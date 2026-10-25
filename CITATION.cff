@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "bayesian-statistics-ai999x: an offline, verified bayesian statistics solver"
+authors:
+  - family-names: Farabi
+    given-names: Ibnul Jaif
+    affiliation: AI999X
+version: 1.0.0
+license: Apache-2.0
+url: "https://huggingface.co/AI999X/bayesian-statistics-ai999x"
+repository-code: "https://huggingface.co/AI999X/bayesian-statistics-ai999x"
+keywords:
+  - bayesian statistics
+  - bayes theorem
+  - conjugate prior
+  - posterior
+  - credible interval
+  - bayes factor
+  - decision analysis
+  - uncertainty propagation
+  - sensitivity analysis
+  - sobol indices
+  - monte carlo
+  - ai999x
