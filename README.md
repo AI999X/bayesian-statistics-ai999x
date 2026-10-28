@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/bayesian-statistics-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.2
 
 Field: **Mathematics & Statistics** · Tasks: Question Answering, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ bayesian-statistics-ai999x is an offline, deterministic Python solver that answe
 
 | Property | Value |
 |---|---|
-| Package | `bayesian-statistics-ai999x` 1.0.1 (import `bayesian_statistics_ai999x`) |
+| Package | `bayesian-statistics-ai999x` 1.0.2 (import `bayesian_statistics_ai999x`) |
 | Type | Deterministic neuro-symbolic bayesian statistics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 78 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -61,7 +61,7 @@ bayesian_statistics.ask("Who created you?").message
 # -> bayesian-statistics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `bayesian-statistics-ai999x "<question>"`, `bayesian-statistics-ai999x --capabilities`. The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.0.1.
+Command line: `bayesian-statistics-ai999x "<question>"`, `bayesian-statistics-ai999x --capabilities`. The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.0.2.
 
 ## Find the right capability, and draw it
 
@@ -222,10 +222,10 @@ _A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1: the packa
 ## Citation
 
 ```bibtex
-@software{bayesian_statistics_ai999x_1_0_1,
+@software{bayesian_statistics_ai999x_1_0_2,
   title  = {bayesian-statistics-ai999x: an offline, verified bayesian statistics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.1},
+  year   = {2026}, version = {1.0.2},
   url    = {https://huggingface.co/AI999X/bayesian-statistics-ai999x}
 }
 ```
