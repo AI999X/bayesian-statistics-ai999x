@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/AI999X/bayesian-statistics-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/bayesian-statistics-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/bayesian-statistics-ai999x)](https://pypi.org/project/bayesian-statistics-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/bayesian-statistics-ai999x)
 
-**[Install](https://pypi.org/project/bayesian-statistics-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
+**[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/bayesian-statistics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
 License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
@@ -12,7 +12,309 @@ bayesian-statistics-ai999x is an offline, deterministic Python solver that answe
 
 **bayesian-statistics-ai999x** is a compact, deterministic bayesian statistics engine for Python. It reads a question in plain English (or a typed call), picks a certified bayesian statistics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
+
+**Run it your way.** bayesian-statistics-ai999x comes as the AI999X desktop app and as the command-line program `bayesian-statistics` for Windows and Linux, runs in your browser as WebAssembly, and installs as a Python package. The desktop app, the command line and the browser run the same compiled Rust program on your own device: offline, no Python needed.
+
+## Get it
+
+| Way to run it | For | Get it |
+|---|---|---|
+| **AI999X Bayesian Statistics desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
+| **Command line** (`bayesian-statistics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try) |
+| **Python** | Python 3.10+ | `pip install bayesian-statistics-ai999x` |
+
+Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+
+## Rust versions
+
+Bayesian Statistics also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.0.3) and on the website.
+
+| Program | System | File | Size | Download | Use |
+|---|---|---|---|---|---|
+| Desktop app (Bayesian Statistics) | Windows x86-64 | `ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip` | 7.2 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-bayesian-statistics.exe` (no installer) |
+| Desktop app (Bayesian Statistics) | Linux x86-64 | `ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz` | 8.1 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-bayesian-statistics` (X11 or Wayland desktop) |
+| Command line (`bayesian-statistics`) | Windows x86-64 | `ai999x-bayesian-statistics-cli-1.2.0-windows-x86_64.zip` | 2.9 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `bayesian-statistics.exe ask "<question>"` or `bayesian-statistics.exe solve <capability> name=value` |
+| Command line (`bayesian-statistics`) | Linux x86-64 | `ai999x-bayesian-statistics-cli-1.2.0-linux-x86_64.tar.gz` | 2.9 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./bayesian-statistics ask "<question>"` or `./bayesian-statistics solve <capability> name=value` |
+
+The command-line archive holds `bayesian-statistics` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+
+## Quick start
+
+### Desktop app
+
+Download **AI999X Bayesian Statistics** for your system (above), unpack it and start it; type a question in words or pick a capability, fill in the form and press Compute. Figures and an explanation of the answer appear beside it. The AI999X desktop app has the same, with Bayesian Statistics among all AI999X models.
+
+Linux, from a terminal:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz
+./ai999x-bayesian-statistics-1.2.0-linux-x86_64/ai999x-bayesian-statistics
+```
+
+### Command line
+
+Linux:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+bayesian-statistics --version
+```
+
+Windows (PowerShell):
+
+```powershell
+$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+(Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
+Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
+bayesian-statistics --version
+```
+
+Every command below was run as shown; the text under it is what the program printed.
+
+**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```console
+$ bayesian-statistics ask "A test has sensitivity 0.9 and specificity 0.95; the prevalence is 0.01. What is the positive predictive value?"
+Read as: Positive and negative predictive values of a test
+ppv = 0.1538461538
+npv = 0.9989378651
+p_positive = 0.0585
+false_discovery_rate = 0.8461538462
+false_omission_rate = 0.001062134891
+  by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
+  prevalence = 0.01
+  sensitivity = 0.9
+  specificity = 0.95
+  assumes: probabilities between 0 and 1; both results possible
+```
+
+**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```console
+$ bayesian-statistics info diagnostic_test_predictive_values
+Positive and negative predictive values of a test
+  Bayes' theorem with the total probability of a positive result
+  in   prevalence prevalence (pre-test probability of the condition) [1]
+  in   sensitivity sensitivity P(positive | condition) [1]
+  in   specificity specificity P(negative | no condition) [1]
+  out  ppv      positive predictive value P(condition | positive) [1]
+  out  npv      negative predictive value P(no condition | negative) [1]
+  out  p_positive probability of a positive result [1]
+  out  false_discovery_rate 1 - PPV [1]
+  out  false_omission_rate 1 - NPV [1]
+```
+
+**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```console
+$ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95
+ppv = 0.1538461538
+npv = 0.9989378651
+p_positive = 0.0585
+false_discovery_rate = 0.8461538462
+false_omission_rate = 0.001062134891
+  by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
+  prevalence = 0.01
+  sensitivity = 0.9
+  specificity = 0.95
+  assumes: probabilities between 0 and 1; both results possible
+```
+
+**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
+
+```console
+$ bayesian-statistics figures diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --out .
+[
+  {
+    "slug": "diagnostic-test-predictive-values-live-1",
+    "title": "Positive predictive value P(condition | posit... as specificity P(negative | no condition) varies",
+    "caption": "Positive predictive value P(condition | posit... as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
+    "file": "./diagnostic-test-predictive-values-live-1.svg"
+  },
+  {
+    "slug": "diagnostic-test-predictive-values-live-2",
+    "title": "Positive predictive value P(condition | posit... as sensitivity P(positive | condition) varies",
+    "caption": "Positive predictive value P(condition | posit... as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
+    "file": "./diagnostic-test-predictive-values-live-2.svg"
+  }
+]
+```
+
+**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch
+
+`cases.jsonl`:
+
+```json
+{"key": "diagnostic_test_predictive_values", "inputs": {"prevalence": 0.01, "sensitivity": 0.9, "specificity": 0.95}}
+{"key": "beta_binomial_posterior", "inputs": {"alpha": 2.0, "beta": 2.0, "successes": "7", "trials": "10"}}
+```
+
+```console
+$ bayesian-statistics batch < cases.jsonl
+{"outcome":"SOLVED","message":"","value":0.153846153846,"unit":"","solved_for":"ppv","si":[["prevalence",0.01],["sensitivity",0.9],["specificity",0.95]],"values":[["ppv",0.153846153846,""],["npv",0.998937865109,""],["p_positive",0.0585,""],["false_discovery_rate",0.846153846154,""],["false_omission_rate",0.00106213489113,""]],"target":"ppv","phrase":"positive predictive value P(condition | positive)","assumptions":["probabilities between 0 and 1","both results possible"],"name":"Positive and negative predictive values of a test","equation":"Bayes' theorem with the total probability of a positive result"}
+{"outcome":"SOLVED","message":"","value":0.642857142857,"unit":"","solved_for":"posterior_mean","si":[["alpha",2.0],["beta",2.0]],"values":[["post_alpha",9.0,""],["post_beta",5.0,""],["posterior_mean",0.642857142857,""],["posterior_variance",0.015306122449,""],["posterior_sd",0.123717914826,""]],"target":"posterior_mean","phrase":"posterior alpha = alpha + k","assumptions":["alpha, beta > 0","0 <= k <= n"],"name":"Beta-binomial conjugate posterior","equation":"conjugate update of the beta prior with the binomial likelihood"}
+```
+
+### In your browser
+
+Open [Bayesian Statistics on ai999x.com](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try), choose a capability and press **Compute**: the model runs on your own device as WebAssembly; nothing is sent anywhere. Change any input (any unit of the right kind) and the answer, its explanation and the figures follow.
+
+In your own page: `bayesian_statistics_ai999x.wasm` and the loader `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js).
+
+### Python
+
+```bash
+pip install bayesian-statistics-ai999x
+```
+
+## Worked examples in every form
+
+The same worked example from the command line, from Python and in the browser. Each command-line output is what the program printed.
+
+### Bayes factor for a normal mean (known variance)
+
+BF10 for H1: mu ~ N(mu0, tau^2) against H0: mu = mu0, from the sample mean of n observations with known sigma; BF01 and the posterior probability of H1 at equal prior odds.
+
+Command line:
+
+```console
+$ bayesian-statistics solve bayes_factor_normal_mean sample_mean=0 n=1 sigma=1 mu0=0 prior_sd=1
+bf10 = 0.7071067812
+bf01 = 1.414213562
+log10_bf10 = -0.1505149978
+posterior_h1 = 0.4142135624
+  by: Bayes factor for a normal mean (known variance)  (Savage-Dickey density ratio of the posterior and prior at mu0)
+  sample_mean = 0
+  sigma = 1
+  mu0 = 0
+  prior_sd = 1
+  assumes: sigma, tau > 0; n >= 1
+```
+
+Python:
+
+```python
+import bayesian_statistics_ai999x as m
+
+a = m.solve("bayes_factor_normal_mean", sample_mean="0", n="1", sigma="1", mu0="0", prior_sd="1")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#cap-bayes_factor_normal_mean) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the strength of evidence for a normal mean differing from a specified value using a known variance. By comparing the posterior and prior densities at the null value, it yields a Bayes factor of 0.707107 for the alternative model against the null. The corresponding inverse Bayes factor is 1.41421, and the logarithmic scale value is -0.150515. With equal prior odds, the posterior probability of the alternative model is estimated as 0.414214. These metrics rely on a sample size of 1, a sample mean of 0, and a prior standard deviation of 1, assuming a known population standard deviation of 1.
+
+### Bayes factor for a point null on a proportion (beta prior under H1)
+
+BF10 for H1: p ~ Beta(alpha, beta) against H0: p = p0 after k successes in n trials (default uniform prior), with BF01 and the posterior probability of H1 at equal prior odds.
+
+Command line:
+
+```console
+$ bayesian-statistics solve bayes_factor_point_null_binomial p0=0.5 successes=2 trials=2 alpha=1 beta=1
+bf10 = 1.333333333
+bf01 = 0.75
+log10_bf10 = 0.1249387366
+posterior_h1 = 0.5714285714
+  by: Bayes factor for a point null on a proportion (beta prior under H1)  (ratio of the beta-binomial marginal likelihood to the binomial likelihood at p0)
+  p0 = 0.5
+  alpha = 1
+  beta = 1
+  assumes: 0 < p0 < 1; alpha, beta > 0; 0 <= k <= n
+```
+
+Python:
+
+```python
+import bayesian_statistics_ai999x as m
+
+a = m.solve("bayes_factor_point_null_binomial", p0="0.5", successes="2", trials="2", alpha="1", beta="1")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#cap-bayes_factor_point_null_binomial) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the strength of evidence for a beta-distributed proportion against a fixed null value. Given 2 successes in 2 trials, with a null hypothesis of 0.5 and prior parameters alpha of 1 and beta of 1, the resulting Bayes factor is 1.33333. The reciprocal, 0.75, represents evidence for the null. Under equal prior odds, the posterior probability that the alternative model is true is 0.571429.
+
+### Bayes factor for two simple binomial hypotheses
+
+Bayes factor BF10 for H1: p = p1 against H0: p = p0 after k successes in n trials, its log10 and the posterior probability of H1 with equal prior odds.
+
+Command line:
+
+```console
+$ bayesian-statistics solve bayes_factor_binomial_simple p0=0.5 p1=0.7 successes=14 trials=20
+bf10 = 5.184417905
+log10_bf10 = 0.7147000018
+posterior_h1 = 0.8383032946
+  by: Bayes factor for two simple binomial hypotheses  (likelihood ratio of the two simple hypotheses)
+  p0 = 0.5
+  p1 = 0.7
+  assumes: 0 < p0, p1 < 1; 0 <= k <= n
+```
+
+Python:
+
+```python
+import bayesian_statistics_ai999x as m
+
+a = m.solve("bayes_factor_binomial_simple", p0="0.5", p1="0.7", successes="14", trials="20")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#cap-bayes_factor_binomial_simple) and press **Compute in your browser**.
+
+_What this means:_ This calculation compares two simple hypotheses about a success probability using observed data consisting of 14 successes in 20 trials. The likelihood ratio yields a Bayes factor of 5.18442 for the hypothesis with probability 0.7 against the hypothesis with probability 0.5. This evidence translates to a log base ten scale value of 0.7147. Assuming equal prior odds between the two hypotheses, the resulting posterior probability that the first hypothesis is true given the data is 0.838303.
+
+### Marginal likelihood (evidence) of binomial data under a beta prior
+
+Prior predictive probability of k successes in n trials when p ~ Beta(alpha, beta), and its logarithm.
+
+Command line:
+
+```console
+$ bayesian-statistics solve beta_binomial_evidence alpha=1 beta=1 successes=7 trials=10
+marginal_likelihood = 0.09090909091
+log_marginal_likelihood = -2.397895273
+  by: Marginal likelihood (evidence) of binomial data under a beta prior  (closed form with log-beta functions)
+  alpha = 1
+  beta = 1
+  assumes: alpha, beta > 0; 0 <= k <= n
+```
+
+Python:
+
+```python
+import bayesian_statistics_ai999x as m
+
+a = m.solve("beta_binomial_evidence", alpha="1", beta="1", successes="7", trials="10")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#cap-beta_binomial_evidence) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the probability of observing exactly 7 successes out of 10 independent Bernoulli trials, assuming the underlying success rate follows a Beta distribution with parameters alpha equal to 1 and beta equal to 1. The resulting value, 0.0909091, represents the evidence for the data given the prior model. Its natural logarithm is computed as -2.3979, which is often more numerically stable for large numbers of trials.
+
+## Documentation
+
+- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_rust_guide.md)
+- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_capabilities.md)
+- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/bayesian-statistics-ai999x/
 
 ## Highlights
 
@@ -20,6 +322,7 @@ bayesian-statistics-ai999x is an offline, deterministic Python solver that answe
 - **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 378 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `bayesian-statistics` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** Bayes' theorem, conjugate posteriors, credible intervals, Bayes factors, decision analysis, uncertainty propagation, Monte Carlo and sensitivity analysis.
 
@@ -38,7 +341,7 @@ bayesian-statistics-ai999x is an offline, deterministic Python solver that answe
 | Creator / engineer | Ibnul Jaif Farabi |
 | Organization | AI999X |
 
-## Quickstart
+## Python quick start
 
 ```bash
 pip install bayesian-statistics-ai999x
@@ -61,7 +364,7 @@ bayesian_statistics.ask("Who created you?").message
 # -> bayesian-statistics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `bayesian-statistics-ai999x "<question>"`, `bayesian-statistics-ai999x --capabilities`. The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.0.3.
+The Python package also installs a Python command, `bayesian-statistics-ai999x "<question>"`; for the native program use `bayesian-statistics` (above). The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -83,7 +386,7 @@ bayesian_statistics.search("Solve x^2 - 5x + 6 = 0", k=2)
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
-## Worked examples
+## Python worked examples, with their steps
 
 Each question was put to `bayesian-statistics-ai999x`; the answer is the one it returned, with the steps it took.
 
