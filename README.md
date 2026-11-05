@@ -1,16 +1,16 @@
-# bayesian-statistics-ai999x — offline, verified bayesian statistics solver with step-by-step answers
+# bayesian-statistics-ai999x: offline, verified bayesian statistics solver with step-by-step answers
 
 [![tests](https://github.com/AI999X/bayesian-statistics-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/bayesian-statistics-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/bayesian-statistics-ai999x)](https://pypi.org/project/bayesian-statistics-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/bayesian-statistics-ai999x)
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/bayesian-statistics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.5.0
 
-Field: **Mathematics & Statistics** · Tasks: Question Answering, Sentence Similarity, Feature Extraction
+Field: **Mathematics & Statistics** · Tasks: Question Answering
 
-bayesian-statistics-ai999x is an offline, deterministic Python solver that answers bayesian statistics questions with verified results from 78 certified capabilities, gives 378 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
+bayesian-statistics-ai999x is an offline, deterministic bayesian statistics solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers bayesian statistics questions with verified results from 78 certified capabilities, gives 378 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
-**bayesian-statistics-ai999x** is a compact, deterministic bayesian statistics engine for Python. It reads a question in plain English (or a typed call), picks a certified bayesian statistics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
+**bayesian-statistics-ai999x** reads a question in plain English (or a typed call), picks a certified bayesian statistics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions, or a refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
 
@@ -20,13 +20,13 @@ bayesian-statistics-ai999x is an offline, deterministic Python solver that answe
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Bayesian Statistics desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
-| **Command line** (`bayesian-statistics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
-| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try) |
+| **AI999X Bayesian Statistics desktop app** 1.5.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-bayesian-statistics-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-bayesian-statistics-1.5.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.5.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz) |
+| **Command line** (`bayesian-statistics`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device. Nothing to install | [Compute on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install bayesian-statistics-ai999x` |
 
-Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -37,11 +37,11 @@ Download **AI999X Bayesian Statistics** for your system (above), unpack it and s
 Linux, from a terminal:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-bayesian-statistics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
-./ai999x-bayesian-statistics-1.4.0-linux-x86_64/ai999x-bayesian-statistics
+tar xzf ai999x-bayesian-statistics-1.5.0-linux-x86_64.tar.gz
+./ai999x-bayesian-statistics-1.5.0-linux-x86_64/ai999x-bayesian-statistics
 ```
 
 ### Command line
@@ -49,30 +49,30 @@ tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 bayesian-statistics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 bayesian-statistics --version
 ```
 
 Every command below was run as shown; the text under it is what the program printed.
 
-**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+**Ask in words**: Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
 
 ```console
 $ bayesian-statistics ask "A test has sensitivity 0.9 and specificity 0.95; the prevalence is 0.01. What is the positive predictive value?"
@@ -89,7 +89,7 @@ false_omission_rate = 0.001062134891
   assumes: probabilities between 0 and 1; both results possible
 ```
 
-**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+**What a capability needs**: The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
 ```console
 $ bayesian-statistics info diagnostic_test_predictive_values
@@ -105,7 +105,7 @@ Positive and negative predictive values of a test
   out  false_omission_rate 1 - NPV [1]
 ```
 
-**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+**Solve**: Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
 ```console
 $ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95
@@ -121,7 +121,7 @@ false_omission_rate = 0.001062134891
   assumes: probabilities between 0 and 1; both results possible
 ```
 
-**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch
+**Many questions at once**: One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch
 
 `cases.jsonl`:
 
@@ -278,18 +278,18 @@ _What this means:_ This calculation determines the probability of observing exac
 
 ## Documentation
 
-- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_rust_guide.md)
-- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_capabilities.md)
-- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
-- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/bayesian-statistics-ai999x/
+- **Rust user guide**: the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_rust_guide.md)
+- **Python guide**: every capability with a Python example: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_capabilities.md)
+- **Desktop app & command line**: downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page**: compute in your browser, every capability explained: https://www.ai999x.com/models/bayesian-statistics-ai999x/
 
 ## Highlights
 
 - **Verified, not generated.** Every answer is computed by a certified bayesian statistics capability and checked (substituted back, dimension-checked or compared with an independent computation) before it is returned.
-- **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 378 documented answers is reproduced exactly on every tested platform.
+- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 378 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
-- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `bayesian-statistics` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `bayesian-statistics` command line for Windows and Linux, and WebAssembly on the model page, no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** Bayes' theorem, conjugate posteriors, credible intervals, Bayes factors, decision analysis, uncertainty propagation, Monte Carlo and sensitivity analysis.
 
@@ -297,7 +297,7 @@ _What this means:_ This calculation determines the probability of observing exac
 
 | Property | Value |
 |---|---|
-| Package | `bayesian-statistics-ai999x` 1.1.0 (import `bayesian_statistics_ai999x`) |
+| Package | `bayesian-statistics-ai999x` 1.5.0 (import `bayesian_statistics_ai999x`) |
 | Type | Deterministic neuro-symbolic bayesian statistics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 78 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -331,25 +331,14 @@ bayesian_statistics.ask("Who created you?").message
 # -> bayesian-statistics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `bayesian-statistics-ai999x "<question>"`; for the native program use `bayesian-statistics` (above). The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.1.0.
-
-## Find the right capability, and draw it
-
-`bayesian_statistics.search()` finds which certified capability a question is about — across **every** AI999X model, so a question for another model points you to it. It runs **[ai999x-encoder](https://huggingface.co/AI999X/ai999x-encoder)**, AI999X's own capability encoder (4.7M parameters, a 4.9 MB ONNX model, offline; the root `model.safetensors` of this repository): `pip install "bayesian-statistics-ai999x[search]"`. `ask(question, suggest=True)` adds the same pointers to a question it does not answer; an answer itself never changes.
-
-```python
-import bayesian_statistics_ai999x as bayesian_statistics
-
-bayesian_statistics.search("Solve x^2 - 5x + 6 = 0", k=2)
-# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
-```
+The Python package also installs a Python command, `bayesian-statistics-ai999x "<question>"`; for the native program use `bayesian-statistics` (above). The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.5.0.
 
 ## How every answer is verified
 
-1. **Reading** — the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
-2. **Planning** — only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
-3. **Computing** — exact symbolic or high-precision numeric evaluation.
-4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
+1. **Reading**: the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
+2. **Planning**: only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
+3. **Computing**: exact symbolic or high-precision numeric evaluation.
+4. **Checking**: dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
@@ -435,37 +424,37 @@ Every point was computed by `bayesian-statistics-ai999x`.
 
 **Beta prior and posterior after 7 successes in 10 trials**
 
-![Beta prior and posterior after 7 successes in 10 trials — computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-binomial-posterior-density.svg)
+![Beta prior and posterior after 7 successes in 10 trials, computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-binomial-posterior-density.svg)
 
 _A Beta(2, 2) prior updated with 7 successes in 10 trials: the posterior Beta(9, 5) with mean 0.642857 and standard deviation 0.123718; shaded: the equal-tailed 95 % credible interval [0.385738, 0.861421]. Both densities are drawn from the package's cumulative probabilities at 199 values of θ (each interval's probability divided by its width)._
 
 **Posterior mean for every count of successes and failures**
 
-![Posterior mean for every count of successes and failures — computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-binomial-posterior-heatmap.svg)
+![Posterior mean for every count of successes and failures, computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-binomial-posterior-heatmap.svg)
 
 _The posterior mean of a success probability under a Beta(2, 2) prior after s successes (rows, 0 to 5) and f failures (columns, 0 to 5), each cell from the package (rounded to 3 decimals): from 0.222 after 5 failures to 0.778 after 5 successes, 0.5 with no data._
 
 **Probability of the condition after repeated tests**
 
-![Probability of the condition after repeated tests — computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/sequential-test-posterior-stems.svg)
+![Probability of the condition after repeated tests, computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/sequential-test-posterior-stems.svg)
 
 _Repeated diagnostic tests with prevalence 0.01, sensitivity 0.9 and specificity 0.95: the package's posterior probability of the condition after k = 1 … 5 positive results (0.153846, 0.765957, 0.983308, 0.999058, 0.999948) and after 1 … 5 negative results (down to 1.3054e-07)._
 
 **Prior and posterior over three hypotheses**
 
-![Prior and posterior over three hypotheses — computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/discrete-bayes-posterior-bars.svg)
+![Prior and posterior over three hypotheses, computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/discrete-bayes-posterior-bars.svg)
 
 _Bayes' rule over 3 hypotheses with priors 0.5, 0.3, 0.2 and likelihoods 0.1, 0.4, 0.7: the package's posterior probabilities 0.16129, 0.387097, 0.451613 (evidence 0.31); the most probable hypothesis is 3 with 0.451613._
 
 **Category probabilities after multinomial counts**
 
-![Category probabilities after multinomial counts — computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/dirichlet-multinomial-posterior-bars.svg)
+![Category probabilities after multinomial counts, computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/dirichlet-multinomial-posterior-bars.svg)
 
 _A Dirichlet(1, 1, 1) prior over 3 categories updated with the counts 10, 5, 3: the package's posterior Dirichlet(11, 6, 4), posterior means 0.52381, 0.285714, 0.190476; whiskers ±2 posterior standard deviations (0.106479, 0.0963143, 0.083719)._
 
 **Normal posterior shrinking towards the data as n grows**
 
-![Normal posterior shrinking towards the data as n grows — computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/normal-normal-summary-band.svg)
+![Normal posterior shrinking towards the data as n grows, computed by bayesian-statistics-ai999x](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/normal-normal-summary-band.svg)
 
 _A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1: the package's posterior mean and 95 % credible interval for 17 sample sizes from 1 to 100, moving from the prior towards the data; marked: n = 10, posterior mean = 0.714286, interval [-0.333359, 1.76193]._
 
@@ -480,22 +469,22 @@ _A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1: the packa
 ## Out of scope
 
 - Open-ended explanation, essay writing or tutoring dialogue: it is a solver, not a chatbot.
-- Questions outside its certified bayesian statistics capabilities, and any question whose stated numbers it cannot all use — it refuses with the reason instead.
+- Questions outside its certified bayesian statistics capabilities, and any question whose stated numbers it cannot all use: it refuses with the reason instead.
 - High-stakes engineering, medical or legal decisions without independent review.
 
 ## Limitations
 
 - It answers what its certified capabilities cover (Bayes' theorem, conjugate posteriors, credible intervals, Bayes factors, decision analysis, uncertainty propagation, Monte Carlo and sensitivity analysis); anything else is refused with a reason.
-- `ask()` reads documented question forms and common phrasings; unusual wording may be refused — use `solve()` for guaranteed results.
+- `ask()` reads documented question forms and common phrasings; unusual wording may be refused; use `solve()` for guaranteed results.
 - Results are as correct as the certified relations and their stated conditions; a certified relation is a checked model, not a claim about every physical situation.
 
 ## Citation
 
 ```bibtex
-@software{bayesian_statistics_ai999x_1_1_0,
+@software{bayesian_statistics_ai999x_1_5_0,
   title  = {bayesian-statistics-ai999x: an offline, verified bayesian statistics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.1.0},
+  year   = {2026}, version = {1.5.0},
   url    = {https://huggingface.co/AI999X/bayesian-statistics-ai999x}
 }
 ```
@@ -512,4 +501,15 @@ Created and engineered by **Ibnul Jaif Farabi** · **[AI999X](https://huggingfac
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/bayesian-statistics-ai999x/) (`pip install .` builds it). Releases are tagged `v<version>`; the wheel is attached to each [GitHub release](https://github.com/AI999X/bayesian-statistics-ai999x/releases). The optional ONNX models (formula graphs and, where measured, a decision model) are on [Hugging Face](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/onnx).
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/bayesian-statistics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.5.0`; the [GitHub release](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.5.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+
+## Build the program from source
+
+`rust/` holds the Rust source of the `bayesian-statistics` command-line program and browser module: the AI999X engine (`rust/ax-engine`), this model (`rust/bayesian-statistics`) and its data (`rust/models/bayesian_statistics/pack.json`). With Rust 1.80 or later:
+
+```bash
+cd rust
+cargo build --release -p bayesian-statistics-ai999x
+./target/release/bayesian-statistics --help
+cargo test -p bayesian-statistics-ai999x
+```

@@ -1,5 +1,5 @@
 {
- "package": "1.1.0",
+ "package": "1.5.0",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -9,10 +9,7 @@
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
   "capabilities/procedures.py": "111ad2187601fb01870ab3f92814310e830c5680140aa829279b5836593f0592",
   "capabilities/procedures_certified.json": "df7ffa636baa64427c0fdcb3ef3b1a9a05b4fa3ce0443ba94aa715de10ba4b9a",
-  "bayesian_statistics_knowledge_public.sqlite": "a4f557a8871f28812afd537a2dc843834c15de7769708e84b0564f88f4b8d6ab",
-  "search/encoder.int8.onnx": "521452d928a72da4d241b1835ab0f46b0e81ff58ffff0367b9a7029bd129fbd9",
-  "search/tokenizer.json": "b2f2deb461e6ad672b8e42aac29773e7a9be77d582cdf58808113ea43fda565e",
-  "search/index.json": "cbd28f9d940abc33d3bfd4a61beed818eda670deffcfe40b46845d84423f9ef9"
+  "bayesian_statistics_knowledge_public.sqlite": "9c4a994ef435c2e54982f19ab86a73f9a43f4ed067b4b763ca16f73460e30f17"
  },
  "engine": [
   "__init__.py",

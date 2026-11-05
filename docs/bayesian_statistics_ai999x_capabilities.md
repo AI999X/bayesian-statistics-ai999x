@@ -153,7 +153,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="bayes_theorem"></a>
 
-### Bayes' theorem for an event and its complement — `bayes_theorem`
+### Bayes' theorem for an event and its complement, `bayes_theorem`
 
 The posterior probability P(A|B) from the prior P(A) and the likelihoods P(B|A) and P(B|not A).
 
@@ -206,7 +206,7 @@ bayesian_statistics_ai999x.solve('bayes_theorem', p_a=0.5, p_b_given_a=0.5, p_b_
 
 <a id="diagnostic_test_predictive_values"></a>
 
-### Positive and negative predictive values of a test — `diagnostic_test_predictive_values`
+### Positive and negative predictive values of a test, `diagnostic_test_predictive_values`
 
 The probability of the condition after a positive result (PPV) and of no condition after a negative one (NPV), from prevalence, sensitivity and specificity.
 
@@ -261,7 +261,7 @@ bayesian_statistics_ai999x.solve('diagnostic_test_predictive_values', prevalence
 
 <a id="total_probability"></a>
 
-### Law of total probability — `total_probability`
+### Law of total probability: `total_probability`
 
 P(B) = sum of P(B|A_i) P(A_i) over a partition A_1, ..., A_k (and the joint probabilities).
 
@@ -308,7 +308,7 @@ bayesian_statistics_ai999x.solve('total_probability', priors=[0.6, 0.4], conditi
 
 <a id="discrete_bayes_posterior"></a>
 
-### Posterior over several discrete hypotheses — `discrete_bayes_posterior`
+### Posterior over several discrete hypotheses, `discrete_bayes_posterior`
 
 Posterior probabilities of k hypotheses from their priors and the likelihood of the observed data under each; the evidence and the most probable hypothesis (MAP).
 
@@ -361,7 +361,7 @@ bayesian_statistics_ai999x.solve('discrete_bayes_posterior', priors=[0.5, 0.5], 
 
 <a id="probability_to_odds"></a>
 
-### Odds and log-odds of a probability — `probability_to_odds`
+### Odds and log-odds of a probability: `probability_to_odds`
 
 The odds $p/(1-p)$, the odds against and the log-odds (logit) of a probability.
 
@@ -407,7 +407,7 @@ bayesian_statistics_ai999x.solve('probability_to_odds', probability=0.75)
 
 <a id="odds_to_probability"></a>
 
-### Probability from odds — `odds_to_probability`
+### Probability from odds: `odds_to_probability`
 
 The probability $o/(1+o)$ that corresponds to odds o in favour.
 
@@ -452,7 +452,7 @@ bayesian_statistics_ai999x.solve('odds_to_probability', odds=0.25)
 
 <a id="likelihood_ratios"></a>
 
-### Likelihood ratios of a diagnostic test — `likelihood_ratios`
+### Likelihood ratios of a diagnostic test: `likelihood_ratios`
 
 Positive and negative likelihood ratios and the diagnostic odds ratio from sensitivity and specificity.
 
@@ -500,7 +500,7 @@ bayesian_statistics_ai999x.solve('likelihood_ratios', sensitivity=0.95, specific
 
 <a id="posterior_from_likelihood_ratio"></a>
 
-### Post-test probability from a likelihood ratio — `posterior_from_likelihood_ratio`
+### Post-test probability from a likelihood ratio, `posterior_from_likelihood_ratio`
 
 Bayes' theorem in odds form: post-test odds = pre-test odds x likelihood ratio, and the post-test probability.
 
@@ -552,7 +552,7 @@ bayesian_statistics_ai999x.solve('posterior_from_likelihood_ratio', prior=0.1, l
 
 <a id="sequential_test_posterior"></a>
 
-### Posterior after repeated independent tests — `sequential_test_posterior`
+### Posterior after repeated independent tests, `sequential_test_posterior`
 
 Probability of the condition after several conditionally independent test results (k positive and m negative), by multiplying the pre-test odds by LR+ for each positive and LR- for each negative.
 
@@ -606,7 +606,7 @@ bayesian_statistics_ai999x.solve('sequential_test_posterior', prevalence=0.05, s
 
 <a id="posterior_from_bayes_factor"></a>
 
-### Posterior probability of a hypothesis from a Bayes factor — `posterior_from_bayes_factor`
+### Posterior probability of a hypothesis from a Bayes factor, `posterior_from_bayes_factor`
 
 Posterior probability of H1 from the Bayes factor BF10 and the prior probability of H1 (default 1/2).
 
@@ -657,7 +657,7 @@ bayesian_statistics_ai999x.solve('posterior_from_bayes_factor', bayes_factor=0.2
 
 <a id="rule_of_succession"></a>
 
-### Laplace's rule of succession — `rule_of_succession`
+### Laplace's rule of succession: `rule_of_succession`
 
 Probability that the next trial is a success after k successes in n trials, with a uniform prior on the success probability: $(k + 1)/(n + 2)$.
 
@@ -704,7 +704,7 @@ bayesian_statistics_ai999x.solve('rule_of_succession', successes=0, trials=5)
 
 <a id="beta_binomial_posterior"></a>
 
-### Beta-binomial conjugate posterior — `beta_binomial_posterior`
+### Beta-binomial conjugate posterior: `beta_binomial_posterior`
 
 Update a Beta(alpha, beta) prior on a success probability with k successes in n trials: posterior parameters, mean, variance and standard deviation.
 
@@ -764,7 +764,7 @@ bayesian_statistics_ai999x.solve('beta_binomial_posterior', alpha=1, beta=1, suc
 
 <a id="beta_credible_interval"></a>
 
-### Equal-tailed credible interval of a beta distribution — `beta_credible_interval`
+### Equal-tailed credible interval of a beta distribution, `beta_credible_interval`
 
 The central (equal-tailed) credible interval and the median of a Beta(alpha, beta) posterior.
 
@@ -788,9 +788,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Beta(4, 10) density (inputs chosen for the drawing: alpha = 4, beta = 10, level = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-density)
+![The Beta(1, 1) density (the worked example: alpha = 1, beta = 1, level = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-density)
 
-*The Beta(4, 10) density (inputs chosen for the drawing: alpha = 4, beta = 10, level = 0.9); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.112666, 0.49465], 5 % of the probability left in each tail; marked: the returned median 0.275276.*
+*The Beta(1, 1) density (the worked example: alpha = 1, beta = 1, level = 0.9); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.05, 0.95], 5 % of the probability left in each tail; marked: the returned median 0.5.*
 
 ![lower (lower limit (quantile (1 - level)/2)) against beta (Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-curve)
 
@@ -817,7 +817,7 @@ bayesian_statistics_ai999x.solve('beta_credible_interval', alpha=3, beta=9)
 
 <a id="beta_binomial_credible_interval"></a>
 
-### Credible interval for a proportion (beta-binomial) — `beta_binomial_credible_interval`
+### Credible interval for a proportion (beta-binomial), `beta_binomial_credible_interval`
 
 Equal-tailed credible interval of a success probability after k successes in n trials with a Beta(alpha, beta) prior.
 
@@ -844,9 +844,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  k  \leq  n$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![90 % equal-tailed credible intervals for a success probability under a uniform Beta(1, 1) prior, for the same observed share 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-intervals)
+![90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (0 of 0), then the same share 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-intervals)
 
-*90 % equal-tailed credible intervals for a success probability under a uniform Beta(1, 1) prior, for the same observed share 0.3 in ever more trials (inputs chosen; each interval returned by the package): 3/10 [0.135075, 0.564374]; 6/20 [0.168176, 0.487389]; 12/40 [0.198829, 0.430652]; 24/80 [0.224502, 0.390697]; 48/160 [0.244689, 0.363031]; 96/320 [0.259957, 0.343933]. Four times the data halves the width.*
+*90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (0 of 0), then the same share 0.5 in ever more trials (each interval returned by the package): 0/0 [0.05, 0.95]; 5/10 [0.27125, 0.72875]; 20/40 [0.374396, 0.625604]; 80/160 [0.435554, 0.564446]; 320/640 [0.467563, 0.532437]. Four times the data halves the width.*
 
 ![lower (lower credible limit) against trials (number of trials n) from -10 to 10](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-curve)
 
@@ -873,7 +873,7 @@ bayesian_statistics_ai999x.solve('beta_binomial_credible_interval', alpha=2, bet
 
 <a id="beta_posterior_tail_probability"></a>
 
-### Posterior probability that p exceeds a value — `beta_posterior_tail_probability`
+### Posterior probability that p exceeds a value, `beta_posterior_tail_probability`
 
 P(p > c) and P(p < c) under a Beta(alpha, beta) posterior, optionally after k successes in n trials.
 
@@ -926,7 +926,7 @@ bayesian_statistics_ai999x.solve('beta_posterior_tail_probability', alpha=2, bet
 
 <a id="jeffreys_interval"></a>
 
-### Jeffreys interval for a binomial proportion — `jeffreys_interval`
+### Jeffreys interval for a binomial proportion, `jeffreys_interval`
 
 The equal-tailed Bayesian interval for a proportion under the Jeffreys Beta($1/2$, 1/2) prior (lower limit 0 when $k = 0$ and upper limit 1 when k = n).
 
@@ -979,7 +979,7 @@ bayesian_statistics_ai999x.solve('jeffreys_interval', successes=0, trials=20, le
 
 <a id="beta_binomial_predictive"></a>
 
-### Posterior predictive probability (beta-binomial) — `beta_binomial_predictive`
+### Posterior predictive probability (beta-binomial), `beta_binomial_predictive`
 
 Probability of exactly j successes in m future trials when the success probability has a Beta(alpha, beta) posterior; the cumulative probability and the predictive mean.
 
@@ -1005,9 +1005,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  j  \leq  m$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The beta-binomial predictive distribution of the number of successes in 10 future trials, for a flat Beta(1, 1) and a Beta(8, 4) belief (inputs chosen); each probability returned by the package: Beta(1, 1): 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-predictive-stems)
+![The beta-binomial predictive distribution of the number of successes in 4 future trials, for the worked example's Beta(1, 1) belief and, for comparison, a Beta(8, 4) one; each probability returned by the package: Beta(1, 1): 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-predictive-stems)
 
-*The beta-binomial predictive distribution of the number of successes in 10 future trials, for a flat Beta(1, 1) and a Beta(8, 4) belief (inputs chosen); each probability returned by the package: Beta(1, 1): 0.0909, 0.0909, 0.0909, 0.0909, 0.0909, 0.0909, 0.0909, 0.0909, 0.0909, 0.0909, 0.0909 (mean 5); Beta(8, 4): 0.0008, 0.005, 0.0168, 0.0408, 0.0786, 0.1257, 0.1703, 0.1946, 0.1824, 0.1297, 0.0551 (mean 6.66667). A flat belief gives every count the same chance.*
+*The beta-binomial predictive distribution of the number of successes in 4 future trials, for the worked example's Beta(1, 1) belief and, for comparison, a Beta(8, 4) one; each probability returned by the package: Beta(1, 1): 0.2, 0.2, 0.2, 0.2, 0.2 (mean 2); Beta(8, 4): 0.0256, 0.1172, 0.2637, 0.3516, 0.2418 (mean 2.66667). Marked: the worked example's count, P(k = 2) = 0.2. A flat belief gives every count the same chance.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_predictive', alpha=1, beta=1, future_trials=4, future_successes=2)
@@ -1029,7 +1029,7 @@ bayesian_statistics_ai999x.solve('beta_binomial_predictive', alpha=8, beta=4, fu
 
 <a id="beta_binomial_evidence"></a>
 
-### Marginal likelihood (evidence) of binomial data under a beta prior — `beta_binomial_evidence`
+### Marginal likelihood (evidence) of binomial data under a beta prior, `beta_binomial_evidence`
 
 Prior predictive probability of k successes in n trials when p ~ Beta(alpha, beta), and its logarithm.
 
@@ -1077,7 +1077,7 @@ bayesian_statistics_ai999x.solve('beta_binomial_evidence', alpha=2, beta=2, succ
 
 <a id="map_beta_binomial"></a>
 
-### MAP estimate of a proportion (beta-binomial) — `map_beta_binomial`
+### MAP estimate of a proportion (beta-binomial), `map_beta_binomial`
 
 The posterior mode (maximum a posteriori estimate) of p after k successes in n trials with a Beta(alpha, beta) prior, with the maximum-likelihood estimate and the posterior mean for comparison.
 
@@ -1130,7 +1130,7 @@ bayesian_statistics_ai999x.solve('map_beta_binomial', alpha=3, beta=5, successes
 
 <a id="laplace_approximation_beta"></a>
 
-### Laplace (normal) approximation of a beta posterior — `laplace_approximation_beta`
+### Laplace (normal) approximation of a beta posterior, `laplace_approximation_beta`
 
 Approximate a Beta(alpha, beta) posterior by a normal distribution centred at its mode with variance -1/(second derivative of the log density); the approximate credible interval.
 
@@ -1183,7 +1183,7 @@ bayesian_statistics_ai999x.solve('laplace_approximation_beta', alpha=10, beta=4)
 
 <a id="beta_hdi"></a>
 
-### Highest-density interval of a beta posterior — `beta_hdi`
+### Highest-density interval of a beta posterior, `beta_hdi`
 
 The shortest interval holding a stated posterior probability of a unimodal Beta(alpha, beta): equal density at both ends.
 
@@ -1207,9 +1207,9 @@ $$
 - **Assumes:** $\alpha > 1$ and $\beta > 1$ (unimodal, zero density at both ends); 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The skewed Beta(3, 9) density at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-density)
+![The Beta(2, 2) density at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-density)
 
-*The skewed Beta(3, 9) density at level 0.9 (inputs chosen so the two intervals differ); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.0559771, 0.434394] (width 0.378417):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.07882, 0.470087] at the same level, width 0.391267 (difference of the returned limits).*
+*The Beta(2, 2) density at level 0.5 (the worked example; the two intervals coincide when the density is symmetric); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.326352, 0.673648] (width 0.347296):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.326352, 0.673648] at the same level, width 0.347296 (difference of the returned limits).*
 
 ![lower (lower limit) against beta (Beta beta (> 1)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-curve)
 
@@ -1235,7 +1235,7 @@ bayesian_statistics_ai999x.solve('beta_hdi', alpha=3, beta=9, level=0.95)
 
 <a id="beta_prior_from_mean_sd"></a>
 
-### Beta prior from a mean and standard deviation — `beta_prior_from_mean_sd`
+### Beta prior from a mean and standard deviation, `beta_prior_from_mean_sd`
 
 The Beta(alpha, beta) prior with a stated mean and standard deviation (method of moments) and its effective prior sample size alpha + beta.
 
@@ -1283,7 +1283,7 @@ bayesian_statistics_ai999x.solve('beta_prior_from_mean_sd', mean=0.5, sd=0.28867
 
 <a id="ab_test_probability_beta"></a>
 
-### Bayesian A/B test: probability that A beats B — `ab_test_probability_beta`
+### Bayesian A/B test: probability that A beats B, `ab_test_probability_beta`
 
 P(p_A > p_B) for independent Beta posteriors of two success probabilities (alpha_b a whole number, as after a uniform or any integer-parameter prior).
 
@@ -1307,9 +1307,9 @@ $$
 - **Assumes:** all parameters > 0; alpha_b a whole number
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![An A/B comparison (inputs chosen: 12 of 50 conversions for A and 18 of 50 for B on a uniform prior, giving the posteriors Beta(13, 39) and Beta(19, 33)); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-density)
+![An A/B comparison of the worked example's posteriors Beta(1, 1) for A and Beta(1, 1) for B; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-density)
 
-*An A/B comparison (inputs chosen: 12 of 50 conversions for A and 18 of 50 for B on a uniform prior, giving the posteriors Beta(13, 39) and Beta(19, 33)); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned P(pB > pA) = 0.901949 (P(pA > pB) = 0.0980514).*
+*An A/B comparison of the worked example's posteriors Beta(1, 1) for A and Beta(1, 1) for B; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned P(pB > pA) = 0.5 (P(pA > pB) = 0.5).*
 
 ![prob_a_greater (P(p_A > p_B)) against alpha_b (posterior alpha of B (whole number)) from 1 to 9](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-curve)
 
@@ -1335,7 +1335,7 @@ bayesian_statistics_ai999x.solve('ab_test_probability_beta', alpha_a=2, beta_a=1
 
 <a id="gamma_poisson_posterior"></a>
 
-### Gamma-Poisson conjugate posterior of a rate — `gamma_poisson_posterior`
+### Gamma-Poisson conjugate posterior of a rate, `gamma_poisson_posterior`
 
 Update a Gamma(shape, rate) prior on a Poisson rate with observed counts: posterior parameters, mean, variance and standard deviation.
 
@@ -1390,7 +1390,7 @@ bayesian_statistics_ai999x.solve('gamma_poisson_posterior', shape=1, rate=0.5, c
 
 <a id="gamma_poisson_credible_interval"></a>
 
-### Credible interval for a Poisson rate — `gamma_poisson_credible_interval`
+### Credible interval for a Poisson rate: `gamma_poisson_credible_interval`
 
 Equal-tailed credible interval of a Poisson rate after observed counts with a Gamma(shape, rate) prior.
 
@@ -1416,9 +1416,9 @@ $$
 - **Assumes:** shape, rate > 0; counts whole numbers >= 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![90 % credible intervals for a Poisson rate under a Gamma(shape 1, rate 1) prior as the counts 3, 5, 4, 6, 2, 5, 4, 3 arrive (inputs chosen; the first 1, 2, 4, 6 and 8 counts), each returned by the package: 1: [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-intervals)
+![90 % credible intervals for a Poisson rate under a Gamma(shape 1, rate 1) prior as the worked example's counts 0 arrive (the first 1 counts), each returned by the package: 1: [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-intervals)
 
-*90 % credible intervals for a Poisson rate under a Gamma(shape 1, rate 1) prior as the counts 3, 5, 4, 6, 2, 5, 4, 3 arrive (inputs chosen; the first 1, 2, 4, 6 and 8 counts), each returned by the package: 1: [0.683159, 3.87683]; 2: [1.56508, 4.81155]; 4: [2.48839, 5.33835]; 6: [2.60265, 4.98801]; 8: [2.68363, 4.77583].*
+*90 % credible intervals for a Poisson rate under a Gamma(shape 1, rate 1) prior as the worked example's counts 0 arrive (the first 1 counts), each returned by the package: 1: [0.0256466, 1.49787].*
 
 ![lower (lower limit) against shape (prior shape (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-curve)
 
@@ -1444,7 +1444,7 @@ bayesian_statistics_ai999x.solve('gamma_poisson_credible_interval', shape=2, rat
 
 <a id="gamma_credible_interval"></a>
 
-### Equal-tailed credible interval of a gamma distribution — `gamma_credible_interval`
+### Equal-tailed credible interval of a gamma distribution, `gamma_credible_interval`
 
 The central credible interval and median of a Gamma(shape, rate) posterior.
 
@@ -1496,7 +1496,7 @@ bayesian_statistics_ai999x.solve('gamma_credible_interval', shape=5, rate=2)
 
 <a id="gamma_hdi"></a>
 
-### Highest-density interval of a gamma posterior — `gamma_hdi`
+### Highest-density interval of a gamma posterior, `gamma_hdi`
 
 The shortest interval holding a stated probability of a unimodal Gamma(shape, rate): equal density at both ends.
 
@@ -1547,7 +1547,7 @@ bayesian_statistics_ai999x.solve('gamma_hdi', shape=2, rate=1, level=0.5)
 
 <a id="gamma_poisson_predictive"></a>
 
-### Posterior predictive count (negative binomial) — `gamma_poisson_predictive`
+### Posterior predictive count (negative binomial), `gamma_poisson_predictive`
 
 Probability of exactly k events in the next unit interval when the Poisson rate has a Gamma(shape, rate) posterior; the cumulative probability and the predictive mean and variance.
 
@@ -1572,9 +1572,9 @@ $$
 - **Assumes:** shape, rate > 0; k whole number >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The negative-binomial predictive distribution of next-period counts for a Gamma(shape 1, rate 1) rate (the worked example's) and a Gamma(shape 10, rate 2) rate (chosen), k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-stems)
+![The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-stems)
 
-*The negative-binomial predictive distribution of next-period counts for a Gamma(shape 1, rate 1) rate (the worked example's) and a Gamma(shape 10, rate 2) rate (chosen), k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0.5, mean 1, variance 2; Gamma(10, 2): P(0) = 0.0173415, mean 5, variance 7.5. The predictive variance exceeds the mean.*
+*The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0.5, mean 1, variance 2; Gamma(10, 2): P(0) = 0.0173415, mean 5, variance 7.5. Marked: the worked example's count, P(k = 0) = 0.5. The predictive variance exceeds the mean.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_poisson_predictive', shape=1, rate=1, events=0)
@@ -1596,7 +1596,7 @@ bayesian_statistics_ai999x.solve('gamma_poisson_predictive', shape=12, rate=4, e
 
 <a id="map_gamma_poisson"></a>
 
-### MAP estimate of a Poisson rate (gamma prior) — `map_gamma_poisson`
+### MAP estimate of a Poisson rate (gamma prior), `map_gamma_poisson`
 
 Posterior mode of a Poisson rate with a Gamma(shape, rate) prior and observed counts, with the MLE and the posterior mean for comparison.
 
@@ -1648,7 +1648,7 @@ bayesian_statistics_ai999x.solve('map_gamma_poisson', shape=1, rate=0.5, counts=
 
 <a id="gamma_exponential_posterior"></a>
 
-### Gamma-exponential conjugate posterior of a rate — `gamma_exponential_posterior`
+### Gamma-exponential conjugate posterior of a rate, `gamma_exponential_posterior`
 
 Update a Gamma(shape, rate) prior on the rate of exponential waiting times with observed times.
 
@@ -1702,7 +1702,7 @@ bayesian_statistics_ai999x.solve('gamma_exponential_posterior', shape=1, rate=2,
 
 <a id="normal_normal_posterior"></a>
 
-### Normal mean with known variance: posterior from data — `normal_normal_posterior`
+### Normal mean with known variance: posterior from data, `normal_normal_posterior`
 
 Posterior of a normal mean theta with a N(prior mean, prior sd^2) prior, given observations with known standard deviation sigma.
 
@@ -1756,7 +1756,7 @@ bayesian_statistics_ai999x.solve('normal_normal_posterior', prior_mean=10, prior
 
 <a id="normal_normal_summary"></a>
 
-### Normal mean with known variance: posterior and credible interval from a sample mean — `normal_normal_summary`
+### Normal mean with known variance: posterior and credible interval from a sample mean, `normal_normal_summary`
 
 Posterior mean, standard deviation, credible interval and shrinkage factor of a normal mean from the sample mean of n observations with known sigma and a normal prior.
 
@@ -1813,7 +1813,7 @@ bayesian_statistics_ai999x.solve('normal_normal_summary', prior_mean=100, prior_
 
 <a id="normal_posterior_predictive"></a>
 
-### Posterior predictive distribution of a new observation — `normal_posterior_predictive`
+### Posterior predictive distribution of a new observation, `normal_posterior_predictive`
 
 Mean, standard deviation and tail probabilities of the next observation in the normal model with known sigma, after a sample mean of n observations and a normal prior.
 
@@ -1868,7 +1868,7 @@ bayesian_statistics_ai999x.solve('normal_posterior_predictive', prior_mean=10, p
 
 <a id="normal_inverse_gamma_posterior"></a>
 
-### Normal model with unknown mean and variance (normal-inverse-gamma) — `normal_inverse_gamma_posterior`
+### Normal model with unknown mean and variance (normal-inverse-gamma), `normal_inverse_gamma_posterior`
 
 Conjugate normal-inverse-gamma update for normal data with unknown mean and variance: posterior parameters, posterior mean of the variance and the Student-t credible interval for the mean.
 
@@ -1926,7 +1926,7 @@ bayesian_statistics_ai999x.solve('normal_inverse_gamma_posterior', mu0=10, kappa
 
 <a id="dirichlet_multinomial_posterior"></a>
 
-### Dirichlet-multinomial conjugate posterior — `dirichlet_multinomial_posterior`
+### Dirichlet-multinomial conjugate posterior: `dirichlet_multinomial_posterior`
 
 Update a Dirichlet(alpha_1, ..., alpha_k) prior on category probabilities with category counts: posterior concentrations, means and variances.
 
@@ -1977,7 +1977,7 @@ bayesian_statistics_ai999x.solve('dirichlet_multinomial_posterior', alpha=[2, 2,
 
 <a id="dirichlet_multinomial_evidence"></a>
 
-### Dirichlet-multinomial probability of a count vector (evidence) — `dirichlet_multinomial_evidence`
+### Dirichlet-multinomial probability of a count vector (evidence), `dirichlet_multinomial_evidence`
 
 Prior predictive probability (marginal likelihood) of observed category counts when the category probabilities have a Dirichlet prior.
 
@@ -2023,7 +2023,7 @@ bayesian_statistics_ai999x.solve('dirichlet_multinomial_evidence', alpha=[1, 1],
 
 <a id="bayes_factor_binomial_simple"></a>
 
-### Bayes factor for two simple binomial hypotheses — `bayes_factor_binomial_simple`
+### Bayes factor for two simple binomial hypotheses, `bayes_factor_binomial_simple`
 
 Bayes factor BF10 for H1: $p = p_{1}$ against H0: $p = p_{0}$ after k successes in n trials, its log10 and the posterior probability of H1 with equal prior odds.
 
@@ -2050,7 +2050,7 @@ $$
 
 ![The Bayes factor of the simple hypotheses p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-stems)
 
-*The Bayes factor of the simple hypotheses p = 0.8 against p = 0.5 for every number of successes in 20 trials (inputs chosen; the worked example has 1 trial), as log10 of the returned factor: each extra success multiplies it by the same amount, so the stems lie on a straight line. Marked: the count nearest to even evidence, k = 13.*
+*The Bayes factor of the simple hypotheses p = 0.8 against p = 0.5 for every number of successes in the worked example's 1 trials, as log10 of the returned factor: each extra success multiplies it by the same amount, so the stems lie on a straight line. Marked: the worked example's count, k = 1: log10 BF = 0.20412.*
 
 ![log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-curve)
 
@@ -2076,7 +2076,7 @@ bayesian_statistics_ai999x.solve('bayes_factor_binomial_simple', successes=14, t
 
 <a id="bayes_factor_point_null_binomial"></a>
 
-### Bayes factor for a point null on a proportion (beta prior under H1) — `bayes_factor_point_null_binomial`
+### Bayes factor for a point null on a proportion (beta prior under H1), `bayes_factor_point_null_binomial`
 
 BF10 for H1: p ~ Beta(alpha, beta) against H0: $p = p_{0}$ after k successes in n trials (default uniform prior), with BF01 and the posterior probability of H1 at equal prior odds.
 
@@ -2105,7 +2105,7 @@ $$
 
 ![The Bayes factor of a uniform alternative against the point null p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-stems)
 
-*The Bayes factor of a uniform alternative against the point null p = 0.5 for every number of successes in 20 trials (inputs chosen; the worked example has 1 trial), as log10 of the returned factor: counts near n/2 support the null, but only moderately (marked: k = 10, -0.568218), while extreme counts give strong evidence against it.*
+*The Bayes factor of a uniform alternative against the point null p = 0.5 for every number of successes in the worked example's 1 trials, as log10 of the returned factor: counts near n·p0 support the null, but only moderately, while extreme counts give strong evidence against it. Marked: the worked example's count, k = 1: 1.4465e-16.*
 
 ![log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 9](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-curve)
 
@@ -2131,7 +2131,7 @@ bayesian_statistics_ai999x.solve('bayes_factor_point_null_binomial', successes=2
 
 <a id="bayes_factor_normal_mean"></a>
 
-### Bayes factor for a normal mean (known variance) — `bayes_factor_normal_mean`
+### Bayes factor for a normal mean (known variance), `bayes_factor_normal_mean`
 
 BF10 for H1: mu ~ N(mu0, tau^2) against H0: $mu = mu0$, from the sample mean of n observations with known sigma; BF01 and the posterior probability of H1 at equal prior odds.
 
@@ -2182,7 +2182,7 @@ bayesian_statistics_ai999x.solve('bayes_factor_normal_mean', sample_mean=0.5, n=
 
 <a id="posterior_model_probabilities"></a>
 
-### Posterior model probabilities from log evidences — `posterior_model_probabilities`
+### Posterior model probabilities from log evidences, `posterior_model_probabilities`
 
 Posterior probabilities of several models from their log marginal likelihoods and prior model probabilities (default equal), computed stably in log space.
 
@@ -2205,9 +2205,9 @@ $$
 - **Assumes:** prior probabilities sum to 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior probability of model 1 of two as the difference of their natural-log evidences runs from −6 to 6 (inputs chosen; the worked example has a difference of 0 and equal priors, giving 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-curves)
+![The posterior probability of model 1 of two as the difference of their natural-log evidences runs from -6 to 6, for the worked example's priors (equal) and for priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-curves)
 
-*The posterior probability of model 1 of two as the difference of their natural-log evidences runs from −6 to 6 (inputs chosen; the worked example has a difference of 0 and equal priors, giving 0.5), for equal priors and for priors 0.8, 0.2, every value from the package. Marked: equal evidence with priors 0.8, 0.2 gives 0.8.*
+*The posterior probability of model 1 of two as the difference of their natural-log evidences runs from -6 to 6, for the worked example's priors (equal) and for priors 0.8, 0.2, every value from the package. Marked: the worked example, log evidences -1, -1 (difference 0), gives 0.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('posterior_model_probabilities', log_evidences='-1, -1')
@@ -2229,7 +2229,7 @@ bayesian_statistics_ai999x.solve('posterior_model_probabilities', log_evidences=
 
 <a id="expected_value_decision"></a>
 
-### Best action by expected monetary value — `expected_value_decision`
+### Best action by expected monetary value: `expected_value_decision`
 
 Expected payoff of each action over uncertain states with known probabilities, and the action with the highest expected value.
 
@@ -2281,7 +2281,7 @@ bayesian_statistics_ai999x.solve('expected_value_decision', payoffs=[[5, 1, 0], 
 
 <a id="decision_criteria_under_uncertainty"></a>
 
-### Decision under uncertainty: maximin, maximax, Laplace, minimax regret, Hurwicz — `decision_criteria_under_uncertainty`
+### Decision under uncertainty: maximin, maximax, Laplace, minimax regret, Hurwicz, `decision_criteria_under_uncertainty`
 
 The best action and its criterion value when state probabilities are unknown, by a stated criterion.
 
@@ -2330,7 +2330,7 @@ bayesian_statistics_ai999x.solve('decision_criteria_under_uncertainty', payoffs=
 
 <a id="expected_value_of_perfect_information"></a>
 
-### Expected value of perfect information (EVPI) — `expected_value_of_perfect_information`
+### Expected value of perfect information (EVPI), `expected_value_of_perfect_information`
 
 The most a decision maker should pay to learn the true state before acting: expected value with perfect information minus the best expected value without it.
 
@@ -2377,7 +2377,7 @@ bayesian_statistics_ai999x.solve('expected_value_of_perfect_information', payoff
 
 <a id="expected_value_of_sample_information"></a>
 
-### Expected value of sample information (EVSI) — `expected_value_of_sample_information`
+### Expected value of sample information (EVSI), `expected_value_of_sample_information`
 
 Value of an imperfect test before acting: for each possible signal, update the state probabilities by Bayes' theorem, choose the best action, and compare the expected value with that of acting now.
 
@@ -2430,7 +2430,7 @@ bayesian_statistics_ai999x.solve('expected_value_of_sample_information', payoffs
 
 <a id="bayes_action_minimum_expected_loss"></a>
 
-### Bayes action: minimum posterior expected loss — `bayes_action_minimum_expected_loss`
+### Bayes action: minimum posterior expected loss, `bayes_action_minimum_expected_loss`
 
 Posterior expected loss of each action from a loss matrix and (posterior) state probabilities; the Bayes action minimizes it.
 
@@ -2481,7 +2481,7 @@ bayesian_statistics_ai999x.solve('bayes_action_minimum_expected_loss', losses=[[
 
 <a id="certainty_equivalent_exponential_utility"></a>
 
-### Expected utility and certainty equivalent (exponential utility) — `certainty_equivalent_exponential_utility`
+### Expected utility and certainty equivalent (exponential utility), `certainty_equivalent_exponential_utility`
 
 Expected utility, certainty equivalent and risk premium of a lottery for a risk-averse decision maker with exponential utility u(x) = 1 - exp(-x/R).
 
@@ -2533,7 +2533,7 @@ bayesian_statistics_ai999x.solve('certainty_equivalent_exponential_utility', out
 
 <a id="certainty_equivalent_log_utility"></a>
 
-### Certainty equivalent with logarithmic utility — `certainty_equivalent_log_utility`
+### Certainty equivalent with logarithmic utility, `certainty_equivalent_log_utility`
 
 Expected log utility, certainty equivalent (the weighted geometric mean) and risk premium of a lottery over positive wealth levels.
 
@@ -2581,7 +2581,7 @@ bayesian_statistics_ai999x.solve('certainty_equivalent_log_utility', outcomes=[5
 
 <a id="break_even_probability"></a>
 
-### Break-even (indifference) probability of two actions — `break_even_probability`
+### Break-even (indifference) probability of two actions, `break_even_probability`
 
 The probability of state 1 at which two actions have equal expected value, and which action is preferred above it.
 
@@ -2626,7 +2626,7 @@ bayesian_statistics_ai999x.solve('break_even_probability', payoffs=[[50, 0], [20
 
 <a id="treatment_threshold"></a>
 
-### Decision threshold probability (treat / do not treat) — `treatment_threshold`
+### Decision threshold probability (treat / do not treat), `treatment_threshold`
 
 The probability above which acting (treating) has lower expected loss than not acting, from the loss of a false positive and of a false negative; the decision for a given probability.
 
@@ -2651,7 +2651,7 @@ $$
 
 ![treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-decision)
 
-*treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0.02 to 0.98 and loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 (logarithmic vertical axis): each of the 31 × 21 cells is one run of bayesian-statistics-ai999x, coloured by the verdict it returned — do not treat: 107 cells, treat: 544 cells. Other inputs as in the worked example: loss_fn = 9. Marked: the worked example, probability = 0.15, loss_fp = 1 → treat.*
+*treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0.02 to 0.98 and loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 (logarithmic vertical axis): each of the 31 × 21 cells is one run of bayesian-statistics-ai999x, coloured by the verdict it returned, do not treat: 107 cells, treat: 544 cells. Other inputs as in the worked example: loss_fn = 9. Marked: the worked example, probability = 0.15, loss_fp = 1 → treat.*
 
 ![threshold (loss_fp / (loss_fp + loss_fn)) against loss_fp (loss of acting when the condition is absent (false positive)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-curve)
 
@@ -2677,7 +2677,7 @@ bayesian_statistics_ai999x.solve('treatment_threshold', loss_fp=20, loss_fn=80)
 
 <a id="uncertainty_sum"></a>
 
-### Uncertainty of a sum or linear combination (independent inputs) — `uncertainty_sum`
+### Uncertainty of a sum or linear combination (independent inputs), `uncertainty_sum`
 
 Value and combined standard uncertainty of y = sum c_i x_i for independent inputs (default $c_i = 1$; use -1 for a difference).
 
@@ -2702,7 +2702,7 @@ $$
 
 ![A weighted sum y = Σ c_i x_i of the inputs 10, 4 with standard uncertainties 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-sum-intervals)
 
-*A weighted sum y = Σ c_i x_i of the inputs 10, 4 with standard uncertainties 0.3, 0.4 and coefficients 1, -1 (the worked example), each drawn as value ± uncertainty: the returned y = 6 ± 0.5 — uncertainties add in quadrature, so the result is less uncertain than their plain sum.*
+*A weighted sum y = Σ c_i x_i of the inputs 10, 4 with standard uncertainties 0.3, 0.4 and coefficients 1, -1 (the worked example), each drawn as value ± uncertainty: the returned y = 6 ± 0.5, uncertainties add in quadrature, so the result is less uncertain than their plain sum.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_sum', values='10, 4', uncertainties='0.3, 0.4', coefficients='1, -1')
@@ -2724,7 +2724,7 @@ bayesian_statistics_ai999x.solve('uncertainty_sum', values=[12.3, 4.5, 7.1], unc
 
 <a id="uncertainty_product_quotient"></a>
 
-### Uncertainty of a product and a quotient — `uncertainty_product_quotient`
+### Uncertainty of a product and a quotient: `uncertainty_product_quotient`
 
 Value and first-order standard uncertainty of $a b$ and a/b for independent a and b.
 
@@ -2778,7 +2778,7 @@ bayesian_statistics_ai999x.solve('uncertainty_product_quotient', a=5, ua=0.1, b=
 
 <a id="uncertainty_product_correlated"></a>
 
-### Uncertainty of a product and quotient with correlation — `uncertainty_product_correlated`
+### Uncertainty of a product and quotient with correlation, `uncertainty_product_correlated`
 
 First-order standard uncertainty of $a b$ and a/b when a and b are correlated with coefficient rho.
 
@@ -2828,7 +2828,7 @@ bayesian_statistics_ai999x.solve('uncertainty_product_correlated', a=12.0, ua=0.
 
 <a id="uncertainty_power"></a>
 
-### Uncertainty of a power x^n — `uncertainty_power`
+### Uncertainty of a power x^n, `uncertainty_power`
 
 Value, standard uncertainty and relative uncertainty of $y = x^{n}$ (first order).
 
@@ -2880,7 +2880,7 @@ bayesian_statistics_ai999x.solve('uncertainty_power', x=16, ux=0.4, exponent=0.5
 
 <a id="uncertainty_function"></a>
 
-### Uncertainty of a function of one variable — `uncertainty_function`
+### Uncertainty of a function of one variable: `uncertainty_function`
 
 Value and first-order standard uncertainty of f(x) for exp, ln, log10, sqrt, sin, cos, tan (x in radians) or $1/x.$
 
@@ -2931,7 +2931,7 @@ bayesian_statistics_ai999x.solve('uncertainty_function', x=0.0, ux=0.01, functio
 
 <a id="uncertainty_power_law"></a>
 
-### Uncertainty of a power-law product y = k x1^p1 x2^p2 ... — `uncertainty_power_law`
+### Uncertainty of a power-law product y = k x1^p1 x2^p2 ..., `uncertainty_power_law`
 
 Value and first-order uncertainty of a product of powers of independent positive inputs (relative uncertainties weighted by the exponents add in quadrature).
 
@@ -2979,7 +2979,7 @@ bayesian_statistics_ai999x.solve('uncertainty_power_law', coefficient=1, values=
 
 <a id="inverse_variance_weighted_mean"></a>
 
-### Inverse-variance weighted mean of measurements — `inverse_variance_weighted_mean`
+### Inverse-variance weighted mean of measurements, `inverse_variance_weighted_mean`
 
 Combine measurements of one quantity with different standard uncertainties: weighted mean, its uncertainty, chi-square of consistency and Birge ratio (equal to the posterior under a flat prior).
 
@@ -3003,9 +3003,9 @@ $$
 - **Assumes:** $u_i > 0$; $n  \geq  2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Four measurements 5](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/inverse-variance-weighted-mean-intervals)
+![The worked example's 2 measurements 5](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/inverse-variance-weighted-mean-intervals)
 
-*Four measurements 5.1, 4.9, 5.25, 5.02 with standard uncertainties 0.1, 0.1, 0.2, 0.05 (inputs chosen; the worked example has two), each drawn as value ± uncertainty, and the returned inverse-variance weighted mean 5.0228 ± 0.04 (bottom row and vertical line): the most precise measurement pulls hardest. Returned χ² = 3.3976, Birge ratio 1.06421.*
+*The worked example's 2 measurements 5.1, 4.9 with standard uncertainties 0.1, 0.1, each drawn as value ± uncertainty, and the returned inverse-variance weighted mean 5 ± 0.0707107 (bottom row and vertical line): the most precise measurement pulls hardest. Returned χ² = 2, Birge ratio 1.41421.*
 
 ```python
 bayesian_statistics_ai999x.solve('inverse_variance_weighted_mean', values='5.1, 4.9', uncertainties='0.1, 0.1')
@@ -3026,7 +3026,7 @@ bayesian_statistics_ai999x.solve('inverse_variance_weighted_mean', values=[10.2,
 
 <a id="uncertainty_linear_correlated"></a>
 
-### Uncertainty of a linear combination of correlated inputs — `uncertainty_linear_correlated`
+### Uncertainty of a linear combination of correlated inputs, `uncertainty_linear_correlated`
 
 Combined standard uncertainty of y = sum c_i x_i when the inputs are correlated (correlation matrix), u_y^2 = sum_ij c_i c_j u_i u_j r_ij.
 
@@ -3073,7 +3073,7 @@ bayesian_statistics_ai999x.solve('uncertainty_linear_correlated', values=[1, 2],
 
 <a id="covariance_propagation_linear"></a>
 
-### Covariance propagation through a linear map y = A x — `covariance_propagation_linear`
+### Covariance propagation through a linear map y = A x, `covariance_propagation_linear`
 
 Covariance matrix of the outputs $y = A$ x and their standard uncertainties, given the covariance matrix of x (first-order propagation with a sensitivity matrix).
 
@@ -3122,7 +3122,7 @@ bayesian_statistics_ai999x.solve('covariance_propagation_linear', matrix=[[2, 1]
 
 <a id="welch_satterthwaite_expanded_uncertainty"></a>
 
-### Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite) — `welch_satterthwaite_expanded_uncertainty`
+### Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite), `welch_satterthwaite_expanded_uncertainty`
 
 Combined standard uncertainty, Welch-Satterthwaite effective degrees of freedom, the Student-t coverage factor and the expanded uncertainty at a stated coverage probability.
 
@@ -3174,7 +3174,7 @@ bayesian_statistics_ai999x.solve('welch_satterthwaite_expanded_uncertainty', unc
 
 <a id="type_b_standard_uncertainty"></a>
 
-### Type B standard uncertainty from a stated half-width — `type_b_standard_uncertainty`
+### Type B standard uncertainty from a stated half-width, `type_b_standard_uncertainty`
 
 Standard uncertainty of a quantity known only to lie within +/- a, for a rectangular, triangular or U-shaped (arcsine) distribution.
 
@@ -3224,7 +3224,7 @@ bayesian_statistics_ai999x.solve('type_b_standard_uncertainty', half_width=0.3, 
 
 <a id="lognormal_propagation"></a>
 
-### Exact versus first-order propagation through exp(X) — `lognormal_propagation`
+### Exact versus first-order propagation through exp(X), `lognormal_propagation`
 
 Mean and standard deviation of $Y = exp$(X) for normal X ~ N(mu, sigma^2), exactly (lognormal) and by first-order propagation, showing the bias of the linear approximation.
 
@@ -3275,7 +3275,7 @@ bayesian_statistics_ai999x.solve('lognormal_propagation', mu=1, sigma=0.5)
 
 <a id="product_of_normals_exact_moments"></a>
 
-### Exact mean and standard deviation of a product of independent normals — `product_of_normals_exact_moments`
+### Exact mean and standard deviation of a product of independent normals, `product_of_normals_exact_moments`
 
 Exact moments of XY for independent normal X and Y, compared with first-order propagation (which misses the sd_x sd_y term).
 
@@ -3300,9 +3300,9 @@ $$
 - **Assumes:** independent normal inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The standard deviation of the product of independent normals X (mean 2) and Y (mean 3, sd 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curves)
+![The standard deviation of the product of independent normals X (mean 0) and Y (mean 0, sd 1) (the worked example's), as the sd of X runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curves)
 
-*The standard deviation of the product of independent normals X (mean 2) and Y (mean 3, sd 0.5) as the sd of X runs from 0.05 to 3 (inputs chosen; the worked example has zero means, where the first-order value vanishes): exact and first-order values, each from the package. Marked: sd of X = 1, exact 3.20156, first order 3.16228.*
+*The standard deviation of the product of independent normals X (mean 0) and Y (mean 0, sd 1) (the worked example's), as the sd of X runs from 0.06 to 3: exact and first-order values, each from the package (with zero means the first-order value vanishes). Marked: the worked example's sd of X = 1, exact 1, first order 0.*
 
 ![exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against mean_x (mean of X) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curve)
 
@@ -3327,7 +3327,7 @@ bayesian_statistics_ai999x.solve('product_of_normals_exact_moments', mean_x=10, 
 
 <a id="monte_carlo_sample_size"></a>
 
-### Number of Monte Carlo draws for a target accuracy — `monte_carlo_sample_size`
+### Number of Monte Carlo draws for a target accuracy, `monte_carlo_sample_size`
 
 How many independent draws make the half-width of the confidence interval of a Monte Carlo mean at most the stated value, given the standard deviation of one draw.
 
@@ -3374,7 +3374,7 @@ bayesian_statistics_ai999x.solve('monte_carlo_sample_size', sigma=1, half_width=
 
 <a id="monte_carlo_integration"></a>
 
-### Monte Carlo estimate of an integral from uniform samples — `monte_carlo_integration`
+### Monte Carlo estimate of an integral from uniform samples, `monte_carlo_integration`
 
 Estimate of the integral of f over [a, b] from f evaluated at n points drawn uniformly on [a, b], with its Monte Carlo standard error.
 
@@ -3398,9 +3398,13 @@ $$
 - **Assumes:** $b > a$; $n  \geq  2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Monte Carlo estimates of the integral of f(x) = x² over [0, 2] (inputs chosen: the values f at x = 2·h_i, where h_i are the package's first 256 one-dimensional Halton points) from the first n = 4, 8, 16, 32, 64, 128, 256 values, each estimate and standard error returned by the package; the band narrows like 1/√n](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-convergence)
+![estimate ((b - a) times the mean of f) against upper (upper limit b (> a)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-curve)
 
-*Monte Carlo estimates of the integral of f(x) = x² over [0, 2] (inputs chosen: the values f at x = 2·h_i, where h_i are the package's first 256 one-dimensional Halton points) from the first n = 4, 8, 16, 32, 64, 128, 256 values, each estimate and standard error returned by the package; the band narrows like 1/√n. Marked: n = 256, 2.65106 ± 0.148815.*
+*estimate ((b - a) times the mean of f) against upper (upper limit b (> a)) from 1 to 3. One curve for each value of lower (lower limit a): 0, -0.5, 0.5. Other inputs as in the worked example: values = 1, 3. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, upper = 2, estimate = 4.*
+
+![estimate ((b - a) times the mean of f) over upper (upper limit b (> a)) from 1 to 3 and lower (lower limit a) from -1 to 1: each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-field)
+
+*estimate ((b - a) times the mean of f) over upper (upper limit b (> a)) from 1 to 3 and lower (lower limit a) from -1 to 1: each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0.2 to dark 8); iso-lines at estimate = 2, 4, 6; blank cells: inputs the capability refuses. Other inputs as in the worked example: values = 1, 3. Marked: the worked example, upper = 2, lower = 0, estimate = 4.*
 
 ```python
 bayesian_statistics_ai999x.solve('monte_carlo_integration', values='1, 3', lower=0, upper=2)
@@ -3421,7 +3425,7 @@ bayesian_statistics_ai999x.solve('monte_carlo_integration', values=[3, 5, 4, 6],
 
 <a id="importance_sampling_estimate"></a>
 
-### Importance sampling estimate and effective sample size — `importance_sampling_estimate`
+### Importance sampling estimate and effective sample size, `importance_sampling_estimate`
 
 Self-normalized and plain importance-sampling estimates of E_p[f] from draws of a proposal q, with the effective sample size of the weights p/q.
 
@@ -3468,7 +3472,7 @@ bayesian_statistics_ai999x.solve('importance_sampling_estimate', values=[1, 2, 3
 
 <a id="control_variate_estimate"></a>
 
-### Control-variate Monte Carlo estimate — `control_variate_estimate`
+### Control-variate Monte Carlo estimate: `control_variate_estimate`
 
 Variance-reduced estimate of E[Y] from paired draws (y_i, c_i) of the output and a control variate with known mean: optimal coefficient, estimate and the fraction of variance left $(1 - r^{2})$.
 
@@ -3493,9 +3497,9 @@ $$
 - **Assumes:** outputs and control vary; $n  \geq  3$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A control-variate estimate for paired draws y = 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/control-variate-estimate-fit)
+![A control-variate estimate for the worked example's paired draws y = 1, 2, 3 and c = 1, 2, 3 with the known mean of c = 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/control-variate-estimate-fit)
 
-*A control-variate estimate for paired draws y = 3.2, 5.1, 4.4, 7.9, 6.1, 4.0 and c = 1.1, 2.0, 1.9, 3.6, 2.8, 1.5 with the known mean of c = 2.5 (inputs chosen; the worked example's y and c are identical): the line through the sample means (c̄ = 2.15, ȳ = 5.1167, derived) with the returned slope 1.83676 is read at the known mean, giving the returned estimate 5.75953 instead of the plain mean 5.11667; returned variance reduction 0.0140049.*
+*A control-variate estimate for the worked example's paired draws y = 1, 2, 3 and c = 1, 2, 3 with the known mean of c = 2.5: the line through the sample means (c̄ = 2, ȳ = 2, derived) with the returned slope 1 is read at the known mean, giving the returned estimate 2.5 instead of the plain mean 2; returned variance reduction 0.*
 
 ```python
 bayesian_statistics_ai999x.solve('control_variate_estimate', y='1, 2, 3', c='1, 2, 3', control_mean=2.5)
@@ -3516,7 +3520,7 @@ bayesian_statistics_ai999x.solve('control_variate_estimate', y=[2.1, 3.9, 6.2, 8
 
 <a id="stratified_sampling_estimate"></a>
 
-### Stratified sampling estimate and standard error — `stratified_sampling_estimate`
+### Stratified sampling estimate and standard error, `stratified_sampling_estimate`
 
 Estimate of a mean from strata with known weights, the sample mean, standard deviation and size of each stratum, and its standard error.
 
@@ -3563,7 +3567,7 @@ bayesian_statistics_ai999x.solve('stratified_sampling_estimate', weights=[0.5, 0
 
 <a id="halton_point"></a>
 
-### Point of the Halton low-discrepancy sequence — `halton_point`
+### Point of the Halton low-discrepancy sequence, `halton_point`
 
 Coordinates of the point with a given index in the (unscrambled) Halton sequence of a given dimension: the radical inverses of the index in the first prime bases (index 0 is the origin).
 
@@ -3608,7 +3612,7 @@ bayesian_statistics_ai999x.solve('halton_point', index=1, dimension=2)
 
 <a id="sobol_indices_ishigami"></a>
 
-### Sobol sensitivity indices of the Ishigami function — `sobol_indices_ishigami`
+### Sobol sensitivity indices of the Ishigami function, `sobol_indices_ishigami`
 
 Exact first-order and total Sobol indices and the variance of the Ishigami test function $f = sin$ $x_{1} + a$ $sin^{2}$ $x_{2} + b$ $x_{3}^{4}$ sin x1 with x_i uniform on [-pi, pi].
 
@@ -3662,7 +3666,7 @@ bayesian_statistics_ai999x.solve('sobol_indices_ishigami', a=0, b=0)
 
 <a id="sobol_indices_g_function"></a>
 
-### Sobol indices of Sobol's G-function — `sobol_indices_g_function`
+### Sobol indices of Sobol's G-function: `sobol_indices_g_function`
 
 Exact first-order and total Sobol indices and the variance of the G-function prod_i (|4 $x_i - 2$| + a_i)/(1 + a_i), x_i uniform on [0, 1].
 
@@ -3684,9 +3688,9 @@ $$
 - **Assumes:** $a_i  \geq  0$; independent uniform inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sobol' indices of the g-function with importance parameters a = 0, 1, 4](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-g-function-bars)
+![The worked example of Sobol indices of Sobol's G-function as inputs and results: stated a = 0; returned by bayesian-statistics-ai999x: first_order = [1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-g-function-io)
 
-*Sobol' indices of the g-function with importance parameters a = 0, 1, 4.5, 9 (chosen; the worked example has a single input, which then carries everything): returned first-order indices 0.7165, 0.1791, 0.0237, 0.0072 and total-order indices 0.7874, 0.2423, 0.0343, 0.0105, output variance 0.465229. A larger a makes an input less important; total exceeds first order by the interactions.*
+*The worked example of Sobol indices of Sobol's G-function as inputs and results: stated a = 0; returned by bayesian-statistics-ai999x: first_order = [1.0], total_order = [1.0], variance = 0.333333.*
 
 ```python
 bayesian_statistics_ai999x.solve('sobol_indices_g_function', a='0')
@@ -3707,7 +3711,7 @@ bayesian_statistics_ai999x.solve('sobol_indices_g_function', a=[0, 0])
 
 <a id="sobol_indices_linear_model"></a>
 
-### Sobol indices of a linear (additive) model — `sobol_indices_linear_model`
+### Sobol indices of a linear (additive) model, `sobol_indices_linear_model`
 
 First-order Sobol indices of y = sum a_i x_i with independent inputs of given standard deviations (S_i = a_i^2 sigma_i^2 / Var y; they sum to 1).
 
@@ -3752,7 +3756,7 @@ bayesian_statistics_ai999x.solve('sobol_indices_linear_model', coefficients=[2, 
 
 <a id="sobol_indices_interaction_model"></a>
 
-### Sobol indices of a model with an interaction term — `sobol_indices_interaction_model`
+### Sobol indices of a model with an interaction term, `sobol_indices_interaction_model`
 
 First-order, interaction and total Sobol indices of $y = a_{1}$ $x_{1} + a_{2}$ $x_{2} + a12$ x1 x2 with independent normal inputs x1 ~ N(mean1, sd1^2), x2 ~ N(mean2, sd2^2).
 
@@ -3783,9 +3787,9 @@ $$
 - **Assumes:** independent normal inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sobol' indices of y = a1 x1 + a2 x2 + a12 x1 x2 with a1 = 1, a2 = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-bars)
+![Sobol' indices of y = a1 x1 + a2 x2 + a12 x1 x2 with the worked example's a1 = 0, a2 = 0, a12 = 1 and inputs x1 ~ N(0, 1²), x2 ~ N(0, 1²): returned S1 = 0, S2 = 0, S12 = 1, ST1 = 1, ST2 = 1, variance 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-bars)
 
-*Sobol' indices of y = a1 x1 + a2 x2 + a12 x1 x2 with a1 = 1, a2 = 0.5, a12 = 0.8 and standard normal inputs (chosen; the worked example has only the interaction term, which then carries everything): returned S1 = 0.529101, S2 = 0.132275, S12 = 0.338624, ST1 = 0.867725, ST2 = 0.470899, variance 1.89. Each total index adds the interaction share to the first-order one (the interaction bar repeats S12).*
+*Sobol' indices of y = a1 x1 + a2 x2 + a12 x1 x2 with the worked example's a1 = 0, a2 = 0, a12 = 1 and inputs x1 ~ N(0, 1²), x2 ~ N(0, 1²): returned S1 = 0, S2 = 0, S12 = 1, ST1 = 1, ST2 = 1, variance 1. Each total index adds the interaction share to the first-order one (the interaction bar repeats S12).*
 
 ![S1 (first-order index of x1) against a1 (coefficient of x1) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-curve)
 
@@ -3810,7 +3814,7 @@ bayesian_statistics_ai999x.solve('sobol_indices_interaction_model', a1=1, a2=2, 
 
 <a id="morris_elementary_effects"></a>
 
-### Morris elementary-effects screening — `morris_elementary_effects`
+### Morris elementary-effects screening: `morris_elementary_effects`
 
 Mean, mean absolute value (mu*) and standard deviation of the elementary effects from one-at-a-time trajectories: in each row, output $j+1$ is the model at the previous point with input j raised by delta.
 
@@ -3860,7 +3864,7 @@ bayesian_statistics_ai999x.solve('morris_elementary_effects', outputs=[[10, 12],
 
 <a id="kl_divergence_normal"></a>
 
-### Kullback-Leibler divergence between two normal distributions — `kl_divergence_normal`
+### Kullback-Leibler divergence between two normal distributions, `kl_divergence_normal`
 
 KL(N1 || N2) and KL(N2 || N1), e.g. the information gained from a normal prior to a normal posterior.
 
@@ -3911,7 +3915,7 @@ bayesian_statistics_ai999x.solve('kl_divergence_normal', mean1=0, sd1=1, mean2=1
 
 <a id="kl_divergence_beta"></a>
 
-### Kullback-Leibler divergence between two beta distributions — `kl_divergence_beta`
+### Kullback-Leibler divergence between two beta distributions, `kl_divergence_beta`
 
 KL(Beta(alpha1, beta1) || Beta(alpha2, beta2)): for example the information gained from a beta prior (distribution 2) to a beta posterior (distribution 1).
 
@@ -3936,7 +3940,7 @@ $$
 
 ![The two Beta densities of the worked example; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-density)
 
-*The two Beta densities of the worked example; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned divergence KL(P‖Q) = 0.193147 nats and, with the two swapped, KL(Q‖P) = 0.306853 nats — the divergence is not symmetric.*
+*The two Beta densities of the worked example; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned divergence KL(P‖Q) = 0.193147 nats and, with the two swapped, KL(Q‖P) = 0.306853 nats, the divergence is not symmetric.*
 
 ![kl (KL divergence in nats) against alpha1 (alpha of distribution 1) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-curve)
 
@@ -3961,7 +3965,7 @@ bayesian_statistics_ai999x.solve('kl_divergence_beta', alpha1=8, beta1=4, alpha2
 
 <a id="gauss_hermite_rule"></a>
 
-### Gauss-Hermite rule for expectations under a normal distribution — `gauss_hermite_rule`
+### Gauss-Hermite rule for expectations under a normal distribution, `gauss_hermite_rule`
 
 Nodes and weights of the n-point Gauss-Hermite rule for E[f(Z)], Z standard normal (probabilists' Hermite polynomials; weights sum to 1; exact for polynomials of degree up to 2n - 1). For N(mu, sigma^2) use mu + sigma x_i.
 
@@ -3982,9 +3986,9 @@ $$
 - **Assumes:** $1  \leq  n  \leq  40$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Gauss–Hermite rules with n = 3, 6 and 10 nodes (inputs chosen; the worked example has n = 2): each node with its weight as a stem, all returned by the package (n = 3: nodes ±1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-stems)
+![Gauss–Hermite rules with n = 2, 4, 8 nodes (the worked example's n = 2 and wider ones): each node with its weight as a stem, all returned by the package (n = 2: nodes ±1 at most, largest weight 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-stems)
 
-*Gauss–Hermite rules with n = 3, 6 and 10 nodes (inputs chosen; the worked example has n = 2): each node with its weight as a stem, all returned by the package (n = 3: nodes ±1.7321 at most, largest weight 0.6667, weights summing to 1; n = 6: nodes ±3.3243 at most, largest weight 0.4088, weights summing to 1; n = 10: nodes ±4.8595 at most, largest weight 0.3446, weights summing to 1, the sum being derived). Wider rules reach further into the tails with ever smaller weights.*
+*Gauss–Hermite rules with n = 2, 4, 8 nodes (the worked example's n = 2 and wider ones): each node with its weight as a stem, all returned by the package (n = 2: nodes ±1 at most, largest weight 0.5, weights summing to 1; n = 4: nodes ±2.3344 at most, largest weight 0.4541, weights summing to 1; n = 8: nodes ±4.1445 at most, largest weight 0.373, weights summing to 1, the sum being derived). Wider rules reach further into the tails with ever smaller weights.*
 
 ```python
 bayesian_statistics_ai999x.solve('gauss_hermite_rule', n=2)
@@ -4005,7 +4009,7 @@ bayesian_statistics_ai999x.solve('gauss_hermite_rule', n=3)
 
 <a id="polynomial_of_normal_moments"></a>
 
-### Exact mean and variance of a polynomial of a normal variable — `polynomial_of_normal_moments`
+### Exact mean and variance of a polynomial of a normal variable, `polynomial_of_normal_moments`
 
 Exact mean, variance and standard deviation of $Y = c_{0} + c_{1}$ $X + ... + c_{6}$ $X^{6}$ for X ~ N(mean, sd^2) (nonlinear uncertainty propagation without linearization).
 
@@ -4056,7 +4060,7 @@ bayesian_statistics_ai999x.solve('polynomial_of_normal_moments', coefficients=[0
 
 <a id="probability_rate_greater_gamma"></a>
 
-### Probability that one Poisson rate exceeds another (gamma posteriors) — `probability_rate_greater_gamma`
+### Probability that one Poisson rate exceeds another (gamma posteriors), `probability_rate_greater_gamma`
 
 P(lambda_1 > lambda_2) for independent Gamma(shape, rate) posteriors of two Poisson rates, and the ratio of their posterior means.
 
@@ -4081,9 +4085,9 @@ $$
 - **Assumes:** all parameters > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Two gamma posteriors for rates (inputs chosen: shape 12, rate 2 and shape 8, rate 2); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-rate-greater-gamma-density)
+![Two gamma posteriors for rates (the worked example: shape 5, rate 1 and shape 5, rate 1); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-rate-greater-gamma-density)
 
-*Two gamma posteriors for rates (inputs chosen: shape 12, rate 2 and shape 8, rate 2); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned P(λ1 > λ2) = 0.820358, and the posterior mean of λ1/λ2 = 1.5.*
+*Two gamma posteriors for rates (the worked example: shape 5, rate 1 and shape 5, rate 1); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned P(λ1 > λ2) = 0.5, and the posterior mean of λ1/λ2 = 1.*
 
 ```python
 bayesian_statistics_ai999x.solve('probability_rate_greater_gamma', shape1=5, rate1=1, shape2=5, rate2=1)

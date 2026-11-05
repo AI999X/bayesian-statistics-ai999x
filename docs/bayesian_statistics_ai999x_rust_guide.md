@@ -1,4 +1,4 @@
-# bayesian-statistics: the Bayesian Statistics program — user guide
+# bayesian-statistics: the Bayesian Statistics program, user guide
 
 **bayesian-statistics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Bayesian Statistics covers Bayes' theorem, conjugate priors and posteriors, cred
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Bayesian Statistics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip |
-| Desktop app: Bayesian Statistics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Bayesian Statistics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-bayesian-statistics-1.5.0-windows-x86_64.zip |
+| Desktop app: Bayesian Statistics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-bayesian-statistics-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Bayesian Statistics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-bayesian-statistics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Bayesian Statistics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-bayesian-statistics-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-bayesian-statistics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-bayesian-statistics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
-./ai999x-bayesian-statistics-1.4.0-linux-x86_64/ai999x-bayesian-statistics
+tar xzf ai999x-bayesian-statistics-1.5.0-linux-x86_64.tar.gz
+./ai999x-bayesian-statistics-1.5.0-linux-x86_64/ai999x-bayesian-statistics
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `bayesian-statistics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 bayesian-statistics --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 bayesian-statistics --version
 ```
@@ -96,10 +96,46 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ bayesian-statistics --version
-bayesian-statistics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+bayesian-statistics-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
-### 2.2 List the capabilities
+### 2.2 Ask in words
+
+Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```shell
+$ bayesian-statistics ask "A test has sensitivity 0.9 and specificity 0.95; the prevalence is 0.01. What is the positive predictive value?"
+Read as: Positive and negative predictive values of a test
+ppv = 0.1538461538
+npv = 0.9989378651
+p_positive = 0.0585
+false_discovery_rate = 0.8461538462
+false_omission_rate = 0.001062134891
+  by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
+  prevalence = 0.01
+  sensitivity = 0.9
+  specificity = 0.95
+  assumes: probabilities between 0 and 1; both results possible
+```
+
+### 2.3 Find a capability
+
+Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
+
+```shell
+$ bayesian-statistics search "positive and negative predictive values of a test"
+diagnostic_test_predictive_values    Positive and negative predictive values of a test  (Bayes' theorem and conditional probability)
+gamma_poisson_predictive             Posterior predictive count (negative binomial)  (conjugate priors: gamma-Poisson and gamma-exponential)
+likelihood_ratios                    Likelihood ratios of a diagnostic test  (odds and likelihood ratios)
+sequential_test_posterior            Posterior after repeated independent tests  (Bayes' theorem and conditional probability)
+beta_binomial_predictive             Posterior predictive probability (beta-binomial)  (conjugate priors: beta-binomial)
+normal_posterior_predictive          Posterior predictive distribution of a new observation  (conjugate priors: normal models)
+ab_test_probability_beta             Bayesian A/B test: probability that A beats B  (conjugate priors: beta-binomial)
+posterior_from_likelihood_ratio      Post-test probability from a likelihood ratio  (odds and likelihood ratios)
+… 10 more
+```
+
+### 2.4 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -113,10 +149,10 @@ bayes_factor_point_null_binomial         Bayes factor for a point null on a prop
 bayes_theorem                            Bayes' theorem for an event and its complement
 beta_binomial_credible_interval          Credible interval for a proportion (beta-binomial)
 beta_binomial_evidence                   Marginal likelihood (evidence) of binomial data under a beta prior
-… 69 more
+… 70 more
 ```
 
-### 2.3 What a capability needs
+### 2.5 What a capability needs
 
 The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
@@ -134,7 +170,7 @@ Positive and negative predictive values of a test
   out  false_omission_rate 1 - NPV [1]
 ```
 
-### 2.4 Solve
+### 2.6 Solve
 
 Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
@@ -146,13 +182,13 @@ p_positive = 0.0585
 false_discovery_rate = 0.8461538462
 false_omission_rate = 0.001062134891
   by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
-  prevalence = 0.01   []
-  sensitivity = 0.9   []
-  specificity = 0.95   []
+  prevalence = 0.01
+  sensitivity = 0.9
+  specificity = 0.95
   assumes: probabilities between 0 and 1; both results possible
 ```
 
-### 2.5 Machine-readable answer
+### 2.7 Machine-readable answer
 
 --json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
 
@@ -161,7 +197,7 @@ $ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 se
 {"outcome":"SOLVED","message":"","value":0.153846153846,"unit":"","solved_for":"ppv","si":[["prevalence",0.01],["sensitivity",0.9],["specificity",0.95]],"values":[["ppv",0.153846153846,""],["npv",0.998937865109,""],["p_positive",0.0585,""],["false_discovery_rate",0.846153846154,""],["false_omission_rate",0.00106213489113,""]],"target":"ppv","phrase":"positive predictive value P(condition | positive)","assumptions":["probabilities between 0 and 1","both results possible"],"name":"Positive and negative predictive values of a test","equation":"Bayes' theorem with the total probability of a positive result"}
 ```
 
-### 2.6 When an input is missing
+### 2.8 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
@@ -170,7 +206,7 @@ $ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 se
 NEEDS_INPUT: diagnostic_test_predictive_values needs specificity (specificity P(negative | no condition)). Example: solve('diagnostic_test_predictive_values', prevalence=0.01, sensitivity=0.9, specificity=0.95).
 ```
 
-### 2.7 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch
 
@@ -266,7 +302,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="bayes_factor_normal_mean"></a>
 
-#### Bayes factor for a normal mean (known variance) — `bayes_factor_normal_mean`
+#### Bayes factor for a normal mean (known variance), `bayes_factor_normal_mean`
 
 BF10 for H1: mu ~ N(mu0, tau^2) against H0: mu = mu0, from the sample mean of n observations with known sigma; BF01 and the posterior probability of H1 at equal prior odds.
 
@@ -276,15 +312,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sample_mean` | in | sample mean | — |
-| `n` | in | sample size (>= 1) | — |
-| `sigma` | in | known standard deviation (> 0) | — |
-| `mu0` | in | null value mu0 | — |
-| `prior_sd` | in | prior standard deviation tau of mu under H1 (> 0) | — |
-| `bf10` | out | Bayes factor H1 : H0 | — |
-| `bf01` | out | 1/BF10 | — |
-| `log10_bf10` | out | log10 BF10 | — |
-| `posterior_h1` | out | P(H1 \| data) with prior odds 1 | — |
+| `sample_mean` | in | sample mean | - |
+| `n` | in | sample size (>= 1) | - |
+| `sigma` | in | known standard deviation (> 0) | - |
+| `mu0` | in | null value mu0 | - |
+| `prior_sd` | in | prior standard deviation tau of mu under H1 (> 0) | - |
+| `bf10` | out | Bayes factor H1 : H0 | - |
+| `bf01` | out | 1/BF10 | - |
+| `log10_bf10` | out | log10 BF10 | - |
+| `posterior_h1` | out | P(H1 \| data) with prior odds 1 | - |
 
 **Applies when:** sigma, tau > 0; n >= 1.
 
@@ -295,10 +331,10 @@ bf01 = 1.414213562
 log10_bf10 = -0.1505149978
 posterior_h1 = 0.4142135624
   by: Bayes factor for a normal mean (known variance)  (Savage-Dickey density ratio of the posterior and prior at mu0)
-  sample_mean = 0   []
-  sigma = 1   []
-  mu0 = 0   []
-  prior_sd = 1   []
+  sample_mean = 0
+  sigma = 1
+  mu0 = 0
+  prior_sd = 1
   assumes: sigma, tau > 0; n >= 1
 ```
 
@@ -306,7 +342,7 @@ posterior_h1 = 0.4142135624
 
 <a id="bayes_factor_point_null_binomial"></a>
 
-#### Bayes factor for a point null on a proportion (beta prior under H1) — `bayes_factor_point_null_binomial`
+#### Bayes factor for a point null on a proportion (beta prior under H1), `bayes_factor_point_null_binomial`
 
 BF10 for H1: p ~ Beta(alpha, beta) against H0: p = p0 after k successes in n trials (default uniform prior), with BF01 and the posterior probability of H1 at equal prior odds.
 
@@ -316,15 +352,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `successes` | in | successes k | — |
-| `trials` | in | trials n (>= 1) | — |
-| `p0` | in | null value p0 | — |
-| `alpha` | in | Beta alpha under H1 (default 1) (optional) | — |
-| `beta` | in | Beta beta under H1 (default 1) (optional) | — |
-| `bf10` | out | Bayes factor H1 : H0 | — |
-| `bf01` | out | 1/BF10 | — |
-| `log10_bf10` | out | log10 BF10 | — |
-| `posterior_h1` | out | P(H1 \| data) with prior odds 1 | — |
+| `successes` | in | successes k | - |
+| `trials` | in | trials n (>= 1) | - |
+| `p0` | in | null value p0 | - |
+| `alpha` | in | Beta alpha under H1 (default 1) (optional) | - |
+| `beta` | in | Beta beta under H1 (default 1) (optional) | - |
+| `bf10` | out | Bayes factor H1 : H0 | - |
+| `bf01` | out | 1/BF10 | - |
+| `log10_bf10` | out | log10 BF10 | - |
+| `posterior_h1` | out | P(H1 \| data) with prior odds 1 | - |
 
 **Applies when:** 0 < p0 < 1; alpha, beta > 0; 0 <= k <= n.
 
@@ -335,9 +371,9 @@ bf01 = 0.75
 log10_bf10 = 0.1249387366
 posterior_h1 = 0.5714285714
   by: Bayes factor for a point null on a proportion (beta prior under H1)  (ratio of the beta-binomial marginal likelihood to the binomial likelihood at p0)
-  p0 = 0.5   []
-  alpha = 1   []
-  beta = 1   []
+  p0 = 0.5
+  alpha = 1
+  beta = 1
   assumes: 0 < p0 < 1; alpha, beta > 0; 0 <= k <= n
 ```
 
@@ -345,7 +381,7 @@ posterior_h1 = 0.5714285714
 
 <a id="bayes_factor_binomial_simple"></a>
 
-#### Bayes factor for two simple binomial hypotheses — `bayes_factor_binomial_simple`
+#### Bayes factor for two simple binomial hypotheses, `bayes_factor_binomial_simple`
 
 Bayes factor BF10 for H1: p = p1 against H0: p = p0 after k successes in n trials, its log10 and the posterior probability of H1 with equal prior odds.
 
@@ -355,13 +391,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `successes` | in | successes k | — |
-| `trials` | in | trials n (>= 1) | — |
-| `p0` | in | success probability under H0 | — |
-| `p1` | in | success probability under H1 | — |
-| `bf10` | out | Bayes factor H1 : H0 | — |
-| `log10_bf10` | out | log10 of BF10 | — |
-| `posterior_h1` | out | P(H1 \| data) with prior odds 1 | — |
+| `successes` | in | successes k | - |
+| `trials` | in | trials n (>= 1) | - |
+| `p0` | in | success probability under H0 | - |
+| `p1` | in | success probability under H1 | - |
+| `bf10` | out | Bayes factor H1 : H0 | - |
+| `log10_bf10` | out | log10 of BF10 | - |
+| `posterior_h1` | out | P(H1 \| data) with prior odds 1 | - |
 
 **Applies when:** 0 < p0, p1 < 1; 0 <= k <= n.
 
@@ -371,8 +407,8 @@ bf10 = 5.184417905
 log10_bf10 = 0.7147000018
 posterior_h1 = 0.8383032946
   by: Bayes factor for two simple binomial hypotheses  (likelihood ratio of the two simple hypotheses)
-  p0 = 0.5   []
-  p1 = 0.7   []
+  p0 = 0.5
+  p1 = 0.7
   assumes: 0 < p0, p1 < 1; 0 <= k <= n
 ```
 
@@ -380,7 +416,7 @@ posterior_h1 = 0.8383032946
 
 <a id="beta_binomial_evidence"></a>
 
-#### Marginal likelihood (evidence) of binomial data under a beta prior — `beta_binomial_evidence`
+#### Marginal likelihood (evidence) of binomial data under a beta prior, `beta_binomial_evidence`
 
 Prior predictive probability of k successes in n trials when p ~ Beta(alpha, beta), and its logarithm.
 
@@ -390,12 +426,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | prior Beta alpha (> 0) | — |
-| `beta` | in | prior Beta beta (> 0) | — |
-| `successes` | in | number of successes k | — |
-| `trials` | in | number of trials n | — |
-| `marginal_likelihood` | out | P(k \| n, alpha, beta) | — |
-| `log_marginal_likelihood` | out | its natural log | — |
+| `alpha` | in | prior Beta alpha (> 0) | - |
+| `beta` | in | prior Beta beta (> 0) | - |
+| `successes` | in | number of successes k | - |
+| `trials` | in | number of trials n | - |
+| `marginal_likelihood` | out | P(k \| n, alpha, beta) | - |
+| `log_marginal_likelihood` | out | its natural log | - |
 
 **Applies when:** alpha, beta > 0; 0 <= k <= n.
 
@@ -404,8 +440,8 @@ $ bayesian-statistics solve beta_binomial_evidence alpha=1 beta=1 successes=7 tr
 marginal_likelihood = 0.09090909091
 log_marginal_likelihood = -2.397895273
   by: Marginal likelihood (evidence) of binomial data under a beta prior  (closed form with log-beta functions)
-  alpha = 1   []
-  beta = 1   []
+  alpha = 1
+  beta = 1
   assumes: alpha, beta > 0; 0 <= k <= n
 ```
 
@@ -413,7 +449,7 @@ log_marginal_likelihood = -2.397895273
 
 <a id="posterior_model_probabilities"></a>
 
-#### Posterior model probabilities from log evidences — `posterior_model_probabilities`
+#### Posterior model probabilities from log evidences, `posterior_model_probabilities`
 
 Posterior probabilities of several models from their log marginal likelihoods and prior model probabilities (default equal), computed stably in log space.
 
@@ -423,11 +459,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `log_evidences` | in | natural-log marginal likelihoods of the models | — |
-| `priors` | in | prior model probabilities (default equal) (optional) | — |
-| `posterior` | out | posterior model probabilities | — |
-| `best_model` | out | number of the most probable model | — |
-| `best_probability` | out | its posterior probability | — |
+| `log_evidences` | in | natural-log marginal likelihoods of the models | - |
+| `priors` | in | prior model probabilities (default equal) (optional) | - |
+| `posterior` | out | posterior model probabilities | - |
+| `best_model` | out | number of the most probable model | - |
+| `best_probability` | out | its posterior probability | - |
 
 **Applies when:** prior probabilities sum to 1.
 
@@ -444,7 +480,7 @@ best_probability = 0.3333333333
 
 <a id="posterior_from_bayes_factor"></a>
 
-#### Posterior probability of a hypothesis from a Bayes factor — `posterior_from_bayes_factor`
+#### Posterior probability of a hypothesis from a Bayes factor, `posterior_from_bayes_factor`
 
 Posterior probability of H1 from the Bayes factor BF10 and the prior probability of H1 (default 1/2).
 
@@ -454,11 +490,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `bayes_factor` | in | Bayes factor BF10 in favour of H1 (> 0) | — |
-| `prior` | in | prior probability of H1 (default 0.5) (optional) | — |
-| `posterior` | out | posterior probability of H1 | — |
-| `posterior_odds` | out | posterior odds H1 : H0 | — |
-| `posterior_h0` | out | posterior probability of H0 | — |
+| `bayes_factor` | in | Bayes factor BF10 in favour of H1 (> 0) | - |
+| `prior` | in | prior probability of H1 (default 0.5) (optional) | - |
+| `posterior` | out | posterior probability of H1 | - |
+| `posterior_odds` | out | posterior odds H1 : H0 | - |
+| `posterior_h0` | out | posterior probability of H0 | - |
 
 **Applies when:** BF10 > 0; 0 < prior < 1.
 
@@ -468,8 +504,8 @@ posterior = 0.8571428571
 posterior_odds = 6
 posterior_h0 = 0.1428571429
   by: Posterior probability of a hypothesis from a Bayes factor  (posterior odds = BF10 x prior odds)
-  bayes_factor = 6   []
-  prior = 0.5   []
+  bayes_factor = 6
+  prior = 0.5
   assumes: BF10 > 0; 0 < prior < 1
 ```
 
@@ -479,7 +515,7 @@ posterior_h0 = 0.1428571429
 
 <a id="bayes_theorem"></a>
 
-#### Bayes' theorem for an event and its complement — `bayes_theorem`
+#### Bayes' theorem for an event and its complement, `bayes_theorem`
 
 The posterior probability P(A|B) from the prior P(A) and the likelihoods P(B|A) and P(B|not A).
 
@@ -489,12 +525,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `p_a` | in | prior probability P(A) | — |
-| `p_b_given_a` | in | likelihood P(B\|A) | — |
-| `p_b_given_not_a` | in | likelihood P(B\|not A) | — |
-| `p_a_given_b` | out | posterior probability P(A\|B) | — |
-| `p_b` | out | total probability P(B) | — |
-| `p_not_a_given_b` | out | P(not A\|B) = 1 - P(A\|B) | — |
+| `p_a` | in | prior probability P(A) | - |
+| `p_b_given_a` | in | likelihood P(B\|A) | - |
+| `p_b_given_not_a` | in | likelihood P(B\|not A) | - |
+| `p_a_given_b` | out | posterior probability P(A\|B) | - |
+| `p_b` | out | total probability P(B) | - |
+| `p_not_a_given_b` | out | P(not A\|B) = 1 - P(A\|B) | - |
 
 **Applies when:** probabilities between 0 and 1; P(B) > 0.
 
@@ -504,9 +540,9 @@ p_a_given_b = 0.7741935484
 p_b = 0.31
 p_not_a_given_b = 0.2258064516
   by: Bayes' theorem for an event and its complement  (law of total probability for P(B), then Bayes' theorem)
-  p_a = 0.3   []
-  p_b_given_a = 0.8   []
-  p_b_given_not_a = 0.1   []
+  p_a = 0.3
+  p_b_given_a = 0.8
+  p_b_given_not_a = 0.1
   assumes: probabilities between 0 and 1; P(B) > 0
 ```
 
@@ -514,7 +550,7 @@ p_not_a_given_b = 0.2258064516
 
 <a id="total_probability"></a>
 
-#### Law of total probability — `total_probability`
+#### Law of total probability: `total_probability`
 
 P(B) = sum of P(B|A_i) P(A_i) over a partition A_1, ..., A_k (and the joint probabilities).
 
@@ -524,10 +560,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `priors` | in | probabilities P(A_i) of the partition (sum to 1) | — |
-| `conditionals` | in | conditional probabilities P(B\|A_i), one per part | — |
-| `p_b` | out | total probability P(B) | — |
-| `joint` | out | joint probabilities P(B and A_i) | — |
+| `priors` | in | probabilities P(A_i) of the partition (sum to 1) | - |
+| `conditionals` | in | conditional probabilities P(B\|A_i), one per part | - |
+| `p_b` | out | total probability P(B) | - |
+| `joint` | out | joint probabilities P(B and A_i) | - |
 
 **Applies when:** the P(A_i) sum to 1; same number of conditionals as parts.
 
@@ -543,7 +579,7 @@ joint = [0.005,0.006,0.01]
 
 <a id="diagnostic_test_predictive_values"></a>
 
-#### Positive and negative predictive values of a test — `diagnostic_test_predictive_values`
+#### Positive and negative predictive values of a test, `diagnostic_test_predictive_values`
 
 The probability of the condition after a positive result (PPV) and of no condition after a negative one (NPV), from prevalence, sensitivity and specificity.
 
@@ -553,14 +589,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prevalence` | in | prevalence (pre-test probability of the condition) | — |
-| `sensitivity` | in | sensitivity P(positive \| condition) | — |
-| `specificity` | in | specificity P(negative \| no condition) | — |
-| `ppv` | out | positive predictive value P(condition \| positive) | — |
-| `npv` | out | negative predictive value P(no condition \| negative) | — |
-| `p_positive` | out | probability of a positive result | — |
-| `false_discovery_rate` | out | 1 - PPV | — |
-| `false_omission_rate` | out | 1 - NPV | — |
+| `prevalence` | in | prevalence (pre-test probability of the condition) | - |
+| `sensitivity` | in | sensitivity P(positive \| condition) | - |
+| `specificity` | in | specificity P(negative \| no condition) | - |
+| `ppv` | out | positive predictive value P(condition \| positive) | - |
+| `npv` | out | negative predictive value P(no condition \| negative) | - |
+| `p_positive` | out | probability of a positive result | - |
+| `false_discovery_rate` | out | 1 - PPV | - |
+| `false_omission_rate` | out | 1 - NPV | - |
 
 **Applies when:** probabilities between 0 and 1; both results possible.
 
@@ -572,9 +608,9 @@ p_positive = 0.0585
 false_discovery_rate = 0.8461538462
 false_omission_rate = 0.001062134891
   by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
-  prevalence = 0.01   []
-  sensitivity = 0.9   []
-  specificity = 0.95   []
+  prevalence = 0.01
+  sensitivity = 0.9
+  specificity = 0.95
   assumes: probabilities between 0 and 1; both results possible
 ```
 
@@ -582,7 +618,7 @@ false_omission_rate = 0.001062134891
 
 <a id="sequential_test_posterior"></a>
 
-#### Posterior after repeated independent tests — `sequential_test_posterior`
+#### Posterior after repeated independent tests, `sequential_test_posterior`
 
 Probability of the condition after several conditionally independent test results (k positive and m negative), by multiplying the pre-test odds by LR+ for each positive and LR- for each negative.
 
@@ -592,13 +628,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prevalence` | in | prevalence (pre-test probability of the condition) | — |
-| `sensitivity` | in | sensitivity P(positive \| condition) | — |
-| `specificity` | in | specificity P(negative \| no condition) | — |
-| `positives` | in | number of positive results | — |
-| `negatives` | in | number of negative results (default 0) (optional) | — |
-| `posterior` | out | probability of the condition after all results | — |
-| `posterior_odds` | out | its odds | — |
+| `prevalence` | in | prevalence (pre-test probability of the condition) | - |
+| `sensitivity` | in | sensitivity P(positive \| condition) | - |
+| `specificity` | in | specificity P(negative \| no condition) | - |
+| `positives` | in | number of positive results | - |
+| `negatives` | in | number of negative results (default 0) (optional) | - |
+| `posterior` | out | probability of the condition after all results | - |
+| `posterior_odds` | out | its odds | - |
 
 **Applies when:** 0 < prevalence < 1; results conditionally independent given the status.
 
@@ -607,9 +643,9 @@ $ bayesian-statistics solve sequential_test_posterior prevalence=0.01 sensitivit
 posterior = 0.7659574468
 posterior_odds = 3.272727273
   by: Posterior after repeated independent tests  (odds form, applied once per result (in log space))
-  prevalence = 0.01   []
-  sensitivity = 0.9   []
-  specificity = 0.95   []
+  prevalence = 0.01
+  sensitivity = 0.9
+  specificity = 0.95
   assumes: 0 < prevalence < 1; results conditionally independent given the status
 ```
 
@@ -617,7 +653,7 @@ posterior_odds = 3.272727273
 
 <a id="discrete_bayes_posterior"></a>
 
-#### Posterior over several discrete hypotheses — `discrete_bayes_posterior`
+#### Posterior over several discrete hypotheses, `discrete_bayes_posterior`
 
 Posterior probabilities of k hypotheses from their priors and the likelihood of the observed data under each; the evidence and the most probable hypothesis (MAP).
 
@@ -627,12 +663,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `priors` | in | prior probabilities of the hypotheses (sum to 1) | — |
-| `likelihoods` | in | likelihood of the data under each hypothesis | — |
-| `posterior` | out | posterior probabilities | — |
-| `evidence` | out | marginal probability of the data | — |
-| `map_hypothesis` | out | number (1-based) of the most probable hypothesis | — |
-| `map_probability` | out | its posterior probability | — |
+| `priors` | in | prior probabilities of the hypotheses (sum to 1) | - |
+| `likelihoods` | in | likelihood of the data under each hypothesis | - |
+| `posterior` | out | posterior probabilities | - |
+| `evidence` | out | marginal probability of the data | - |
+| `map_hypothesis` | out | number (1-based) of the most probable hypothesis | - |
+| `map_probability` | out | its posterior probability | - |
 
 **Applies when:** priors sum to 1; likelihoods >= 0, not all zero where the prior is positive.
 
@@ -652,7 +688,7 @@ map_probability = 0.4516129032
 
 <a id="ab_test_probability_beta"></a>
 
-#### Bayesian A/B test: probability that A beats B — `ab_test_probability_beta`
+#### Bayesian A/B test: probability that A beats B, `ab_test_probability_beta`
 
 P(p_A > p_B) for independent Beta posteriors of two success probabilities (alpha_b a whole number, as after a uniform or any integer-parameter prior).
 
@@ -662,12 +698,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha_a` | in | posterior alpha of A | — |
-| `beta_a` | in | posterior beta of A | — |
-| `alpha_b` | in | posterior alpha of B (whole number) | — |
-| `beta_b` | in | posterior beta of B | — |
-| `prob_a_greater` | out | P(p_A > p_B) | — |
-| `prob_b_greater` | out | P(p_B > p_A) | — |
+| `alpha_a` | in | posterior alpha of A | - |
+| `beta_a` | in | posterior beta of A | - |
+| `alpha_b` | in | posterior alpha of B (whole number) | - |
+| `beta_b` | in | posterior beta of B | - |
+| `prob_a_greater` | out | P(p_A > p_B) | - |
+| `prob_b_greater` | out | P(p_B > p_A) | - |
 
 **Applies when:** all parameters > 0; alpha_b a whole number.
 
@@ -676,10 +712,10 @@ $ bayesian-statistics solve ab_test_probability_beta alpha_a=1 beta_a=1 alpha_b=
 prob_a_greater = 0.5
 prob_b_greater = 0.5
   by: Bayesian A/B test: probability that A beats B  (exact finite sum of beta functions (Miller's formula))
-  alpha_a = 1   []
-  beta_a = 1   []
-  alpha_b = 1   []
-  beta_b = 1   []
+  alpha_a = 1
+  beta_a = 1
+  alpha_b = 1
+  beta_b = 1
   assumes: all parameters > 0; alpha_b a whole number
 ```
 
@@ -687,7 +723,7 @@ prob_b_greater = 0.5
 
 <a id="beta_binomial_posterior"></a>
 
-#### Beta-binomial conjugate posterior — `beta_binomial_posterior`
+#### Beta-binomial conjugate posterior: `beta_binomial_posterior`
 
 Update a Beta(alpha, beta) prior on a success probability with k successes in n trials: posterior parameters, mean, variance and standard deviation.
 
@@ -697,15 +733,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | prior Beta alpha (> 0) | — |
-| `beta` | in | prior Beta beta (> 0) | — |
-| `successes` | in | number of successes k | — |
-| `trials` | in | number of trials n | — |
-| `post_alpha` | out | posterior alpha = alpha + k | — |
-| `post_beta` | out | posterior beta = beta + n - k | — |
-| `posterior_mean` | out | posterior mean | — |
-| `posterior_variance` | out | posterior variance | — |
-| `posterior_sd` | out | posterior standard deviation | — |
+| `alpha` | in | prior Beta alpha (> 0) | - |
+| `beta` | in | prior Beta beta (> 0) | - |
+| `successes` | in | number of successes k | - |
+| `trials` | in | number of trials n | - |
+| `post_alpha` | out | posterior alpha = alpha + k | - |
+| `post_beta` | out | posterior beta = beta + n - k | - |
+| `posterior_mean` | out | posterior mean | - |
+| `posterior_variance` | out | posterior variance | - |
+| `posterior_sd` | out | posterior standard deviation | - |
 
 **Applies when:** alpha, beta > 0; 0 <= k <= n.
 
@@ -717,8 +753,8 @@ posterior_mean = 0.6428571429
 posterior_variance = 0.01530612245
 posterior_sd = 0.1237179148
   by: Beta-binomial conjugate posterior  (conjugate update of the beta prior with the binomial likelihood)
-  alpha = 2   []
-  beta = 2   []
+  alpha = 2
+  beta = 2
   assumes: alpha, beta > 0; 0 <= k <= n
 ```
 
@@ -726,7 +762,7 @@ posterior_sd = 0.1237179148
 
 <a id="dirichlet_multinomial_posterior"></a>
 
-#### Dirichlet-multinomial conjugate posterior — `dirichlet_multinomial_posterior`
+#### Dirichlet-multinomial conjugate posterior: `dirichlet_multinomial_posterior`
 
 Update a Dirichlet(alpha_1, ..., alpha_k) prior on category probabilities with category counts: posterior concentrations, means and variances.
 
@@ -736,11 +772,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | prior concentrations alpha_j (> 0) | — |
-| `counts` | in | observed category counts | — |
-| `post_alpha` | out | alpha_j + n_j | — |
-| `posterior_means` | out | posterior means (alpha_j + n_j)/(alpha_0 + n) | — |
-| `posterior_variances` | out | posterior variances | — |
+| `alpha` | in | prior concentrations alpha_j (> 0) | - |
+| `counts` | in | observed category counts | - |
+| `post_alpha` | out | alpha_j + n_j | - |
+| `posterior_means` | out | posterior means (alpha_j + n_j)/(alpha_0 + n) | - |
+| `posterior_variances` | out | posterior variances | - |
 
 **Applies when:** alpha_j > 0; counts whole numbers >= 0; same length.
 
@@ -757,7 +793,7 @@ posterior_variances = [0.0113378684807,0.00927643784787,0.00700886415172]
 
 <a id="dirichlet_multinomial_evidence"></a>
 
-#### Dirichlet-multinomial probability of a count vector (evidence) — `dirichlet_multinomial_evidence`
+#### Dirichlet-multinomial probability of a count vector (evidence), `dirichlet_multinomial_evidence`
 
 Prior predictive probability (marginal likelihood) of observed category counts when the category probabilities have a Dirichlet prior.
 
@@ -767,10 +803,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | prior concentrations (> 0) | — |
-| `counts` | in | category counts | — |
-| `probability` | out | P(counts \| alpha) | — |
-| `log_probability` | out | its natural log | — |
+| `alpha` | in | prior concentrations (> 0) | - |
+| `counts` | in | category counts | - |
+| `probability` | out | P(counts \| alpha) | - |
+| `log_probability` | out | its natural log | - |
 
 **Applies when:** alpha_j > 0; counts whole numbers >= 0.
 
@@ -786,7 +822,7 @@ log_probability = -2.302585093
 
 <a id="gamma_exponential_posterior"></a>
 
-#### Gamma-exponential conjugate posterior of a rate — `gamma_exponential_posterior`
+#### Gamma-exponential conjugate posterior of a rate, `gamma_exponential_posterior`
 
 Update a Gamma(shape, rate) prior on the rate of exponential waiting times with observed times.
 
@@ -796,14 +832,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | prior shape (> 0) | — |
-| `rate` | in | prior rate (> 0) | — |
-| `times` | in | observed waiting times (> 0) | — |
-| `post_shape` | out | shape + n | — |
-| `post_rate` | out | rate + sum of times | — |
-| `posterior_mean` | out | posterior mean of the rate | — |
-| `posterior_variance` | out | posterior variance | — |
-| `posterior_sd` | out | posterior standard deviation | — |
+| `shape` | in | prior shape (> 0) | - |
+| `rate` | in | prior rate (> 0) | - |
+| `times` | in | observed waiting times (> 0) | - |
+| `post_shape` | out | shape + n | - |
+| `post_rate` | out | rate + sum of times | - |
+| `posterior_mean` | out | posterior mean of the rate | - |
+| `posterior_variance` | out | posterior variance | - |
+| `posterior_sd` | out | posterior standard deviation | - |
 
 **Applies when:** shape, rate > 0; times > 0.
 
@@ -815,8 +851,8 @@ posterior_mean = 1.428571429
 posterior_variance = 0.4081632653
 posterior_sd = 0.638876565
   by: Gamma-exponential conjugate posterior of a rate  (conjugate update of the gamma prior with the exponential likelihood)
-  shape = 2   []
-  rate = 1   []
+  shape = 2
+  rate = 1
   assumes: shape, rate > 0; times > 0
 ```
 
@@ -824,7 +860,7 @@ posterior_sd = 0.638876565
 
 <a id="gamma_poisson_posterior"></a>
 
-#### Gamma-Poisson conjugate posterior of a rate — `gamma_poisson_posterior`
+#### Gamma-Poisson conjugate posterior of a rate, `gamma_poisson_posterior`
 
 Update a Gamma(shape, rate) prior on a Poisson rate with observed counts: posterior parameters, mean, variance and standard deviation.
 
@@ -834,14 +870,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | prior shape alpha (> 0) | — |
-| `rate` | in | prior rate beta (> 0) | — |
-| `counts` | in | observed counts (whole numbers), one per unit interval | — |
-| `post_shape` | out | alpha + sum of counts | — |
-| `post_rate` | out | beta + number of intervals | — |
-| `posterior_mean` | out | posterior mean of the rate | — |
-| `posterior_variance` | out | posterior variance | — |
-| `posterior_sd` | out | posterior standard deviation | — |
+| `shape` | in | prior shape alpha (> 0) | - |
+| `rate` | in | prior rate beta (> 0) | - |
+| `counts` | in | observed counts (whole numbers), one per unit interval | - |
+| `post_shape` | out | alpha + sum of counts | - |
+| `post_rate` | out | beta + number of intervals | - |
+| `posterior_mean` | out | posterior mean of the rate | - |
+| `posterior_variance` | out | posterior variance | - |
+| `posterior_sd` | out | posterior standard deviation | - |
 
 **Applies when:** shape, rate > 0; counts whole numbers >= 0.
 
@@ -853,8 +889,8 @@ posterior_mean = 3.5
 posterior_variance = 0.875
 posterior_sd = 0.9354143467
   by: Gamma-Poisson conjugate posterior of a rate  (conjugate update of the gamma prior with the Poisson likelihood)
-  shape = 2   []
-  rate = 1   []
+  shape = 2
+  rate = 1
   assumes: shape, rate > 0; counts whole numbers >= 0
 ```
 
@@ -862,7 +898,7 @@ posterior_sd = 0.9354143467
 
 <a id="rule_of_succession"></a>
 
-#### Laplace's rule of succession — `rule_of_succession`
+#### Laplace's rule of succession: `rule_of_succession`
 
 Probability that the next trial is a success after k successes in n trials, with a uniform prior on the success probability: (k + 1)/(n + 2).
 
@@ -872,10 +908,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `successes` | in | number of successes k | — |
-| `trials` | in | number of trials n | — |
-| `p_next` | out | posterior predictive probability that the next trial succeeds | — |
-| `mle` | out | observed proportion k/n (none when n = 0) | — |
+| `successes` | in | number of successes k | - |
+| `trials` | in | number of trials n | - |
+| `p_next` | out | posterior predictive probability that the next trial succeeds | - |
+| `mle` | out | observed proportion k/n (none when n = 0) | - |
 
 **Applies when:** 0 <= k <= n; uniform Beta(1, 1) prior.
 
@@ -891,7 +927,7 @@ In the worked example, successes = 7, trials = 10 go through the equation above 
 
 <a id="map_gamma_poisson"></a>
 
-#### MAP estimate of a Poisson rate (gamma prior) — `map_gamma_poisson`
+#### MAP estimate of a Poisson rate (gamma prior), `map_gamma_poisson`
 
 Posterior mode of a Poisson rate with a Gamma(shape, rate) prior and observed counts, with the MLE and the posterior mean for comparison.
 
@@ -901,12 +937,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | prior shape (> 0) | — |
-| `rate` | in | prior rate (> 0) | — |
-| `counts` | in | observed counts | — |
-| `map` | out | (shape + sum - 1)/(rate + n) | — |
-| `mle` | out | sample mean of the counts | — |
-| `posterior_mean` | out | (shape + sum)/(rate + n) | — |
+| `shape` | in | prior shape (> 0) | - |
+| `rate` | in | prior rate (> 0) | - |
+| `counts` | in | observed counts | - |
+| `map` | out | (shape + sum - 1)/(rate + n) | - |
+| `mle` | out | sample mean of the counts | - |
+| `posterior_mean` | out | (shape + sum)/(rate + n) | - |
 
 **Applies when:** shape + sum of counts > 1.
 
@@ -916,8 +952,8 @@ map = 3.25
 mle = 4
 posterior_mean = 3.5
   by: MAP estimate of a Poisson rate (gamma prior)  (stationary point of the log posterior)
-  shape = 2   []
-  rate = 1   []
+  shape = 2
+  rate = 1
   assumes: shape + sum of counts > 1
 ```
 
@@ -925,7 +961,7 @@ posterior_mean = 3.5
 
 <a id="map_beta_binomial"></a>
 
-#### MAP estimate of a proportion (beta-binomial) — `map_beta_binomial`
+#### MAP estimate of a proportion (beta-binomial), `map_beta_binomial`
 
 The posterior mode (maximum a posteriori estimate) of p after k successes in n trials with a Beta(alpha, beta) prior, with the maximum-likelihood estimate and the posterior mean for comparison.
 
@@ -935,13 +971,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | prior Beta alpha (> 0) | — |
-| `beta` | in | prior Beta beta (> 0) | — |
-| `successes` | in | number of successes k | — |
-| `trials` | in | number of trials n | — |
-| `map` | out | posterior mode (alpha + k - 1)/(alpha + beta + n - 2) | — |
-| `mle` | out | k/n | — |
-| `posterior_mean` | out | (alpha + k)/(alpha + beta + n) | — |
+| `alpha` | in | prior Beta alpha (> 0) | - |
+| `beta` | in | prior Beta beta (> 0) | - |
+| `successes` | in | number of successes k | - |
+| `trials` | in | number of trials n | - |
+| `map` | out | posterior mode (alpha + k - 1)/(alpha + beta + n - 2) | - |
+| `mle` | out | k/n | - |
+| `posterior_mean` | out | (alpha + k)/(alpha + beta + n) | - |
 
 **Applies when:** alpha + k > 1 and beta + n - k > 1 (interior mode).
 
@@ -951,8 +987,8 @@ map = 0.6666666667
 mle = 0.7
 posterior_mean = 0.6428571429
   by: MAP estimate of a proportion (beta-binomial)  (maximize the log posterior (closed form of its stationary point))
-  alpha = 2   []
-  beta = 2   []
+  alpha = 2
+  beta = 2
   assumes: alpha + k > 1 and beta + n - k > 1 (interior mode)
 ```
 
@@ -960,7 +996,7 @@ posterior_mean = 0.6428571429
 
 <a id="normal_normal_summary"></a>
 
-#### Normal mean with known variance: posterior and credible interval from a sample mean — `normal_normal_summary`
+#### Normal mean with known variance: posterior and credible interval from a sample mean, `normal_normal_summary`
 
 Posterior mean, standard deviation, credible interval and shrinkage factor of a normal mean from the sample mean of n observations with known sigma and a normal prior.
 
@@ -970,17 +1006,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prior_mean` | in | prior mean | — |
-| `prior_sd` | in | prior standard deviation (> 0) | — |
-| `sigma` | in | known standard deviation of one observation (> 0) | — |
-| `sample_mean` | in | sample mean | — |
-| `n` | in | sample size (>= 1) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `posterior_mean` | out | posterior mean | — |
-| `posterior_sd` | out | posterior standard deviation | — |
-| `lower` | out | lower credible limit | — |
-| `upper` | out | upper credible limit | — |
-| `shrinkage` | out | weight on the prior mean (sigma^2/n)/(sigma^2/n + tau0^2) | — |
+| `prior_mean` | in | prior mean | - |
+| `prior_sd` | in | prior standard deviation (> 0) | - |
+| `sigma` | in | known standard deviation of one observation (> 0) | - |
+| `sample_mean` | in | sample mean | - |
+| `n` | in | sample size (>= 1) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `posterior_mean` | out | posterior mean | - |
+| `posterior_sd` | out | posterior standard deviation | - |
+| `lower` | out | lower credible limit | - |
+| `upper` | out | upper credible limit | - |
+| `shrinkage` | out | weight on the prior mean (sigma^2/n)/(sigma^2/n + tau0^2) | - |
 
 **Applies when:** prior sd > 0; sigma > 0; n >= 1; 0 < level < 1.
 
@@ -992,11 +1028,11 @@ lower = -0.8859038244
 upper = 1.885903824
 shrinkage = 0.5
   by: Normal mean with known variance: posterior and credible interval from a sample mean  (normal-normal conjugate update, interval from normal quantiles)
-  prior_mean = 0   []
-  prior_sd = 1   []
-  sigma = 2   []
-  sample_mean = 1   []
-  level = 0.95   []
+  prior_mean = 0
+  prior_sd = 1
+  sigma = 2
+  sample_mean = 1
+  level = 0.95
   assumes: prior sd > 0; sigma > 0; n >= 1; 0 < level < 1
 ```
 
@@ -1004,7 +1040,7 @@ shrinkage = 0.5
 
 <a id="normal_normal_posterior"></a>
 
-#### Normal mean with known variance: posterior from data — `normal_normal_posterior`
+#### Normal mean with known variance: posterior from data, `normal_normal_posterior`
 
 Posterior of a normal mean theta with a N(prior mean, prior sd^2) prior, given observations with known standard deviation sigma.
 
@@ -1014,13 +1050,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prior_mean` | in | prior mean mu0 | — |
-| `prior_sd` | in | prior standard deviation tau0 (> 0) | — |
-| `sigma` | in | known standard deviation of each observation (> 0) | — |
-| `data` | in | the observations | — |
-| `posterior_mean` | out | posterior mean | — |
-| `posterior_sd` | out | posterior standard deviation | — |
-| `posterior_variance` | out | posterior variance | — |
+| `prior_mean` | in | prior mean mu0 | - |
+| `prior_sd` | in | prior standard deviation tau0 (> 0) | - |
+| `sigma` | in | known standard deviation of each observation (> 0) | - |
+| `data` | in | the observations | - |
+| `posterior_mean` | out | posterior mean | - |
+| `posterior_sd` | out | posterior standard deviation | - |
+| `posterior_variance` | out | posterior variance | - |
 
 **Applies when:** prior sd > 0; sigma > 0 known.
 
@@ -1030,9 +1066,9 @@ posterior_mean = 10.95238095
 posterior_sd = 1.309307341
 posterior_variance = 1.714285714
   by: Normal mean with known variance: posterior from data  (precision-weighted average of the prior mean and the sample mean)
-  prior_mean = 10   []
-  prior_sd = 2   []
-  sigma = 3   []
+  prior_mean = 10
+  prior_sd = 2
+  sigma = 3
   assumes: prior sd > 0; sigma > 0 known
 ```
 
@@ -1040,7 +1076,7 @@ posterior_variance = 1.714285714
 
 <a id="normal_inverse_gamma_posterior"></a>
 
-#### Normal model with unknown mean and variance (normal-inverse-gamma) — `normal_inverse_gamma_posterior`
+#### Normal model with unknown mean and variance (normal-inverse-gamma), `normal_inverse_gamma_posterior`
 
 Conjugate normal-inverse-gamma update for normal data with unknown mean and variance: posterior parameters, posterior mean of the variance and the Student-t credible interval for the mean.
 
@@ -1050,19 +1086,19 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mu0` | in | prior location of the mean | — |
-| `kappa0` | in | prior pseudo-observations for the mean (> 0) | — |
-| `alpha0` | in | prior inverse-gamma shape (> 0) | — |
-| `beta0` | in | prior inverse-gamma scale (> 0) | — |
-| `data` | in | the observations | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `mu_n` | out | posterior location | — |
-| `kappa_n` | out | kappa0 + n | — |
-| `alpha_n` | out | alpha0 + n/2 | — |
-| `beta_n` | out | posterior scale | — |
-| `sigma2_mean` | out | posterior mean of sigma^2 (alpha_n > 1) | — |
-| `lower` | out | lower credible limit for the mean | — |
-| `upper` | out | upper credible limit for the mean | — |
+| `mu0` | in | prior location of the mean | - |
+| `kappa0` | in | prior pseudo-observations for the mean (> 0) | - |
+| `alpha0` | in | prior inverse-gamma shape (> 0) | - |
+| `beta0` | in | prior inverse-gamma scale (> 0) | - |
+| `data` | in | the observations | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `mu_n` | out | posterior location | - |
+| `kappa_n` | out | kappa0 + n | - |
+| `alpha_n` | out | alpha0 + n/2 | - |
+| `beta_n` | out | posterior scale | - |
+| `sigma2_mean` | out | posterior mean of sigma^2 (alpha_n > 1) | - |
+| `lower` | out | lower credible limit for the mean | - |
+| `upper` | out | upper credible limit for the mean | - |
 
 **Applies when:** kappa0, alpha0, beta0 > 0; 0 < level < 1.
 
@@ -1076,11 +1112,11 @@ sigma2_mean = 1.5
 lower = -1.412725216
 upper = 1.412725216
   by: Normal model with unknown mean and variance (normal-inverse-gamma)  (conjugate update; marginal posterior of the mean is Student t with 2 alpha_n degrees of freedom)
-  mu0 = 0   []
-  kappa0 = 1   []
-  alpha0 = 2   []
-  beta0 = 2   []
-  level = 0.95   []
+  mu0 = 0
+  kappa0 = 1
+  alpha0 = 2
+  beta0 = 2
+  level = 0.95
   assumes: kappa0, alpha0, beta0 > 0; 0 < level < 1
 ```
 
@@ -1088,7 +1124,7 @@ upper = 1.412725216
 
 <a id="gamma_poisson_predictive"></a>
 
-#### Posterior predictive count (negative binomial) — `gamma_poisson_predictive`
+#### Posterior predictive count (negative binomial), `gamma_poisson_predictive`
 
 Probability of exactly k events in the next unit interval when the Poisson rate has a Gamma(shape, rate) posterior; the cumulative probability and the predictive mean and variance.
 
@@ -1098,13 +1134,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | posterior shape (> 0) | — |
-| `rate` | in | posterior rate (> 0) | — |
-| `events` | in | number of events k in the next interval | — |
-| `probability` | out | P(exactly k events) | — |
-| `prob_at_most` | out | P(at most k events) | — |
-| `predictive_mean` | out | shape/rate | — |
-| `predictive_variance` | out | shape/rate (1 + 1/rate) | — |
+| `shape` | in | posterior shape (> 0) | - |
+| `rate` | in | posterior rate (> 0) | - |
+| `events` | in | number of events k in the next interval | - |
+| `probability` | out | P(exactly k events) | - |
+| `prob_at_most` | out | P(at most k events) | - |
+| `predictive_mean` | out | shape/rate | - |
+| `predictive_variance` | out | shape/rate (1 + 1/rate) | - |
 
 **Applies when:** shape, rate > 0; k whole number >= 0.
 
@@ -1115,8 +1151,8 @@ prob_at_most = 0.75
 predictive_mean = 1
 predictive_variance = 2
   by: Posterior predictive count (negative binomial)  (negative binomial distribution (the Poisson averaged over the gamma posterior))
-  shape = 1   []
-  rate = 1   []
+  shape = 1
+  rate = 1
   assumes: shape, rate > 0; k whole number >= 0
 ```
 
@@ -1124,7 +1160,7 @@ predictive_variance = 2
 
 <a id="normal_posterior_predictive"></a>
 
-#### Posterior predictive distribution of a new observation — `normal_posterior_predictive`
+#### Posterior predictive distribution of a new observation, `normal_posterior_predictive`
 
 Mean, standard deviation and tail probabilities of the next observation in the normal model with known sigma, after a sample mean of n observations and a normal prior.
 
@@ -1134,16 +1170,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prior_mean` | in | prior mean | — |
-| `prior_sd` | in | prior standard deviation (> 0) | — |
-| `sigma` | in | known standard deviation (> 0) | — |
-| `sample_mean` | in | sample mean | — |
-| `n` | in | sample size (>= 1) | — |
-| `threshold` | in | value c for P(Y > c) | — |
-| `predictive_mean` | out | posterior mean | — |
-| `predictive_sd` | out | sqrt(posterior variance + sigma^2) | — |
-| `prob_above` | out | P(Y_new > c) | — |
-| `prob_below` | out | P(Y_new < c) | — |
+| `prior_mean` | in | prior mean | - |
+| `prior_sd` | in | prior standard deviation (> 0) | - |
+| `sigma` | in | known standard deviation (> 0) | - |
+| `sample_mean` | in | sample mean | - |
+| `n` | in | sample size (>= 1) | - |
+| `threshold` | in | value c for P(Y > c) | - |
+| `predictive_mean` | out | posterior mean | - |
+| `predictive_sd` | out | sqrt(posterior variance + sigma^2) | - |
+| `prob_above` | out | P(Y_new > c) | - |
+| `prob_below` | out | P(Y_new < c) | - |
 
 **Applies when:** prior sd > 0; sigma > 0; n >= 1.
 
@@ -1154,11 +1190,11 @@ predictive_sd = 2.121320344
 prob_above = 0.5
 prob_below = 0.5
   by: Posterior predictive distribution of a new observation  (predictive variance = posterior variance + sampling variance)
-  prior_mean = 0   []
-  prior_sd = 1   []
-  sigma = 2   []
-  sample_mean = 1   []
-  threshold = 0.5   []
+  prior_mean = 0
+  prior_sd = 1
+  sigma = 2
+  sample_mean = 1
+  threshold = 0.5
   assumes: prior sd > 0; sigma > 0; n >= 1
 ```
 
@@ -1166,7 +1202,7 @@ prob_below = 0.5
 
 <a id="beta_binomial_predictive"></a>
 
-#### Posterior predictive probability (beta-binomial) — `beta_binomial_predictive`
+#### Posterior predictive probability (beta-binomial), `beta_binomial_predictive`
 
 Probability of exactly j successes in m future trials when the success probability has a Beta(alpha, beta) posterior; the cumulative probability and the predictive mean.
 
@@ -1176,14 +1212,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | posterior alpha (> 0) | — |
-| `beta` | in | posterior beta (> 0) | — |
-| `future_trials` | in | number of future trials m (>= 1) | — |
-| `future_successes` | in | number of future successes j | — |
-| `probability` | out | P(exactly j successes in m trials) | — |
-| `prob_at_most` | out | P(at most j) | — |
-| `prob_more` | out | P(more than j) | — |
-| `predictive_mean` | out | expected number of successes m alpha/(alpha+beta) | — |
+| `alpha` | in | posterior alpha (> 0) | - |
+| `beta` | in | posterior beta (> 0) | - |
+| `future_trials` | in | number of future trials m (>= 1) | - |
+| `future_successes` | in | number of future successes j | - |
+| `probability` | out | P(exactly j successes in m trials) | - |
+| `prob_at_most` | out | P(at most j) | - |
+| `prob_more` | out | P(more than j) | - |
+| `predictive_mean` | out | expected number of successes m alpha/(alpha+beta) | - |
 
 **Applies when:** alpha, beta > 0; 0 <= j <= m.
 
@@ -1194,8 +1230,8 @@ prob_at_most = 0.6
 prob_more = 0.4
 predictive_mean = 2
   by: Posterior predictive probability (beta-binomial)  (beta-binomial distribution (the binomial averaged over the beta posterior))
-  alpha = 1   []
-  beta = 1   []
+  alpha = 1
+  beta = 1
   assumes: alpha, beta > 0; 0 <= j <= m
 ```
 
@@ -1203,7 +1239,7 @@ predictive_mean = 2
 
 <a id="beta_posterior_tail_probability"></a>
 
-#### Posterior probability that p exceeds a value — `beta_posterior_tail_probability`
+#### Posterior probability that p exceeds a value, `beta_posterior_tail_probability`
 
 P(p > c) and P(p < c) under a Beta(alpha, beta) posterior, optionally after k successes in n trials.
 
@@ -1213,13 +1249,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | Beta alpha (> 0) | — |
-| `beta` | in | Beta beta (> 0) | — |
-| `threshold` | in | the value c, 0 < c < 1 | — |
-| `successes` | in | successes to add (default 0) (optional) | — |
-| `trials` | in | trials to add (default 0) (optional) | — |
-| `prob_above` | out | posterior probability P(p > c) | — |
-| `prob_below` | out | posterior probability P(p < c) | — |
+| `alpha` | in | Beta alpha (> 0) | - |
+| `beta` | in | Beta beta (> 0) | - |
+| `threshold` | in | the value c, 0 < c < 1 | - |
+| `successes` | in | successes to add (default 0) (optional) | - |
+| `trials` | in | trials to add (default 0) (optional) | - |
+| `prob_above` | out | posterior probability P(p > c) | - |
+| `prob_below` | out | posterior probability P(p < c) | - |
 
 **Applies when:** alpha, beta > 0; 0 < c < 1; 0 <= k <= n.
 
@@ -1228,9 +1264,9 @@ $ bayesian-statistics solve beta_posterior_tail_probability alpha=2 beta=1 thres
 prob_above = 0.75
 prob_below = 0.25
   by: Posterior probability that p exceeds a value  (regularized incomplete beta function of the (updated) posterior)
-  alpha = 2   []
-  beta = 1   []
-  threshold = 0.5   []
+  alpha = 2
+  beta = 1
+  threshold = 0.5
   assumes: alpha, beta > 0; 0 < c < 1; 0 <= k <= n
 ```
 
@@ -1238,7 +1274,7 @@ prob_below = 0.25
 
 <a id="probability_rate_greater_gamma"></a>
 
-#### Probability that one Poisson rate exceeds another (gamma posteriors) — `probability_rate_greater_gamma`
+#### Probability that one Poisson rate exceeds another (gamma posteriors), `probability_rate_greater_gamma`
 
 P(lambda_1 > lambda_2) for independent Gamma(shape, rate) posteriors of two Poisson rates, and the ratio of their posterior means.
 
@@ -1248,13 +1284,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape1` | in | posterior shape of rate 1 | — |
-| `rate1` | in | posterior rate parameter of rate 1 | — |
-| `shape2` | in | posterior shape of rate 2 | — |
-| `rate2` | in | posterior rate parameter of rate 2 | — |
-| `prob_1_greater` | out | P(lambda_1 > lambda_2) | — |
-| `prob_2_greater` | out | P(lambda_2 > lambda_1) | — |
-| `rate_ratio_mean` | out | ratio of posterior means | — |
+| `shape1` | in | posterior shape of rate 1 | - |
+| `rate1` | in | posterior rate parameter of rate 1 | - |
+| `shape2` | in | posterior shape of rate 2 | - |
+| `rate2` | in | posterior rate parameter of rate 2 | - |
+| `prob_1_greater` | out | P(lambda_1 > lambda_2) | - |
+| `prob_2_greater` | out | P(lambda_2 > lambda_1) | - |
+| `rate_ratio_mean` | out | ratio of posterior means | - |
 
 **Applies when:** all parameters > 0.
 
@@ -1264,10 +1300,10 @@ prob_1_greater = 0.5
 prob_2_greater = 0.5
 rate_ratio_mean = 1
   by: Probability that one Poisson rate exceeds another (gamma posteriors)  (lambda_1 b_1 / (lambda_1 b_1 + lambda_2 b_2) ~ Beta(shape1, shape2): one regularized incomplete beta)
-  shape1 = 5   []
-  rate1 = 1   []
-  shape2 = 5   []
-  rate2 = 1   []
+  shape1 = 5
+  rate1 = 1
+  shape2 = 5
+  rate2 = 1
   assumes: all parameters > 0
 ```
 
@@ -1277,7 +1313,7 @@ In the worked example, shape1 = 5, rate1 = 1, shape2 = 5, rate2 = 1 go through t
 
 <a id="gamma_poisson_credible_interval"></a>
 
-#### Credible interval for a Poisson rate — `gamma_poisson_credible_interval`
+#### Credible interval for a Poisson rate: `gamma_poisson_credible_interval`
 
 Equal-tailed credible interval of a Poisson rate after observed counts with a Gamma(shape, rate) prior.
 
@@ -1287,14 +1323,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | prior shape (> 0) | — |
-| `rate` | in | prior rate (> 0) | — |
-| `counts` | in | observed counts | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `post_shape` | out | posterior shape | — |
-| `post_rate` | out | posterior rate | — |
-| `lower` | out | lower limit | — |
-| `upper` | out | upper limit | — |
+| `shape` | in | prior shape (> 0) | - |
+| `rate` | in | prior rate (> 0) | - |
+| `counts` | in | observed counts | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `post_shape` | out | posterior shape | - |
+| `post_rate` | out | posterior rate | - |
+| `lower` | out | lower limit | - |
+| `upper` | out | upper limit | - |
 
 **Applies when:** shape, rate > 0; counts whole numbers >= 0; 0 < level < 1.
 
@@ -1305,9 +1341,9 @@ post_rate = 2
 lower = 0.02564664719
 upper = 1.497866137
   by: Credible interval for a Poisson rate  (conjugate update, then gamma quantiles (inverse regularized incomplete gamma))
-  shape = 1   []
-  rate = 1   []
-  level = 0.9   []
+  shape = 1
+  rate = 1
+  level = 0.9
   assumes: shape, rate > 0; counts whole numbers >= 0; 0 < level < 1
 ```
 
@@ -1315,7 +1351,7 @@ upper = 1.497866137
 
 <a id="beta_binomial_credible_interval"></a>
 
-#### Credible interval for a proportion (beta-binomial) — `beta_binomial_credible_interval`
+#### Credible interval for a proportion (beta-binomial), `beta_binomial_credible_interval`
 
 Equal-tailed credible interval of a success probability after k successes in n trials with a Beta(alpha, beta) prior.
 
@@ -1325,15 +1361,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | prior Beta alpha (> 0) | — |
-| `beta` | in | prior Beta beta (> 0) | — |
-| `successes` | in | number of successes k | — |
-| `trials` | in | number of trials n | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `post_alpha` | out | posterior alpha | — |
-| `post_beta` | out | posterior beta | — |
-| `lower` | out | lower credible limit | — |
-| `upper` | out | upper credible limit | — |
+| `alpha` | in | prior Beta alpha (> 0) | - |
+| `beta` | in | prior Beta beta (> 0) | - |
+| `successes` | in | number of successes k | - |
+| `trials` | in | number of trials n | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `post_alpha` | out | posterior alpha | - |
+| `post_beta` | out | posterior beta | - |
+| `lower` | out | lower credible limit | - |
+| `upper` | out | upper credible limit | - |
 
 **Applies when:** alpha, beta > 0; 0 <= k <= n; 0 < level < 1.
 
@@ -1344,9 +1380,9 @@ post_beta = 1
 lower = 0.2236067978
 upper = 0.9746794345
   by: Credible interval for a proportion (beta-binomial)  (conjugate update, then beta quantiles)
-  alpha = 1   []
-  beta = 1   []
-  level = 0.9   []
+  alpha = 1
+  beta = 1
+  level = 0.9
   assumes: alpha, beta > 0; 0 <= k <= n; 0 < level < 1
 ```
 
@@ -1354,7 +1390,7 @@ In the worked example, alpha = 1, beta = 1, successes = 1, trials = 1, level = 0
 
 <a id="beta_credible_interval"></a>
 
-#### Equal-tailed credible interval of a beta distribution — `beta_credible_interval`
+#### Equal-tailed credible interval of a beta distribution, `beta_credible_interval`
 
 The central (equal-tailed) credible interval and the median of a Beta(alpha, beta) posterior.
 
@@ -1364,12 +1400,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | Beta alpha (> 0) | — |
-| `beta` | in | Beta beta (> 0) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `lower` | out | lower limit (quantile (1 - level)/2) | — |
-| `upper` | out | upper limit (quantile (1 + level)/2) | — |
-| `median` | out | posterior median | — |
+| `alpha` | in | Beta alpha (> 0) | - |
+| `beta` | in | Beta beta (> 0) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `lower` | out | lower limit (quantile (1 - level)/2) | - |
+| `upper` | out | upper limit (quantile (1 + level)/2) | - |
+| `median` | out | posterior median | - |
 
 **Applies when:** alpha, beta > 0; 0 < level < 1.
 
@@ -1379,9 +1415,9 @@ lower = 0.05
 upper = 0.95
 median = 0.5
   by: Equal-tailed credible interval of a beta distribution  (beta quantiles by safeguarded Newton inversion of the regularized incomplete beta function)
-  alpha = 1   []
-  beta = 1   []
-  level = 0.9   []
+  alpha = 1
+  beta = 1
+  level = 0.9
   assumes: alpha, beta > 0; 0 < level < 1
 ```
 
@@ -1389,7 +1425,7 @@ median = 0.5
 
 <a id="gamma_credible_interval"></a>
 
-#### Equal-tailed credible interval of a gamma distribution — `gamma_credible_interval`
+#### Equal-tailed credible interval of a gamma distribution, `gamma_credible_interval`
 
 The central credible interval and median of a Gamma(shape, rate) posterior.
 
@@ -1399,12 +1435,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | shape (> 0) | — |
-| `rate` | in | rate (> 0) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `lower` | out | lower limit | — |
-| `upper` | out | upper limit | — |
-| `median` | out | median | — |
+| `shape` | in | shape (> 0) | - |
+| `rate` | in | rate (> 0) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `lower` | out | lower limit | - |
+| `upper` | out | upper limit | - |
+| `median` | out | median | - |
 
 **Applies when:** shape, rate > 0; 0 < level < 1.
 
@@ -1414,9 +1450,9 @@ lower = 0.02564664719
 upper = 1.497866137
 median = 0.3465735903
   by: Equal-tailed credible interval of a gamma distribution  (gamma quantiles by inversion of the regularized incomplete gamma function)
-  shape = 1   []
-  rate = 2   []
-  level = 0.9   []
+  shape = 1
+  rate = 2
+  level = 0.9
   assumes: shape, rate > 0; 0 < level < 1
 ```
 
@@ -1424,7 +1460,7 @@ median = 0.3465735903
 
 <a id="beta_hdi"></a>
 
-#### Highest-density interval of a beta posterior — `beta_hdi`
+#### Highest-density interval of a beta posterior, `beta_hdi`
 
 The shortest interval holding a stated posterior probability of a unimodal Beta(alpha, beta): equal density at both ends.
 
@@ -1434,12 +1470,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | Beta alpha (> 1) | — |
-| `beta` | in | Beta beta (> 1) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `lower` | out | lower limit | — |
-| `upper` | out | upper limit | — |
-| `width` | out | interval width | — |
+| `alpha` | in | Beta alpha (> 1) | - |
+| `beta` | in | Beta beta (> 1) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `lower` | out | lower limit | - |
+| `upper` | out | upper limit | - |
+| `width` | out | interval width | - |
 
 **Applies when:** alpha > 1 and beta > 1 (unimodal, zero density at both ends); 0 < level < 1.
 
@@ -1449,9 +1485,9 @@ lower = 0.04055516641
 upper = 0.4837236593
 width = 0.4431684929
   by: Highest-density interval of a beta posterior  (bisection on the lower limit l with u = F^-1(F(l) + level) until f(l) = f(u))
-  alpha = 3   []
-  beta = 9   []
-  level = 0.95   []
+  alpha = 3
+  beta = 9
+  level = 0.95
   assumes: alpha > 1 and beta > 1 (unimodal, zero density at both ends); 0 < level < 1
 ```
 
@@ -1459,7 +1495,7 @@ width = 0.4431684929
 
 <a id="gamma_hdi"></a>
 
-#### Highest-density interval of a gamma posterior — `gamma_hdi`
+#### Highest-density interval of a gamma posterior, `gamma_hdi`
 
 The shortest interval holding a stated probability of a unimodal Gamma(shape, rate): equal density at both ends.
 
@@ -1469,12 +1505,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `shape` | in | shape (> 1) | — |
-| `rate` | in | rate (> 0) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `lower` | out | lower limit | — |
-| `upper` | out | upper limit | — |
-| `width` | out | interval width | — |
+| `shape` | in | shape (> 1) | - |
+| `rate` | in | rate (> 0) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `lower` | out | lower limit | - |
+| `upper` | out | upper limit | - |
+| `width` | out | interval width | - |
 
 **Applies when:** shape > 1; rate > 0; 0 < level < 1.
 
@@ -1484,9 +1520,9 @@ lower = 0.603480051
 upper = 4.715108491
 width = 4.11162844
   by: Highest-density interval of a gamma posterior  (bisection on the lower limit with u = G^-1(G(l) + level) until the densities are equal)
-  shape = 5   []
-  rate = 2   []
-  level = 0.95   []
+  shape = 5
+  rate = 2
+  level = 0.95
   assumes: shape > 1; rate > 0; 0 < level < 1
 ```
 
@@ -1494,7 +1530,7 @@ width = 4.11162844
 
 <a id="jeffreys_interval"></a>
 
-#### Jeffreys interval for a binomial proportion — `jeffreys_interval`
+#### Jeffreys interval for a binomial proportion, `jeffreys_interval`
 
 The equal-tailed Bayesian interval for a proportion under the Jeffreys Beta(1/2, 1/2) prior (lower limit 0 when k = 0 and upper limit 1 when k = n).
 
@@ -1504,12 +1540,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `successes` | in | number of successes k | — |
-| `trials` | in | number of trials n (>= 1) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `lower` | out | lower limit | — |
-| `upper` | out | upper limit | — |
-| `posterior_mean` | out | (k + 1/2)/(n + 1) | — |
+| `successes` | in | number of successes k | - |
+| `trials` | in | number of trials n (>= 1) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `lower` | out | lower limit | - |
+| `upper` | out | upper limit | - |
+| `posterior_mean` | out | (k + 1/2)/(n + 1) | - |
 
 **Applies when:** 0 <= k <= n; n >= 1; 0 < level < 1.
 
@@ -1519,7 +1555,7 @@ lower = 0.06487170115
 upper = 0.2553250282
 posterior_mean = 0.1470588235
   by: Jeffreys interval for a binomial proportion  (quantiles of Beta(k + 1/2, n - k + 1/2))
-  level = 0.95   []
+  level = 0.95
   assumes: 0 <= k <= n; n >= 1; 0 < level < 1
 ```
 
@@ -1529,7 +1565,7 @@ posterior_mean = 0.1470588235
 
 <a id="bayes_action_minimum_expected_loss"></a>
 
-#### Bayes action: minimum posterior expected loss — `bayes_action_minimum_expected_loss`
+#### Bayes action: minimum posterior expected loss, `bayes_action_minimum_expected_loss`
 
 Posterior expected loss of each action from a loss matrix and (posterior) state probabilities; the Bayes action minimizes it.
 
@@ -1539,11 +1575,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `losses` | in | loss matrix: one row per action, one column per state | — |
-| `probabilities` | in | posterior state probabilities (sum to 1) | — |
-| `expected_losses` | out | expected loss of each action | — |
-| `bayes_action` | out | action with least expected loss | — |
-| `bayes_risk` | out | its expected loss | — |
+| `losses` | in | loss matrix: one row per action, one column per state | - |
+| `probabilities` | in | posterior state probabilities (sum to 1) | - |
+| `expected_losses` | out | expected loss of each action | - |
+| `bayes_action` | out | action with least expected loss | - |
+| `bayes_risk` | out | its expected loss | - |
 
 **Applies when:** probabilities sum to 1.
 
@@ -1560,7 +1596,7 @@ bayes_risk = 1.5
 
 <a id="expected_value_decision"></a>
 
-#### Best action by expected monetary value — `expected_value_decision`
+#### Best action by expected monetary value: `expected_value_decision`
 
 Expected payoff of each action over uncertain states with known probabilities, and the action with the highest expected value.
 
@@ -1570,11 +1606,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `payoffs` | in | payoff matrix: one row per action, one column per state | — |
-| `probabilities` | in | state probabilities (sum to 1) | — |
-| `expected_values` | out | expected payoff of each action | — |
-| `best_action` | out | number (1-based) of the best action (first if tied) | — |
-| `best_expected_value` | out | its expected payoff | — |
+| `payoffs` | in | payoff matrix: one row per action, one column per state | - |
+| `probabilities` | in | state probabilities (sum to 1) | - |
+| `expected_values` | out | expected payoff of each action | - |
+| `best_action` | out | number (1-based) of the best action (first if tied) | - |
+| `best_expected_value` | out | its expected payoff | - |
 
 **Applies when:** probabilities sum to 1; one probability per column.
 
@@ -1591,7 +1627,7 @@ best_expected_value = 34
 
 <a id="break_even_probability"></a>
 
-#### Break-even (indifference) probability of two actions — `break_even_probability`
+#### Break-even (indifference) probability of two actions, `break_even_probability`
 
 The probability of state 1 at which two actions have equal expected value, and which action is preferred above it.
 
@@ -1601,10 +1637,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `payoffs` | in | 2 x 2 payoff matrix [[action 1 in state 1, in state 2], [action 2 ...]] | — |
-| `break_even` | out | probability of state 1 at which the expected values are equal | — |
-| `preferred_above` | out | action preferred when P(state 1) exceeds it | — |
-| `expected_value_at_break_even` | out | the common expected value there | — |
+| `payoffs` | in | 2 x 2 payoff matrix [[action 1 in state 1, in state 2], [action 2 ...]] | - |
+| `break_even` | out | probability of state 1 at which the expected values are equal | - |
+| `preferred_above` | out | action preferred when P(state 1) exceeds it | - |
+| `expected_value_at_break_even` | out | the common expected value there | - |
 
 **Applies when:** a crossing strictly between 0 and 1.
 
@@ -1621,7 +1657,7 @@ expected_value_at_break_even = 34.54545455
 
 <a id="certainty_equivalent_log_utility"></a>
 
-#### Certainty equivalent with logarithmic utility — `certainty_equivalent_log_utility`
+#### Certainty equivalent with logarithmic utility, `certainty_equivalent_log_utility`
 
 Expected log utility, certainty equivalent (the weighted geometric mean) and risk premium of a lottery over positive wealth levels.
 
@@ -1631,12 +1667,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `outcomes` | in | positive wealth levels | — |
-| `probabilities` | in | their probabilities (sum to 1) | — |
-| `expected_log_utility` | out | E[ln x] | — |
-| `certainty_equivalent` | out | exp(E[ln x]) | — |
-| `risk_premium` | out | E[x] - CE | — |
-| `expected_value` | out | E[x] | — |
+| `outcomes` | in | positive wealth levels | - |
+| `probabilities` | in | their probabilities (sum to 1) | - |
+| `expected_log_utility` | out | E[ln x] | - |
+| `certainty_equivalent` | out | exp(E[ln x]) | - |
+| `risk_premium` | out | E[x] - CE | - |
+| `expected_value` | out | E[x] | - |
 
 **Applies when:** outcomes > 0; probabilities sum to 1.
 
@@ -1654,7 +1690,7 @@ expected_value = 250
 
 <a id="treatment_threshold"></a>
 
-#### Decision threshold probability (treat / do not treat) — `treatment_threshold`
+#### Decision threshold probability (treat / do not treat), `treatment_threshold`
 
 The probability above which acting (treating) has lower expected loss than not acting, from the loss of a false positive and of a false negative; the decision for a given probability.
 
@@ -1664,11 +1700,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `loss_fp` | in | loss of acting when the condition is absent (false positive) | — |
-| `loss_fn` | in | loss of not acting when the condition is present (false negative) | — |
-| `probability` | in | probability of the condition (optional) (optional) | — |
-| `threshold` | out | loss_fp / (loss_fp + loss_fn) | — |
-| `decision` | out | treat / do not treat (if p given) | — |
+| `loss_fp` | in | loss of acting when the condition is absent (false positive) | - |
+| `loss_fn` | in | loss of not acting when the condition is present (false negative) | - |
+| `probability` | in | probability of the condition (optional) (optional) | - |
+| `threshold` | out | loss_fp / (loss_fp + loss_fn) | - |
+| `decision` | out | treat / do not treat (if p given) | - |
 
 **Applies when:** losses > 0.
 
@@ -1677,9 +1713,9 @@ $ bayesian-statistics solve treatment_threshold loss_fp=1 loss_fn=9 probability=
 threshold = 0.1
 decision = do not treat
   by: Decision threshold probability (treat / do not treat)  (equal expected losses)
-  loss_fp = 1   []
-  loss_fn = 9   []
-  probability = 0.05   []
+  loss_fp = 1
+  loss_fn = 9
+  probability = 0.05
   assumes: losses > 0
 ```
 
@@ -1687,7 +1723,7 @@ decision = do not treat
 
 <a id="decision_criteria_under_uncertainty"></a>
 
-#### Decision under uncertainty: maximin, maximax, Laplace, minimax regret, Hurwicz — `decision_criteria_under_uncertainty`
+#### Decision under uncertainty: maximin, maximax, Laplace, minimax regret, Hurwicz, `decision_criteria_under_uncertainty`
 
 The best action and its criterion value when state probabilities are unknown, by a stated criterion.
 
@@ -1697,12 +1733,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `payoffs` | in | payoff matrix: one row per action, one column per state | — |
-| `criterion` | in | maximin, maximax, laplace, minimax regret or hurwicz | — |
-| `optimism` | in | Hurwicz optimism coefficient alpha (Hurwicz only) (optional) | — |
-| `scores` | out | criterion score of each action (maximum regret for minimax regret) | — |
-| `best_action` | out | number of the chosen action (first if tied) | — |
-| `criterion_value` | out | criterion value of the chosen action | — |
+| `payoffs` | in | payoff matrix: one row per action, one column per state | - |
+| `criterion` | in | maximin, maximax, laplace, minimax regret or hurwicz | - |
+| `optimism` | in | Hurwicz optimism coefficient alpha (Hurwicz only) (optional) | - |
+| `scores` | out | criterion score of each action (maximum regret for minimax regret) | - |
+| `best_action` | out | number of the chosen action (first if tied) | - |
+| `criterion_value` | out | criterion value of the chosen action | - |
 
 **Applies when:** 0 <= alpha <= 1 for Hurwicz.
 
@@ -1720,7 +1756,7 @@ criterion_value = 30
 
 <a id="certainty_equivalent_exponential_utility"></a>
 
-#### Expected utility and certainty equivalent (exponential utility) — `certainty_equivalent_exponential_utility`
+#### Expected utility and certainty equivalent (exponential utility), `certainty_equivalent_exponential_utility`
 
 Expected utility, certainty equivalent and risk premium of a lottery for a risk-averse decision maker with exponential utility u(x) = 1 - exp(-x/R).
 
@@ -1730,13 +1766,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `outcomes` | in | monetary outcomes | — |
-| `probabilities` | in | their probabilities (sum to 1) | — |
-| `risk_tolerance` | in | risk tolerance R (> 0) | — |
-| `expected_utility` | out | E[1 - exp(-x/R)] | — |
-| `certainty_equivalent` | out | -R ln E[exp(-x/R)] | — |
-| `risk_premium` | out | expected value - certainty equivalent | — |
-| `expected_value` | out | expected value | — |
+| `outcomes` | in | monetary outcomes | - |
+| `probabilities` | in | their probabilities (sum to 1) | - |
+| `risk_tolerance` | in | risk tolerance R (> 0) | - |
+| `expected_utility` | out | E[1 - exp(-x/R)] | - |
+| `certainty_equivalent` | out | -R ln E[exp(-x/R)] | - |
+| `risk_premium` | out | expected value - certainty equivalent | - |
+| `expected_value` | out | expected value | - |
 
 **Applies when:** probabilities sum to 1; R > 0.
 
@@ -1747,7 +1783,7 @@ certainty_equivalent = 283.1095848
 risk_premium = 216.8904152
 expected_value = 500
   by: Expected utility and certainty equivalent (exponential utility)  (log-sum-exp evaluation of E[exp(-x/R)])
-  risk_tolerance = 500   []
+  risk_tolerance = 500
   assumes: probabilities sum to 1; R > 0
 ```
 
@@ -1755,7 +1791,7 @@ expected_value = 500
 
 <a id="expected_value_of_perfect_information"></a>
 
-#### Expected value of perfect information (EVPI) — `expected_value_of_perfect_information`
+#### Expected value of perfect information (EVPI), `expected_value_of_perfect_information`
 
 The most a decision maker should pay to learn the true state before acting: expected value with perfect information minus the best expected value without it.
 
@@ -1765,11 +1801,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `payoffs` | in | payoff matrix: one row per action, one column per state | — |
-| `probabilities` | in | state probabilities (sum to 1) | — |
-| `evpi` | out | expected value of perfect information | — |
-| `ev_with_perfect_information` | out | expected value of the best action in each state | — |
-| `best_expected_value` | out | best expected value without information | — |
+| `payoffs` | in | payoff matrix: one row per action, one column per state | - |
+| `probabilities` | in | state probabilities (sum to 1) | - |
+| `evpi` | out | expected value of perfect information | - |
+| `ev_with_perfect_information` | out | expected value of the best action in each state | - |
+| `best_expected_value` | out | best expected value without information | - |
 
 **Applies when:** probabilities sum to 1.
 
@@ -1786,7 +1822,7 @@ best_expected_value = 34
 
 <a id="expected_value_of_sample_information"></a>
 
-#### Expected value of sample information (EVSI) — `expected_value_of_sample_information`
+#### Expected value of sample information (EVSI), `expected_value_of_sample_information`
 
 Value of an imperfect test before acting: for each possible signal, update the state probabilities by Bayes' theorem, choose the best action, and compare the expected value with that of acting now.
 
@@ -1796,14 +1832,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `payoffs` | in | payoff matrix: one row per action, one column per state | — |
-| `priors` | in | prior state probabilities (sum to 1) | — |
-| `likelihoods` | in | likelihood matrix P(signal \| state): one row per signal, one column per state | — |
-| `evsi` | out | expected value of sample information | — |
-| `ev_with_information` | out | expected value with the test | — |
-| `ev_without_information` | out | best expected value without the test | — |
-| `signal_probabilities` | out | probability of each signal | — |
-| `best_action_per_signal` | out | best action after each signal | — |
+| `payoffs` | in | payoff matrix: one row per action, one column per state | - |
+| `priors` | in | prior state probabilities (sum to 1) | - |
+| `likelihoods` | in | likelihood matrix P(signal \| state): one row per signal, one column per state | - |
+| `evsi` | out | expected value of sample information | - |
+| `ev_with_information` | out | expected value with the test | - |
+| `ev_without_information` | out | best expected value without the test | - |
+| `signal_probabilities` | out | probability of each signal | - |
+| `best_action_per_signal` | out | best action after each signal | - |
 
 **Applies when:** priors sum to 1; each likelihood column sums to 1.
 
@@ -1824,7 +1860,7 @@ best_action_per_signal = [1,2]
 
 <a id="gauss_hermite_rule"></a>
 
-#### Gauss-Hermite rule for expectations under a normal distribution — `gauss_hermite_rule`
+#### Gauss-Hermite rule for expectations under a normal distribution, `gauss_hermite_rule`
 
 Nodes and weights of the n-point Gauss-Hermite rule for E[f(Z)], Z standard normal (probabilists' Hermite polynomials; weights sum to 1; exact for polynomials of degree up to 2n - 1). For N(mu, sigma^2) use mu + sigma x_i.
 
@@ -1834,9 +1870,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | number of nodes (1 to 40) | — |
-| `nodes` | out | nodes x_i (ascending) | — |
-| `weights` | out | weights w_i (sum to 1) | — |
+| `n` | in | number of nodes (1 to 40) | - |
+| `nodes` | out | nodes x_i (ascending) | - |
+| `weights` | out | weights w_i (sum to 1) | - |
 
 **Applies when:** 1 <= n <= 40.
 
@@ -1852,7 +1888,7 @@ In the worked example, n = 3 go through the equation above and give nodes = [-1.
 
 <a id="kl_divergence_beta"></a>
 
-#### Kullback-Leibler divergence between two beta distributions — `kl_divergence_beta`
+#### Kullback-Leibler divergence between two beta distributions, `kl_divergence_beta`
 
 KL(Beta(alpha1, beta1) || Beta(alpha2, beta2)): for example the information gained from a beta prior (distribution 2) to a beta posterior (distribution 1).
 
@@ -1862,11 +1898,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha1` | in | alpha of distribution 1 | — |
-| `beta1` | in | beta of distribution 1 | — |
-| `alpha2` | in | alpha of distribution 2 | — |
-| `beta2` | in | beta of distribution 2 | — |
-| `kl` | out | KL divergence in nats | — |
+| `alpha1` | in | alpha of distribution 1 | - |
+| `beta1` | in | beta of distribution 1 | - |
+| `alpha2` | in | alpha of distribution 2 | - |
+| `beta2` | in | beta of distribution 2 | - |
+| `kl` | out | KL divergence in nats | - |
 
 **Applies when:** all parameters > 0.
 
@@ -1874,10 +1910,10 @@ $$
 $ bayesian-statistics solve kl_divergence_beta alpha1=2 beta1=1 alpha2=1 beta2=1
 kl = 0.1931471806
   by: Kullback-Leibler divergence between two beta distributions  (closed form with log-beta and digamma functions)
-  alpha1 = 2   []
-  beta1 = 1   []
-  alpha2 = 1   []
-  beta2 = 1   []
+  alpha1 = 2
+  beta1 = 1
+  alpha2 = 1
+  beta2 = 1
   assumes: all parameters > 0
 ```
 
@@ -1885,7 +1921,7 @@ kl = 0.1931471806
 
 <a id="kl_divergence_normal"></a>
 
-#### Kullback-Leibler divergence between two normal distributions — `kl_divergence_normal`
+#### Kullback-Leibler divergence between two normal distributions, `kl_divergence_normal`
 
 KL(N1 || N2) and KL(N2 || N1), e.g. the information gained from a normal prior to a normal posterior.
 
@@ -1895,12 +1931,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mean1` | in | mean of distribution 1 | — |
-| `sd1` | in | sd of distribution 1 (> 0) | — |
-| `mean2` | in | mean of distribution 2 | — |
-| `sd2` | in | sd of distribution 2 (> 0) | — |
-| `kl_1_to_2` | out | KL(N1 \|\| N2) in nats | — |
-| `kl_2_to_1` | out | KL(N2 \|\| N1) in nats | — |
+| `mean1` | in | mean of distribution 1 | - |
+| `sd1` | in | sd of distribution 1 (> 0) | - |
+| `mean2` | in | mean of distribution 2 | - |
+| `sd2` | in | sd of distribution 2 (> 0) | - |
+| `kl_1_to_2` | out | KL(N1 \|\| N2) in nats | - |
+| `kl_2_to_1` | out | KL(N2 \|\| N1) in nats | - |
 
 **Applies when:** sd1, sd2 > 0.
 
@@ -1909,10 +1945,10 @@ $ bayesian-statistics solve kl_divergence_normal mean1=0 sd1=1 mean2=1 sd2=2
 kl_1_to_2 = 0.4431471806
 kl_2_to_1 = 1.306852819
   by: Kullback-Leibler divergence between two normal distributions  (closed form for two normals)
-  mean1 = 0   []
-  sd1 = 1   []
-  mean2 = 1   []
-  sd2 = 2   []
+  mean1 = 0
+  sd1 = 1
+  mean2 = 1
+  sd2 = 2
   assumes: sd1, sd2 > 0
 ```
 
@@ -1922,7 +1958,7 @@ kl_2_to_1 = 1.306852819
 
 <a id="control_variate_estimate"></a>
 
-#### Control-variate Monte Carlo estimate — `control_variate_estimate`
+#### Control-variate Monte Carlo estimate: `control_variate_estimate`
 
 Variance-reduced estimate of E[Y] from paired draws (y_i, c_i) of the output and a control variate with known mean: optimal coefficient, estimate and the fraction of variance left (1 - r^2).
 
@@ -1932,13 +1968,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y` | in | simulated outputs y_i | — |
-| `c` | in | control values c_i (same draws) | — |
-| `control_mean` | in | known mean of the control | — |
-| `estimate` | out | mean(y) - b (mean(c) - mu_c) | — |
-| `coefficient` | out | b = cov(y, c)/var(c) | — |
-| `plain_estimate` | out | mean(y) | — |
-| `variance_reduction` | out | variance factor 1 - r^2 | — |
+| `y` | in | simulated outputs y_i | - |
+| `c` | in | control values c_i (same draws) | - |
+| `control_mean` | in | known mean of the control | - |
+| `estimate` | out | mean(y) - b (mean(c) - mu_c) | - |
+| `coefficient` | out | b = cov(y, c)/var(c) | - |
+| `plain_estimate` | out | mean(y) | - |
+| `variance_reduction` | out | variance factor 1 - r^2 | - |
 
 **Applies when:** outputs and control vary; n >= 3.
 
@@ -1949,7 +1985,7 @@ coefficient = 1
 plain_estimate = 2
 variance_reduction = 0
   by: Control-variate Monte Carlo estimate  (regression (optimal) control-variate coefficient)
-  control_mean = 2.5   []
+  control_mean = 2.5
   assumes: outputs and control vary; n >= 3
 ```
 
@@ -1957,7 +1993,7 @@ variance_reduction = 0
 
 <a id="importance_sampling_estimate"></a>
 
-#### Importance sampling estimate and effective sample size — `importance_sampling_estimate`
+#### Importance sampling estimate and effective sample size, `importance_sampling_estimate`
 
 Self-normalized and plain importance-sampling estimates of E_p[f] from draws of a proposal q, with the effective sample size of the weights p/q.
 
@@ -1967,12 +2003,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `values` | in | f(x_i) at the draws | — |
-| `target_density` | in | target density p(x_i) (or unnormalized) | — |
-| `proposal_density` | in | proposal density q(x_i) > 0 | — |
-| `estimate` | out | self-normalized estimate sum w f / sum w | — |
-| `unnormalized_estimate` | out | mean of w f (needs normalized densities) | — |
-| `effective_sample_size` | out | (sum w)^2 / sum w^2 | — |
+| `values` | in | f(x_i) at the draws | - |
+| `target_density` | in | target density p(x_i) (or unnormalized) | - |
+| `proposal_density` | in | proposal density q(x_i) > 0 | - |
+| `estimate` | out | self-normalized estimate sum w f / sum w | - |
+| `unnormalized_estimate` | out | mean of w f (needs normalized densities) | - |
+| `effective_sample_size` | out | (sum w)^2 / sum w^2 | - |
 
 **Applies when:** q > 0; p >= 0, not all zero.
 
@@ -1989,7 +2025,7 @@ effective_sample_size = 1.6
 
 <a id="monte_carlo_integration"></a>
 
-#### Monte Carlo estimate of an integral from uniform samples — `monte_carlo_integration`
+#### Monte Carlo estimate of an integral from uniform samples, `monte_carlo_integration`
 
 Estimate of the integral of f over [a, b] from f evaluated at n points drawn uniformly on [a, b], with its Monte Carlo standard error.
 
@@ -1999,12 +2035,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `values` | in | f(x_i) at uniform sample points | — |
-| `lower` | in | lower limit a | — |
-| `upper` | in | upper limit b (> a) | — |
-| `estimate` | out | (b - a) times the mean of f | — |
-| `standard_error` | out | (b - a) s / sqrt(n) | — |
-| `n` | out | number of samples | — |
+| `values` | in | f(x_i) at uniform sample points | - |
+| `lower` | in | lower limit a | - |
+| `upper` | in | upper limit b (> a) | - |
+| `estimate` | out | (b - a) times the mean of f | - |
+| `standard_error` | out | (b - a) s / sqrt(n) | - |
+| `n` | out | number of samples | - |
 
 **Applies when:** b > a; n >= 2.
 
@@ -2014,8 +2050,8 @@ estimate = 4
 standard_error = 2
 n = 2
   by: Monte Carlo estimate of an integral from uniform samples  (sample mean of f scaled by the interval length)
-  lower = 0   []
-  upper = 2   []
+  lower = 0
+  upper = 2
   assumes: b > a; n >= 2
 ```
 
@@ -2023,7 +2059,7 @@ n = 2
 
 <a id="monte_carlo_sample_size"></a>
 
-#### Number of Monte Carlo draws for a target accuracy — `monte_carlo_sample_size`
+#### Number of Monte Carlo draws for a target accuracy, `monte_carlo_sample_size`
 
 How many independent draws make the half-width of the confidence interval of a Monte Carlo mean at most the stated value, given the standard deviation of one draw.
 
@@ -2033,12 +2069,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sigma` | in | standard deviation of one draw (> 0) | — |
-| `half_width` | in | target half-width (> 0) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `draws` | out | required number of draws (rounded up) | — |
-| `z` | out | normal quantile z_{(1+c)/2} | — |
-| `standard_error_target` | out | target standard error half_width/z | — |
+| `sigma` | in | standard deviation of one draw (> 0) | - |
+| `half_width` | in | target half-width (> 0) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `draws` | out | required number of draws (rounded up) | - |
+| `z` | out | normal quantile z_{(1+c)/2} | - |
+| `standard_error_target` | out | target standard error half_width/z | - |
 
 **Applies when:** sigma, half-width > 0; 0 < level < 1.
 
@@ -2048,9 +2084,9 @@ draws = 1537
 z = 1.959963985
 standard_error_target = 0.2551067285
   by: Number of Monte Carlo draws for a target accuracy  (n = (z sigma / E)^2, rounded up)
-  sigma = 10   []
-  half_width = 0.5   []
-  level = 0.95   []
+  sigma = 10
+  half_width = 0.5
+  level = 0.95
   assumes: sigma, half-width > 0; 0 < level < 1
 ```
 
@@ -2058,7 +2094,7 @@ standard_error_target = 0.2551067285
 
 <a id="halton_point"></a>
 
-#### Point of the Halton low-discrepancy sequence — `halton_point`
+#### Point of the Halton low-discrepancy sequence, `halton_point`
 
 Coordinates of the point with a given index in the (unscrambled) Halton sequence of a given dimension: the radical inverses of the index in the first prime bases (index 0 is the origin).
 
@@ -2068,10 +2104,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `index` | in | index of the point (0, 1, 2, ...) | — |
-| `dimension` | in | dimension (1 to 20) | — |
-| `point` | out | coordinates in [0, 1) | — |
-| `bases` | out | prime bases used | — |
+| `index` | in | index of the point (0, 1, 2, ...) | - |
+| `dimension` | in | dimension (1 to 20) | - |
+| `point` | out | coordinates in [0, 1) | - |
+| `bases` | out | prime bases used | - |
 
 **Applies when:** index >= 0; 1 <= dimension <= 20.
 
@@ -2087,7 +2123,7 @@ bases = [2.0,3.0,5.0]
 
 <a id="stratified_sampling_estimate"></a>
 
-#### Stratified sampling estimate and standard error — `stratified_sampling_estimate`
+#### Stratified sampling estimate and standard error, `stratified_sampling_estimate`
 
 Estimate of a mean from strata with known weights, the sample mean, standard deviation and size of each stratum, and its standard error.
 
@@ -2097,12 +2133,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `weights` | in | stratum weights (sum to 1) | — |
-| `means` | in | stratum sample means | — |
-| `sds` | in | stratum sample standard deviations | — |
-| `sizes` | in | stratum sample sizes | — |
-| `estimate` | out | sum W_h mean_h | — |
-| `standard_error` | out | sqrt(sum W_h^2 s_h^2 / n_h) | — |
+| `weights` | in | stratum weights (sum to 1) | - |
+| `means` | in | stratum sample means | - |
+| `sds` | in | stratum sample standard deviations | - |
+| `sizes` | in | stratum sample sizes | - |
+| `estimate` | out | sum W_h mean_h | - |
+| `standard_error` | out | sqrt(sum W_h^2 s_h^2 / n_h) | - |
 
 **Applies when:** weights sum to 1; sizes >= 1.
 
@@ -2120,7 +2156,7 @@ standard_error = 0.4979959839
 
 <a id="likelihood_ratios"></a>
 
-#### Likelihood ratios of a diagnostic test — `likelihood_ratios`
+#### Likelihood ratios of a diagnostic test: `likelihood_ratios`
 
 Positive and negative likelihood ratios and the diagnostic odds ratio from sensitivity and specificity.
 
@@ -2130,11 +2166,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sensitivity` | in | sensitivity P(positive \| condition) | — |
-| `specificity` | in | specificity P(negative \| no condition) | — |
-| `lr_positive` | out | LR+ = sensitivity / (1 - specificity) | — |
-| `lr_negative` | out | LR- = (1 - sensitivity) / specificity | — |
-| `diagnostic_odds_ratio` | out | DOR = LR+ / LR- | — |
+| `sensitivity` | in | sensitivity P(positive \| condition) | - |
+| `specificity` | in | specificity P(negative \| no condition) | - |
+| `lr_positive` | out | LR+ = sensitivity / (1 - specificity) | - |
+| `lr_negative` | out | LR- = (1 - sensitivity) / specificity | - |
+| `diagnostic_odds_ratio` | out | DOR = LR+ / LR- | - |
 
 **Applies when:** 0 < specificity < 1; sensitivity < 1.
 
@@ -2144,8 +2180,8 @@ lr_positive = 4.5
 lr_negative = 0.125
 diagnostic_odds_ratio = 36
   by: Likelihood ratios of a diagnostic test  (ratios of the probabilities of a result with and without the condition)
-  sensitivity = 0.9   []
-  specificity = 0.8   []
+  sensitivity = 0.9
+  specificity = 0.8
   assumes: 0 < specificity < 1; sensitivity < 1
 ```
 
@@ -2153,7 +2189,7 @@ diagnostic_odds_ratio = 36
 
 <a id="probability_to_odds"></a>
 
-#### Odds and log-odds of a probability — `probability_to_odds`
+#### Odds and log-odds of a probability: `probability_to_odds`
 
 The odds p/(1-p), the odds against and the log-odds (logit) of a probability.
 
@@ -2163,10 +2199,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `probability` | in | probability p, strictly between 0 and 1 | — |
-| `odds` | out | odds in favour p/(1-p) | — |
-| `odds_against` | out | odds against (1-p)/p | — |
-| `log_odds` | out | natural log-odds ln(p/(1-p)) | — |
+| `probability` | in | probability p, strictly between 0 and 1 | - |
+| `odds` | out | odds in favour p/(1-p) | - |
+| `odds_against` | out | odds against (1-p)/p | - |
+| `log_odds` | out | natural log-odds ln(p/(1-p)) | - |
 
 **Applies when:** 0 < p < 1.
 
@@ -2176,7 +2212,7 @@ odds = 0.25
 odds_against = 4
 log_odds = -1.386294361
   by: Odds and log-odds of a probability  (definition of odds)
-  probability = 0.2   []
+  probability = 0.2
   assumes: 0 < p < 1
 ```
 
@@ -2184,7 +2220,7 @@ log_odds = -1.386294361
 
 <a id="posterior_from_likelihood_ratio"></a>
 
-#### Post-test probability from a likelihood ratio — `posterior_from_likelihood_ratio`
+#### Post-test probability from a likelihood ratio, `posterior_from_likelihood_ratio`
 
 Bayes' theorem in odds form: post-test odds = pre-test odds x likelihood ratio, and the post-test probability.
 
@@ -2194,11 +2230,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prior` | in | pre-test (prior) probability, 0 < p < 1 | — |
-| `likelihood_ratio` | in | likelihood ratio (>= 0) | — |
-| `posterior` | out | post-test (posterior) probability | — |
-| `prior_odds` | out | pre-test odds | — |
-| `posterior_odds` | out | post-test odds | — |
+| `prior` | in | pre-test (prior) probability, 0 < p < 1 | - |
+| `likelihood_ratio` | in | likelihood ratio (>= 0) | - |
+| `posterior` | out | post-test (posterior) probability | - |
+| `prior_odds` | out | pre-test odds | - |
+| `posterior_odds` | out | post-test odds | - |
 
 **Applies when:** 0 < prior < 1; likelihood ratio >= 0.
 
@@ -2208,8 +2244,8 @@ posterior = 0.6
 prior_odds = 0.25
 posterior_odds = 1.5
   by: Post-test probability from a likelihood ratio  (odds form of Bayes' theorem)
-  prior = 0.2   []
-  likelihood_ratio = 6   []
+  prior = 0.2
+  likelihood_ratio = 6
   assumes: 0 < prior < 1; likelihood ratio >= 0
 ```
 
@@ -2217,7 +2253,7 @@ posterior_odds = 1.5
 
 <a id="odds_to_probability"></a>
 
-#### Probability from odds — `odds_to_probability`
+#### Probability from odds: `odds_to_probability`
 
 The probability o/(1+o) that corresponds to odds o in favour.
 
@@ -2227,9 +2263,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `odds` | in | odds in favour (>= 0) | — |
-| `probability` | out | probability o/(1+o) | — |
-| `complement` | out | 1 - probability | — |
+| `odds` | in | odds in favour (>= 0) | - |
+| `probability` | out | probability o/(1+o) | - |
+| `complement` | out | 1 - probability | - |
 
 **Applies when:** odds >= 0.
 
@@ -2238,7 +2274,7 @@ $ bayesian-statistics solve odds_to_probability odds=3
 probability = 0.75
 complement = 0.25
   by: Probability from odds  (p = o/(1+o))
-  odds = 3   []
+  odds = 3
   assumes: odds >= 0
 ```
 
@@ -2248,7 +2284,7 @@ complement = 0.25
 
 <a id="laplace_approximation_beta"></a>
 
-#### Laplace (normal) approximation of a beta posterior — `laplace_approximation_beta`
+#### Laplace (normal) approximation of a beta posterior, `laplace_approximation_beta`
 
 Approximate a Beta(alpha, beta) posterior by a normal distribution centred at its mode with variance -1/(second derivative of the log density); the approximate credible interval.
 
@@ -2258,13 +2294,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | Beta alpha (> 1) | — |
-| `beta` | in | Beta beta (> 1) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `mode` | out | posterior mode | — |
-| `laplace_sd` | out | Laplace standard deviation | — |
-| `lower` | out | approximate lower limit | — |
-| `upper` | out | approximate upper limit | — |
+| `alpha` | in | Beta alpha (> 1) | - |
+| `beta` | in | Beta beta (> 1) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `mode` | out | posterior mode | - |
+| `laplace_sd` | out | Laplace standard deviation | - |
+| `lower` | out | approximate lower limit | - |
+| `upper` | out | approximate upper limit | - |
 
 **Applies when:** alpha > 1 and beta > 1.
 
@@ -2275,9 +2311,9 @@ laplace_sd = 0.25
 lower = 0.01000900386
 upper = 0.9899909961
   by: Laplace (normal) approximation of a beta posterior  (second-order Taylor expansion of the log posterior at its mode)
-  alpha = 3   []
-  beta = 3   []
-  level = 0.95   []
+  alpha = 3
+  beta = 3
+  level = 0.95
   assumes: alpha > 1 and beta > 1
 ```
 
@@ -2287,7 +2323,7 @@ upper = 0.9899909961
 
 <a id="beta_prior_from_mean_sd"></a>
 
-#### Beta prior from a mean and standard deviation — `beta_prior_from_mean_sd`
+#### Beta prior from a mean and standard deviation, `beta_prior_from_mean_sd`
 
 The Beta(alpha, beta) prior with a stated mean and standard deviation (method of moments) and its effective prior sample size alpha + beta.
 
@@ -2297,11 +2333,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mean` | in | prior mean, 0 < m < 1 | — |
-| `sd` | in | prior standard deviation, sd^2 < m(1 - m) | — |
-| `alpha` | out | alpha | — |
-| `beta` | out | beta | — |
-| `prior_sample_size` | out | alpha + beta | — |
+| `mean` | in | prior mean, 0 < m < 1 | - |
+| `sd` | in | prior standard deviation, sd^2 < m(1 - m) | - |
+| `alpha` | out | alpha | - |
+| `beta` | out | beta | - |
+| `prior_sample_size` | out | alpha + beta | - |
 
 **Applies when:** 0 < mean < 1; 0 < sd^2 < mean (1 - mean).
 
@@ -2311,8 +2347,8 @@ alpha = 6
 beta = 14
 prior_sample_size = 20
   by: Beta prior from a mean and standard deviation  (match the beta mean and variance)
-  mean = 0.3   []
-  sd = 0.1   []
+  mean = 0.3
+  sd = 0.1
   assumes: 0 < mean < 1; 0 < sd^2 < mean (1 - mean)
 ```
 
@@ -2322,7 +2358,7 @@ prior_sample_size = 20
 
 <a id="morris_elementary_effects"></a>
 
-#### Morris elementary-effects screening — `morris_elementary_effects`
+#### Morris elementary-effects screening: `morris_elementary_effects`
 
 Mean, mean absolute value (mu*) and standard deviation of the elementary effects from one-at-a-time trajectories: in each row, output j+1 is the model at the previous point with input j raised by delta.
 
@@ -2332,11 +2368,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `outputs` | in | model outputs: one row per trajectory, k + 1 values (base point, then input 1, 2, ... raised in turn) | — |
-| `delta` | in | step delta (> 0) | — |
-| `mu` | out | mean elementary effect of each input | — |
-| `mu_star` | out | mean absolute elementary effect | — |
-| `sigma` | out | standard deviation of the elementary effects | — |
+| `outputs` | in | model outputs: one row per trajectory, k + 1 values (base point, then input 1, 2, ... raised in turn) | - |
+| `delta` | in | step delta (> 0) | - |
+| `mu` | out | mean elementary effect of each input | - |
+| `mu_star` | out | mean absolute elementary effect | - |
+| `sigma` | out | standard deviation of the elementary effects | - |
 
 **Applies when:** at least 2 trajectories; delta > 0.
 
@@ -2346,7 +2382,7 @@ mu = [0.5]
 mu_star = [1.5]
 sigma = [2.12132034356]
   by: Morris elementary-effects screening  (elementary effects EE_ij = (y_{i,j+1} - y_{ij})/delta)
-  delta = 1   []
+  delta = 1
   assumes: at least 2 trajectories; delta > 0
 ```
 
@@ -2354,7 +2390,7 @@ sigma = [2.12132034356]
 
 <a id="sobol_indices_linear_model"></a>
 
-#### Sobol indices of a linear (additive) model — `sobol_indices_linear_model`
+#### Sobol indices of a linear (additive) model, `sobol_indices_linear_model`
 
 First-order Sobol indices of y = sum a_i x_i with independent inputs of given standard deviations (S_i = a_i^2 sigma_i^2 / Var y; they sum to 1).
 
@@ -2364,10 +2400,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `coefficients` | in | model coefficients a_i | — |
-| `sds` | in | input standard deviations sigma_i (> 0) | — |
-| `first_order` | out | first-order (= total) indices | — |
-| `variance` | out | Var y | — |
+| `coefficients` | in | model coefficients a_i | - |
+| `sds` | in | input standard deviations sigma_i (> 0) | - |
+| `first_order` | out | first-order (= total) indices | - |
+| `variance` | out | Var y | - |
 
 **Applies when:** independent inputs; sigma_i > 0.
 
@@ -2383,7 +2419,7 @@ variance = 12
 
 <a id="sobol_indices_interaction_model"></a>
 
-#### Sobol indices of a model with an interaction term — `sobol_indices_interaction_model`
+#### Sobol indices of a model with an interaction term, `sobol_indices_interaction_model`
 
 First-order, interaction and total Sobol indices of y = a1 x1 + a2 x2 + a12 x1 x2 with independent normal inputs x1 ~ N(mean1, sd1^2), x2 ~ N(mean2, sd2^2).
 
@@ -2393,19 +2429,19 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a1` | in | coefficient of x1 | — |
-| `a2` | in | coefficient of x2 | — |
-| `a12` | in | interaction coefficient | — |
-| `mean1` | in | mean of x1 | — |
-| `sd1` | in | sd of x1 (> 0) | — |
-| `mean2` | in | mean of x2 | — |
-| `sd2` | in | sd of x2 (> 0) | — |
-| `S1` | out | first-order index of x1 | — |
-| `S2` | out | first-order index of x2 | — |
-| `S12` | out | interaction index | — |
-| `ST1` | out | total index of x1 | — |
-| `ST2` | out | total index of x2 | — |
-| `variance` | out | Var y | — |
+| `a1` | in | coefficient of x1 | - |
+| `a2` | in | coefficient of x2 | - |
+| `a12` | in | interaction coefficient | - |
+| `mean1` | in | mean of x1 | - |
+| `sd1` | in | sd of x1 (> 0) | - |
+| `mean2` | in | mean of x2 | - |
+| `sd2` | in | sd of x2 (> 0) | - |
+| `S1` | out | first-order index of x1 | - |
+| `S2` | out | first-order index of x2 | - |
+| `S12` | out | interaction index | - |
+| `ST1` | out | total index of x1 | - |
+| `ST2` | out | total index of x2 | - |
+| `variance` | out | Var y | - |
 
 **Applies when:** independent normal inputs.
 
@@ -2418,13 +2454,13 @@ ST1 = 1
 ST2 = 1
 variance = 1
   by: Sobol indices of a model with an interaction term  (ANOVA decomposition of the bilinear polynomial)
-  a1 = 0   []
-  a2 = 0   []
-  a12 = 1   []
-  mean1 = 0   []
-  sd1 = 1   []
-  mean2 = 0   []
-  sd2 = 1   []
+  a1 = 0
+  a2 = 0
+  a12 = 1
+  mean1 = 0
+  sd1 = 1
+  mean2 = 0
+  sd2 = 1
   assumes: independent normal inputs
 ```
 
@@ -2432,7 +2468,7 @@ In the worked example, a1 = 0, a2 = 0, a12 = 1, mean1 = 0, sd1 = 1, mean2 = 0, s
 
 <a id="sobol_indices_g_function"></a>
 
-#### Sobol indices of Sobol's G-function — `sobol_indices_g_function`
+#### Sobol indices of Sobol's G-function: `sobol_indices_g_function`
 
 Exact first-order and total Sobol indices and the variance of the G-function prod_i (|4 x_i - 2| + a_i)/(1 + a_i), x_i uniform on [0, 1].
 
@@ -2442,10 +2478,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | parameters a_i >= 0 (small a_i = important input) | — |
-| `first_order` | out | first-order indices S_i | — |
-| `total_order` | out | total indices ST_i | — |
-| `variance` | out | variance of the function | — |
+| `a` | in | parameters a_i >= 0 (small a_i = important input) | - |
+| `first_order` | out | first-order indices S_i | - |
+| `total_order` | out | total indices ST_i | - |
+| `variance` | out | variance of the function | - |
 
 **Applies when:** a_i >= 0; independent uniform inputs.
 
@@ -2462,7 +2498,7 @@ variance = 0.7777777778
 
 <a id="sobol_indices_ishigami"></a>
 
-#### Sobol sensitivity indices of the Ishigami function — `sobol_indices_ishigami`
+#### Sobol sensitivity indices of the Ishigami function, `sobol_indices_ishigami`
 
 Exact first-order and total Sobol indices and the variance of the Ishigami test function f = sin x1 + a sin^2 x2 + b x3^4 sin x1 with x_i uniform on [-pi, pi].
 
@@ -2472,15 +2508,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | parameter a (commonly 7) | — |
-| `b` | in | parameter b (commonly 0.1) | — |
-| `S1` | out | first-order index of x1 | — |
-| `S2` | out | first-order index of x2 | — |
-| `S3` | out | first-order index of x3 | — |
-| `ST1` | out | total index of x1 | — |
-| `ST2` | out | total index of x2 | — |
-| `ST3` | out | total index of x3 | — |
-| `variance` | out | variance of f | — |
+| `a` | in | parameter a (commonly 7) | - |
+| `b` | in | parameter b (commonly 0.1) | - |
+| `S1` | out | first-order index of x1 | - |
+| `S2` | out | first-order index of x2 | - |
+| `S3` | out | first-order index of x3 | - |
+| `ST1` | out | total index of x1 | - |
+| `ST2` | out | total index of x2 | - |
+| `ST3` | out | total index of x3 | - |
+| `variance` | out | variance of f | - |
 
 **Applies when:** inputs independent uniform on [-pi, pi].
 
@@ -2494,8 +2530,8 @@ ST2 = 0.4424111448
 ST3 = 0.2436836641
 variance = 13.84458794
   by: Sobol sensitivity indices of the Ishigami function  (closed-form variance decomposition)
-  a = 7   []
-  b = 0.1   []
+  a = 7
+  b = 0.1
   assumes: inputs independent uniform on [-pi, pi]
 ```
 
@@ -2505,7 +2541,7 @@ variance = 13.84458794
 
 <a id="covariance_propagation_linear"></a>
 
-#### Covariance propagation through a linear map y = A x — `covariance_propagation_linear`
+#### Covariance propagation through a linear map y = A x, `covariance_propagation_linear`
 
 Covariance matrix of the outputs y = A x and their standard uncertainties, given the covariance matrix of x (first-order propagation with a sensitivity matrix).
 
@@ -2515,10 +2551,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `matrix` | in | sensitivity (Jacobian) matrix A: one row per output | — |
-| `covariance` | in | covariance matrix of the inputs (symmetric, positive semi-definite) | — |
-| `output_covariance` | out | A Sigma A^T | — |
-| `uncertainties` | out | square roots of its diagonal | — |
+| `matrix` | in | sensitivity (Jacobian) matrix A: one row per output | - |
+| `covariance` | in | covariance matrix of the inputs (symmetric, positive semi-definite) | - |
+| `output_covariance` | out | A Sigma A^T | - |
+| `uncertainties` | out | square roots of its diagonal | - |
 
 **Applies when:** covariance symmetric positive semi-definite; columns of A = inputs.
 
@@ -2534,7 +2570,7 @@ uncertainties = [0.387298334621,0.331662479036]
 
 <a id="welch_satterthwaite_expanded_uncertainty"></a>
 
-#### Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite) — `welch_satterthwaite_expanded_uncertainty`
+#### Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite), `welch_satterthwaite_expanded_uncertainty`
 
 Combined standard uncertainty, Welch-Satterthwaite effective degrees of freedom, the Student-t coverage factor and the expanded uncertainty at a stated coverage probability.
 
@@ -2544,13 +2580,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `uncertainties` | in | uncertainty components c_i u_i (> 0) | — |
-| `dof` | in | degrees of freedom of each component (> 0) | — |
-| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | — |
-| `combined_uncertainty` | out | u_c | — |
-| `effective_dof` | out | nu_eff | — |
-| `coverage_factor` | out | k = t_{(1+p)/2, nu_eff} | — |
-| `expanded_uncertainty` | out | U = k u_c | — |
+| `uncertainties` | in | uncertainty components c_i u_i (> 0) | - |
+| `dof` | in | degrees of freedom of each component (> 0) | - |
+| `level` | in | credibility level as a fraction (0.95 for 95%; default 0.95) (optional) | - |
+| `combined_uncertainty` | out | u_c | - |
+| `effective_dof` | out | nu_eff | - |
+| `coverage_factor` | out | k = t_{(1+p)/2, nu_eff} | - |
+| `expanded_uncertainty` | out | U = k u_c | - |
 
 **Applies when:** components and degrees of freedom > 0; 0 < level < 1.
 
@@ -2561,7 +2597,7 @@ effective_dof = 10
 coverage_factor = 2.228138852
 expanded_uncertainty = 2.228138852
   by: Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite)  (Welch-Satterthwaite formula and the Student-t quantile at non-integer degrees of freedom)
-  level = 0.95   []
+  level = 0.95
   assumes: components and degrees of freedom > 0; 0 < level < 1
 ```
 
@@ -2569,7 +2605,7 @@ expanded_uncertainty = 2.228138852
 
 <a id="product_of_normals_exact_moments"></a>
 
-#### Exact mean and standard deviation of a product of independent normals — `product_of_normals_exact_moments`
+#### Exact mean and standard deviation of a product of independent normals, `product_of_normals_exact_moments`
 
 Exact moments of XY for independent normal X and Y, compared with first-order propagation (which misses the sd_x sd_y term).
 
@@ -2579,13 +2615,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mean_x` | in | mean of X | — |
-| `sd_x` | in | sd of X (> 0) | — |
-| `mean_y` | in | mean of Y | — |
-| `sd_y` | in | sd of Y (> 0) | — |
-| `exact_mean` | out | mean_x mean_y | — |
-| `exact_sd` | out | sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2) | — |
-| `first_order_sd` | out | sqrt(mx^2 sy^2 + my^2 sx^2) | — |
+| `mean_x` | in | mean of X | - |
+| `sd_x` | in | sd of X (> 0) | - |
+| `mean_y` | in | mean of Y | - |
+| `sd_y` | in | sd of Y (> 0) | - |
+| `exact_mean` | out | mean_x mean_y | - |
+| `exact_sd` | out | sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2) | - |
+| `first_order_sd` | out | sqrt(mx^2 sy^2 + my^2 sx^2) | - |
 
 **Applies when:** independent normal inputs.
 
@@ -2595,10 +2631,10 @@ exact_mean = 50
 exact_sd = 20.71231518
 first_order_sd = 20.61552813
   by: Exact mean and standard deviation of a product of independent normals  (exact second moments of a product)
-  mean_x = 10   []
-  sd_x = 1   []
-  mean_y = 5   []
-  sd_y = 2   []
+  mean_x = 10
+  sd_x = 1
+  mean_y = 5
+  sd_y = 2
   assumes: independent normal inputs
 ```
 
@@ -2606,7 +2642,7 @@ first_order_sd = 20.61552813
 
 <a id="polynomial_of_normal_moments"></a>
 
-#### Exact mean and variance of a polynomial of a normal variable — `polynomial_of_normal_moments`
+#### Exact mean and variance of a polynomial of a normal variable, `polynomial_of_normal_moments`
 
 Exact mean, variance and standard deviation of Y = c0 + c1 X + ... + c6 X^6 for X ~ N(mean, sd^2) (nonlinear uncertainty propagation without linearization).
 
@@ -2616,12 +2652,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `coefficients` | in | coefficients c0, c1, ... (constant first, up to degree 6) | — |
-| `mean` | in | mean of X | — |
-| `sd` | in | standard deviation of X (> 0) | — |
-| `mean` | out | E[Y] | — |
-| `variance` | out | Var[Y] | — |
-| `sd` | out | sd of Y | — |
+| `coefficients` | in | coefficients c0, c1, ... (constant first, up to degree 6) | - |
+| `mean` | in | mean of X | - |
+| `sd` | in | standard deviation of X (> 0) | - |
+| `mean` | out | E[Y] | - |
+| `variance` | out | Var[Y] | - |
+| `sd` | out | sd of Y | - |
 
 **Applies when:** sd > 0; degree <= 6.
 
@@ -2631,8 +2667,8 @@ mean = 4
 variance = 22
 sd = 4.69041576
   by: Exact mean and variance of a polynomial of a normal variable  (substitute X = mean + sd Z and use the normal moments E[Z^k] = (k - 1)!! for even k)
-  mean = 0   []
-  sd = 1   []
+  mean = 0
+  sd = 1
   assumes: sd > 0; degree <= 6
 ```
 
@@ -2640,7 +2676,7 @@ sd = 4.69041576
 
 <a id="lognormal_propagation"></a>
 
-#### Exact versus first-order propagation through exp(X) — `lognormal_propagation`
+#### Exact versus first-order propagation through exp(X), `lognormal_propagation`
 
 Mean and standard deviation of Y = exp(X) for normal X ~ N(mu, sigma^2), exactly (lognormal) and by first-order propagation, showing the bias of the linear approximation.
 
@@ -2650,12 +2686,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mu` | in | mean of X | — |
-| `sigma` | in | standard deviation of X (> 0) | — |
-| `exact_mean` | out | exp(mu + sigma^2/2) | — |
-| `exact_sd` | out | sqrt(exp(sigma^2) - 1) exp(mu + sigma^2/2) | — |
-| `first_order_mean` | out | exp(mu) | — |
-| `first_order_sd` | out | exp(mu) sigma | — |
+| `mu` | in | mean of X | - |
+| `sigma` | in | standard deviation of X (> 0) | - |
+| `exact_mean` | out | exp(mu + sigma^2/2) | - |
+| `exact_sd` | out | sqrt(exp(sigma^2) - 1) exp(mu + sigma^2/2) | - |
+| `first_order_mean` | out | exp(mu) | - |
+| `first_order_sd` | out | exp(mu) sigma | - |
 
 **Applies when:** sigma > 0.
 
@@ -2666,8 +2702,8 @@ exact_sd = 2.161197416
 first_order_mean = 1
 first_order_sd = 1
   by: Exact versus first-order propagation through exp(X)  (lognormal moments; first-order Taylor propagation)
-  mu = 0   []
-  sigma = 1   []
+  mu = 0
+  sigma = 1
   assumes: sigma > 0
 ```
 
@@ -2675,7 +2711,7 @@ first_order_sd = 1
 
 <a id="inverse_variance_weighted_mean"></a>
 
-#### Inverse-variance weighted mean of measurements — `inverse_variance_weighted_mean`
+#### Inverse-variance weighted mean of measurements, `inverse_variance_weighted_mean`
 
 Combine measurements of one quantity with different standard uncertainties: weighted mean, its uncertainty, chi-square of consistency and Birge ratio (equal to the posterior under a flat prior).
 
@@ -2685,12 +2721,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `values` | in | measured values | — |
-| `uncertainties` | in | their standard uncertainties (> 0) | — |
-| `weighted_mean` | out | sum(x_i/u_i^2)/sum(1/u_i^2) | — |
-| `uncertainty` | out | 1/sqrt(sum 1/u_i^2) | — |
-| `chi_square` | out | sum((x_i - mean)^2/u_i^2) | — |
-| `birge_ratio` | out | sqrt(chi^2/(n-1)) | — |
+| `values` | in | measured values | - |
+| `uncertainties` | in | their standard uncertainties (> 0) | - |
+| `weighted_mean` | out | sum(x_i/u_i^2)/sum(1/u_i^2) | - |
+| `uncertainty` | out | 1/sqrt(sum 1/u_i^2) | - |
+| `chi_square` | out | sum((x_i - mean)^2/u_i^2) | - |
+| `birge_ratio` | out | sqrt(chi^2/(n-1)) | - |
 
 **Applies when:** u_i > 0; n >= 2.
 
@@ -2708,7 +2744,7 @@ birge_ratio = 1.414213562
 
 <a id="type_b_standard_uncertainty"></a>
 
-#### Type B standard uncertainty from a stated half-width — `type_b_standard_uncertainty`
+#### Type B standard uncertainty from a stated half-width, `type_b_standard_uncertainty`
 
 Standard uncertainty of a quantity known only to lie within +/- a, for a rectangular, triangular or U-shaped (arcsine) distribution.
 
@@ -2718,10 +2754,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `half_width` | in | half-width a of the interval (> 0) | — |
-| `distribution` | in | rectangular, triangular or arcsine (U-shaped) | — |
-| `standard_uncertainty` | out | a / divisor | — |
-| `divisor` | out | sqrt(3), sqrt(6) or sqrt(2) | — |
+| `half_width` | in | half-width a of the interval (> 0) | - |
+| `distribution` | in | rectangular, triangular or arcsine (U-shaped) | - |
+| `standard_uncertainty` | out | a / divisor | - |
+| `divisor` | out | sqrt(3), sqrt(6) or sqrt(2) | - |
 
 **Applies when:** a > 0.
 
@@ -2730,7 +2766,7 @@ $ bayesian-statistics solve type_b_standard_uncertainty half_width=0.5 distribut
 standard_uncertainty = 0.2886751346
 divisor = 1.732050808
   by: Type B standard uncertainty from a stated half-width  (standard deviation of the assumed distribution)
-  half_width = 0.5   []
+  half_width = 0.5
   distribution = rectangular
   assumes: a > 0
 ```
@@ -2739,7 +2775,7 @@ divisor = 1.732050808
 
 <a id="uncertainty_function"></a>
 
-#### Uncertainty of a function of one variable — `uncertainty_function`
+#### Uncertainty of a function of one variable: `uncertainty_function`
 
 Value and first-order standard uncertainty of f(x) for exp, ln, log10, sqrt, sin, cos, tan (x in radians) or 1/x.
 
@@ -2749,21 +2785,30 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | value of x (radians for sin, cos, tan) | — |
-| `ux` | in | standard uncertainty of x | — |
-| `function` | in | exp, ln, log10, sqrt, sin, cos, tan or reciprocal | — |
-| `value` | out | f(x) | — |
-| `uncertainty` | out | \|f'(x)\| u(x) | — |
+| `x` | in | value of x (radians for sin, cos, tan) | - |
+| `ux` | in | standard uncertainty of x | - |
+| `function` | in | exp, ln, log10, sqrt, sin, cos, tan or reciprocal | - |
+| `value` | out | f(x) | - |
+| `uncertainty` | out | \|f'(x)\| u(x) | - |
 
 **Applies when:** x inside the function's domain.
 
-*Not in `bayesian-statistics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ bayesian-statistics solve uncertainty_function x=2.5 ux=0.05 function=ln
+value = 0.9162907319
+uncertainty = 0.02
+  by: Uncertainty of a function of one variable  (first-order propagation u_f = |f'(x)| u_x)
+  x = 2.5
+  ux = 0.05
+  function = ln
+  assumes: x inside the function's domain
+```
 
 **What the worked example means:** This calculation determines the result of applying a specific mathematical function to an input variable and estimates the associated uncertainty using first-order error propagation. The computed value, 0.916291, represents the transformed quantity, while the output uncertainty, 0.02, quantifies how much this result could vary given the input uncertainty, 0.05. This method assumes that the change in the function's output is linearly proportional to the change in its input near the current value.
 
 <a id="uncertainty_linear_correlated"></a>
 
-#### Uncertainty of a linear combination of correlated inputs — `uncertainty_linear_correlated`
+#### Uncertainty of a linear combination of correlated inputs, `uncertainty_linear_correlated`
 
 Combined standard uncertainty of y = sum c_i x_i when the inputs are correlated (correlation matrix), u_y^2 = sum_ij c_i c_j u_i u_j r_ij.
 
@@ -2773,12 +2818,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `values` | in | input values | — |
-| `uncertainties` | in | standard uncertainties | — |
-| `correlation` | in | correlation matrix (ones on the diagonal, positive semi-definite) | — |
-| `coefficients` | in | coefficients c_i (default 1) (optional) | — |
-| `value` | out | y | — |
-| `uncertainty` | out | u_y | — |
+| `values` | in | input values | - |
+| `uncertainties` | in | standard uncertainties | - |
+| `correlation` | in | correlation matrix (ones on the diagonal, positive semi-definite) | - |
+| `coefficients` | in | coefficients c_i (default 1) (optional) | - |
+| `value` | out | y | - |
+| `uncertainty` | out | u_y | - |
 
 **Applies when:** valid correlation matrix.
 
@@ -2794,7 +2839,7 @@ uncertainty = 0.608276253
 
 <a id="uncertainty_power"></a>
 
-#### Uncertainty of a power x^n — `uncertainty_power`
+#### Uncertainty of a power x^n, `uncertainty_power`
 
 Value, standard uncertainty and relative uncertainty of y = x^n (first order).
 
@@ -2804,12 +2849,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | value of x | — |
-| `ux` | in | standard uncertainty of x (>= 0) | — |
-| `exponent` | in | exponent n | — |
-| `value` | out | x^n | — |
-| `uncertainty` | out | \|n x^(n-1)\| u(x) | — |
-| `relative_uncertainty` | out | \|n\| u(x)/\|x\| | — |
+| `x` | in | value of x | - |
+| `ux` | in | standard uncertainty of x (>= 0) | - |
+| `exponent` | in | exponent n | - |
+| `value` | out | x^n | - |
+| `uncertainty` | out | \|n x^(n-1)\| u(x) | - |
+| `relative_uncertainty` | out | \|n\| u(x)/\|x\| | - |
 
 **Applies when:** x > 0 for a non-integer exponent; x != 0 for n < 1.
 
@@ -2819,9 +2864,9 @@ value = 9
 uncertainty = 0.6
 relative_uncertainty = 0.06666666667
   by: Uncertainty of a power x^n  (first-order propagation)
-  x = 3   []
-  ux = 0.1   []
-  exponent = 2   []
+  x = 3
+  ux = 0.1
+  exponent = 2
   assumes: x > 0 for a non-integer exponent; x != 0 for n < 1
 ```
 
@@ -2829,7 +2874,7 @@ relative_uncertainty = 0.06666666667
 
 <a id="uncertainty_power_law"></a>
 
-#### Uncertainty of a power-law product y = k x1^p1 x2^p2 ... — `uncertainty_power_law`
+#### Uncertainty of a power-law product y = k x1^p1 x2^p2 ..., `uncertainty_power_law`
 
 Value and first-order uncertainty of a product of powers of independent positive inputs (relative uncertainties weighted by the exponents add in quadrature).
 
@@ -2839,13 +2884,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `coefficient` | in | exact constant k | — |
-| `values` | in | positive input values x_i | — |
-| `exponents` | in | exponents p_i | — |
-| `uncertainties` | in | standard uncertainties u_i | — |
-| `value` | out | y | — |
-| `uncertainty` | out | u_y | — |
-| `relative_uncertainty` | out | u_y/\|y\| | — |
+| `coefficient` | in | exact constant k | - |
+| `values` | in | positive input values x_i | - |
+| `exponents` | in | exponents p_i | - |
+| `uncertainties` | in | standard uncertainties u_i | - |
+| `value` | out | y | - |
+| `uncertainty` | out | u_y | - |
+| `relative_uncertainty` | out | u_y/\|y\| | - |
 
 **Applies when:** x_i > 0; independent inputs.
 
@@ -2855,7 +2900,7 @@ value = 9
 uncertainty = 0.3710795063
 relative_uncertainty = 0.04123105626
   by: Uncertainty of a power-law product y = k x1^p1 x2^p2 ...  (first-order propagation in relative form)
-  coefficient = 0.5   []
+  coefficient = 0.5
   assumes: x_i > 0; independent inputs
 ```
 
@@ -2863,7 +2908,7 @@ relative_uncertainty = 0.04123105626
 
 <a id="uncertainty_product_quotient"></a>
 
-#### Uncertainty of a product and a quotient — `uncertainty_product_quotient`
+#### Uncertainty of a product and a quotient: `uncertainty_product_quotient`
 
 Value and first-order standard uncertainty of a*b and a/b for independent a and b.
 
@@ -2873,14 +2918,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | value of a | — |
-| `ua` | in | standard uncertainty of a (>= 0) | — |
-| `b` | in | value of b (non-zero) | — |
-| `ub` | in | standard uncertainty of b (>= 0) | — |
-| `product` | out | a*b | — |
-| `u_product` | out | u(a*b) | — |
-| `quotient` | out | a/b | — |
-| `u_quotient` | out | u(a/b) | — |
+| `a` | in | value of a | - |
+| `ua` | in | standard uncertainty of a (>= 0) | - |
+| `b` | in | value of b (non-zero) | - |
+| `ub` | in | standard uncertainty of b (>= 0) | - |
+| `product` | out | a*b | - |
+| `u_product` | out | u(a*b) | - |
+| `quotient` | out | a/b | - |
+| `u_quotient` | out | u(a/b) | - |
 
 **Applies when:** independent a and b; b != 0.
 
@@ -2891,10 +2936,10 @@ u_product = 2.683281573
 quotient = 3
 u_quotient = 0.1677050983
   by: Uncertainty of a product and a quotient  (first-order propagation (relative uncertainties add in quadrature))
-  a = 12   []
-  ua = 0.3   []
-  b = 4   []
-  ub = 0.2   []
+  a = 12
+  ua = 0.3
+  b = 4
+  ub = 0.2
   assumes: independent a and b; b != 0
 ```
 
@@ -2902,7 +2947,7 @@ u_quotient = 0.1677050983
 
 <a id="uncertainty_product_correlated"></a>
 
-#### Uncertainty of a product and quotient with correlation — `uncertainty_product_correlated`
+#### Uncertainty of a product and quotient with correlation, `uncertainty_product_correlated`
 
 First-order standard uncertainty of a*b and a/b when a and b are correlated with coefficient rho.
 
@@ -2912,15 +2957,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | value of a | — |
-| `ua` | in | standard uncertainty of a | — |
-| `b` | in | value of b (non-zero) | — |
-| `ub` | in | standard uncertainty of b | — |
-| `rho` | in | correlation coefficient of a and b (-1 to 1) | — |
-| `product` | out | a*b | — |
-| `u_product` | out | u(a*b) | — |
-| `quotient` | out | a/b | — |
-| `u_quotient` | out | u(a/b) | — |
+| `a` | in | value of a | - |
+| `ua` | in | standard uncertainty of a | - |
+| `b` | in | value of b (non-zero) | - |
+| `ub` | in | standard uncertainty of b | - |
+| `rho` | in | correlation coefficient of a and b (-1 to 1) | - |
+| `product` | out | a*b | - |
+| `u_product` | out | u(a*b) | - |
+| `quotient` | out | a/b | - |
+| `u_quotient` | out | u(a/b) | - |
 
 **Applies when:** -1 <= rho <= 1; b != 0.
 
@@ -2931,11 +2976,11 @@ u_product = 0
 quotient = 1
 u_quotient = 0.2
   by: Uncertainty of a product and quotient with correlation  (first-order propagation with the covariance term)
-  a = 1   []
-  ua = 0.1   []
-  b = 1   []
-  ub = 0.1   []
-  rho = -1   []
+  a = 1
+  ua = 0.1
+  b = 1
+  ub = 0.1
+  rho = -1
   assumes: -1 <= rho <= 1; b != 0
 ```
 
@@ -2943,7 +2988,7 @@ u_quotient = 0.2
 
 <a id="uncertainty_sum"></a>
 
-#### Uncertainty of a sum or linear combination (independent inputs) — `uncertainty_sum`
+#### Uncertainty of a sum or linear combination (independent inputs), `uncertainty_sum`
 
 Value and combined standard uncertainty of y = sum c_i x_i for independent inputs (default c_i = 1; use -1 for a difference).
 
@@ -2953,11 +2998,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `values` | in | input values x_i | — |
-| `uncertainties` | in | standard uncertainties u_i (>= 0) | — |
-| `coefficients` | in | coefficients c_i (default all 1) (optional) | — |
-| `value` | out | y = sum c_i x_i | — |
-| `uncertainty` | out | u_y = sqrt(sum (c_i u_i)^2) | — |
+| `values` | in | input values x_i | - |
+| `uncertainties` | in | standard uncertainties u_i (>= 0) | - |
+| `coefficients` | in | coefficients c_i (default all 1) (optional) | - |
+| `value` | out | y = sum c_i x_i | - |
+| `uncertainty` | out | u_y = sqrt(sum (c_i u_i)^2) | - |
 
 **Applies when:** independent inputs; u_i >= 0.
 
@@ -2971,4 +3016,4 @@ uncertainty = 0.3741657387
 
 **What the worked example means:** This calculation determines the total value and its associated standard uncertainty for a linear combination of independent inputs. The central value, shown as 23.9, is derived by summing the products of each input value and its coefficient. The uncertainty, displayed as 0.374166, represents the square root of the sum of the squared individual uncertainties scaled by their coefficients. This result quantifies the precision of the computed quantity based on the propagation of errors from the constituent parts.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.
