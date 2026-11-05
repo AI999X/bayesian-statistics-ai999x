@@ -4,7 +4,7 @@
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/bayesian-statistics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/bayesian-statistics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
 
 Field: **Mathematics & Statistics** · Tasks: Question Answering, Sentence Similarity, Feature Extraction
 
@@ -20,26 +20,13 @@ bayesian-statistics-ai999x is an offline, deterministic Python solver that answe
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Bayesian Statistics desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
-| **Command line** (`bayesian-statistics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X Bayesian Statistics desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
+| **Command line** (`bayesian-statistics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
 | **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install bayesian-statistics-ai999x` |
 
-Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
-
-## Rust versions
-
-Bayesian Statistics also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.0.3) and on the website.
-
-| Program | System | File | Size | Download | Use |
-|---|---|---|---|---|---|
-| Desktop app (Bayesian Statistics) | Windows x86-64 | `ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip` | 7.2 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-bayesian-statistics.exe` (no installer) |
-| Desktop app (Bayesian Statistics) | Linux x86-64 | `ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz` | 8.1 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-bayesian-statistics` (X11 or Wayland desktop) |
-| Command line (`bayesian-statistics`) | Windows x86-64 | `ai999x-bayesian-statistics-cli-1.2.0-windows-x86_64.zip` | 2.9 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `bayesian-statistics.exe ask "<question>"` or `bayesian-statistics.exe solve <capability> name=value` |
-| Command line (`bayesian-statistics`) | Linux x86-64 | `ai999x-bayesian-statistics-cli-1.2.0-linux-x86_64.tar.gz` | 2.9 MB | [Hub](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/ai999x-bayesian-statistics-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/bayesian-statistics-ai999x/releases/download/v1.0.3/ai999x-bayesian-statistics-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./bayesian-statistics ask "<question>"` or `./bayesian-statistics solve <capability> name=value` |
-
-The command-line archive holds `bayesian-statistics` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -50,11 +37,11 @@ Download **AI999X Bayesian Statistics** for your system (above), unpack it and s
 Linux, from a terminal:
 
 ```bash
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz
-./ai999x-bayesian-statistics-1.2.0-linux-x86_64/ai999x-bayesian-statistics
+tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
+./ai999x-bayesian-statistics-1.4.0-linux-x86_64/ai999x-bayesian-statistics
 ```
 
 ### Command line
@@ -62,23 +49,23 @@ tar xzf ai999x-bayesian-statistics-1.2.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 bayesian-statistics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 bayesian-statistics --version
 ```
@@ -132,26 +119,6 @@ false_omission_rate = 0.001062134891
   sensitivity = 0.9
   specificity = 0.95
   assumes: probabilities between 0 and 1; both results possible
-```
-
-**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```console
-$ bayesian-statistics figures diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --out .
-[
-  {
-    "slug": "diagnostic-test-predictive-values-live-1",
-    "title": "Positive predictive value P(condition | posit... as specificity P(negative | no condition) varies",
-    "caption": "Positive predictive value P(condition | posit... as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": "./diagnostic-test-predictive-values-live-1.svg"
-  },
-  {
-    "slug": "diagnostic-test-predictive-values-live-2",
-    "title": "Positive predictive value P(condition | posit... as sensitivity P(positive | condition) varies",
-    "caption": "Positive predictive value P(condition | posit... as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": "./diagnostic-test-predictive-values-live-2.svg"
-  }
-]
 ```
 
 **Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch
@@ -330,7 +297,7 @@ _What this means:_ This calculation determines the probability of observing exac
 
 | Property | Value |
 |---|---|
-| Package | `bayesian-statistics-ai999x` 1.0.3 (import `bayesian_statistics_ai999x`) |
+| Package | `bayesian-statistics-ai999x` 1.1.0 (import `bayesian_statistics_ai999x`) |
 | Type | Deterministic neuro-symbolic bayesian statistics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 78 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -364,7 +331,7 @@ bayesian_statistics.ask("Who created you?").message
 # -> bayesian-statistics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `bayesian-statistics-ai999x "<question>"`; for the native program use `bayesian-statistics` (above). The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.0.3.
+The Python package also installs a Python command, `bayesian-statistics-ai999x "<question>"`; for the native program use `bayesian-statistics` (above). The outputs above were produced by running this exact code on bayesian-statistics-ai999x 1.1.0.
 
 ## Find the right capability, and draw it
 
@@ -525,10 +492,10 @@ _A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1: the packa
 ## Citation
 
 ```bibtex
-@software{bayesian_statistics_ai999x_1_0_3,
+@software{bayesian_statistics_ai999x_1_1_0,
   title  = {bayesian-statistics-ai999x: an offline, verified bayesian statistics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.3},
+  year   = {2026}, version = {1.1.0},
   url    = {https://huggingface.co/AI999X/bayesian-statistics-ai999x}
 }
 ```

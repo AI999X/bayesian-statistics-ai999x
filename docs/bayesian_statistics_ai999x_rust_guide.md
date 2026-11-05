@@ -1,6 +1,6 @@
 # bayesian-statistics: the Bayesian Statistics program — user guide
 
-**bayesian-statistics-ai999x 1.0.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**bayesian-statistics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Bayesian Statistics covers Bayes' theorem, conjugate priors and posteriors, credible intervals, Bayes factors, Monte Carlo estimation, uncertainty propagation, sensitivity analysis and decision analysis. This guide is about `bayesian-statistics`, the model as a self-contained program for Windows and Linux: 78 capabilities in 12 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/bayesian-statistics-ai999x/); the Python package (`pip install bayesian-statistics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -17,24 +17,24 @@ Bayesian Statistics covers Bayes' theorem, conjugate priors and posteriors, cred
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS; the newest version is always under https://www.ai999x.com/downloads/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Bayesian Statistics | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip |
-| Desktop app: Bayesian Statistics | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Bayesian Statistics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip |
+| Desktop app: Bayesian Statistics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
 Bayesian Statistics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-bayesian-statistics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
 ./ai999x-bayesian-statistics-1.4.0-linux-x86_64/ai999x-bayesian-statistics
@@ -43,8 +43,8 @@ tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
 It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 ./ai999x-1.4.0-linux-x86_64/ai999x
@@ -55,8 +55,8 @@ tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `bayesian-statistics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
 echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
@@ -69,8 +69,8 @@ The fourth line should print True.
 
 ```powershell
 $F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
 $D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
@@ -99,43 +99,7 @@ $ bayesian-statistics --version
 bayesian-statistics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
 ```
 
-### 2.2 Ask in words
-
-Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
-
-```shell
-$ bayesian-statistics ask "A test has sensitivity 0.9 and specificity 0.95; the prevalence is 0.01. What is the positive predictive value?"
-Read as: Positive and negative predictive values of a test
-ppv = 0.1538461538
-npv = 0.9989378651
-p_positive = 0.0585
-false_discovery_rate = 0.8461538462
-false_omission_rate = 0.001062134891
-  by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
-  assumes: probabilities between 0 and 1; both results possible
-```
-
-### 2.3 Find a capability
-
-Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
-
-```shell
-$ bayesian-statistics search "positive and negative predictive values of a test"
-diagnostic_test_predictive_values    Positive and negative predictive values of a test  (Bayes' theorem and conditional probability)
-gamma_poisson_predictive             Posterior predictive count (negative binomial)  (conjugate priors: gamma-Poisson and gamma-exponential)
-likelihood_ratios                    Likelihood ratios of a diagnostic test  (odds and likelihood ratios)
-sequential_test_posterior            Posterior after repeated independent tests  (Bayes' theorem and conditional probability)
-beta_binomial_predictive             Posterior predictive probability (beta-binomial)  (conjugate priors: beta-binomial)
-normal_posterior_predictive          Posterior predictive distribution of a new observation  (conjugate priors: normal models)
-ab_test_probability_beta             Bayesian A/B test: probability that A beats B  (conjugate priors: beta-binomial)
-posterior_from_likelihood_ratio      Post-test probability from a likelihood ratio  (odds and likelihood ratios)
-… 10 more
-```
-
-### 2.4 List the capabilities
+### 2.2 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -149,10 +113,10 @@ bayes_factor_point_null_binomial         Bayes factor for a point null on a prop
 bayes_theorem                            Bayes' theorem for an event and its complement
 beta_binomial_credible_interval          Credible interval for a proportion (beta-binomial)
 beta_binomial_evidence                   Marginal likelihood (evidence) of binomial data under a beta prior
-… 70 more
+… 69 more
 ```
 
-### 2.5 What a capability needs
+### 2.3 What a capability needs
 
 The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
@@ -170,7 +134,7 @@ Positive and negative predictive values of a test
   out  false_omission_rate 1 - NPV [1]
 ```
 
-### 2.6 Solve
+### 2.4 Solve
 
 Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
@@ -182,13 +146,13 @@ p_positive = 0.0585
 false_discovery_rate = 0.8461538462
 false_omission_rate = 0.001062134891
   by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
+  prevalence = 0.01   []
+  sensitivity = 0.9   []
+  specificity = 0.95   []
   assumes: probabilities between 0 and 1; both results possible
 ```
 
-### 2.7 Machine-readable answer
+### 2.5 Machine-readable answer
 
 --json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
 
@@ -197,7 +161,7 @@ $ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 se
 {"outcome":"SOLVED","message":"","value":0.153846153846,"unit":"","solved_for":"ppv","si":[["prevalence",0.01],["sensitivity",0.9],["specificity",0.95]],"values":[["ppv",0.153846153846,""],["npv",0.998937865109,""],["p_positive",0.0585,""],["false_discovery_rate",0.846153846154,""],["false_omission_rate",0.00106213489113,""]],"target":"ppv","phrase":"positive predictive value P(condition | positive)","assumptions":["probabilities between 0 and 1","both results possible"],"name":"Positive and negative predictive values of a test","equation":"Bayes' theorem with the total probability of a positive result"}
 ```
 
-### 2.8 When an input is missing
+### 2.6 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
@@ -206,35 +170,7 @@ $ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 se
 NEEDS_INPUT: diagnostic_test_predictive_values needs specificity (specificity P(negative | no condition)). Example: solve('diagnostic_test_predictive_values', prevalence=0.01, sensitivity=0.9, specificity=0.95).
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ bayesian-statistics figures diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --out .
-[
-  {
-    "slug": "diagnostic-test-predictive-values-curves",
-    "title": "Predictive values of a test against prevalence",
-    "caption": "Positive and negative predictive values of a test with sensitivity 0.9 and specificity 0.95 over prevalences from 0.001 to 0.999, each computed by the model: a positive result means little when the condition is rare. Marked: prevalence 0.01, computed PPV 0.1538 (NPV 0.9989, P(positive) = 0.0585). Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": ".\\diagnostic-test-predictive-values-curves.svg"
-  },
-  {
-    "slug": "diagnostic-test-predictive-values-live-1",
-    "title": "Positive predictive value P(condition | posit... as specificity P(negative | no condition) varies",
-    "caption": "Positive predictive value P(condition | posit... as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": ".\\diagnostic-test-predictive-values-live-1.svg"
-  },
-  {
-    "slug": "diagnostic-test-predictive-values-live-2",
-    "title": "Positive predictive value P(condition | posit... as sensitivity P(positive | condition) varies",
-    "caption": "Positive predictive value P(condition | posit... as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": ".\\diagnostic-test-predictive-values-live-2.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.7 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch
 
@@ -307,30 +243,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `bayesian-statistics figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ bayesian-statistics figures diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --out .
-[
-  {
-    "slug": "diagnostic-test-predictive-values-curves",
-    "title": "Predictive values of a test against prevalence",
-    "caption": "Positive and negative predictive values of a test with sensitivity 0.9 and specificity 0.95 over prevalences from 0.001 to 0.999, each computed by the model: a positive result means little when the condition is rare. Marked: prevalence 0.01, computed PPV 0.1538 (NPV 0.9989, P(positive) = 0.0585). Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": ".\\diagnostic-test-predictive-values-curves.svg"
-  },
-  {
-    "slug": "diagnostic-test-predictive-values-live-1",
-    "title": "Positive predictive value P(condition | posit... as specificity P(negative | no condition) varies",
-    "caption": "Positive predictive value P(condition | posit... as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": ".\\diagnostic-test-predictive-values-live-1.svg"
-  },
-  {
-    "slug": "diagnostic-test-predictive-values-live-2",
-    "title": "Positive predictive value P(condition | posit... as sensitivity P(positive | condition) varies",
-    "caption": "Positive predictive value P(condition | posit... as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.",
-    "file": ".\\diagnostic-test-predictive-values-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `bayesian_statistics_ai999x.wasm` (https://www.ai999x.com/compute/rust/bayesian_statistics_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -383,10 +295,10 @@ bf01 = 1.414213562
 log10_bf10 = -0.1505149978
 posterior_h1 = 0.4142135624
   by: Bayes factor for a normal mean (known variance)  (Savage-Dickey density ratio of the posterior and prior at mu0)
-  sample_mean = 0
-  sigma = 1
-  mu0 = 0
-  prior_sd = 1
+  sample_mean = 0   []
+  sigma = 1   []
+  mu0 = 0   []
+  prior_sd = 1   []
   assumes: sigma, tau > 0; n >= 1
 ```
 
@@ -423,9 +335,9 @@ bf01 = 0.75
 log10_bf10 = 0.1249387366
 posterior_h1 = 0.5714285714
   by: Bayes factor for a point null on a proportion (beta prior under H1)  (ratio of the beta-binomial marginal likelihood to the binomial likelihood at p0)
-  p0 = 0.5
-  alpha = 1
-  beta = 1
+  p0 = 0.5   []
+  alpha = 1   []
+  beta = 1   []
   assumes: 0 < p0 < 1; alpha, beta > 0; 0 <= k <= n
 ```
 
@@ -459,8 +371,8 @@ bf10 = 5.184417905
 log10_bf10 = 0.7147000018
 posterior_h1 = 0.8383032946
   by: Bayes factor for two simple binomial hypotheses  (likelihood ratio of the two simple hypotheses)
-  p0 = 0.5
-  p1 = 0.7
+  p0 = 0.5   []
+  p1 = 0.7   []
   assumes: 0 < p0, p1 < 1; 0 <= k <= n
 ```
 
@@ -492,8 +404,8 @@ $ bayesian-statistics solve beta_binomial_evidence alpha=1 beta=1 successes=7 tr
 marginal_likelihood = 0.09090909091
 log_marginal_likelihood = -2.397895273
   by: Marginal likelihood (evidence) of binomial data under a beta prior  (closed form with log-beta functions)
-  alpha = 1
-  beta = 1
+  alpha = 1   []
+  beta = 1   []
   assumes: alpha, beta > 0; 0 <= k <= n
 ```
 
@@ -556,8 +468,8 @@ posterior = 0.8571428571
 posterior_odds = 6
 posterior_h0 = 0.1428571429
   by: Posterior probability of a hypothesis from a Bayes factor  (posterior odds = BF10 x prior odds)
-  bayes_factor = 6
-  prior = 0.5
+  bayes_factor = 6   []
+  prior = 0.5   []
   assumes: BF10 > 0; 0 < prior < 1
 ```
 
@@ -592,9 +504,9 @@ p_a_given_b = 0.7741935484
 p_b = 0.31
 p_not_a_given_b = 0.2258064516
   by: Bayes' theorem for an event and its complement  (law of total probability for P(B), then Bayes' theorem)
-  p_a = 0.3
-  p_b_given_a = 0.8
-  p_b_given_not_a = 0.1
+  p_a = 0.3   []
+  p_b_given_a = 0.8   []
+  p_b_given_not_a = 0.1   []
   assumes: probabilities between 0 and 1; P(B) > 0
 ```
 
@@ -660,9 +572,9 @@ p_positive = 0.0585
 false_discovery_rate = 0.8461538462
 false_omission_rate = 0.001062134891
   by: Positive and negative predictive values of a test  (Bayes' theorem with the total probability of a positive result)
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
+  prevalence = 0.01   []
+  sensitivity = 0.9   []
+  specificity = 0.95   []
   assumes: probabilities between 0 and 1; both results possible
 ```
 
@@ -695,9 +607,9 @@ $ bayesian-statistics solve sequential_test_posterior prevalence=0.01 sensitivit
 posterior = 0.7659574468
 posterior_odds = 3.272727273
   by: Posterior after repeated independent tests  (odds form, applied once per result (in log space))
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
+  prevalence = 0.01   []
+  sensitivity = 0.9   []
+  specificity = 0.95   []
   assumes: 0 < prevalence < 1; results conditionally independent given the status
 ```
 
@@ -764,10 +676,10 @@ $ bayesian-statistics solve ab_test_probability_beta alpha_a=1 beta_a=1 alpha_b=
 prob_a_greater = 0.5
 prob_b_greater = 0.5
   by: Bayesian A/B test: probability that A beats B  (exact finite sum of beta functions (Miller's formula))
-  alpha_a = 1
-  beta_a = 1
-  alpha_b = 1
-  beta_b = 1
+  alpha_a = 1   []
+  beta_a = 1   []
+  alpha_b = 1   []
+  beta_b = 1   []
   assumes: all parameters > 0; alpha_b a whole number
 ```
 
@@ -805,8 +717,8 @@ posterior_mean = 0.6428571429
 posterior_variance = 0.01530612245
 posterior_sd = 0.1237179148
   by: Beta-binomial conjugate posterior  (conjugate update of the beta prior with the binomial likelihood)
-  alpha = 2
-  beta = 2
+  alpha = 2   []
+  beta = 2   []
   assumes: alpha, beta > 0; 0 <= k <= n
 ```
 
@@ -903,8 +815,8 @@ posterior_mean = 1.428571429
 posterior_variance = 0.4081632653
 posterior_sd = 0.638876565
   by: Gamma-exponential conjugate posterior of a rate  (conjugate update of the gamma prior with the exponential likelihood)
-  shape = 2
-  rate = 1
+  shape = 2   []
+  rate = 1   []
   assumes: shape, rate > 0; times > 0
 ```
 
@@ -941,8 +853,8 @@ posterior_mean = 3.5
 posterior_variance = 0.875
 posterior_sd = 0.9354143467
   by: Gamma-Poisson conjugate posterior of a rate  (conjugate update of the gamma prior with the Poisson likelihood)
-  shape = 2
-  rate = 1
+  shape = 2   []
+  rate = 1   []
   assumes: shape, rate > 0; counts whole numbers >= 0
 ```
 
@@ -1004,8 +916,8 @@ map = 3.25
 mle = 4
 posterior_mean = 3.5
   by: MAP estimate of a Poisson rate (gamma prior)  (stationary point of the log posterior)
-  shape = 2
-  rate = 1
+  shape = 2   []
+  rate = 1   []
   assumes: shape + sum of counts > 1
 ```
 
@@ -1039,8 +951,8 @@ map = 0.6666666667
 mle = 0.7
 posterior_mean = 0.6428571429
   by: MAP estimate of a proportion (beta-binomial)  (maximize the log posterior (closed form of its stationary point))
-  alpha = 2
-  beta = 2
+  alpha = 2   []
+  beta = 2   []
   assumes: alpha + k > 1 and beta + n - k > 1 (interior mode)
 ```
 
@@ -1080,11 +992,11 @@ lower = -0.8859038244
 upper = 1.885903824
 shrinkage = 0.5
   by: Normal mean with known variance: posterior and credible interval from a sample mean  (normal-normal conjugate update, interval from normal quantiles)
-  prior_mean = 0
-  prior_sd = 1
-  sigma = 2
-  sample_mean = 1
-  level = 0.95
+  prior_mean = 0   []
+  prior_sd = 1   []
+  sigma = 2   []
+  sample_mean = 1   []
+  level = 0.95   []
   assumes: prior sd > 0; sigma > 0; n >= 1; 0 < level < 1
 ```
 
@@ -1118,9 +1030,9 @@ posterior_mean = 10.95238095
 posterior_sd = 1.309307341
 posterior_variance = 1.714285714
   by: Normal mean with known variance: posterior from data  (precision-weighted average of the prior mean and the sample mean)
-  prior_mean = 10
-  prior_sd = 2
-  sigma = 3
+  prior_mean = 10   []
+  prior_sd = 2   []
+  sigma = 3   []
   assumes: prior sd > 0; sigma > 0 known
 ```
 
@@ -1164,11 +1076,11 @@ sigma2_mean = 1.5
 lower = -1.412725216
 upper = 1.412725216
   by: Normal model with unknown mean and variance (normal-inverse-gamma)  (conjugate update; marginal posterior of the mean is Student t with 2 alpha_n degrees of freedom)
-  mu0 = 0
-  kappa0 = 1
-  alpha0 = 2
-  beta0 = 2
-  level = 0.95
+  mu0 = 0   []
+  kappa0 = 1   []
+  alpha0 = 2   []
+  beta0 = 2   []
+  level = 0.95   []
   assumes: kappa0, alpha0, beta0 > 0; 0 < level < 1
 ```
 
@@ -1203,8 +1115,8 @@ prob_at_most = 0.75
 predictive_mean = 1
 predictive_variance = 2
   by: Posterior predictive count (negative binomial)  (negative binomial distribution (the Poisson averaged over the gamma posterior))
-  shape = 1
-  rate = 1
+  shape = 1   []
+  rate = 1   []
   assumes: shape, rate > 0; k whole number >= 0
 ```
 
@@ -1242,11 +1154,11 @@ predictive_sd = 2.121320344
 prob_above = 0.5
 prob_below = 0.5
   by: Posterior predictive distribution of a new observation  (predictive variance = posterior variance + sampling variance)
-  prior_mean = 0
-  prior_sd = 1
-  sigma = 2
-  sample_mean = 1
-  threshold = 0.5
+  prior_mean = 0   []
+  prior_sd = 1   []
+  sigma = 2   []
+  sample_mean = 1   []
+  threshold = 0.5   []
   assumes: prior sd > 0; sigma > 0; n >= 1
 ```
 
@@ -1282,8 +1194,8 @@ prob_at_most = 0.6
 prob_more = 0.4
 predictive_mean = 2
   by: Posterior predictive probability (beta-binomial)  (beta-binomial distribution (the binomial averaged over the beta posterior))
-  alpha = 1
-  beta = 1
+  alpha = 1   []
+  beta = 1   []
   assumes: alpha, beta > 0; 0 <= j <= m
 ```
 
@@ -1316,9 +1228,9 @@ $ bayesian-statistics solve beta_posterior_tail_probability alpha=2 beta=1 thres
 prob_above = 0.75
 prob_below = 0.25
   by: Posterior probability that p exceeds a value  (regularized incomplete beta function of the (updated) posterior)
-  alpha = 2
-  beta = 1
-  threshold = 0.5
+  alpha = 2   []
+  beta = 1   []
+  threshold = 0.5   []
   assumes: alpha, beta > 0; 0 < c < 1; 0 <= k <= n
 ```
 
@@ -1352,10 +1264,10 @@ prob_1_greater = 0.5
 prob_2_greater = 0.5
 rate_ratio_mean = 1
   by: Probability that one Poisson rate exceeds another (gamma posteriors)  (lambda_1 b_1 / (lambda_1 b_1 + lambda_2 b_2) ~ Beta(shape1, shape2): one regularized incomplete beta)
-  shape1 = 5
-  rate1 = 1
-  shape2 = 5
-  rate2 = 1
+  shape1 = 5   []
+  rate1 = 1   []
+  shape2 = 5   []
+  rate2 = 1   []
   assumes: all parameters > 0
 ```
 
@@ -1393,9 +1305,9 @@ post_rate = 2
 lower = 0.02564664719
 upper = 1.497866137
   by: Credible interval for a Poisson rate  (conjugate update, then gamma quantiles (inverse regularized incomplete gamma))
-  shape = 1
-  rate = 1
-  level = 0.9
+  shape = 1   []
+  rate = 1   []
+  level = 0.9   []
   assumes: shape, rate > 0; counts whole numbers >= 0; 0 < level < 1
 ```
 
@@ -1432,9 +1344,9 @@ post_beta = 1
 lower = 0.2236067978
 upper = 0.9746794345
   by: Credible interval for a proportion (beta-binomial)  (conjugate update, then beta quantiles)
-  alpha = 1
-  beta = 1
-  level = 0.9
+  alpha = 1   []
+  beta = 1   []
+  level = 0.9   []
   assumes: alpha, beta > 0; 0 <= k <= n; 0 < level < 1
 ```
 
@@ -1467,9 +1379,9 @@ lower = 0.05
 upper = 0.95
 median = 0.5
   by: Equal-tailed credible interval of a beta distribution  (beta quantiles by safeguarded Newton inversion of the regularized incomplete beta function)
-  alpha = 1
-  beta = 1
-  level = 0.9
+  alpha = 1   []
+  beta = 1   []
+  level = 0.9   []
   assumes: alpha, beta > 0; 0 < level < 1
 ```
 
@@ -1502,9 +1414,9 @@ lower = 0.02564664719
 upper = 1.497866137
 median = 0.3465735903
   by: Equal-tailed credible interval of a gamma distribution  (gamma quantiles by inversion of the regularized incomplete gamma function)
-  shape = 1
-  rate = 2
-  level = 0.9
+  shape = 1   []
+  rate = 2   []
+  level = 0.9   []
   assumes: shape, rate > 0; 0 < level < 1
 ```
 
@@ -1537,9 +1449,9 @@ lower = 0.04055516641
 upper = 0.4837236593
 width = 0.4431684929
   by: Highest-density interval of a beta posterior  (bisection on the lower limit l with u = F^-1(F(l) + level) until f(l) = f(u))
-  alpha = 3
-  beta = 9
-  level = 0.95
+  alpha = 3   []
+  beta = 9   []
+  level = 0.95   []
   assumes: alpha > 1 and beta > 1 (unimodal, zero density at both ends); 0 < level < 1
 ```
 
@@ -1572,9 +1484,9 @@ lower = 0.603480051
 upper = 4.715108491
 width = 4.11162844
   by: Highest-density interval of a gamma posterior  (bisection on the lower limit with u = G^-1(G(l) + level) until the densities are equal)
-  shape = 5
-  rate = 2
-  level = 0.95
+  shape = 5   []
+  rate = 2   []
+  level = 0.95   []
   assumes: shape > 1; rate > 0; 0 < level < 1
 ```
 
@@ -1607,7 +1519,7 @@ lower = 0.06487170115
 upper = 0.2553250282
 posterior_mean = 0.1470588235
   by: Jeffreys interval for a binomial proportion  (quantiles of Beta(k + 1/2, n - k + 1/2))
-  level = 0.95
+  level = 0.95   []
   assumes: 0 <= k <= n; n >= 1; 0 < level < 1
 ```
 
@@ -1765,9 +1677,9 @@ $ bayesian-statistics solve treatment_threshold loss_fp=1 loss_fn=9 probability=
 threshold = 0.1
 decision = do not treat
   by: Decision threshold probability (treat / do not treat)  (equal expected losses)
-  loss_fp = 1
-  loss_fn = 9
-  probability = 0.05
+  loss_fp = 1   []
+  loss_fn = 9   []
+  probability = 0.05   []
   assumes: losses > 0
 ```
 
@@ -1835,7 +1747,7 @@ certainty_equivalent = 283.1095848
 risk_premium = 216.8904152
 expected_value = 500
   by: Expected utility and certainty equivalent (exponential utility)  (log-sum-exp evaluation of E[exp(-x/R)])
-  risk_tolerance = 500
+  risk_tolerance = 500   []
   assumes: probabilities sum to 1; R > 0
 ```
 
@@ -1962,10 +1874,10 @@ $$
 $ bayesian-statistics solve kl_divergence_beta alpha1=2 beta1=1 alpha2=1 beta2=1
 kl = 0.1931471806
   by: Kullback-Leibler divergence between two beta distributions  (closed form with log-beta and digamma functions)
-  alpha1 = 2
-  beta1 = 1
-  alpha2 = 1
-  beta2 = 1
+  alpha1 = 2   []
+  beta1 = 1   []
+  alpha2 = 1   []
+  beta2 = 1   []
   assumes: all parameters > 0
 ```
 
@@ -1997,10 +1909,10 @@ $ bayesian-statistics solve kl_divergence_normal mean1=0 sd1=1 mean2=1 sd2=2
 kl_1_to_2 = 0.4431471806
 kl_2_to_1 = 1.306852819
   by: Kullback-Leibler divergence between two normal distributions  (closed form for two normals)
-  mean1 = 0
-  sd1 = 1
-  mean2 = 1
-  sd2 = 2
+  mean1 = 0   []
+  sd1 = 1   []
+  mean2 = 1   []
+  sd2 = 2   []
   assumes: sd1, sd2 > 0
 ```
 
@@ -2037,7 +1949,7 @@ coefficient = 1
 plain_estimate = 2
 variance_reduction = 0
   by: Control-variate Monte Carlo estimate  (regression (optimal) control-variate coefficient)
-  control_mean = 2.5
+  control_mean = 2.5   []
   assumes: outputs and control vary; n >= 3
 ```
 
@@ -2102,8 +2014,8 @@ estimate = 4
 standard_error = 2
 n = 2
   by: Monte Carlo estimate of an integral from uniform samples  (sample mean of f scaled by the interval length)
-  lower = 0
-  upper = 2
+  lower = 0   []
+  upper = 2   []
   assumes: b > a; n >= 2
 ```
 
@@ -2136,9 +2048,9 @@ draws = 1537
 z = 1.959963985
 standard_error_target = 0.2551067285
   by: Number of Monte Carlo draws for a target accuracy  (n = (z sigma / E)^2, rounded up)
-  sigma = 10
-  half_width = 0.5
-  level = 0.95
+  sigma = 10   []
+  half_width = 0.5   []
+  level = 0.95   []
   assumes: sigma, half-width > 0; 0 < level < 1
 ```
 
@@ -2232,8 +2144,8 @@ lr_positive = 4.5
 lr_negative = 0.125
 diagnostic_odds_ratio = 36
   by: Likelihood ratios of a diagnostic test  (ratios of the probabilities of a result with and without the condition)
-  sensitivity = 0.9
-  specificity = 0.8
+  sensitivity = 0.9   []
+  specificity = 0.8   []
   assumes: 0 < specificity < 1; sensitivity < 1
 ```
 
@@ -2264,7 +2176,7 @@ odds = 0.25
 odds_against = 4
 log_odds = -1.386294361
   by: Odds and log-odds of a probability  (definition of odds)
-  probability = 0.2
+  probability = 0.2   []
   assumes: 0 < p < 1
 ```
 
@@ -2296,8 +2208,8 @@ posterior = 0.6
 prior_odds = 0.25
 posterior_odds = 1.5
   by: Post-test probability from a likelihood ratio  (odds form of Bayes' theorem)
-  prior = 0.2
-  likelihood_ratio = 6
+  prior = 0.2   []
+  likelihood_ratio = 6   []
   assumes: 0 < prior < 1; likelihood ratio >= 0
 ```
 
@@ -2326,7 +2238,7 @@ $ bayesian-statistics solve odds_to_probability odds=3
 probability = 0.75
 complement = 0.25
   by: Probability from odds  (p = o/(1+o))
-  odds = 3
+  odds = 3   []
   assumes: odds >= 0
 ```
 
@@ -2363,9 +2275,9 @@ laplace_sd = 0.25
 lower = 0.01000900386
 upper = 0.9899909961
   by: Laplace (normal) approximation of a beta posterior  (second-order Taylor expansion of the log posterior at its mode)
-  alpha = 3
-  beta = 3
-  level = 0.95
+  alpha = 3   []
+  beta = 3   []
+  level = 0.95   []
   assumes: alpha > 1 and beta > 1
 ```
 
@@ -2399,8 +2311,8 @@ alpha = 6
 beta = 14
 prior_sample_size = 20
   by: Beta prior from a mean and standard deviation  (match the beta mean and variance)
-  mean = 0.3
-  sd = 0.1
+  mean = 0.3   []
+  sd = 0.1   []
   assumes: 0 < mean < 1; 0 < sd^2 < mean (1 - mean)
 ```
 
@@ -2434,7 +2346,7 @@ mu = [0.5]
 mu_star = [1.5]
 sigma = [2.12132034356]
   by: Morris elementary-effects screening  (elementary effects EE_ij = (y_{i,j+1} - y_{ij})/delta)
-  delta = 1
+  delta = 1   []
   assumes: at least 2 trajectories; delta > 0
 ```
 
@@ -2506,13 +2418,13 @@ ST1 = 1
 ST2 = 1
 variance = 1
   by: Sobol indices of a model with an interaction term  (ANOVA decomposition of the bilinear polynomial)
-  a1 = 0
-  a2 = 0
-  a12 = 1
-  mean1 = 0
-  sd1 = 1
-  mean2 = 0
-  sd2 = 1
+  a1 = 0   []
+  a2 = 0   []
+  a12 = 1   []
+  mean1 = 0   []
+  sd1 = 1   []
+  mean2 = 0   []
+  sd2 = 1   []
   assumes: independent normal inputs
 ```
 
@@ -2582,8 +2494,8 @@ ST2 = 0.4424111448
 ST3 = 0.2436836641
 variance = 13.84458794
   by: Sobol sensitivity indices of the Ishigami function  (closed-form variance decomposition)
-  a = 7
-  b = 0.1
+  a = 7   []
+  b = 0.1   []
   assumes: inputs independent uniform on [-pi, pi]
 ```
 
@@ -2649,7 +2561,7 @@ effective_dof = 10
 coverage_factor = 2.228138852
 expanded_uncertainty = 2.228138852
   by: Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite)  (Welch-Satterthwaite formula and the Student-t quantile at non-integer degrees of freedom)
-  level = 0.95
+  level = 0.95   []
   assumes: components and degrees of freedom > 0; 0 < level < 1
 ```
 
@@ -2683,10 +2595,10 @@ exact_mean = 50
 exact_sd = 20.71231518
 first_order_sd = 20.61552813
   by: Exact mean and standard deviation of a product of independent normals  (exact second moments of a product)
-  mean_x = 10
-  sd_x = 1
-  mean_y = 5
-  sd_y = 2
+  mean_x = 10   []
+  sd_x = 1   []
+  mean_y = 5   []
+  sd_y = 2   []
   assumes: independent normal inputs
 ```
 
@@ -2719,8 +2631,8 @@ mean = 4
 variance = 22
 sd = 4.69041576
   by: Exact mean and variance of a polynomial of a normal variable  (substitute X = mean + sd Z and use the normal moments E[Z^k] = (k - 1)!! for even k)
-  mean = 0
-  sd = 1
+  mean = 0   []
+  sd = 1   []
   assumes: sd > 0; degree <= 6
 ```
 
@@ -2754,8 +2666,8 @@ exact_sd = 2.161197416
 first_order_mean = 1
 first_order_sd = 1
   by: Exact versus first-order propagation through exp(X)  (lognormal moments; first-order Taylor propagation)
-  mu = 0
-  sigma = 1
+  mu = 0   []
+  sigma = 1   []
   assumes: sigma > 0
 ```
 
@@ -2818,7 +2730,7 @@ $ bayesian-statistics solve type_b_standard_uncertainty half_width=0.5 distribut
 standard_uncertainty = 0.2886751346
 divisor = 1.732050808
   by: Type B standard uncertainty from a stated half-width  (standard deviation of the assumed distribution)
-  half_width = 0.5
+  half_width = 0.5   []
   distribution = rectangular
   assumes: a > 0
 ```
@@ -2845,16 +2757,7 @@ $$
 
 **Applies when:** x inside the function's domain.
 
-```shell
-$ bayesian-statistics solve uncertainty_function x=2.5 ux=0.05 function=ln
-value = 0.9162907319
-uncertainty = 0.02
-  by: Uncertainty of a function of one variable  (first-order propagation u_f = |f'(x)| u_x)
-  x = 2.5
-  ux = 0.05
-  function = ln
-  assumes: x inside the function's domain
-```
+*Not in `bayesian-statistics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the result of applying a specific mathematical function to an input variable and estimates the associated uncertainty using first-order error propagation. The computed value, 0.916291, represents the transformed quantity, while the output uncertainty, 0.02, quantifies how much this result could vary given the input uncertainty, 0.05. This method assumes that the change in the function's output is linearly proportional to the change in its input near the current value.
 
@@ -2916,9 +2819,9 @@ value = 9
 uncertainty = 0.6
 relative_uncertainty = 0.06666666667
   by: Uncertainty of a power x^n  (first-order propagation)
-  x = 3
-  ux = 0.1
-  exponent = 2
+  x = 3   []
+  ux = 0.1   []
+  exponent = 2   []
   assumes: x > 0 for a non-integer exponent; x != 0 for n < 1
 ```
 
@@ -2952,7 +2855,7 @@ value = 9
 uncertainty = 0.3710795063
 relative_uncertainty = 0.04123105626
   by: Uncertainty of a power-law product y = k x1^p1 x2^p2 ...  (first-order propagation in relative form)
-  coefficient = 0.5
+  coefficient = 0.5   []
   assumes: x_i > 0; independent inputs
 ```
 
@@ -2988,10 +2891,10 @@ u_product = 2.683281573
 quotient = 3
 u_quotient = 0.1677050983
   by: Uncertainty of a product and a quotient  (first-order propagation (relative uncertainties add in quadrature))
-  a = 12
-  ua = 0.3
-  b = 4
-  ub = 0.2
+  a = 12   []
+  ua = 0.3   []
+  b = 4   []
+  ub = 0.2   []
   assumes: independent a and b; b != 0
 ```
 
@@ -3028,11 +2931,11 @@ u_product = 0
 quotient = 1
 u_quotient = 0.2
   by: Uncertainty of a product and quotient with correlation  (first-order propagation with the covariance term)
-  a = 1
-  ua = 0.1
-  b = 1
-  ub = 0.1
-  rho = -1
+  a = 1   []
+  ua = 0.1   []
+  b = 1   []
+  ub = 0.1   []
+  rho = -1   []
   assumes: -1 <= rho <= 1; b != 0
 ```
 

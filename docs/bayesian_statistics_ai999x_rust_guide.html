@@ -21,30 +21,30 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>bayesian-statistics: the Bayesian Statistics program — user guide</h1>
-<p><strong>bayesian-statistics-ai999x 1.0.3</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p><strong>bayesian-statistics-ai999x 1.1.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
 <p>Bayesian Statistics covers Bayes&#x27; theorem, conjugate priors and posteriors, credible intervals, Bayes factors, Monte Carlo estimation, uncertainty propagation, sensitivity analysis and decision analysis. This guide is about <code>bayesian-statistics</code>, the model as a self-contained program for Windows and Linux: 78 capabilities in 12 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/bayesian-statistics-ai999x/); the Python package (<code>pip install bayesian-statistics-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
 <h2>1. Get it</h2>
-<p>Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS; the newest version is always under https://www.ai999x.com/downloads/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
-<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Bayesian Statistics</td><td>Windows x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Bayesian Statistics</td><td>Linux x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
+<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Bayesian Statistics</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Bayesian Statistics</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz</td></tr></tbody></table>
 <h3>Desktop app</h3>
 <p>Bayesian Statistics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-bayesian-statistics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-bayesian-statistics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-bayesian-statistics-1.4.0-linux-x86_64.tar.gz
 ./ai999x-bayesian-statistics-1.4.0-linux-x86_64/ai999x-bayesian-statistics</code></pre>
 <p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 ./ai999x-1.4.0-linux-x86_64/ai999x</code></pre>
 <h3>Command line — Linux</h3>
 <p>The bundle holds one program per model; <code>bayesian-statistics</code> is this one. The checksum line should print OK.</p>
-<pre><code class="shell">curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
 echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
@@ -52,8 +52,8 @@ bayesian-statistics --version</code></pre>
 <h3>Command line — Windows (PowerShell)</h3>
 <p>The fourth line should print True.</p>
 <pre><code class="powershell">$F = &quot;ai999x-cli-1.4.0-windows-x86_64.zip&quot;
-Invoke-WebRequest &quot;https://www.ai999x.com/downloads/desktop/1.4.0/$F&quot; -OutFile $F
-Invoke-WebRequest &quot;https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS&quot; -OutFile SHA256SUMS
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.4.0/$F&quot; -OutFile $F
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS&quot; -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split &#x27; &#x27;)[0]
 Expand-Archive $F -DestinationPath &quot;$env:LOCALAPPDATA\AI999X&quot; -Force
 $D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
@@ -68,33 +68,7 @@ bayesian-statistics --version</code></pre>
 <p>Prints the model, its version and that this is the Rust build.</p>
 <pre><code class="shell">$ bayesian-statistics --version
 bayesian-statistics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)</code></pre>
-<h3>2.2 Ask in words</h3>
-<p>Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.</p>
-<pre><code class="shell">$ bayesian-statistics ask &quot;A test has sensitivity 0.9 and specificity 0.95; the prevalence is 0.01. What is the positive predictive value?&quot;
-Read as: Positive and negative predictive values of a test
-ppv = 0.1538461538
-npv = 0.9989378651
-p_positive = 0.0585
-false_discovery_rate = 0.8461538462
-false_omission_rate = 0.001062134891
-  by: Positive and negative predictive values of a test  (Bayes&#x27; theorem with the total probability of a positive result)
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
-  assumes: probabilities between 0 and 1; both results possible</code></pre>
-<h3>2.3 Find a capability</h3>
-<p>Search the capabilities by what you want to know; the first column is the id to pass to info and solve.</p>
-<pre><code class="shell">$ bayesian-statistics search &quot;positive and negative predictive values of a test&quot;
-diagnostic_test_predictive_values    Positive and negative predictive values of a test  (Bayes&#x27; theorem and conditional probability)
-gamma_poisson_predictive             Posterior predictive count (negative binomial)  (conjugate priors: gamma-Poisson and gamma-exponential)
-likelihood_ratios                    Likelihood ratios of a diagnostic test  (odds and likelihood ratios)
-sequential_test_posterior            Posterior after repeated independent tests  (Bayes&#x27; theorem and conditional probability)
-beta_binomial_predictive             Posterior predictive probability (beta-binomial)  (conjugate priors: beta-binomial)
-normal_posterior_predictive          Posterior predictive distribution of a new observation  (conjugate priors: normal models)
-ab_test_probability_beta             Bayesian A/B test: probability that A beats B  (conjugate priors: beta-binomial)
-posterior_from_likelihood_ratio      Post-test probability from a likelihood ratio  (odds and likelihood ratios)
-… 10 more</code></pre>
-<h3>2.4 List the capabilities</h3>
+<h3>2.2 List the capabilities</h3>
 <p>Every capability the program answers: its id (what you pass to solve) and its name.</p>
 <pre><code class="shell">$ bayesian-statistics list
 ab_test_probability_beta                 Bayesian A/B test: probability that A beats B
@@ -105,8 +79,8 @@ bayes_factor_point_null_binomial         Bayes factor for a point null on a prop
 bayes_theorem                            Bayes&#x27; theorem for an event and its complement
 beta_binomial_credible_interval          Credible interval for a proportion (beta-binomial)
 beta_binomial_evidence                   Marginal likelihood (evidence) of binomial data under a beta prior
-… 70 more</code></pre>
-<h3>2.5 What a capability needs</h3>
+… 69 more</code></pre>
+<h3>2.3 What a capability needs</h3>
 <p>The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.</p>
 <pre><code class="shell">$ bayesian-statistics info diagnostic_test_predictive_values
 Positive and negative predictive values of a test
@@ -119,7 +93,7 @@ Positive and negative predictive values of a test
   out  p_positive probability of a positive result [1]
   out  false_discovery_rate 1 - PPV [1]
   out  false_omission_rate 1 - NPV [1]</code></pre>
-<h3>2.6 Solve</h3>
+<h3>2.4 Solve</h3>
 <p>Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.</p>
 <pre><code class="shell">$ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95
 ppv = 0.1538461538
@@ -128,42 +102,19 @@ p_positive = 0.0585
 false_discovery_rate = 0.8461538462
 false_omission_rate = 0.001062134891
   by: Positive and negative predictive values of a test  (Bayes&#x27; theorem with the total probability of a positive result)
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
+  prevalence = 0.01   []
+  sensitivity = 0.9   []
+  specificity = 0.95   []
   assumes: probabilities between 0 and 1; both results possible</code></pre>
-<h3>2.7 Machine-readable answer</h3>
+<h3>2.5 Machine-readable answer</h3>
 <p>--json prints the same answer as one line of JSON (values in SI): for scripts and other programs.</p>
 <pre><code class="shell">$ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --json
 {&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:0.153846153846,&quot;unit&quot;:&quot;&quot;,&quot;solved_for&quot;:&quot;ppv&quot;,&quot;si&quot;:[[&quot;prevalence&quot;,0.01],[&quot;sensitivity&quot;,0.9],[&quot;specificity&quot;,0.95]],&quot;values&quot;:[[&quot;ppv&quot;,0.153846153846,&quot;&quot;],[&quot;npv&quot;,0.998937865109,&quot;&quot;],[&quot;p_positive&quot;,0.0585,&quot;&quot;],[&quot;false_discovery_rate&quot;,0.846153846154,&quot;&quot;],[&quot;false_omission_rate&quot;,0.00106213489113,&quot;&quot;]],&quot;target&quot;:&quot;ppv&quot;,&quot;phrase&quot;:&quot;positive predictive value P(condition | positive)&quot;,&quot;assumptions&quot;:[&quot;probabilities between 0 and 1&quot;,&quot;both results possible&quot;],&quot;name&quot;:&quot;Positive and negative predictive values of a test&quot;,&quot;equation&quot;:&quot;Bayes&#x27; theorem with the total probability of a positive result&quot;}</code></pre>
-<h3>2.8 When an input is missing</h3>
+<h3>2.6 When an input is missing</h3>
 <p>No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.</p>
 <pre><code class="shell">$ bayesian-statistics solve diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9
 NEEDS_INPUT: diagnostic_test_predictive_values needs specificity (specificity P(negative | no condition)). Example: solve(&#x27;diagnostic_test_predictive_values&#x27;, prevalence=0.01, sensitivity=0.9, specificity=0.95).</code></pre>
-<h3>2.9 Draw the figures</h3>
-<p>The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.</p>
-<pre><code class="shell">$ bayesian-statistics figures diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --out .
-[
-  {
-    &quot;slug&quot;: &quot;diagnostic-test-predictive-values-curves&quot;,
-    &quot;title&quot;: &quot;Predictive values of a test against prevalence&quot;,
-    &quot;caption&quot;: &quot;Positive and negative predictive values of a test with sensitivity 0.9 and specificity 0.95 over prevalences from 0.001 to 0.999, each computed by the model: a positive result means little when the condition is rare. Marked: prevalence 0.01, computed PPV 0.1538 (NPV 0.9989, P(positive) = 0.0585). Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.&quot;,
-    &quot;file&quot;: &quot;.\\diagnostic-test-predictive-values-curves.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;diagnostic-test-predictive-values-live-1&quot;,
-    &quot;title&quot;: &quot;Positive predictive value P(condition | posit... as specificity P(negative | no condition) varies&quot;,
-    &quot;caption&quot;: &quot;Positive predictive value P(condition | posit... as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.&quot;,
-    &quot;file&quot;: &quot;.\\diagnostic-test-predictive-values-live-1.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;diagnostic-test-predictive-values-live-2&quot;,
-    &quot;title&quot;: &quot;Positive predictive value P(condition | posit... as sensitivity P(positive | condition) varies&quot;,
-    &quot;caption&quot;: &quot;Positive predictive value P(condition | posit... as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.&quot;,
-    &quot;file&quot;: &quot;.\\diagnostic-test-predictive-values-live-2.svg&quot;
-  }
-]</code></pre>
-<h3>2.10 Many questions at once</h3>
+<h3>2.7 Many questions at once</h3>
 <p>One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | bayesian-statistics batch</p>
 <p><code>cases.jsonl</code>:</p>
 <pre><code class="json">{&quot;key&quot;: &quot;diagnostic_test_predictive_values&quot;, &quot;inputs&quot;: {&quot;prevalence&quot;: 0.01, &quot;sensitivity&quot;: 0.9, &quot;specificity&quot;: 0.95}}
@@ -189,27 +140,6 @@ out = subprocess.run([&quot;bayesian-statistics&quot;, &quot;batch&quot;], input
 answers = [json.loads(line) for line in out.splitlines()]</code></pre>
 <h2>6. Figures</h2>
 <p><code>bayesian-statistics figures &lt;capability&gt; name=value ... --out DIR</code> draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without <code>--out</code> the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.</p>
-<pre><code class="shell">$ bayesian-statistics figures diagnostic_test_predictive_values prevalence=0.01 sensitivity=0.9 specificity=0.95 --out .
-[
-  {
-    &quot;slug&quot;: &quot;diagnostic-test-predictive-values-curves&quot;,
-    &quot;title&quot;: &quot;Predictive values of a test against prevalence&quot;,
-    &quot;caption&quot;: &quot;Positive and negative predictive values of a test with sensitivity 0.9 and specificity 0.95 over prevalences from 0.001 to 0.999, each computed by the model: a positive result means little when the condition is rare. Marked: prevalence 0.01, computed PPV 0.1538 (NPV 0.9989, P(positive) = 0.0585). Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.&quot;,
-    &quot;file&quot;: &quot;.\\diagnostic-test-predictive-values-curves.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;diagnostic-test-predictive-values-live-1&quot;,
-    &quot;title&quot;: &quot;Positive predictive value P(condition | posit... as specificity P(negative | no condition) varies&quot;,
-    &quot;caption&quot;: &quot;Positive predictive value P(condition | posit... as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.&quot;,
-    &quot;file&quot;: &quot;.\\diagnostic-test-predictive-values-live-1.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;diagnostic-test-predictive-values-live-2&quot;,
-    &quot;title&quot;: &quot;Positive predictive value P(condition | posit... as sensitivity P(positive | condition) varies&quot;,
-    &quot;caption&quot;: &quot;Positive predictive value P(condition | posit... as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.&quot;,
-    &quot;file&quot;: &quot;.\\diagnostic-test-predictive-values-live-2.svg&quot;
-  }
-]</code></pre>
 <h2>7. In a web page or Node.js: WebAssembly</h2>
 <p>The same model is a WebAssembly module, <code>bayesian_statistics_ai999x.wasm</code> (https://www.ai999x.com/compute/rust/bayesian_statistics_ai999x.wasm), with a small loader, <code>ax-wasm.js</code> (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.</p>
 <pre><code class="html">&lt;script src=&quot;ax-wasm.js&quot;&gt;&lt;/script&gt;
@@ -234,10 +164,10 @@ bf01 = 1.414213562
 log10_bf10 = -0.1505149978
 posterior_h1 = 0.4142135624
   by: Bayes factor for a normal mean (known variance)  (Savage-Dickey density ratio of the posterior and prior at mu0)
-  sample_mean = 0
-  sigma = 1
-  mu0 = 0
-  prior_sd = 1
+  sample_mean = 0   []
+  sigma = 1   []
+  mu0 = 0   []
+  prior_sd = 1   []
   assumes: sigma, tau &gt; 0; n &gt;= 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the strength of evidence for a normal mean differing from a specified value using a known variance. By comparing the posterior and prior densities at the null value, it yields a Bayes factor of 0.707107 for the alternative model against the null. The corresponding inverse Bayes factor is 1.41421, and the logarithmic scale value is -0.150515. With equal prior odds, the posterior probability of the alternative model is estimated as 0.414214. These metrics rely on a sample size of 1, a sample mean of 0, and a prior standard deviation of 1, assuming a known population standard deviation of 1.</p>
 <h4 id="bayes_factor_point_null_binomial">Bayes factor for a point null on a proportion (beta prior under H1) — <code>bayes_factor_point_null_binomial</code></h4>
@@ -251,9 +181,9 @@ bf01 = 0.75
 log10_bf10 = 0.1249387366
 posterior_h1 = 0.5714285714
   by: Bayes factor for a point null on a proportion (beta prior under H1)  (ratio of the beta-binomial marginal likelihood to the binomial likelihood at p0)
-  p0 = 0.5
-  alpha = 1
-  beta = 1
+  p0 = 0.5   []
+  alpha = 1   []
+  beta = 1   []
   assumes: 0 &lt; p0 &lt; 1; alpha, beta &gt; 0; 0 &lt;= k &lt;= n</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the strength of evidence for a beta-distributed proportion against a fixed null value. Given 2 successes in 2 trials, with a null hypothesis of 0.5 and prior parameters alpha of 1 and beta of 1, the resulting Bayes factor is 1.33333. The reciprocal, 0.75, represents evidence for the null. Under equal prior odds, the posterior probability that the alternative model is true is 0.571429.</p>
 <h4 id="bayes_factor_binomial_simple">Bayes factor for two simple binomial hypotheses — <code>bayes_factor_binomial_simple</code></h4>
@@ -266,8 +196,8 @@ bf10 = 5.184417905
 log10_bf10 = 0.7147000018
 posterior_h1 = 0.8383032946
   by: Bayes factor for two simple binomial hypotheses  (likelihood ratio of the two simple hypotheses)
-  p0 = 0.5
-  p1 = 0.7
+  p0 = 0.5   []
+  p1 = 0.7   []
   assumes: 0 &lt; p0, p1 &lt; 1; 0 &lt;= k &lt;= n</code></pre>
 <p><strong>What the worked example means:</strong> This calculation compares two simple hypotheses about a success probability using observed data consisting of 14 successes in 20 trials. The likelihood ratio yields a Bayes factor of 5.18442 for the hypothesis with probability 0.7 against the hypothesis with probability 0.5. This evidence translates to a log base ten scale value of 0.7147. Assuming equal prior odds between the two hypotheses, the resulting posterior probability that the first hypothesis is true given the data is 0.838303.</p>
 <h4 id="beta_binomial_evidence">Marginal likelihood (evidence) of binomial data under a beta prior — <code>beta_binomial_evidence</code></h4>
@@ -279,8 +209,8 @@ posterior_h1 = 0.8383032946
 marginal_likelihood = 0.09090909091
 log_marginal_likelihood = -2.397895273
   by: Marginal likelihood (evidence) of binomial data under a beta prior  (closed form with log-beta functions)
-  alpha = 1
-  beta = 1
+  alpha = 1   []
+  beta = 1   []
   assumes: alpha, beta &gt; 0; 0 &lt;= k &lt;= n</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the probability of observing exactly 7 successes out of 10 independent Bernoulli trials, assuming the underlying success rate follows a Beta distribution with parameters alpha equal to 1 and beta equal to 1. The resulting value, 0.0909091, represents the evidence for the data given the prior model. Its natural logarithm is computed as -2.3979, which is often more numerically stable for large numbers of trials.</p>
 <h4 id="posterior_model_probabilities">Posterior model probabilities from log evidences — <code>posterior_model_probabilities</code></h4>
@@ -305,8 +235,8 @@ posterior = 0.8571428571
 posterior_odds = 6
 posterior_h0 = 0.1428571429
   by: Posterior probability of a hypothesis from a Bayes factor  (posterior odds = BF10 x prior odds)
-  bayes_factor = 6
-  prior = 0.5
+  bayes_factor = 6   []
+  prior = 0.5   []
   assumes: BF10 &gt; 0; 0 &lt; prior &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the updated probability of hypothesis H1 after observing data. It multiplies the provided Bayes factor, which quantifies the evidence strength for H1 over H0, by the prior odds to yield the posterior odds. These odds are then converted into a probability, resulting in a posterior value of 0.857143. This process translates abstract model comparison metrics into actionable probabilistic statements about which hypothesis is more likely given the evidence.</p>
 <h3>Bayes&#x27; theorem and conditional probability (5)</h3>
@@ -320,9 +250,9 @@ p_a_given_b = 0.7741935484
 p_b = 0.31
 p_not_a_given_b = 0.2258064516
   by: Bayes&#x27; theorem for an event and its complement  (law of total probability for P(B), then Bayes&#x27; theorem)
-  p_a = 0.3
-  p_b_given_a = 0.8
-  p_b_given_not_a = 0.1
+  p_a = 0.3   []
+  p_b_given_a = 0.8   []
+  p_b_given_not_a = 0.1   []
   assumes: probabilities between 0 and 1; P(B) &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the updated probability of event A given evidence B. It uses the law of total probability to find the marginal likelihood of B, which equals 0.31, combining the prior probability 0.3 with the conditional probabilities 0.8 and 0.1. The resulting posterior probability for A is 0.774194, while the complementary probability for not A is 0.225806. This process rationalizes belief revision by weighing new evidence against existing assumptions.</p>
 <h4 id="total_probability">Law of total probability — <code>total_probability</code></h4>
@@ -348,9 +278,9 @@ p_positive = 0.0585
 false_discovery_rate = 0.8461538462
 false_omission_rate = 0.001062134891
   by: Positive and negative predictive values of a test  (Bayes&#x27; theorem with the total probability of a positive result)
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
+  prevalence = 0.01   []
+  sensitivity = 0.9   []
+  specificity = 0.95   []
   assumes: probabilities between 0 and 1; both results possible</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the probability that a person actually has the condition given a positive test result, known as the positive predictive value, which is 0.153846. It also finds the probability that a person does not have the condition given a negative result, the negative predictive value, at 0.998938. These values are derived from the pre-test probability of the condition, or prevalence 0.01, along with the test&#x27;s ability to correctly identify those with the disease (sensitivity 0.9) and those without it (specificity 0.95). The overall chance of getting a positive result on this test is 0.0585.</p>
 <h4 id="sequential_test_posterior">Posterior after repeated independent tests — <code>sequential_test_posterior</code></h4>
@@ -362,9 +292,9 @@ false_omission_rate = 0.001062134891
 posterior = 0.7659574468
 posterior_odds = 3.272727273
   by: Posterior after repeated independent tests  (odds form, applied once per result (in log space))
-  prevalence = 0.01
-  sensitivity = 0.9
-  specificity = 0.95
+  prevalence = 0.01   []
+  sensitivity = 0.9   []
+  specificity = 0.95   []
   assumes: 0 &lt; prevalence &lt; 1; results conditionally independent given the status</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the updated probability of a condition after processing multiple independent test results. It begins with the pre-test probability, represented here as 0.01, and converts it into odds. For each positive result, the odds are multiplied by the likelihood ratio for positivity, and for each negative result, they are multiplied by the likelihood ratio for negativity. The final computed posterior odds are 3.27273, which translate to a posterior probability of 0.765957. This method allows clinicians to integrate cumulative evidence from repeated screenings or diagnostic tests into a single coherent risk estimate.</p>
 <h4 id="discrete_bayes_posterior">Posterior over several discrete hypotheses — <code>discrete_bayes_posterior</code></h4>
@@ -390,10 +320,10 @@ map_probability = 0.4516129032
 prob_a_greater = 0.5
 prob_b_greater = 0.5
   by: Bayesian A/B test: probability that A beats B  (exact finite sum of beta functions (Miller&#x27;s formula))
-  alpha_a = 1
-  beta_a = 1
-  alpha_b = 1
-  beta_b = 1
+  alpha_a = 1   []
+  beta_a = 1   []
+  alpha_b = 1   []
+  beta_b = 1   []
   assumes: all parameters &gt; 0; alpha_b a whole number</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the exact Bayesian probability that the success rate of variant A exceeds that of variant B, given their independent Beta posterior distributions. The result shows a probability of 0.5 for A being better and 0.5 for B being better. These values are derived from Miller&#x27;s formula using the posterior parameters alpha and beta for both groups, providing a direct measure of superiority without relying on frequentist p-values.</p>
 <h4 id="beta_binomial_posterior">Beta-binomial conjugate posterior — <code>beta_binomial_posterior</code></h4>
@@ -408,8 +338,8 @@ posterior_mean = 0.6428571429
 posterior_variance = 0.01530612245
 posterior_sd = 0.1237179148
   by: Beta-binomial conjugate posterior  (conjugate update of the beta prior with the binomial likelihood)
-  alpha = 2
-  beta = 2
+  alpha = 2   []
+  beta = 2   []
   assumes: alpha, beta &gt; 0; 0 &lt;= k &lt;= n</code></pre>
 <p><strong>What the worked example means:</strong> This calculation updates a Beta distribution prior using binomial likelihood data. The posterior parameters are determined by adding the number of successes to the prior alpha, resulting in 9, and adding the number of failures to the prior beta, resulting in 5. The expected value of the success probability given this updated belief is 0.642857, while the spread of the uncertainty is quantified by a standard deviation of 0.123718.</p>
 <h4 id="dirichlet_multinomial_posterior">Dirichlet-multinomial conjugate posterior — <code>dirichlet_multinomial_posterior</code></h4>
@@ -447,8 +377,8 @@ posterior_mean = 1.428571429
 posterior_variance = 0.4081632653
 posterior_sd = 0.638876565
   by: Gamma-exponential conjugate posterior of a rate  (conjugate update of the gamma prior with the exponential likelihood)
-  shape = 2
-  rate = 1
+  shape = 2   []
+  rate = 1   []
   assumes: shape, rate &gt; 0; times &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation updates the uncertainty about the event rate by combining prior beliefs with new data. Starting with a Gamma prior defined by shape 2 and rate 1, the sum of observed waiting times is incorporated. The resulting posterior distribution has a shape of 5 and a rate of 3.5. Consequently, the expected value for the rate parameter is estimated at 1.42857, reflecting a blend of initial assumptions and empirical evidence.</p>
 <h4 id="gamma_poisson_posterior">Gamma-Poisson conjugate posterior of a rate — <code>gamma_poisson_posterior</code></h4>
@@ -463,8 +393,8 @@ posterior_mean = 3.5
 posterior_variance = 0.875
 posterior_sd = 0.9354143467
   by: Gamma-Poisson conjugate posterior of a rate  (conjugate update of the gamma prior with the Poisson likelihood)
-  shape = 2
-  rate = 1
+  shape = 2   []
+  rate = 1   []
   assumes: shape, rate &gt; 0; counts whole numbers &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation updates a Gamma prior on a Poisson rate using observed counts. The new shape parameter, 14, combines the prior belief with the total evidence from the data. The updated rate, 4, reflects the number of intervals plus the prior rate. Consequently, the estimated average event rate is 3.5, with a standard deviation of 0.935414 indicating the uncertainty in this estimate.</p>
 <h4 id="rule_of_succession">Laplace&#x27;s rule of succession — <code>rule_of_succession</code></h4>
@@ -488,8 +418,8 @@ map = 3.25
 mle = 4
 posterior_mean = 3.5
   by: MAP estimate of a Poisson rate (gamma prior)  (stationary point of the log posterior)
-  shape = 2
-  rate = 1
+  shape = 2   []
+  rate = 1   []
   assumes: shape + sum of counts &gt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the most probable value for the Poisson rate parameter given observed counts and prior beliefs. The result, 3.25, represents the peak of the updated probability distribution. For context, the simple average of the data is 4, and the expected value of the distribution is 3.5. These values help compare how much the prior information influences the final estimate relative to the raw data.</p>
 <h4 id="map_beta_binomial">MAP estimate of a proportion (beta-binomial) — <code>map_beta_binomial</code></h4>
@@ -502,8 +432,8 @@ map = 0.6666666667
 mle = 0.7
 posterior_mean = 0.6428571429
   by: MAP estimate of a proportion (beta-binomial)  (maximize the log posterior (closed form of its stationary point))
-  alpha = 2
-  beta = 2
+  alpha = 2   []
+  beta = 2   []
   assumes: alpha + k &gt; 1 and beta + n - k &gt; 1 (interior mode)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the most probable value of a success rate given observed data and prior beliefs. Using the number of successes 7 out of 10 trials with prior parameters 2 and 2, the algorithm finds the peak of the posterior distribution. The resulting mode, 0.666667, represents the balance between the empirical frequency 0.7 and the prior expectation, while the posterior mean 0.642857 offers an alternative average-based estimate.</p>
 <h4 id="normal_normal_summary">Normal mean with known variance: posterior and credible interval from a sample mean — <code>normal_normal_summary</code></h4>
@@ -518,11 +448,11 @@ lower = -0.8859038244
 upper = 1.885903824
 shrinkage = 0.5
   by: Normal mean with known variance: posterior and credible interval from a sample mean  (normal-normal conjugate update, interval from normal quantiles)
-  prior_mean = 0
-  prior_sd = 1
-  sigma = 2
-  sample_mean = 1
-  level = 0.95
+  prior_mean = 0   []
+  prior_sd = 1   []
+  sigma = 2   []
+  sample_mean = 1   []
+  level = 0.95   []
   assumes: prior sd &gt; 0; sigma &gt; 0; n &gt;= 1; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation updates the belief about the population mean using a normal prior and observed data summarized by the sample mean. The resulting posterior mean, 0.5, represents a weighted average of the prior mean and the sample mean, determined by the shrinkage factor 0.5. This factor indicates how much weight is given to the prior information versus the new data. The uncertainty in this estimate is quantified by the posterior standard deviation, 0.707107, which allows for the construction of a credible interval bounded by -0.885904 and 1.8859. This interval provides a range of plausible values for the true mean at the specified credibility level.</p>
 <h4 id="normal_normal_posterior">Normal mean with known variance: posterior from data — <code>normal_normal_posterior</code></h4>
@@ -535,9 +465,9 @@ posterior_mean = 10.95238095
 posterior_sd = 1.309307341
 posterior_variance = 1.714285714
   by: Normal mean with known variance: posterior from data  (precision-weighted average of the prior mean and the sample mean)
-  prior_mean = 10
-  prior_sd = 2
-  sigma = 3
+  prior_mean = 10   []
+  prior_sd = 2   []
+  sigma = 3   []
   assumes: prior sd &gt; 0; sigma &gt; 0 known</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the updated belief about a normal mean given observed data. It combines the prior information, represented by a mean of 10 and a standard deviation of 2, with the evidence from the sample. The result is a posterior distribution characterized by a mean of 10.9524 and a standard deviation of 1.30931. This new estimate reflects a precision-weighted average, balancing the strength of the prior against the reliability of the data, which has a known observation standard deviation of 3.</p>
 <h4 id="normal_inverse_gamma_posterior">Normal model with unknown mean and variance (normal-inverse-gamma) — <code>normal_inverse_gamma_posterior</code></h4>
@@ -554,11 +484,11 @@ sigma2_mean = 1.5
 lower = -1.412725216
 upper = 1.412725216
   by: Normal model with unknown mean and variance (normal-inverse-gamma)  (conjugate update; marginal posterior of the mean is Student t with 2 alpha_n degrees of freedom)
-  mu0 = 0
-  kappa0 = 1
-  alpha0 = 2
-  beta0 = 2
-  level = 0.95
+  mu0 = 0   []
+  kappa0 = 1   []
+  alpha0 = 2   []
+  beta0 = 2   []
+  level = 0.95   []
   assumes: kappa0, alpha0, beta0 &gt; 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This update combines prior beliefs about the mean and variance with observed data to produce a joint posterior distribution. The posterior location of the mean is calculated as 0, reflecting a weighted average of the prior mean and sample mean. The expected value of the variance is 1.5, while the uncertainty in the mean is summarized by a Student t credible interval spanning from -1.41273 to 1.41273. These values indicate how the data has shifted the estimate relative to the initial assumptions.</p>
 <h4 id="gamma_poisson_predictive">Posterior predictive count (negative binomial) — <code>gamma_poisson_predictive</code></h4>
@@ -572,8 +502,8 @@ prob_at_most = 0.75
 predictive_mean = 1
 predictive_variance = 2
   by: Posterior predictive count (negative binomial)  (negative binomial distribution (the Poisson averaged over the gamma posterior))
-  shape = 1
-  rate = 1
+  shape = 1   []
+  rate = 1   []
   assumes: shape, rate &gt; 0; k whole number &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the likelihood of observing a specific number of future events by averaging the Poisson distribution over the Gamma posterior for the rate. Using a posterior shape of 1 and rate of 1, the model computes that the probability of exactly 1 events is 0.25. The cumulative probability of seeing at most 1 events is 0.75. Additionally, the expected count for the next interval is 1, and the variance in these counts is 2, reflecting uncertainty from both the Poisson process and the estimated rate.</p>
 <h4 id="normal_posterior_predictive">Posterior predictive distribution of a new observation — <code>normal_posterior_predictive</code></h4>
@@ -587,11 +517,11 @@ predictive_sd = 2.121320344
 prob_above = 0.5
 prob_below = 0.5
   by: Posterior predictive distribution of a new observation  (predictive variance = posterior variance + sampling variance)
-  prior_mean = 0
-  prior_sd = 1
-  sigma = 2
-  sample_mean = 1
-  threshold = 0.5
+  prior_mean = 0   []
+  prior_sd = 1   []
+  sigma = 2   []
+  sample_mean = 1   []
+  threshold = 0.5   []
   assumes: prior sd &gt; 0; sigma &gt; 0; n &gt;= 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the distribution for a future observation by combining the uncertainty in the estimated mean with the inherent variability of the data. The posterior mean, which serves as the center of this predictive distribution, is computed as 0.5. This value reflects a weighted average of the prior belief at 0 and the sample evidence at 1. The spread of the prediction, given by the standard deviation 2.12132, accounts for both the precision of the mean estimate and the known noise level 2. Consequently, the probability that the next value falls below the threshold 0.5 is 0.5, while the chance it exceeds that threshold is 0.5. These results allow you to assess the likely range of future outcomes based on current knowledge.</p>
 <h4 id="beta_binomial_predictive">Posterior predictive probability (beta-binomial) — <code>beta_binomial_predictive</code></h4>
@@ -605,8 +535,8 @@ prob_at_most = 0.6
 prob_more = 0.4
 predictive_mean = 2
   by: Posterior predictive probability (beta-binomial)  (beta-binomial distribution (the binomial averaged over the beta posterior))
-  alpha = 1
-  beta = 1
+  alpha = 1   []
+  beta = 1   []
   assumes: alpha, beta &gt; 0; 0 &lt;= j &lt;= m</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the likelihood of observing a specific number of successes in upcoming experiments, given current uncertainty about the success rate. Using the beta-binomial distribution, it integrates over all possible success probabilities weighted by their posterior plausibility. The result shows that the chance of getting exactly 2 successes out of 4 trials is 0.2, while the cumulative probability of at most that many successes is 0.6. The expected number of successes under this model is 2.</p>
 <h4 id="beta_posterior_tail_probability">Posterior probability that p exceeds a value — <code>beta_posterior_tail_probability</code></h4>
@@ -618,9 +548,9 @@ predictive_mean = 2
 prob_above = 0.75
 prob_below = 0.25
   by: Posterior probability that p exceeds a value  (regularized incomplete beta function of the (updated) posterior)
-  alpha = 2
-  beta = 1
-  threshold = 0.5
+  alpha = 2   []
+  beta = 1   []
+  threshold = 0.5   []
   assumes: alpha, beta &gt; 0; 0 &lt; c &lt; 1; 0 &lt;= k &lt;= n</code></pre>
 <p><strong>What the worked example means:</strong> The posterior probability that p exceeds 0.5 is 0.75, while the probability it falls below is 0.25.</p>
 <h4 id="probability_rate_greater_gamma">Probability that one Poisson rate exceeds another (gamma posteriors) — <code>probability_rate_greater_gamma</code></h4>
@@ -633,10 +563,10 @@ prob_1_greater = 0.5
 prob_2_greater = 0.5
 rate_ratio_mean = 1
   by: Probability that one Poisson rate exceeds another (gamma posteriors)  (lambda_1 b_1 / (lambda_1 b_1 + lambda_2 b_2) ~ Beta(shape1, shape2): one regularized incomplete beta)
-  shape1 = 5
-  rate1 = 1
-  shape2 = 5
-  rate2 = 1
+  shape1 = 5   []
+  rate1 = 1   []
+  shape2 = 5   []
+  rate2 = 1   []
   assumes: all parameters &gt; 0</code></pre>
 <p>In the worked example, shape1 = 5, rate1 = 1, shape2 = 5, rate2 = 1 go through the equation above and give prob_1_greater = 0.5, prob_2_greater = 0.5, rate_ratio_mean = 1. It applies only when all parameters &gt; 0: outside that it says what is wrong instead of returning a number.</p>
 <h3>Credible intervals (7)</h3>
@@ -651,9 +581,9 @@ post_rate = 2
 lower = 0.02564664719
 upper = 1.497866137
   by: Credible interval for a Poisson rate  (conjugate update, then gamma quantiles (inverse regularized incomplete gamma))
-  shape = 1
-  rate = 1
-  level = 0.9
+  shape = 1   []
+  rate = 1   []
+  level = 0.9   []
   assumes: shape, rate &gt; 0; counts whole numbers &gt;= 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines an equal-tailed credible interval for the rate of events in a Poisson process. It updates a Gamma prior with observed counts to produce a posterior distribution characterized by a shape of 1 and a rate of 2. The resulting interval spans from 0.0256466 to 1.49787, indicating where the true rate is likely to lie given the data and prior beliefs.</p>
 <h4 id="beta_binomial_credible_interval">Credible interval for a proportion (beta-binomial) — <code>beta_binomial_credible_interval</code></h4>
@@ -667,9 +597,9 @@ post_beta = 1
 lower = 0.2236067978
 upper = 0.9746794345
   by: Credible interval for a proportion (beta-binomial)  (conjugate update, then beta quantiles)
-  alpha = 1
-  beta = 1
-  level = 0.9
+  alpha = 1   []
+  beta = 1   []
+  level = 0.9   []
   assumes: alpha, beta &gt; 0; 0 &lt;= k &lt;= n; 0 &lt; level &lt; 1</code></pre>
 <p>In the worked example, alpha = 1, beta = 1, successes = 1, trials = 1, level = 0.9 go through the equation above and give post_alpha = 2, post_beta = 1, lower = 0.2236067978, upper = 0.9746794345. It applies only when alpha, beta &gt; 0; 0 &lt;= k &lt;= n; 0 &lt; level &lt; 1: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="beta_credible_interval">Equal-tailed credible interval of a beta distribution — <code>beta_credible_interval</code></h4>
@@ -682,9 +612,9 @@ lower = 0.05
 upper = 0.95
 median = 0.5
   by: Equal-tailed credible interval of a beta distribution  (beta quantiles by safeguarded Newton inversion of the regularized incomplete beta function)
-  alpha = 1
-  beta = 1
-  level = 0.9
+  alpha = 1   []
+  beta = 1   []
+  level = 0.9   []
   assumes: alpha, beta &gt; 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the equal-tailed credible interval and median for a Beta distribution posterior. Given shape parameters alpha of 1 and beta of 1, along with a credibility level of 0.9, the resulting interval is [0.05, 0.95]. The median, representing the most probable value, is 0.5. This range indicates where the true parameter value likely lies based on the observed data and prior beliefs.</p>
 <h4 id="gamma_credible_interval">Equal-tailed credible interval of a gamma distribution — <code>gamma_credible_interval</code></h4>
@@ -697,9 +627,9 @@ lower = 0.02564664719
 upper = 1.497866137
 median = 0.3465735903
   by: Equal-tailed credible interval of a gamma distribution  (gamma quantiles by inversion of the regularized incomplete gamma function)
-  shape = 1
-  rate = 2
-  level = 0.9
+  shape = 1   []
+  rate = 2   []
+  level = 0.9   []
   assumes: shape, rate &gt; 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the equal-tailed credible interval and median for a Gamma distribution specified by shape 1 and rate 2 at credibility level 0.9. The resulting lower bound is 0.0256466 and the upper bound is 1.49787, enclosing the most plausible values for the parameter. The median, representing the point where half the probability mass lies below, is calculated as 0.346574. These values provide a quantitative measure of uncertainty around the estimated rate.</p>
 <h4 id="beta_hdi">Highest-density interval of a beta posterior — <code>beta_hdi</code></h4>
@@ -712,9 +642,9 @@ lower = 0.04055516641
 upper = 0.4837236593
 width = 0.4431684929
   by: Highest-density interval of a beta posterior  (bisection on the lower limit l with u = F^-1(F(l) + level) until f(l) = f(u))
-  alpha = 3
-  beta = 9
-  level = 0.95
+  alpha = 3   []
+  beta = 9   []
+  level = 0.95   []
   assumes: alpha &gt; 1 and beta &gt; 1 (unimodal, zero density at both ends); 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the shortest interval containing the specified probability mass, defined by the level 0.95, for a Beta distribution with parameters alpha 3 and beta 9. The resulting lower limit is 0.0405552 and the upper limit is 0.483724, yielding an interval width of 0.443168. This range represents the most credible values where the density at both ends is equal.</p>
 <h4 id="gamma_hdi">Highest-density interval of a gamma posterior — <code>gamma_hdi</code></h4>
@@ -727,9 +657,9 @@ lower = 0.603480051
 upper = 4.715108491
 width = 4.11162844
   by: Highest-density interval of a gamma posterior  (bisection on the lower limit with u = G^-1(G(l) + level) until the densities are equal)
-  shape = 5
-  rate = 2
-  level = 0.95
+  shape = 5   []
+  rate = 2   []
+  level = 0.95   []
   assumes: shape &gt; 1; rate &gt; 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the shortest credible interval containing a specified probability mass for a unimodal gamma distribution. By ensuring that the density at the lower limit equals the density at the upper limit, it identifies the most plausible range of values. The resulting interval spans from 0.60348 to 4.71511, giving a total width of 4.11163 for the given shape and rate parameters.</p>
 <h4 id="jeffreys_interval">Jeffreys interval for a binomial proportion — <code>jeffreys_interval</code></h4>
@@ -742,7 +672,7 @@ lower = 0.06487170115
 upper = 0.2553250282
 posterior_mean = 0.1470588235
   by: Jeffreys interval for a binomial proportion  (quantiles of Beta(k + 1/2, n - k + 1/2))
-  level = 0.95
+  level = 0.95   []
   assumes: 0 &lt;= k &lt;= n; n &gt;= 1; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines a Bayesian credible interval for a binomial proportion using the Jeffreys prior. Given 7 successes out of 50 trials at a credibility level of 0.95, the resulting interval ranges from 0.0648717 to 0.255325. The posterior mean of the proportion is calculated as 0.147059. This method provides an equal-tailed interval that naturally handles boundary cases, such as zero successes or all successes, without producing invalid limits.</p>
 <h3>Decision analysis (9)</h3>
@@ -804,9 +734,9 @@ expected_value = 250
 threshold = 0.1
 decision = do not treat
   by: Decision threshold probability (treat / do not treat)  (equal expected losses)
-  loss_fp = 1
-  loss_fn = 9
-  probability = 0.05
+  loss_fp = 1   []
+  loss_fn = 9   []
+  probability = 0.05   []
   assumes: losses &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the critical probability level, 0.1, at which the expected loss of treating equals the expected loss of not treating. It is derived from the false positive loss, 1, and the false negative loss, 9. If a specific condition probability, 0.05, is provided, the system compares it to the threshold to output a recommendation of do not treat. A higher false positive cost raises the bar for action, while a higher false negative cost lowers it.</p>
 <h4 id="decision_criteria_under_uncertainty">Decision under uncertainty: maximin, maximax, Laplace, minimax regret, Hurwicz — <code>decision_criteria_under_uncertainty</code></h4>
@@ -833,7 +763,7 @@ certainty_equivalent = 283.1095848
 risk_premium = 216.8904152
 expected_value = 500
   by: Expected utility and certainty equivalent (exponential utility)  (log-sum-exp evaluation of E[exp(-x/R)])
-  risk_tolerance = 500
+  risk_tolerance = 500   []
   assumes: probabilities sum to 1; R &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the certainty equivalent for a risk-averse decision maker with exponential utility. Using an outcomes list and their corresponding probabilities, along with a risk tolerance parameter, it computes the expected utility as 0.432332. The certainty equivalent, representing the guaranteed amount that provides the same satisfaction as the risky prospect, is found to be 283.11. This value is derived from the formula involving the natural logarithm of the sum of probability-weighted exponentials. The difference between the expected value of 500 and this certainty equivalent constitutes the risk premium of 216.89, quantifying the cost of bearing uncertainty.</p>
 <h4 id="expected_value_of_perfect_information">Expected value of perfect information (EVPI) — <code>expected_value_of_perfect_information</code></h4>
@@ -882,10 +812,10 @@ weights = [0.166666666667,0.666666666667,0.166666666667]
 <pre><code class="shell">$ bayesian-statistics solve kl_divergence_beta alpha1=2 beta1=1 alpha2=1 beta2=1
 kl = 0.1931471806
   by: Kullback-Leibler divergence between two beta distributions  (closed form with log-beta and digamma functions)
-  alpha1 = 2
-  beta1 = 1
-  alpha2 = 1
-  beta2 = 1
+  alpha1 = 2   []
+  beta1 = 1   []
+  alpha2 = 1   []
+  beta2 = 1   []
   assumes: all parameters &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the information loss when approximating the first beta distribution with the second. By using the shape parameters alpha1, beta1, alpha2, and beta2, the closed-form method computes the asymmetric distance in nats. The resulting value of 0.193147 quantifies how much information is gained or lost between these two probability distributions representing proportions.</p>
 <h4 id="kl_divergence_normal">Kullback-Leibler divergence between two normal distributions — <code>kl_divergence_normal</code></h4>
@@ -897,10 +827,10 @@ kl = 0.1931471806
 kl_1_to_2 = 0.4431471806
 kl_2_to_1 = 1.306852819
   by: Kullback-Leibler divergence between two normal distributions  (closed form for two normals)
-  mean1 = 0
-  sd1 = 1
-  mean2 = 1
-  sd2 = 2
+  mean1 = 0   []
+  sd1 = 1   []
+  mean2 = 1   []
+  sd2 = 2   []
   assumes: sd1, sd2 &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the Kullback-Leibler divergence between two normal distributions using their respective means and standard deviations. The result for the first direction, 0.443147, quantifies the information loss when approximating the first distribution with the second. Conversely, 1.30685 measures the asymmetry in the other direction. These values indicate how distinct the two probability models are, which is useful for comparing prior and posterior beliefs or assessing model fit differences.</p>
 <h3>Monte Carlo estimation (6)</h3>
@@ -915,7 +845,7 @@ coefficient = 1
 plain_estimate = 2
 variance_reduction = 0
   by: Control-variate Monte Carlo estimate  (regression (optimal) control-variate coefficient)
-  control_mean = 2.5
+  control_mean = 2.5   []
   assumes: outputs and control vary; n &gt;= 3</code></pre>
 <p><strong>What the worked example means:</strong> This calculation produces a variance-reduced Monte Carlo estimate of the expected output, denoted as 2.5. It adjusts the plain sample mean 2 using an optimal regression coefficient 1 derived from paired draws of the output and a control variate with known mean 2.5. The resulting value represents a more precise approximation of the true expectation by accounting for the correlation between the simulated outputs and the control. The effectiveness of this adjustment is quantified by the variance reduction factor 0, indicating how much of the original sampling noise has been eliminated through this statistical technique.</p>
 <h4 id="importance_sampling_estimate">Importance sampling estimate and effective sample size — <code>importance_sampling_estimate</code></h4>
@@ -940,8 +870,8 @@ estimate = 4
 standard_error = 2
 n = 2
   by: Monte Carlo estimate of an integral from uniform samples  (sample mean of f scaled by the interval length)
-  lower = 0
-  upper = 2
+  lower = 0   []
+  upper = 2   []
   assumes: b &gt; a; n &gt;= 2</code></pre>
 <p><strong>What the worked example means:</strong> This calculation estimates the definite integral of a function over an interval by averaging the function values at uniformly sampled points and scaling that mean by the length of the interval. The result, 4, represents the area under the curve approximated by these random samples. The accompanying value, 2, quantifies the uncertainty of this approximation, indicating how much the estimate might vary if the sampling were repeated. This method relies on the law of large numbers, where increasing the number of samples generally improves accuracy.</p>
 <h4 id="monte_carlo_sample_size">Number of Monte Carlo draws for a target accuracy — <code>monte_carlo_sample_size</code></h4>
@@ -954,9 +884,9 @@ draws = 1537
 z = 1.959963985
 standard_error_target = 0.2551067285
   by: Number of Monte Carlo draws for a target accuracy  (n = (z sigma / E)^2, rounded up)
-  sigma = 10
-  half_width = 0.5
-  level = 0.95
+  sigma = 10   []
+  half_width = 0.5   []
+  level = 0.95   []
   assumes: sigma, half-width &gt; 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the minimum number of independent samples needed for a Monte Carlo simulation to estimate a mean with a specified precision. By using the known or estimated standard deviation of a single draw, which is 10, and the target half-width of the confidence interval, set at 0.5, the method applies a normal quantile derived from the credibility level of 0.95. The resulting value of 1537 represents the count of draws required to ensure that the uncertainty in the estimated mean does not exceed the desired threshold, assuming the sampling distribution behaves normally.</p>
 <h4 id="halton_point">Point of the Halton low-discrepancy sequence — <code>halton_point</code></h4>
@@ -992,8 +922,8 @@ lr_positive = 4.5
 lr_negative = 0.125
 diagnostic_odds_ratio = 36
   by: Likelihood ratios of a diagnostic test  (ratios of the probabilities of a result with and without the condition)
-  sensitivity = 0.9
-  specificity = 0.8
+  sensitivity = 0.9   []
+  specificity = 0.8   []
   assumes: 0 &lt; specificity &lt; 1; sensitivity &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines how much a test result changes the probability of having a condition. Using a sensitivity of 0.9 and specificity of 0.8, it computes the positive likelihood ratio as 4.5 and the negative likelihood ratio as 0.125. The resulting diagnostic odds ratio is 36, which summarizes the overall discriminatory power of the test independent of disease prevalence.</p>
 <h4 id="probability_to_odds">Odds and log-odds of a probability — <code>probability_to_odds</code></h4>
@@ -1006,7 +936,7 @@ odds = 0.25
 odds_against = 4
 log_odds = -1.386294361
   by: Odds and log-odds of a probability  (definition of odds)
-  probability = 0.2
+  probability = 0.2   []
   assumes: 0 &lt; p &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation transforms a single probability value into three related measures. Given an input probability of 0.2, it computes the odds in favour as 0.25, which represents the ratio of success to failure. It also determines the odds against as 4, reflecting the inverse relationship, and calculates the natural logarithm of the odds, known as the logit or log-odds, resulting in -1.38629. These conversions allow bounded probabilities to be expressed on scales suitable for multiplicative updates.</p>
 <h4 id="posterior_from_likelihood_ratio">Post-test probability from a likelihood ratio — <code>posterior_from_likelihood_ratio</code></h4>
@@ -1019,8 +949,8 @@ posterior = 0.6
 prior_odds = 0.25
 posterior_odds = 1.5
   by: Post-test probability from a likelihood ratio  (odds form of Bayes&#x27; theorem)
-  prior = 0.2
-  likelihood_ratio = 6
+  prior = 0.2   []
+  likelihood_ratio = 6   []
   assumes: 0 &lt; prior &lt; 1; likelihood ratio &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation updates the initial belief using Bayes theorem in odds form. Starting with a pre-test probability of 0.2, this converts to pre-test odds of 0.25. These odds are multiplied by the likelihood ratio of 6 to yield post-test odds of 1.5. Finally, these odds are converted back into a probability, resulting in a post-test probability of 0.6. This method simplifies updating beliefs when new evidence arrives.</p>
 <h4 id="odds_to_probability">Probability from odds — <code>odds_to_probability</code></h4>
@@ -1032,7 +962,7 @@ posterior_odds = 1.5
 probability = 0.75
 complement = 0.25
   by: Probability from odds  (p = o/(1+o))
-  odds = 3
+  odds = 3   []
   assumes: odds &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation converts the given odds in favour, which are 3, into a corresponding probability using the formula where the probability equals the odds divided by one plus the odds. The resulting probability is 0.75, representing the likelihood of the event occurring, while the complement is 0.25, which represents the probability that the event does not occur.</p>
 <h3>Posterior approximation (1)</h3>
@@ -1047,9 +977,9 @@ laplace_sd = 0.25
 lower = 0.01000900386
 upper = 0.9899909961
   by: Laplace (normal) approximation of a beta posterior  (second-order Taylor expansion of the log posterior at its mode)
-  alpha = 3
-  beta = 3
-  level = 0.95
+  alpha = 3   []
+  beta = 3   []
+  level = 0.95   []
   assumes: alpha &gt; 1 and beta &gt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation approximates the Beta posterior distribution with a normal curve centered at its most likely value. Using the input parameters, it determines the mode as 0.5 and the spread as 0.25. These values define an approximate credible interval between 0.010009 and 0.989991, offering a simpler way to interpret uncertainty when the exact Beta shape is complex or when analytical integration is difficult.</p>
 <h3>Prior elicitation (1)</h3>
@@ -1063,8 +993,8 @@ alpha = 6
 beta = 14
 prior_sample_size = 20
   by: Beta prior from a mean and standard deviation  (match the beta mean and variance)
-  mean = 0.3
-  sd = 0.1
+  mean = 0.3   []
+  sd = 0.1   []
   assumes: 0 &lt; mean &lt; 1; 0 &lt; sd^2 &lt; mean (1 - mean)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the shape parameters for a Beta distribution that matches a specified prior mean of 0.3 and standard deviation of 0.1. Using the method of moments gives alpha as 6 and beta as 14. The sum of these two parameters represents the effective prior sample size, which is calculated here as 20, indicating the strength of this prior belief relative to observed data.</p>
 <h3>Sensitivity analysis (5)</h3>
@@ -1078,7 +1008,7 @@ mu = [0.5]
 mu_star = [1.5]
 sigma = [2.12132034356]
   by: Morris elementary-effects screening  (elementary effects EE_ij = (y_{i,j+1} - y_{ij})/delta)
-  delta = 1
+  delta = 1   []
   assumes: at least 2 trajectories; delta &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the influence of each input variable by analyzing trajectories across the parameter space. The mean absolute elementary effect, reported as [1.5], quantifies the overall magnitude of impact an input has on the model output. A higher value indicates that changing this input leads to larger shifts in results regardless of direction. The standard deviation, shown as [2.12132], reveals whether the effect depends on other variables or if it is consistent. These metrics help prioritize which factors need detailed analysis.</p>
 <h4 id="sobol_indices_linear_model">Sobol indices of a linear (additive) model — <code>sobol_indices_linear_model</code></h4>
@@ -1105,13 +1035,13 @@ ST1 = 1
 ST2 = 1
 variance = 1
   by: Sobol indices of a model with an interaction term  (ANOVA decomposition of the bilinear polynomial)
-  a1 = 0
-  a2 = 0
-  a12 = 1
-  mean1 = 0
-  sd1 = 1
-  mean2 = 0
-  sd2 = 1
+  a1 = 0   []
+  a2 = 0   []
+  a12 = 1   []
+  mean1 = 0   []
+  sd1 = 1   []
+  mean2 = 0   []
+  sd2 = 1   []
   assumes: independent normal inputs</code></pre>
 <p>In the worked example, a1 = 0, a2 = 0, a12 = 1, mean1 = 0, sd1 = 1, mean2 = 0, sd2 = 1 go through the equation above and give S1 = 0, S2 = 0, S12 = 1, ST1 = 1. It applies only when independent normal inputs: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="sobol_indices_g_function">Sobol indices of Sobol&#x27;s G-function — <code>sobol_indices_g_function</code></h4>
@@ -1140,8 +1070,8 @@ ST2 = 0.4424111448
 ST3 = 0.2436836641
 variance = 13.84458794
   by: Sobol sensitivity indices of the Ishigami function  (closed-form variance decomposition)
-  a = 7
-  b = 0.1
+  a = 7   []
+  b = 0.1   []
   assumes: inputs independent uniform on [-pi, pi]</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the exact global sensitivity indices for the Ishigami test function using closed-form variance decomposition. Given parameters a set to 7 and b set to 0.1, the method computes the total output variance as 13.8446. The resulting first-order indices, which measure the main effect of each input variable independently, are 0.313905 for the first variable, 0.442411 for the second, and 0 for the third. The total indices, which include all interactions involving that variable, are reported as 0.557589, 0.442411, and 0.243684 respectively.</p>
 <h3>Uncertainty propagation (14)</h3>
@@ -1167,7 +1097,7 @@ effective_dof = 10
 coverage_factor = 2.228138852
 expanded_uncertainty = 2.228138852
   by: Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite)  (Welch-Satterthwaite formula and the Student-t quantile at non-integer degrees of freedom)
-  level = 0.95
+  level = 0.95   []
   assumes: components and degrees of freedom &gt; 0; 0 &lt; level &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the effective degrees of freedom and the expanded uncertainty for a measurement result. It combines individual uncertainty components to find the total standard uncertainty, which is 1. Using the Welch-Satterthwaite approximation, it computes the effective degrees of freedom as 10. Based on the requested credibility level, the coverage factor is determined to be 2.22814. Multiplying these values gives the final expanded uncertainty of 2.22814, representing the interval within which the true value is expected to lie with the stated probability.</p>
 <h4 id="product_of_normals_exact_moments">Exact mean and standard deviation of a product of independent normals — <code>product_of_normals_exact_moments</code></h4>
@@ -1180,10 +1110,10 @@ exact_mean = 50
 exact_sd = 20.71231518
 first_order_sd = 20.61552813
   by: Exact mean and standard deviation of a product of independent normals  (exact second moments of a product)
-  mean_x = 10
-  sd_x = 1
-  mean_y = 5
-  sd_y = 2
+  mean_x = 10   []
+  sd_x = 1   []
+  mean_y = 5   []
+  sd_y = 2   []
   assumes: independent normal inputs</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the precise statistical moments for the product of two independent normal variables. Using the input means and standard deviations, it computes the exact expected value as 50 and the true spread as 20.7123. This result highlights that standard linear error propagation yields a lower bound of 20.6155 because it omits the interaction term between the variances of the two inputs.</p>
 <h4 id="polynomial_of_normal_moments">Exact mean and variance of a polynomial of a normal variable — <code>polynomial_of_normal_moments</code></h4>
@@ -1196,8 +1126,8 @@ mean = 4
 variance = 22
 sd = 4.69041576
   by: Exact mean and variance of a polynomial of a normal variable  (substitute X = mean + sd Z and use the normal moments E[Z^k] = (k - 1)!! for even k)
-  mean = 0
-  sd = 1
+  mean = 0   []
+  sd = 1   []
   assumes: sd &gt; 0; degree &lt;= 6</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the precise statistical properties of a polynomial function applied to a normally distributed variable. By substituting the input with its mean and standard deviation components, it uses known normal moments to compute the expected value as 4, the variance as 22, and the standard deviation as 4.69042. This method provides an accurate result for nonlinear uncertainty propagation without relying on linear approximations or simulation.</p>
 <h4 id="lognormal_propagation">Exact versus first-order propagation through exp(X) — <code>lognormal_propagation</code></h4>
@@ -1211,8 +1141,8 @@ exact_sd = 2.161197416
 first_order_mean = 1
 first_order_sd = 1
   by: Exact versus first-order propagation through exp(X)  (lognormal moments; first-order Taylor propagation)
-  mu = 0
-  sigma = 1
+  mu = 0   []
+  sigma = 1   []
   assumes: sigma &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the expected value and spread of an exponential transformation of a normal variable. Using the input mean 0 and standard deviation 1, it computes the exact lognormal mean as 1.64872 and the exact standard deviation as 2.1612. For comparison, the linear propagation method yields an approximate mean of 1 and an approximate standard deviation of 1. The gap between these values illustrates the bias introduced when ignoring higher-order terms in the Taylor expansion.</p>
 <h4 id="inverse_variance_weighted_mean">Inverse-variance weighted mean of measurements — <code>inverse_variance_weighted_mean</code></h4>
@@ -1237,7 +1167,7 @@ birge_ratio = 1.414213562
 standard_uncertainty = 0.2886751346
 divisor = 1.732050808
   by: Type B standard uncertainty from a stated half-width  (standard deviation of the assumed distribution)
-  half_width = 0.5
+  half_width = 0.5   []
   distribution = rectangular
   assumes: a &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the standard uncertainty by dividing the stated half-width 0.5 by a specific divisor based on the assumed distribution shape. The resulting standard uncertainty is 0.288675, representing the estimated spread of the quantity&#x27;s true value around its central estimate.</p>
@@ -1246,14 +1176,7 @@ divisor = 1.732050808
 <div class="math">\[u_f = \left|f&#x27;(x)\right| u_x\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>x</code></td><td>in</td><td>value of x (radians for sin, cos, tan)</td><td>—</td></tr><tr><td><code>ux</code></td><td>in</td><td>standard uncertainty of x</td><td>—</td></tr><tr><td><code>function</code></td><td>in</td><td>exp, ln, log10, sqrt, sin, cos, tan or reciprocal</td><td>—</td></tr><tr><td><code>value</code></td><td>out</td><td>f(x)</td><td>—</td></tr><tr><td><code>uncertainty</code></td><td>out</td><td>|f&#x27;(x)| u(x)</td><td>—</td></tr></tbody></table>
 <p><strong>Applies when:</strong> x inside the function&#x27;s domain.</p>
-<pre><code class="shell">$ bayesian-statistics solve uncertainty_function x=2.5 ux=0.05 function=ln
-value = 0.9162907319
-uncertainty = 0.02
-  by: Uncertainty of a function of one variable  (first-order propagation u_f = |f&#x27;(x)| u_x)
-  x = 2.5
-  ux = 0.05
-  function = ln
-  assumes: x inside the function&#x27;s domain</code></pre>
+<p>*Not in <code>bayesian-statistics</code> 1.1.0 yet:* use the Python package or the model&#x27;s page in the browser.</p>
 <p><strong>What the worked example means:</strong> This calculation determines the result of applying a specific mathematical function to an input variable and estimates the associated uncertainty using first-order error propagation. The computed value, 0.916291, represents the transformed quantity, while the output uncertainty, 0.02, quantifies how much this result could vary given the input uncertainty, 0.05. This method assumes that the change in the function&#x27;s output is linearly proportional to the change in its input near the current value.</p>
 <h4 id="uncertainty_linear_correlated">Uncertainty of a linear combination of correlated inputs — <code>uncertainty_linear_correlated</code></h4>
 <p>Combined standard uncertainty of y = sum c_i x_i when the inputs are correlated (correlation matrix), u_y^2 = sum_ij c_i c_j u_i u_j r_ij.</p>
@@ -1276,9 +1199,9 @@ value = 9
 uncertainty = 0.6
 relative_uncertainty = 0.06666666667
   by: Uncertainty of a power x^n  (first-order propagation)
-  x = 3
-  ux = 0.1
-  exponent = 2
+  x = 3   []
+  ux = 0.1   []
+  exponent = 2   []
   assumes: x &gt; 0 for a non-integer exponent; x != 0 for n &lt; 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the result of raising a base value to a specified exponent, along with its associated standard and relative uncertainties using first-order propagation. Given the input value 3 with an uncertainty of 0.1 and an exponent of 2, the output value is 9. The absolute uncertainty on this result is 0.6, while the relative uncertainty is 0.0666667. This approach assumes that the input uncertainty is small enough that linear approximation holds, allowing practitioners to estimate how measurement error scales when variables are transformed by powers.</p>
 <h4 id="uncertainty_power_law">Uncertainty of a power-law product y = k x1^p1 x2^p2 ... — <code>uncertainty_power_law</code></h4>
@@ -1291,7 +1214,7 @@ value = 9
 uncertainty = 0.3710795063
 relative_uncertainty = 0.04123105626
   by: Uncertainty of a power-law product y = k x1^p1 x2^p2 ...  (first-order propagation in relative form)
-  coefficient = 0.5
+  coefficient = 0.5   []
   assumes: x_i &gt; 0; independent inputs</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value and first-order uncertainty for a power-law product formed by multiplying powers of independent positive inputs. The result, 9, is derived from the coefficient 0.5 and the input values [2, 3] raised to their respective exponents [1, 2]. The associated uncertainty 0.37108 reflects how the standard uncertainties [0.02, 0.06] propagate through the formula, weighted by the exponents. A relative uncertainty of 0.0412311 indicates the precision of this estimate under the assumption that all inputs are independent and strictly positive.</p>
 <h4 id="uncertainty_product_quotient">Uncertainty of a product and a quotient — <code>uncertainty_product_quotient</code></h4>
@@ -1305,10 +1228,10 @@ u_product = 2.683281573
 quotient = 3
 u_quotient = 0.1677050983
   by: Uncertainty of a product and a quotient  (first-order propagation (relative uncertainties add in quadrature))
-  a = 12
-  ua = 0.3
-  b = 4
-  ub = 0.2
+  a = 12   []
+  ua = 0.3   []
+  b = 4   []
+  ub = 0.2   []
   assumes: independent a and b; b != 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value and standard uncertainty for both the product and the quotient of two independent quantities, a and b. The resulting product is 48 with an associated uncertainty of 2.68328, while the quotient is 3 with an uncertainty of 0.167705. These results are derived using first-order error propagation, where relative uncertainties combine in quadrature to estimate the total spread around the central values.</p>
 <h4 id="uncertainty_product_correlated">Uncertainty of a product and quotient with correlation — <code>uncertainty_product_correlated</code></h4>
@@ -1322,11 +1245,11 @@ u_product = 0
 quotient = 1
 u_quotient = 0.2
   by: Uncertainty of a product and quotient with correlation  (first-order propagation with the covariance term)
-  a = 1
-  ua = 0.1
-  b = 1
-  ub = 0.1
-  rho = -1
+  a = 1   []
+  ua = 0.1   []
+  b = 1   []
+  ub = 0.1   []
+  rho = -1   []
   assumes: -1 &lt;= rho &lt;= 1; b != 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the first-order standard uncertainty for both the product and the quotient of two correlated variables. Using the value of a as 1 with uncertainty 0.1, and b as 1 with uncertainty 0.1, the method applies propagation rules that include a covariance term based on the correlation coefficient -1. The resulting uncertainties, 0 for the product and 0.2 for the quotient, reflect how shared systematic errors influence the precision of these derived quantities.</p>
 <h4 id="uncertainty_sum">Uncertainty of a sum or linear combination (independent inputs) — <code>uncertainty_sum</code></h4>
