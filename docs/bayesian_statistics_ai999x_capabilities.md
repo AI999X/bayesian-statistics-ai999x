@@ -741,7 +741,7 @@ $$
 
 ![posterior_mean (posterior mean) against beta (prior Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-posterior-curve)
 
-*posterior_mean (posterior mean) against beta (prior Beta beta (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3. Other inputs as in the worked example: alpha = 2, trials = 10. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, posterior_mean = 0.642857.*
+*posterior_mean (posterior mean) against beta (prior Beta beta (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3. Other inputs as in the worked example: alpha = 2.0, trials = 10. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, posterior_mean = 0.642857.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_posterior', alpha=2, beta=2, successes=7, trials=10)
@@ -848,9 +848,9 @@ $$
 
 *90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (0 of 0), then the same share 0.5 in ever more trials (each interval returned by the package): 0/0 [0.05, 0.95]; 5/10 [0.27125, 0.72875]; 20/40 [0.374396, 0.625604]; 80/160 [0.435554, 0.564446]; 320/640 [0.467563, 0.532437]. Four times the data halves the width.*
 
-![lower (lower credible limit) against trials (number of trials n) from -10 to 10](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-curve)
+![lower (lower credible limit) against alpha (prior Beta alpha (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-curve)
 
-*lower (lower credible limit) against trials (number of trials n) from -10 to 10. One curve for each value of alpha (prior Beta alpha (> 0)): 1, 0.5, 2. Other inputs as in the worked example: beta = 1, successes = 0, level = 0.9. 11 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, trials = 0, lower = 0.05.*
+*lower (lower credible limit) against alpha (prior Beta alpha (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of level (credibility level as a fraction (0.95 for 95%; default 0.95)): 0.9, 0.26, 0.74. Other inputs as in the worked example: beta = 1.0, successes = 1, trials = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha = 1, lower = 0.223607.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_credible_interval', alpha=1, beta=1, successes=0, trials=0, level=0.9)
@@ -902,9 +902,9 @@ $$
 
 *The posterior of a success probability from a Beta(1, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced). Shaded: the returned P(θ > 0.3) = 0.995709 (P(θ < 0.3) = 0.00429089).*
 
-![prob_above (posterior probability P(p > c)) against alpha (Beta alpha (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-curve)
+![prob_above (posterior probability P(p > c)) against beta (Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-curve)
 
-*prob_above (posterior probability P(p > c)) against alpha (Beta alpha (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of beta (Beta beta (> 0)): 1, 0.5, 2. Other inputs as in the worked example: threshold = 0.3. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha = 1, prob_above = 0.7.*
+*prob_above (posterior probability P(p > c)) against beta (Beta beta (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of alpha (Beta alpha (> 0)): 2, 1, 4. Other inputs as in the worked example: threshold = 0.5. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 1, prob_above = 0.75.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_posterior_tail_probability', alpha=1, beta=1, threshold=0.3)
@@ -1108,7 +1108,7 @@ $$
 
 ![map (posterior mode (alpha + k - 1)/(alpha + beta + n - 2)) against beta (prior Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-beta-binomial-curve)
 
-*map (posterior mode (alpha + k - 1)/(alpha + beta + n - 2)) against beta (prior Beta beta (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3. Other inputs as in the worked example: alpha = 2, trials = 10. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, map = 0.666667.*
+*map (posterior mode (alpha + k - 1)/(alpha + beta + n - 2)) against beta (prior Beta beta (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3. Other inputs as in the worked example: alpha = 2.0, trials = 10. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, map = 0.666667.*
 
 ```python
 bayesian_statistics_ai999x.solve('map_beta_binomial', alpha=2, beta=2, successes=7, trials=10)
@@ -1211,9 +1211,9 @@ $$
 
 *The Beta(2, 2) density at level 0.5 (the worked example; the two intervals coincide when the density is symmetric); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.326352, 0.673648] (width 0.347296):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.326352, 0.673648] at the same level, width 0.347296 (difference of the returned limits).*
 
-![lower (lower limit) against beta (Beta beta (> 1)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-curve)
+![lower (lower limit) against beta (Beta beta (> 1)) from 4](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-curve)
 
-*lower (lower limit) against beta (Beta beta (> 1)) from 1 to 3. One curve for each value of alpha (Beta alpha (> 1)): 2, 4. Other inputs as in the worked example: level = 0.5. 30 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, lower = 0.326352.*
+*lower (lower limit) against beta (Beta beta (> 1)) from 4.5 to 13.5. One curve for each value of alpha (Beta alpha (> 1)): 3, 1.5, 6. Other inputs as in the worked example: level = 0.95. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 9, lower = 0.0405552.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_hdi', alpha=2, beta=2, level=0.5)
@@ -1313,7 +1313,7 @@ $$
 
 ![prob_a_greater (P(p_A > p_B)) against alpha_b (posterior alpha of B (whole number)) from 1 to 9](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-curve)
 
-*prob_a_greater (P(p_A > p_B)) against alpha_b (posterior alpha of B (whole number)) from 1 to 9. One curve for each value of alpha_a (posterior alpha of A): 1, 0.5, 2. Other inputs as in the worked example: beta_a = 1, beta_b = 1. 9 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha_b = 1, prob_a_greater = 0.5.*
+*prob_a_greater (P(p_A > p_B)) against alpha_b (posterior alpha of B (whole number)) from 1 to 9. One curve for each value of alpha_a (posterior alpha of A): 1, 0.5, 2. Other inputs as in the worked example: beta_a = 1.0, beta_b = 1.0. 9 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha_b = 1, prob_a_greater = 0.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('ab_test_probability_beta', alpha_a=1, beta_a=1, alpha_b=1, beta_b=1)
@@ -1422,7 +1422,7 @@ $$
 
 ![lower (lower limit) against shape (prior shape (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-curve)
 
-*lower (lower limit) against shape (prior shape (> 0)) from 0.5 to 1.5. One curve for each value of level (credibility level as a fraction (0.95 for 95%; default 0.95)): 0.9, 0.26, 0.74. Other inputs as in the worked example: rate = 1, counts = 0. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, shape = 1, lower = 0.0256466.*
+*lower (lower limit) against shape (prior shape (> 0)) from 0.5 to 1.5. One curve for each value of level (credibility level as a fraction (0.95 for 95%; default 0.95)): 0.9, 0.26, 0.74. Other inputs as in the worked example: rate = 1.0, counts = 0. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, shape = 1, lower = 0.0256466.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_poisson_credible_interval', shape=1, rate=1, counts='0', level=0.9)
@@ -1472,9 +1472,9 @@ $$
 
 *The Gamma density with shape 1 and rate 1 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.0512933, 2.99573]; marked: the returned median 0.693147.*
 
-![lower (lower limit) against rate (rate (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-curve)
+![lower (lower limit) against rate (rate (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-curve)
 
-*lower (lower limit) against rate (rate (> 0)) from 0.5 to 1.5. One curve for each value of shape (shape (> 0)): 1, 0.5, 2. Other inputs as in the worked example: level = 0.9. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, rate = 1, lower = 0.0512933.*
+*lower (lower limit) against rate (rate (> 0)) from 1 to 3. One curve for each value of shape (shape (> 0)): 1, 0.5, 2. Other inputs as in the worked example: level = 0.9. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, rate = 2, lower = 0.0256466.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_credible_interval', shape=1, rate=1, level=0.9)
@@ -1733,7 +1733,7 @@ $$
 
 ![posterior_mean (posterior mean) against prior_sd (prior standard deviation tau0 (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-curve)
 
-*posterior_mean (posterior mean) against prior_sd (prior standard deviation tau0 (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sigma (known standard deviation of each observation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0, data = 1.2. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior_sd = 1, posterior_mean = 0.6.*
+*posterior_mean (posterior mean) against prior_sd (prior standard deviation tau0 (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of prior_mean (prior mean mu0): 10, 5, 20. Other inputs as in the worked example: sigma = 3.0, data = 1.2. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior_sd = 2, posterior_mean = 7.29231.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_normal_posterior', prior_mean=0, prior_sd=1, sigma=1, data='1.2')
@@ -1791,7 +1791,7 @@ $$
 
 ![posterior_mean (posterior mean) against prior_sd (prior standard deviation (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-summary-curve)
 
-*posterior_mean (posterior mean) against prior_sd (prior standard deviation (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sample_mean (sample mean): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0, sigma = 2, n = 4. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior_sd = 1, posterior_mean = 0.5.*
+*posterior_mean (posterior mean) against prior_sd (prior standard deviation (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sample_mean (sample mean): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0.0, sigma = 2.0, n = 4, level = 0.95. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior_sd = 1, posterior_mean = 0.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_normal_summary', prior_mean=0, prior_sd=1, sigma=2, sample_mean=1, n=4)
@@ -1847,7 +1847,7 @@ $$
 
 ![predictive_sd (sqrt(posterior variance + sigma^2)) against sigma (known standard deviation (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-posterior-predictive-curve)
 
-*predictive_sd (sqrt(posterior variance + sigma^2)) against sigma (known standard deviation (> 0)) from 1 to 3. One curve for each value of prior_sd (prior standard deviation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0, sample_mean = 1, n = 4, threshold = 0.5. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sigma = 2, predictive_sd = 2.12132.*
+*predictive_sd (sqrt(posterior variance + sigma^2)) against sigma (known standard deviation (> 0)) from 1 to 3. One curve for each value of prior_sd (prior standard deviation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0.0, sample_mean = 1.0, n = 4, threshold = 0.5. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sigma = 2, predictive_sd = 2.12132.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_posterior_predictive', prior_mean=0, prior_sd=1, sigma=2, sample_mean=1, n=4, threshold=0.5)
@@ -1905,7 +1905,7 @@ $$
 
 ![beta_n (posterior scale) against mu0 (prior location of the mean) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-inverse-gamma-posterior-curve)
 
-*beta_n (posterior scale) against mu0 (prior location of the mean) from -1 to 1. One curve for each value of beta0 (prior inverse-gamma scale (> 0)): 2, 1, 4. Other inputs as in the worked example: kappa0 = 1, alpha0 = 2, data = 1, -1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, mu0 = 0, beta_n = 3.*
+*beta_n (posterior scale) against mu0 (prior location of the mean) from -1 to 1. One curve for each value of beta0 (prior inverse-gamma scale (> 0)): 2, 1, 4. Other inputs as in the worked example: kappa0 = 1.0, alpha0 = 2.0, data = 1, -1, level = 0.95. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, mu0 = 0, beta_n = 3.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_inverse_gamma_posterior', mu0=0, kappa0=1, alpha0=2, beta0=2, data='1, -1')
@@ -2054,7 +2054,7 @@ $$
 
 ![log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-curve)
 
-*log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0.02 to 0.98. One curve for each value of trials (trials n (>= 1)): 1, 2, 3. Other inputs as in the worked example: successes = 1, p1 = 0.8. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, p0 = 0.5, log10_bf10 = 0.20412.*
+*log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0.02 to 0.98. One curve for each value of p1 (success probability under H1): 0.7, 0.26. Other inputs as in the worked example: successes = 14, trials = 20. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, p0 = 0.5, log10_bf10 = 0.7147.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_factor_binomial_simple', successes=1, trials=1, p0=0.5, p1=0.8)
@@ -2107,9 +2107,9 @@ $$
 
 *The Bayes factor of a uniform alternative against the point null p = 0.5 for every number of successes in the worked example's 1 trials, as log10 of the returned factor: counts near n·p0 support the null, but only moderately, while extreme counts give strong evidence against it. Marked: the worked example's count, k = 1: 1.4465e-16.*
 
-![log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 9](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-curve)
+![log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 10](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-curve)
 
-*log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 9. One curve for each value of p0 (null value p0): 0.5, 0.25. Other inputs as in the worked example: successes = 1. 9 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, trials = 1, log10_bf10 = 1.4465e-16.*
+*log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 10. One curve for each value of p0 (null value p0): 0.5, 0.25. Other inputs as in the worked example: successes = 2, alpha = 1.0, beta = 1.0. 9 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, trials = 2, log10_bf10 = 0.124939.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_factor_point_null_binomial', successes=1, trials=1, p0=0.5)
@@ -2160,7 +2160,7 @@ $$
 
 ![log10_bf10 (log10 BF10) against sample_mean (sample mean) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-normal-mean-curve)
 
-*log10_bf10 (log10 BF10) against sample_mean (sample mean) from -1 to 1. One curve for each value of sigma (known standard deviation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: n = 1, mu0 = 0, prior_sd = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sample_mean = 0, log10_bf10 = -0.150515.*
+*log10_bf10 (log10 BF10) against sample_mean (sample mean) from -1 to 1. One curve for each value of sigma (known standard deviation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: n = 1, mu0 = 0.0, prior_sd = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sample_mean = 0, log10_bf10 = -0.150515.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_factor_normal_mean', sample_mean=0, n=1, sigma=1, mu0=0, prior_sd=1)
@@ -2651,11 +2651,11 @@ $$
 
 ![treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-decision)
 
-*treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0.02 to 0.98 and loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 (logarithmic vertical axis): each of the 31 × 21 cells is one run of bayesian-statistics-ai999x, coloured by the verdict it returned, do not treat: 107 cells, treat: 544 cells. Other inputs as in the worked example: loss_fn = 9. Marked: the worked example, probability = 0.15, loss_fp = 1 → treat.*
+*treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0.02 to 0.98 and loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 (logarithmic vertical axis): each of the 31 × 21 cells is one run of bayesian-statistics-ai999x, coloured by the verdict it returned, do not treat: 107 cells, treat: 544 cells. Other inputs as in the worked example: loss_fn = 9.0. Marked: the worked example, probability = 0.05, loss_fp = 1 → do not treat.*
 
 ![threshold (loss_fp / (loss_fp + loss_fn)) against loss_fp (loss of acting when the condition is absent (false positive)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-curve)
 
-*threshold (loss_fp / (loss_fp + loss_fn)) against loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 on a logarithmic axis. One curve for each value of loss_fn (loss of not acting when the condition is present (false negative)): 9, 4.5, 18. Other inputs as in the worked example: probability = 0.15. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, loss_fp = 1, threshold = 0.1.*
+*threshold (loss_fp / (loss_fp + loss_fn)) against loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 on a logarithmic axis. One curve for each value of loss_fn (loss of not acting when the condition is present (false negative)): 9, 4.5, 18. Other inputs as in the worked example: probability = 0.05. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, loss_fp = 1, threshold = 0.1.*
 
 ```python
 bayesian_statistics_ai999x.solve('treatment_threshold', loss_fp=1, loss_fn=9, probability=0.15)
@@ -3304,9 +3304,9 @@ $$
 
 *The standard deviation of the product of independent normals X (mean 0) and Y (mean 0, sd 1) (the worked example's), as the sd of X runs from 0.06 to 3: exact and first-order values, each from the package (with zero means the first-order value vanishes). Marked: the worked example's sd of X = 1, exact 1, first order 0.*
 
-![exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against mean_x (mean of X) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curve)
+![exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against sd_x (sd of X (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curve)
 
-*exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against mean_x (mean of X) from -1 to 1. One curve for each value of sd_x (sd of X (> 0)): 1, 0.5, 2. Other inputs as in the worked example: mean_y = 0, sd_y = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, mean_x = 0, exact_sd = 1.*
+*exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against sd_x (sd of X (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sd_y (sd of Y (> 0)): 2, 1, 4. Other inputs as in the worked example: mean_x = 10.0, mean_y = 5.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sd_x = 1, exact_sd = 20.7123.*
 
 ```python
 bayesian_statistics_ai999x.solve('product_of_normals_exact_moments', mean_x=0, sd_x=1, mean_y=0, sd_y=1)
@@ -3793,7 +3793,7 @@ $$
 
 ![S1 (first-order index of x1) against a1 (coefficient of x1) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-curve)
 
-*S1 (first-order index of x1) against a1 (coefficient of x1) from -1 to 1. One curve for each value of mean2 (mean of x2): 0, -0.5, 0.5. Other inputs as in the worked example: a2 = 0, a12 = 1, mean1 = 0, sd1 = 1, sd2 = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, a1 = 0, S1 = 0.*
+*S1 (first-order index of x1) against a1 (coefficient of x1) from -1 to 1. One curve for each value of mean2 (mean of x2): 0, -0.5, 0.5. Other inputs as in the worked example: a2 = 0.0, a12 = 1.0, mean1 = 0.0, sd1 = 1.0, sd2 = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, a1 = 0, S1 = 0.*
 
 ```python
 bayesian_statistics_ai999x.solve('sobol_indices_interaction_model', a1=0, a2=0, a12=1, mean1=0, sd1=1, mean2=0, sd2=1)
@@ -3843,7 +3843,7 @@ $$
 
 ![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input). Other inputs: delta = 0.5.*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input). Other inputs: delta = 1.0.*
 
 ```python
 bayesian_statistics_ai999x.solve('morris_elementary_effects', outputs='[[1, 3, 4], [2, 3, 7], [0, 1, 1]]', delta=0.5)
@@ -3894,7 +3894,7 @@ $$
 
 ![kl_1_to_2 (KL(N1 || N2) in nats) against sd1 (sd of distribution 1 (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-curve)
 
-*kl_1_to_2 (KL(N1 || N2) in nats) against sd1 (sd of distribution 1 (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sd2 (sd of distribution 2 (> 0)): 1, 0.5, 2. Other inputs as in the worked example: mean1 = 0, mean2 = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sd1 = 1, kl_1_to_2 = 0.5.*
+*kl_1_to_2 (KL(N1 || N2) in nats) against sd1 (sd of distribution 1 (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sd2 (sd of distribution 2 (> 0)): 2, 1, 4. Other inputs as in the worked example: mean1 = 0.0, mean2 = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sd1 = 1, kl_1_to_2 = 0.443147.*
 
 ```python
 bayesian_statistics_ai999x.solve('kl_divergence_normal', mean1=0, sd1=1, mean2=1, sd2=1)
@@ -3944,7 +3944,7 @@ $$
 
 ![kl (KL divergence in nats) against alpha1 (alpha of distribution 1) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-curve)
 
-*kl (KL divergence in nats) against alpha1 (alpha of distribution 1) from 0.2 to 20 on a logarithmic axis. One curve for each value of beta2 (beta of distribution 2): 1, 0.5, 2. Other inputs as in the worked example: beta1 = 1, alpha2 = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha1 = 2, kl = 0.193147.*
+*kl (KL divergence in nats) against alpha1 (alpha of distribution 1) from 0.2 to 20 on a logarithmic axis. One curve for each value of beta2 (beta of distribution 2): 1, 0.5, 2. Other inputs as in the worked example: beta1 = 1.0, alpha2 = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha1 = 2, kl = 0.193147.*
 
 ```python
 bayesian_statistics_ai999x.solve('kl_divergence_beta', alpha1=2, beta1=1, alpha2=1, beta2=1)
