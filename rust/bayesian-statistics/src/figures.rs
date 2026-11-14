@@ -958,11 +958,13 @@ fn measurement_intervals(s: &Solved) -> Option<Figure> {
             for (i, (a, b)) in m.iter().zip(&sd).enumerate().take(12) {
                 rows.push((format!("stratum {}", i + 1), a - b, a + b, Some(*a), false));
             }
-            rows.push(("estimate".into(), est - 2.0 * se, est + 2.0 * se, Some(est), true));
+            // ± one standard error, so the header's "± …" IS the computed standard error (it read ± 0.996 = 2 SE beside
+            // a standard error of 0.498; bayesian statistics review, 2026-11-13)
+            rows.push(("estimate".into(), est - se, est + se, Some(est), true));
             title = "Strata and the stratified estimate";
             cap = format!("Stratified sampling with weights {}, stratum means {}, standard deviations {} and sample \
                            sizes {}: each stratum's mean ± sd, and the computed overall estimate \
-                           {} with standard error {} (bottom row: ± 2 standard errors).", list_text(&w), list_text(&m),
+                           {} with standard error {} (bottom row: ± 1 standard error).", list_text(&w), list_text(&m),
                           list_text(&sd), list_text(&n), num(est), num(se));
             line = Some(est);
         }

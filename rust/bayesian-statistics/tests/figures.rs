@@ -54,7 +54,7 @@ const KINDS: &[(&str, &[&str])] = &[
     ("map_beta_binomial", &["density"]),
     ("map_gamma_poisson", &["density"]),
     ("monte_carlo_integration", &["field"]),
-    ("morris_elementary_effects", &["matrix", "points"]),
+    ("morris_elementary_effects", &["matrix"]),
     ("normal_inverse_gamma_posterior", &["density"]),
     ("normal_normal_posterior", &["density"]),
     ("normal_normal_summary", &["band"]),
@@ -86,7 +86,6 @@ const KINDS: &[(&str, &[&str])] = &[
 /// Kinds the generic engine draws for these capabilities (no figure of the model's own): checked for presence only.
 const GENERIC: &[(&str, &str)] = &[
     ("covariance_propagation_linear", "matrix"),
-    ("morris_elementary_effects", "points"),
     ("treatment_threshold", "decision"),
     ("type_b_standard_uncertainty", "bars"),
 ];
