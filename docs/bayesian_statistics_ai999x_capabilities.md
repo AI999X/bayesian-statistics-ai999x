@@ -3837,10 +3837,6 @@ $$
 - **Assumes:** at least 2 trajectories; $\delta > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Morris screening plane for the elementary-effect outputs [[1, 3, 4], [2, 3, 7], [0, 1, 1]] with step Δ = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-points)
-
-*The Morris screening plane for the elementary-effect outputs [[1, 3, 4], [2, 3, 7], [0, 1, 1]] with step Δ = 0.5 (the worked example): each input at its returned μ* (importance) and σ (spread, a sign of interactions or non-linearity): μ* = 2.6667, 3.3333, σ = 1.1547, 4.1633, μ = 2.6667, 3.3333. Above the dashed line the spread exceeds the mean effect.*
-
 ![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-matrix)
 
 *The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input). Other inputs: delta = 1.0.*
