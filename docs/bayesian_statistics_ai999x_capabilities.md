@@ -844,9 +844,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  k  \leq  n$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (0 of 0), then the same share 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-intervals)
+![90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (1 of 1), then the same share 1 in ever more trials (each interval returned by the package): 1/1 [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-intervals)
 
-*90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (0 of 0), then the same share 0.5 in ever more trials (each interval returned by the package): 0/0 [0.05, 0.95]; 5/10 [0.27125, 0.72875]; 20/40 [0.374396, 0.625604]; 80/160 [0.435554, 0.564446]; 320/640 [0.467563, 0.532437]. Four times the data halves the width.*
+*90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (1 of 1), then the same share 1 in ever more trials (each interval returned by the package): 1/1 [0.223607, 0.974679]; 10/10 [0.761596, 0.995348]; 40/40 [0.929539, 0.99875]; 160/160 [0.981565, 0.999681]; 640/640 [0.995337, 0.99992]. Four times the data halves the width.*
 
 ![lower (lower credible limit) against alpha (prior Beta alpha (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-curve)
 
@@ -898,9 +898,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0 < c < 1$; $0  \leq  k  \leq  n$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior of a success probability from a Beta(1, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-density)
+![The posterior of a success probability from a Beta(2, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-density)
 
-*The posterior of a success probability from a Beta(1, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced). Shaded: the returned P(θ > 0.3) = 0.995709 (P(θ < 0.3) = 0.00429089).*
+*The posterior of a success probability from a Beta(2, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced). Shaded: the returned P(θ > 0.5) = 0.927002 (P(θ < 0.5) = 0.072998).*
 
 ![prob_above (posterior probability P(p > c)) against beta (Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-curve)
 
@@ -1053,9 +1053,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  k  \leq  n$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The marginal likelihood (evidence) of k successes in 12 trials for every k, under the worked example's Beta(1, 1) prior and a Beta(5, 5) prior (chosen); each value returned by the package (Beta(1, 1): from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-evidence-stems)
+![The marginal likelihood (evidence) of k successes in 10 trials for every k, under the worked example's Beta(1, 1) prior and a Beta(5, 5) prior (chosen); each value returned by the package (Beta(1, 1): from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-evidence-stems)
 
-*The marginal likelihood (evidence) of k successes in 12 trials for every k, under the worked example's Beta(1, 1) prior and a Beta(5, 5) prior (chosen); each value returned by the package (Beta(1, 1): from 0.0769231 to 0.0769231; Beta(5, 5): from 0.00619195 to 0.150036). Marked: the worked example, k = 3, evidence 0.0769231.*
+*The marginal likelihood (evidence) of k successes in 10 trials for every k, under the worked example's Beta(1, 1) prior and a Beta(5, 5) prior (chosen); each value returned by the package (Beta(1, 1): from 0.0909091 to 0.0909091; Beta(5, 5): from 0.0108359 to 0.171859). Marked: the worked example, k = 7, evidence 0.0909091.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_evidence', alpha=1, beta=1, successes=3, trials=12)
@@ -1207,9 +1207,9 @@ $$
 - **Assumes:** $\alpha > 1$ and $\beta > 1$ (unimodal, zero density at both ends); 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Beta(2, 2) density at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-density)
+![The Beta(3, 9) density at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-density)
 
-*The Beta(2, 2) density at level 0.5 (the worked example; the two intervals coincide when the density is symmetric); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.326352, 0.673648] (width 0.347296):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.326352, 0.673648] at the same level, width 0.347296 (difference of the returned limits).*
+*The Beta(3, 9) density at level 0.95 (the worked example; the two intervals coincide when the density is symmetric); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.0405552, 0.483724] (width 0.443168):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.0602177, 0.517756] at the same level, width 0.457538 (difference of the returned limits).*
 
 ![lower (lower limit) against beta (Beta beta (> 1)) from 4](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-curve)
 
@@ -1468,9 +1468,9 @@ $$
 - **Assumes:** shape, rate > 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Gamma density with shape 1 and rate 1 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-density)
+![The Gamma density with shape 1 and rate 2 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-density)
 
-*The Gamma density with shape 1 and rate 1 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.0512933, 2.99573]; marked: the returned median 0.693147.*
+*The Gamma density with shape 1 and rate 2 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.0256466, 1.49787]; marked: the returned median 0.346574.*
 
 ![lower (lower limit) against rate (rate (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-curve)
 
@@ -1574,7 +1574,7 @@ $$
 
 ![The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-stems)
 
-*The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0.5, mean 1, variance 2; Gamma(10, 2): P(0) = 0.0173415, mean 5, variance 7.5. Marked: the worked example's count, P(k = 0) = 0.5. The predictive variance exceeds the mean.*
+*The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0.5, mean 1, variance 2; Gamma(10, 2): P(0) = 0.0173415, mean 5, variance 7.5. Marked: the worked example's count, P(k = 1) = 0.25. The predictive variance exceeds the mean.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_poisson_predictive', shape=1, rate=1, events=0)
@@ -1727,9 +1727,9 @@ $$
 - **Assumes:** prior $sd > 0$; $\sigma > 0$ known
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A normal prior for a mean (mean 0, sd 1) combined with the data 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-density)
+![A normal prior for a mean (mean 10, sd 2) combined with the data 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-density)
 
-*A normal prior for a mean (mean 0, sd 1) combined with the data 1.2 of known σ = 1: the returned posterior mean 0.6 and sd 0.707107 (variance 0.5) lie between prior and data, the posterior narrower than both. The three curves are normal densities drawn from these means and standard deviations (the data curve from the data mean and σ/√n).*
+*A normal prior for a mean (mean 10, sd 2) combined with the data 1.2 of known σ = 3: the returned posterior mean 7.29231 and sd 1.6641 (variance 2.76923) lie between prior and data, the posterior narrower than both. The three curves are normal densities drawn from these means and standard deviations (the data curve from the data mean and σ/√n).*
 
 ![posterior_mean (posterior mean) against prior_sd (prior standard deviation tau0 (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-curve)
 
@@ -2050,7 +2050,7 @@ $$
 
 ![The Bayes factor of the simple hypotheses p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-stems)
 
-*The Bayes factor of the simple hypotheses p = 0.8 against p = 0.5 for every number of successes in the worked example's 1 trials, as log10 of the returned factor: each extra success multiplies it by the same amount, so the stems lie on a straight line. Marked: the worked example's count, k = 1: log10 BF = 0.20412.*
+*The Bayes factor of the simple hypotheses p = 0.7 against p = 0.5 for every number of successes in the worked example's 20 trials, as log10 of the returned factor: each extra success multiplies it by the same amount, so the stems lie on a straight line. Marked: the worked example's count, k = 14: log10 BF = 0.7147.*
 
 ![log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-curve)
 
@@ -2105,7 +2105,7 @@ $$
 
 ![The Bayes factor of a uniform alternative against the point null p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-stems)
 
-*The Bayes factor of a uniform alternative against the point null p = 0.5 for every number of successes in the worked example's 1 trials, as log10 of the returned factor: counts near n·p0 support the null, but only moderately, while extreme counts give strong evidence against it. Marked: the worked example's count, k = 1: 1.4465e-16.*
+*The Bayes factor of a uniform alternative against the point null p = 0.5 for every number of successes in the worked example's 2 trials, as log10 of the returned factor: counts near n·p0 support the null, but only moderately, while extreme counts give strong evidence against it. Marked: the worked example's count, k = 2: 0.124939.*
 
 ![log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 10](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-curve)
 
@@ -2807,7 +2807,7 @@ $$
 
 ![Uncertainties of the product and the quotient of a = 1 ± 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-correlated-curves)
 
-*Uncertainties of the product and the quotient of a = 1 ± 0.1 and b = 1 ± 0.1 as their correlation runs from −1 to 1, each from the package: positive correlation inflates the product's uncertainty and cancels the quotient's. Marked: the worked example, ρ = 1: u(a·b) = 0.2, u(a/b) = 0.*
+*Uncertainties of the product and the quotient of a = 1 ± 0.1 and b = 1 ± 0.1 as their correlation runs from −1 to 1, each from the package: positive correlation inflates the product's uncertainty and cancels the quotient's. Marked: the worked example, ρ = -1: u(a·b) = 0, u(a/b) = 0.2.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_product_correlated', a=1, ua=0.1, b=1, ub=0.1, rho=1)
@@ -3300,9 +3300,9 @@ $$
 - **Assumes:** independent normal inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The standard deviation of the product of independent normals X (mean 0) and Y (mean 0, sd 1) (the worked example's), as the sd of X runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curves)
+![The standard deviation of the product of independent normals X (mean 10) and Y (mean 5, sd 2) (the worked example's), as the sd of X runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curves)
 
-*The standard deviation of the product of independent normals X (mean 0) and Y (mean 0, sd 1) (the worked example's), as the sd of X runs from 0.06 to 3: exact and first-order values, each from the package (with zero means the first-order value vanishes). Marked: the worked example's sd of X = 1, exact 1, first order 0.*
+*The standard deviation of the product of independent normals X (mean 10) and Y (mean 5, sd 2) (the worked example's), as the sd of X runs from 0.06 to 3: exact and first-order values, each from the package (with zero means the first-order value vanishes). Marked: the worked example's sd of X = 1, exact 20.7123, first order 20.6155.*
 
 ![exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against sd_x (sd of X (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curve)
 
@@ -3884,9 +3884,9 @@ $$
 - **Assumes:** sd1, $sd2 > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Normal densities (drawn from their stated means and standard deviations): N1 = N(0, 1²) and N2 = N(1, 1²) of the worked example, and a wider N2' with sd 2 (chosen)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-density)
+![Normal densities (drawn from their stated means and standard deviations): N1 = N(0, 1²) and N2 = N(1, 2²) of the worked example, and a wider N2' with sd 4 (chosen)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-density)
 
-*Normal densities (drawn from their stated means and standard deviations): N1 = N(0, 1²) and N2 = N(1, 1²) of the worked example, and a wider N2' with sd 2 (chosen). Returned divergences in nats: sd2 = 1: KL(1‖2) = 0.5, KL(2‖1) = 0.5; sd2 = 2: KL(1‖2) = 0.443147, KL(2‖1) = 1.30685.*
+*Normal densities (drawn from their stated means and standard deviations): N1 = N(0, 1²) and N2 = N(1, 2²) of the worked example, and a wider N2' with sd 4 (chosen). Returned divergences in nats: sd2 = 2: KL(1‖2) = 0.443147, KL(2‖1) = 1.30685; sd2 = 4: KL(1‖2) = 0.948794, KL(2‖1) = 6.61371.*
 
 ![kl_1_to_2 (KL(N1 || N2) in nats) against sd1 (sd of distribution 1 (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-curve)
 
@@ -3982,9 +3982,9 @@ $$
 - **Assumes:** $1  \leq  n  \leq  40$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Gauss–Hermite rules with n = 2, 4, 8 nodes (the worked example's n = 2 and wider ones): each node with its weight as a stem, all returned by the package (n = 2: nodes ±1 at most, largest weight 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-stems)
+![Gauss–Hermite rules with n = 3, 6, 12 nodes (the worked example's n = 3 and wider ones): each node with its weight as a stem, all returned by the package (n = 3: nodes ±1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-stems)
 
-*Gauss–Hermite rules with n = 2, 4, 8 nodes (the worked example's n = 2 and wider ones): each node with its weight as a stem, all returned by the package (n = 2: nodes ±1 at most, largest weight 0.5, weights summing to 1; n = 4: nodes ±2.3344 at most, largest weight 0.4541, weights summing to 1; n = 8: nodes ±4.1445 at most, largest weight 0.373, weights summing to 1, the sum being derived). Wider rules reach further into the tails with ever smaller weights.*
+*Gauss–Hermite rules with n = 3, 6, 12 nodes (the worked example's n = 3 and wider ones): each node with its weight as a stem, all returned by the package (n = 3: nodes ±1.7321 at most, largest weight 0.6667, weights summing to 1; n = 6: nodes ±3.3243 at most, largest weight 0.4088, weights summing to 1; n = 12: nodes ±5.5009 at most, largest weight 0.3217, weights summing to 1, the sum being derived). Wider rules reach further into the tails with ever smaller weights.*
 
 ```python
 bayesian_statistics_ai999x.solve('gauss_hermite_rule', n=2)

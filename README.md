@@ -10,34 +10,142 @@ Bayesian Statistics covers Bayes' theorem, conjugate priors and posteriors, cred
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://downloads.ai999x.com/desktop/latest/ai999x-windows-x86_64.zip) · [Linux](https://downloads.ai999x.com/desktop/latest/ai999x-linux-x86_64.tar.gz) |
-| **Command line** `bayesian-statistics` (Windows, Linux) | [Windows](https://downloads.ai999x.com/desktop/latest/ai999x-cli-windows-x86_64.zip) · [Linux](https://downloads.ai999x.com/desktop/latest/ai999x-cli-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-1.6.4-linux-x86_64.tar.gz) |
+| **Command line** `bayesian-statistics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#try) |
 | **Python** 3.10+ | `pip install bayesian-statistics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
-## Example
+## Ask in words: 15 examples
+
+Each question below was asked on this release; the comment under it is the line it printed.
 
 ```python
 import bayesian_statistics_ai999x as bayesian_statistics
-a = bayesian_statistics.ask("A test has sensitivity 0.9 and specificity 0.95; the prevalence is 0.01. What is the positive predictive value?")
-print(a.outcome, a.value)
+
+a = bayesian_statistics.ask(
+    "Bayesian A/B test: alpha_a = 1, beta_a = 1, alpha_b = 1, beta_b = "
+    "1. Probability that A beats B?"
+)
+print(a.outcome, a.values)
+# SOLVED {'prob_a_greater': 0.5, 'prob_b_greater': 0.5}
+
+a = bayesian_statistics.ask(
+    "Find the beta prior with mean = 0.3 and standard deviation = 0.1."
+)
+print(a.outcome, a.values)
+# SOLVED {'alpha': 6.0, 'beta': 14.0, 'prior_sample_size': 20.0}
+
+a = bayesian_statistics.ask(
+    "Law of total probability: priors = [0.5, 0.3, 0.2], conditionals "
+    "= [0.01, 0.02, 0.05]. Find P(B)."
+)
+print(a.outcome, a.values)
+# SOLVED {'p_b': 0.021, 'joint': [0.005, 0.006, 0.01]}
+
+a = bayesian_statistics.ask(
+    "KL divergence between beta distributions: alpha1 = 2, beta1 = 1, "
+    "alpha2 = 1, beta2 = 1."
+)
+print(a.outcome, a.values)
+# SOLVED {'kl': 0.19314718056}
+
+a = bayesian_statistics.ask("Convert the probability 0.2 to odds.")
+print(a.outcome, a.values)
+# SOLVED {'odds': 0.25, 'odds_against': 4.0, 'log_odds': -1.38629436112}
+
+a = bayesian_statistics.ask(
+    "Equal-tailed 90% credible interval for a Beta(1, 1) posterior."
+)
+print(a.outcome, a.values)
+# SOLVED {'lower': 0.05, 'upper': 0.95, 'median': 0.5}
+
+a = bayesian_statistics.ask(
+    "KL divergence between normal distributions: mean1 = 0, sd1 = 1, "
+    "mean2 = 1, sd2 = 2."
+)
+print(a.outcome, a.values)
+# SOLVED {'kl_1_to_2': 0.44314718056, 'kl_2_to_1': 1.30685281944}
+
+a = bayesian_statistics.ask(
+    "Monte Carlo integration with values = [1, 3]: lower = 0, upper = "
+    "2."
+)
+print(a.outcome, a.values)
+# SOLVED {'estimate': 4.0, 'standard_error': 2.0, 'n': 2}
+
+a = bayesian_statistics.ask(
+    "The pre-test probability is 0.2 and the likelihood ratio is 6. "
+    "What is the post-test probability?"
+)
+print(a.outcome, a.values)
+# SOLVED {'posterior': 0.6, 'prior_odds': 0.25, 'posterior_odds': 1.5}
+
+a = bayesian_statistics.ask(
+    "Repeated testing: prevalence 0.01, sensitivity 0.9, specificity "
+    "0.95, positives = 2, negatives = 0. Posterior probability of the "
+    "disease?"
+)
+print(a.outcome, a.values)
+# SOLVED {'posterior': 0.765957446809, 'posterior_odds': 3.27272727273}
+
+a = bayesian_statistics.ask(
+    "Dirichlet-multinomial evidence for counts = [2, 1, 0] with alpha "
+    "= [1, 1, 1]."
+)
+print(a.outcome, a.values)
+# SOLVED {'probability': 0.1, 'log_probability': -2.30258509299}
+
+a = bayesian_statistics.ask("Convert odds of 3 to a probability.")
+print(a.outcome, a.values)
+# SOLVED {'probability': 0.75, 'complement': 0.25}
+
+a = bayesian_statistics.ask(
+    "Mean and variance of the polynomial with coefficients = [1, 2, 3] "
+    "of a normal X with mean = 0, sd = 1."
+)
+print(a.outcome, a.values)
+# SOLVED {'mean': 4.0, 'variance': 22.0, 'sd': 4.69041575982}
+
+a = bayesian_statistics.ask(
+    "Treatment threshold with loss_fp = 1 and loss_fn = 9; the "
+    "probability of disease is 0.05. Treat?"
+)
+print(a.outcome, a.values)
+# SOLVED {'threshold': 0.1, 'decision': 'do not treat'}
+
+a = bayesian_statistics.ask(
+    "Stratified sampling: weights = [0.6, 0.4], means = [10, 20], sds "
+    "= [2, 5], sizes = [30, 20]."
+)
+print(a.outcome, a.values)
+# SOLVED {'estimate': 14.0, 'standard_error': 0.49799598392}
 ```
 
-Output:
+## Screenshots
 
-```text
-SOLVED 0.153846153846
-```
+[![The Bayesian Statistics desktop app: Probability that one Poisson rate exceeds another (gamma posteriors), with its worked example and live scene](https://www.ai999x.com/?ax_shot=bayesian-statistics-ai999x/hero-dark.webp)](https://www.ai999x.com/models/bayesian-statistics-ai999x/)
+
+[![Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite): the live scene in the Bayesian Statistics desktop app](https://www.ai999x.com/?ax_shot=bayesian-statistics-ai999x/see-1.webp)](https://www.ai999x.com/models/bayesian-statistics-ai999x/)
+
+*Effective degrees of freedom and expanded uncertainty (Welch-Satterthwaite)*
+
+[![Bayes action: minimum posterior expected loss: the live scene in the Bayesian Statistics desktop app](https://www.ai999x.com/?ax_shot=bayesian-statistics-ai999x/see-2.webp)](https://www.ai999x.com/models/bayesian-statistics-ai999x/)
+
+*Bayes action: minimum posterior expected loss*
+
+[![Credible interval for a Poisson rate: the live scene in the Bayesian Statistics desktop app](https://www.ai999x.com/?ax_shot=bayesian-statistics-ai999x/see-3.webp)](https://www.ai999x.com/models/bayesian-statistics-ai999x/)
+
+*Credible interval for a Poisson rate*
 
 Every calculation, with its formula, a worked example and its figures: **[Bayesian Statistics on ai999x.com](https://www.ai999x.com/models/bayesian-statistics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.3 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/bayesian-statistics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.3`; the [GitHub release](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.6.3) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/bayesian-statistics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.4`; the [GitHub release](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.6.4) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
