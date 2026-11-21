@@ -10,8 +10,8 @@ Bayesian Statistics covers Bayes' theorem, conjugate priors and posteriors, cred
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-bayesian-statistics-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-bayesian-statistics-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `bayesian-statistics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-bayesian-statistics-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-bayesian-statistics-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `bayesian-statistics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install bayesian-statistics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -142,90 +142,6 @@ print(a.outcome, a.values)
 # SOLVED {'estimate': 14.0, 'standard_error': 0.49799598392}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `bayesian-statistics` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ bayesian-statistics solve bayes_factor_normal_mean sample_mean=0 n=1 sigma=1 mu0=0 prior_sd=1
-bf10 = 0.7071067812
-bf01 = 1.414213562
-log10_bf10 = -0.1505149978
-posterior_h1 = 0.4142135624
-
-$ bayesian-statistics solve bayes_theorem p_a=0.3 p_b_given_a=0.8 p_b_given_not_a=0.1
-p_a_given_b = 0.7741935484
-p_b = 0.31
-p_not_a_given_b = 0.2258064516
-
-$ bayesian-statistics solve ab_test_probability_beta alpha_a=1 beta_a=1 alpha_b=1 beta_b=1
-prob_a_greater = 0.5
-prob_b_greater = 0.5
-
-$ bayesian-statistics solve gamma_poisson_credible_interval "counts=[0]" shape=1 rate=1 level=0.9
-post_shape = 1
-post_rate = 2
-lower = 0.02564664719
-upper = 1.497866137
-
-$ bayesian-statistics solve bayes_action_minimum_expected_loss "losses=[[0, 10], [5, 0]]" "probabilities=[0.3, 0.7]"
-expected_losses = [7.0,1.5]
-bayes_action = 2
-bayes_risk = 1.5
-
-$ bayesian-statistics solve gauss_hermite_rule n=3
-nodes = [-1.73205080757,0.0,1.73205080757]
-weights = [0.166666666667,0.666666666667,0.166666666667]
-
-$ bayesian-statistics solve control_variate_estimate "y=[1, 2, 3]" "c=[1, 2, 3]" control_mean=2.5
-estimate = 2.5
-coefficient = 1
-plain_estimate = 2
-variance_reduction = 0
-
-$ bayesian-statistics solve likelihood_ratios sensitivity=0.9 specificity=0.8
-lr_positive = 4.5
-lr_negative = 0.125
-diagnostic_odds_ratio = 36
-
-$ bayesian-statistics solve laplace_approximation_beta alpha=3 beta=3 level=0.95
-mode = 0.5
-laplace_sd = 0.25
-lower = 0.01000900386
-upper = 0.9899909961
-
-$ bayesian-statistics solve beta_prior_from_mean_sd mean=0.3 sd=0.1
-alpha = 6
-beta = 14
-prior_sample_size = 20
-
-$ bayesian-statistics solve morris_elementary_effects "outputs=[[10, 12], [11, 10]]" delta=1
-mu = [0.5]
-mu_star = [1.5]
-sigma = [2.12132034356]
-
-$ bayesian-statistics solve covariance_propagation_linear "matrix=[[1, 1], [1, -1]]" "covariance=[[0.04, 0.01], [0.01, 0.09]]"
-output_covariance = [[0.15,-0.05],[-0.05,0.11]]
-uncertainties = [0.387298334621,0.331662479036]
-
-$ bayesian-statistics solve bayes_factor_point_null_binomial p0=0.5 successes=2 trials=2 alpha=1 beta=1
-bf10 = 1.333333333
-bf01 = 0.75
-log10_bf10 = 0.1249387366
-posterior_h1 = 0.5714285714
-
-$ bayesian-statistics solve total_probability "priors=[0.5, 0.3, 0.2]" "conditionals=[0.01, 0.02, 0.05]"
-p_b = 0.021
-joint = [0.005,0.006,0.01]
-
-$ bayesian-statistics solve beta_binomial_posterior alpha=2 beta=2 successes=7 trials=10
-post_alpha = 9
-post_beta = 5
-posterior_mean = 0.6428571429
-posterior_variance = 0.01530612245
-posterior_sd = 0.1237179148
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_desktop_guide.md)
@@ -234,13 +150,13 @@ posterior_sd = 0.1237179148
 
 Every calculation, with its formula, a worked example and its figures: **[Bayesian Statistics on ai999x.com](https://www.ai999x.com/models/bayesian-statistics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/bayesian-statistics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/bayesian-statistics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/bayesian-statistics-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
