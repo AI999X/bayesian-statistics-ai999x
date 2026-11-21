@@ -10,8 +10,8 @@ Bayesian Statistics covers Bayes' theorem, conjugate priors and posteriors, cred
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-bayesian-statistics-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-bayesian-statistics-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `bayesian-statistics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-bayesian-statistics-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-bayesian-statistics-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `bayesian-statistics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/bayesian-statistics-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install bayesian-statistics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -226,117 +226,6 @@ posterior_variance = 0.01530612245
 posterior_sd = 0.1237179148
 ```
 
-## Rust library: 15 examples
-
-The crate `bayesian-statistics-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `bayesian_statistics_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/bayesian-statistics/examples/readme.rs`: `cd rust && cargo run --release --example readme -p bayesian-statistics-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&bayesian_statistics_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "bayes_factor_normal_mean", "inputs": {"sample_mean": "0", "n": "1", "sigma": "1", "mu0": "0", "prior_sd": "1"}}));
-// SOLVED
-// bf10 = 0.707106781187
-// bf01 = 1.41421356237
-// log10_bf10 = -0.150514997832
-// posterior_h1 = 0.414213562373
-
-show(json!({"key": "bayes_theorem", "inputs": {"p_a": "0.3", "p_b_given_a": "0.8", "p_b_given_not_a": "0.1"}}));
-// SOLVED
-// p_a_given_b = 0.774193548387
-// p_b = 0.31
-// p_not_a_given_b = 0.225806451613
-
-show(json!({"key": "ab_test_probability_beta", "inputs": {"alpha_a": "1", "beta_a": "1", "alpha_b": "1", "beta_b": "1"}}));
-// SOLVED
-// prob_a_greater = 0.5
-// prob_b_greater = 0.5
-
-show(json!({"key": "gamma_poisson_credible_interval", "inputs": {"counts": [0], "shape": "1", "rate": "1", "level": "0.9"}}));
-// SOLVED
-// post_shape = 1.0
-// post_rate = 2.0
-// lower = 0.0256466471938
-// upper = 1.49786613678
-
-show(json!({"key": "bayes_action_minimum_expected_loss", "inputs": {"losses": [[0, 10], [5, 0]], "probabilities": [0.3, 0.7]}}));
-// SOLVED
-// expected_losses = [7.0,1.5]
-// bayes_action = 2
-// bayes_risk = 1.5
-
-show(json!({"key": "gauss_hermite_rule", "inputs": {"n": "3"}}));
-// SOLVED
-// nodes = [-1.73205080757,0.0,1.73205080757]
-// weights = [0.166666666667,0.666666666667,0.166666666667]
-
-show(json!({"key": "control_variate_estimate", "inputs": {"y": [1, 2, 3], "c": [1, 2, 3], "control_mean": "2.5"}}));
-// SOLVED
-// estimate = 2.5
-// coefficient = 1.0
-// plain_estimate = 2.0
-// variance_reduction = 0.0
-
-show(json!({"key": "likelihood_ratios", "inputs": {"sensitivity": "0.9", "specificity": "0.8"}}));
-// SOLVED
-// lr_positive = 4.5
-// lr_negative = 0.125
-// diagnostic_odds_ratio = 36.0
-
-show(json!({"key": "laplace_approximation_beta", "inputs": {"alpha": "3", "beta": "3", "level": "0.95"}}));
-// SOLVED
-// mode = 0.5
-// laplace_sd = 0.25
-// lower = 0.010009003865
-// upper = 0.989990996135
-
-show(json!({"key": "beta_prior_from_mean_sd", "inputs": {"mean": "0.3", "sd": "0.1"}}));
-// SOLVED
-// alpha = 6.0
-// beta = 14.0
-// prior_sample_size = 20.0
-
-show(json!({"key": "morris_elementary_effects", "inputs": {"outputs": [[10, 12], [11, 10]], "delta": "1"}}));
-// SOLVED
-// mu = [0.5]
-// mu_star = [1.5]
-// sigma = [2.12132034356]
-
-show(json!({"key": "covariance_propagation_linear", "inputs": {"matrix": [[1, 1], [1, -1]], "covariance": [[0.04, 0.01], [0.01, 0.09]]}}));
-// SOLVED
-// output_covariance = [[0.15,-0.05],[-0.05,0.11]]
-// uncertainties = [0.387298334621,0.331662479036]
-
-show(json!({"key": "bayes_factor_point_null_binomial", "inputs": {"p0": "0.5", "successes": "2", "trials": "2", "alpha": "1", "beta": "1"}}));
-// SOLVED
-// bf10 = 1.33333333333
-// bf01 = 0.75
-// log10_bf10 = 0.124938736608
-// posterior_h1 = 0.571428571429
-
-show(json!({"key": "total_probability", "inputs": {"priors": [0.5, 0.3, 0.2], "conditionals": [0.01, 0.02, 0.05]}}));
-// SOLVED
-// p_b = 0.021
-// joint = [0.005,0.006,0.01]
-
-show(json!({"key": "beta_binomial_posterior", "inputs": {"alpha": "2", "beta": "2", "successes": "7", "trials": "10"}}));
-// SOLVED
-// post_alpha = 9.0
-// post_beta = 5.0
-// posterior_mean = 0.642857142857
-// posterior_variance = 0.015306122449
-// posterior_sd = 0.123717914826
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/bayesian-statistics-ai999x/blob/main/docs/bayesian_statistics_ai999x_desktop_guide.md)
@@ -345,7 +234,7 @@ show(json!({"key": "beta_binomial_posterior", "inputs": {"alpha": "2", "beta": "
 
 Every calculation, with its formula, a worked example and its figures: **[Bayesian Statistics on ai999x.com](https://www.ai999x.com/models/bayesian-statistics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
