@@ -177,17 +177,13 @@ $$
 - **Assumes:** probabilities between 0 and 1; P(B) > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Bayes' theorem as areas in the unit square, to scale: the width splits the population into A (P(A) = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-theorem-area)
+![Bayes' theorem as areas in the unit square (to scale): the width splits the population into A (P(A) = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-theorem-area)
 
-*Bayes' theorem as areas in the unit square, to scale: the width splits the population into A (P(A) = 0.3) and not A; the shaded heights are P(B | A) = 0.8 and P(B | not A) = 0.1. The shaded areas together are the computed P(B) = 0.31; the share of it inside A is the computed P(A | B) = 0.7742 (P(not A | B) = 0.2258). Your inputs: p_a = 0.3, p_b_given_a = 0.8, p_b_given_not_a = 0.1.*
+*Bayes' theorem as areas in the unit square (to scale): the width splits the population into A (P(A) = 0.3) and not A; the shaded heights are P(B | A) = 0.8 and P(B | not A) = 0.1 (the worked example's inputs). The shaded areas together are the returned P(B) = 0.31; the share of it inside A is the returned P(A | B) = 0.774194 (P(not A | B) = 0.225806).*
 
-![P a given b as p_a runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-theorem-live-1)
+![p_a_given_b (posterior probability P(A|B)) against p_a (prior probability P(A)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-theorem-curve)
 
-*P a given b as p_a runs from 0.075 to 0.525, every other input as you entered it (41 solutions). Marked: your p_a = 0.3 gives p_a_given_b = 0.7742. Your inputs: p_a = 0.3, p_b_given_a = 0.8, p_b_given_not_a = 0.1.*
-
-![P a given b as p_b_given_not_a runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-theorem-live-2)
-
-*P a given b as p_b_given_not_a runs from 0.025 to 0.175, every other input as you entered it (29 solutions). Marked: your p_b_given_not_a = 0.1 gives p_a_given_b = 0.7742. Your inputs: p_a = 0.3, p_b_given_a = 0.8, p_b_given_not_a = 0.1.*
+*p_a_given_b (posterior probability P(A|B)) against p_a (prior probability P(A)) from 0.02 to 0.98. One curve for each value of p_b_given_not_a (likelihood P(B|not A)): 0.1, 0.05, 0.2. Other inputs as in the worked example: p_b_given_a = 0.8. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, p_a = 0.3, p_a_given_b = 0.774194.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_theorem', p_a=0.3, p_b_given_a=0.8, p_b_given_not_a=0.1)
@@ -236,17 +232,13 @@ $$
 - **Assumes:** probabilities between 0 and 1; both results possible
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Positive and negative predictive values of a test with sensitivity 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/diagnostic-test-predictive-values-curves.svg)
+![Positive and negative predictive values of a test with sensitivity 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/diagnostic-test-predictive-values-curves)
 
-*Positive and negative predictive values of a test with sensitivity 0.9 and specificity 0.95 over prevalences from 0.001 to 0.999, each computed by the model: a positive result means little when the condition is rare. Marked: prevalence 0.01, computed PPV 0.1538 (NPV 0.9989, P(positive) = 0.0585). Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.*
+*Positive and negative predictive values of a test with sensitivity 0.9 and specificity 0.95 (the worked example) over prevalences from 0.001 to 1, each from the package: a positive result means little when the condition is rare. Marked: prevalence 0.01, returned PPV 0.153846 (NPV 0.998938, P(positive) = 0.0585).*
 
-![Ppv as specificity runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/diagnostic-test-predictive-values-live-1)
+![ppv (positive predictive value P(condition | positive)) against prevalence (prevalence (pre-test probability of the condition)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/diagnostic-test-predictive-values-curve)
 
-*Ppv as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.*
-
-![Ppv as sensitivity runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/diagnostic-test-predictive-values-live-2)
-
-*Ppv as sensitivity runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your sensitivity = 0.9 gives ppv = 0.1538. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95.*
+*ppv (positive predictive value P(condition | positive)) against prevalence (prevalence (pre-test probability of the condition)) from 0.02 to 0.98. One curve for each value of sensitivity (sensitivity P(positive | condition)): 0.9, 0.45. Other inputs as in the worked example: specificity = 0.95. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prevalence = 0.01, ppv = 0.153846.*
 
 ```python
 bayesian_statistics_ai999x.solve('diagnostic_test_predictive_values', prevalence=0.01, sensitivity=0.9, specificity=0.95)
@@ -293,11 +285,7 @@ $$
 
 ![The law of total probability for priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/total-probability-bars)
 
-*The law of total probability for priors 0.5, 0.3, 0.2 and conditionals P(B | A_i) = 0.01, 0.02, 0.05: the computed joint probabilities 0.005, 0.006, 0.01 and their sum, the computed P(B) = 0.021 (highlighted). Your inputs: priors = 0.5, 0.3, 0.2, conditionals = 0.01, 0.02, 0.05.*
-
-![Every entry of joint as computed for your inputs (3 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/total-probability-live-1)
-
-*Every entry of joint as computed for your inputs (3 entries: 0.005, 0.006, 0.01). Your inputs: priors = 0.5, 0.3, 0.2, conditionals = 0.01, 0.02, 0.05.*
+*The law of total probability for priors 0.5, 0.3, 0.2 and conditionals P(B | A_i) = 0.01, 0.02, 0.05 (the worked example): the returned joint probabilities 0.005, 0.006, 0.01 (prior × conditional, written under each bar) and their sum, the returned P(B) = 0.021.*
 
 ```python
 bayesian_statistics_ai999x.solve('total_probability', priors='0.5, 0.3, 0.2', conditionals='0.01, 0.02, 0.05')
@@ -344,17 +332,13 @@ $$
 - **Assumes:** priors sum to 1; likelihoods >= 0, not all zero where the prior is positive
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Bayes' rule over 3 hypotheses with priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/discrete-bayes-posterior-bars)
+![Bayes' rule over 3 hypotheses with priors 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/discrete-bayes-posterior-bars.svg)
 
-*Bayes' rule over 3 hypotheses with priors 0.5, 0.3, 0.2 and likelihoods 0.1, 0.4, 0.7: the computed posterior probabilities 0.1613, 0.3871, 0.4516 (evidence 0.31); the most probable hypothesis is 3 with 0.4516. Your inputs: priors = 0.5, 0.3, 0.2, likelihoods = 0.1, 0.4, 0.7.*
+*Bayes' rule over 3 hypotheses with priors 0.5, 0.3, 0.2 and likelihoods 0.1, 0.4, 0.7: the package's posterior probabilities 0.16129, 0.387097, 0.451613 (evidence 0.31); the most probable hypothesis is 3 with 0.451613.*
 
 ![Repeated updating over 3 hypotheses with priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/discrete-bayes-posterior-lines)
 
-*Repeated updating over 3 hypotheses with priors 0.5, 0.3, 0.2 and likelihoods 0.1, 0.4, 0.7: the posterior of each step fed back as the next prior, six steps, every probability computed by the model (after 6 steps: 2.019e-05, 0.04963, 0.9503). In SI units: evidence = 0.31. Your inputs: priors = 0.5, 0.3, 0.2, likelihoods = 0.1, 0.4, 0.7.*
-
-![Every entry of posterior as computed for your inputs (3 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/discrete-bayes-posterior-live-1)
-
-*Every entry of posterior as computed for your inputs (3 entries: 0.1613, 0.3871, 0.4516). Your inputs: priors = 0.5, 0.3, 0.2, likelihoods = 0.1, 0.4, 0.7.*
+*Repeated updating over 3 hypotheses with priors 0.5, 0.3, 0.2 and likelihoods 0.1, 0.4, 0.7 (the worked example), the posterior of each step fed back as the next prior, six steps, every probability from the package: the hypothesis that explains the observation best takes over (after 6 steps: 2.0195e-05, 0.0496, 0.9503).*
 
 ```python
 bayesian_statistics_ai999x.solve('discrete_bayes_posterior', priors='0.5, 0.3, 0.2', likelihoods='0.1, 0.4, 0.7')
@@ -399,9 +383,9 @@ $$
 - **Assumes:** $0 < p < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Odds in favour p/(1-p) as probability runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-to-odds-live-1)
+![odds (odds in favour p/(1-p)) against probability (probability p, strictly between 0 and 1) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-to-odds-curve)
 
-*Odds in favour p/(1-p) as probability runs from 0.05 to 0.35, every other input as you entered it (41 solutions). Marked: your probability = 0.2 gives odds = 0.25. Your inputs: probability = 0.2.*
+*odds (odds in favour p/(1-p)) against probability (probability p, strictly between 0 and 1) from 0.02 to 0.98, logarithmic output axis. 41 points computed by bayesian-statistics-ai999x; marked: the worked example, probability = 0.2, odds = 0.25.*
 
 ```python
 bayesian_statistics_ai999x.solve('probability_to_odds', probability=0.2)
@@ -444,9 +428,9 @@ $$
 - **Assumes:** odds >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Probability o/(1+o) as odds runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/odds-to-probability-live-1)
+![probability (probability o/(1+o)) against odds (odds in favour (>= 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/odds-to-probability-curve)
 
-*Probability o/(1+o) as odds runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your odds = 3 gives probability = 0.75. Your inputs: odds = 3.*
+*probability (probability o/(1+o)) against odds (odds in favour (>= 0)) from 0.3 to 30 on a logarithmic axis. 41 points computed by bayesian-statistics-ai999x; marked: the worked example, odds = 3, probability = 0.75.*
 
 ```python
 bayesian_statistics_ai999x.solve('odds_to_probability', odds=3)
@@ -491,17 +475,9 @@ $$
 - **Assumes:** 0 < specificity < 1; sensitivity < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![How far a test result moves a probability: the computed likelihood ratios of a test with sensitivity 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/likelihood-ratios-curves)
+![How far a test result moves a probability: the returned likelihood ratios of a test with sensitivity 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/likelihood-ratios-curves)
 
-*How far a test result moves a probability: the computed likelihood ratios of a test with sensitivity 0.9 and specificity 0.8 (LR+ = 4.5, LR- = 0.125, diagnostic odds ratio 36) turned into post-test probabilities by the model's posterior-from-likelihood-ratio capability at 50 pre-test values. Marked: pre-test 0.29 becomes 0.6476 after a positive result. Your inputs: sensitivity = 0.9, specificity = 0.8.*
-
-![Lr positive as sensitivity runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/likelihood-ratios-live-1)
-
-*Lr positive as sensitivity runs from 0.225 to 0.9675, every other input as you entered it (23 solutions). Marked: your sensitivity = 0.9 gives lr_positive = 4.5. Your inputs: sensitivity = 0.9, specificity = 0.8.*
-
-![Lr positive as specificity runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/likelihood-ratios-live-2)
-
-*Lr positive as specificity runs from 0.2 to 0.9714, every other input as you entered it (19 solutions). Marked: your specificity = 0.8 gives lr_positive = 4.5. Your inputs: sensitivity = 0.9, specificity = 0.8.*
+*How far a test result moves a probability: the returned likelihood ratios of a test with sensitivity 0.9 and specificity 0.8 (LR+ = 4.5, LR− = 0.125, diagnostic odds ratio 36) turned into post-test probabilities by the package's posterior-from-likelihood-ratio capability at 50 pre-test values. Marked: pre-test 0.3 (chosen) → 0.658537 after a positive result.*
 
 ```python
 bayesian_statistics_ai999x.solve('likelihood_ratios', sensitivity=0.9, specificity=0.8)
@@ -547,17 +523,13 @@ $$
 - **Assumes:** 0 < prior < 1; likelihood ratio >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![post-test (posterior) probability (posterior) over prior from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-likelihood-ratio-field)
+![posterior (post-test (posterior) probability) against prior (pre-test (prior) probability, 0 < p < 1) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-likelihood-ratio-curve)
 
-*post-test (posterior) probability (posterior) over prior from 0.02 to 0.98 and likelihood_ratio from 0.6 to 60 (logarithmic axes): each of the 225 shaded cells is one computation of the model, darker for a larger value (from 0.0121 to 0.9997; a blank cell: inputs the model refuses). Marked: the inputs given, posterior = 0.6. Your inputs: prior = 0.2, likelihood_ratio = 6.*
+*posterior (post-test (posterior) probability) against prior (pre-test (prior) probability, 0 < p < 1) from 0.02 to 0.98. One curve for each value of likelihood_ratio (likelihood ratio (>= 0)): 6, 3, 12. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior = 0.2, posterior = 0.6.*
 
-![Post-test (posterior) probability as prior runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-likelihood-ratio-live-1)
+![posterior (post-test (posterior) probability) over prior (pre-test (prior) probability, 0 < p < 1) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-likelihood-ratio-field)
 
-*Post-test (posterior) probability as prior runs from 0.05 to 0.35, every other input as you entered it (41 solutions). Marked: your prior = 0.2 gives posterior = 0.6. Your inputs: prior = 0.2, likelihood_ratio = 6.*
-
-![Post-test (posterior) probability as likelihood_ratio runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-likelihood-ratio-live-2)
-
-*Post-test (posterior) probability as likelihood_ratio runs from 1.5 to 10.5, every other input as you entered it (29 solutions). Marked: your likelihood_ratio = 6 gives posterior = 0.6. Your inputs: prior = 0.2, likelihood_ratio = 6.*
+*posterior (post-test (posterior) probability) over prior (pre-test (prior) probability, 0 < p < 1) from 0.02 to 0.98 and likelihood_ratio (likelihood ratio (>= 0)) from 0.6 to 60 (logarithmic vertical axis): each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0.0120968 to dark 0.99966); iso-lines at posterior = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, prior = 0.2, likelihood_ratio = 6, posterior = 0.6.*
 
 ```python
 bayesian_statistics_ai999x.solve('posterior_from_likelihood_ratio', prior=0.2, likelihood_ratio=6)
@@ -605,17 +577,13 @@ $$
 - **Assumes:** 0 < prevalence < 1; results conditionally independent given the status
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Repeated diagnostic tests with prevalence 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sequential-test-posterior-stems)
+![Repeated diagnostic tests with prevalence 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/sequential-test-posterior-stems.svg)
 
-*Repeated diagnostic tests with prevalence 0.01, sensitivity 0.9 and specificity 0.95: the model's posterior probability of the condition after k = 1 to 5 positive results (0.1538, 0.766, 0.9833, 0.9991, 0.9999) and after 1 to 5 negative results (0.001062, 0.0001119, 1.178e-05, 1.24e-06, 1.305e-07). For the results given (2 positive, 0 negative): 0.766. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95, positives = 2, negatives = 0.*
+*Repeated diagnostic tests with prevalence 0.01, sensitivity 0.9 and specificity 0.95: the package's posterior probability of the condition after k = 1 … 5 positive results (0.153846, 0.765957, 0.983308, 0.999058, 0.999948) and after 1 … 5 negative results (down to 1.3054e-07).*
 
-![Probability of the condition after all results as specificity runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sequential-test-posterior-live-1)
+![posterior (probability of the condition after all results) against positives (number of positive results) from 1 to 10](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sequential-test-posterior-curve)
 
-*Probability of the condition after all results as specificity runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your specificity = 0.95 gives posterior = 0.766. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95, positives = 2, negatives = 0.*
-
-![Probability of the condition after all results as positives runs from 1 to 6, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sequential-test-posterior-live-2)
-
-*Probability of the condition after all results as positives runs from 1 to 6, every other input as you entered it (6 solutions). Marked: your positives = 2 gives posterior = 0.766. Your inputs: prevalence = 0.01, sensitivity = 0.9, specificity = 0.95, positives = 2, negatives = 0.*
+*posterior (probability of the condition after all results) against positives (number of positive results) from 1 to 10. One curve for each value of sensitivity (sensitivity P(positive | condition)): 0.9, 0.45. Other inputs as in the worked example: prevalence = 0.01, specificity = 0.95, negatives = 0. 10 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, positives = 2, posterior = 0.765957.*
 
 ```python
 bayesian_statistics_ai999x.solve('sequential_test_posterior', prevalence=0.01, sensitivity=0.9, specificity=0.95, positives=2, negatives=0)
@@ -661,17 +629,13 @@ $$
 - **Assumes:** $BF10 > 0$; 0 < prior < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![posterior probability of H1 (posterior) over prior from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-bayes-factor-field)
+![posterior (posterior probability of H1) against prior (prior probability of H1 (default 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-bayes-factor-curve)
 
-*posterior probability of H1 (posterior) over prior from 0.02 to 0.98 and bayes_factor from 0.6 to 60 (logarithmic axes): each of the 225 shaded cells is one computation of the model, darker for a larger value (from 0.0121 to 0.9997; a blank cell: inputs the model refuses). Marked: the inputs given, posterior = 0.8571. Your inputs: bayes_factor = 6, prior = 0.5.*
+*posterior (posterior probability of H1) against prior (prior probability of H1 (default 0.5)) from 0.02 to 0.98. One curve for each value of bayes_factor (Bayes factor BF10 in favour of H1 (> 0)): 6, 3, 12. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior = 0.5, posterior = 0.857143.*
 
-![Posterior probability of H1 as prior runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-bayes-factor-live-1)
+![posterior (posterior probability of H1) over prior (prior probability of H1 (default 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-bayes-factor-field)
 
-*Posterior probability of H1 as prior runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your prior = 0.5 gives posterior = 0.8571. Your inputs: bayes_factor = 6, prior = 0.5.*
-
-![Posterior probability of H1 as bayes_factor runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-from-bayes-factor-live-2)
-
-*Posterior probability of H1 as bayes_factor runs from 1.5 to 10.5, every other input as you entered it (29 solutions). Marked: your bayes_factor = 6 gives posterior = 0.8571. Your inputs: bayes_factor = 6, prior = 0.5.*
+*posterior (posterior probability of H1) over prior (prior probability of H1 (default 0.5)) from 0.02 to 0.98 and bayes_factor (Bayes factor BF10 in favour of H1 (> 0)) from 0.6 to 60 (logarithmic vertical axis): each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0.0120968 to dark 0.99966); iso-lines at posterior = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, prior = 0.5, bayes_factor = 6, posterior = 0.857143.*
 
 ```python
 bayesian_statistics_ai999x.solve('posterior_from_bayes_factor', bayes_factor=6, prior=0.5)
@@ -715,13 +679,9 @@ $$
 - **Assumes:** $0  \leq  k  \leq  n$; uniform Beta(1, 1) prior
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Posterior predictive probability that the](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/rule-of-succession-live-1)
+![p_next (posterior predictive probability that the next trial succeeds) against trials (number of trials n) from 1 to 20](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/rule-of-succession-curve)
 
-*Posterior predictive probability that the... as successes runs from 1 to 10, every other input as you entered it (10 solutions). Marked: your successes = 7 gives p_next = 0.6667. Your inputs: successes = 7, trials = 10.*
-
-![Posterior predictive probability that the](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/rule-of-succession-live-2)
-
-*Posterior predictive probability that the... as trials runs from 8 to 30, every other input as you entered it (12 solutions). Marked: your trials = 10 gives p_next = 0.6667. Your inputs: successes = 7, trials = 10.*
+*p_next (posterior predictive probability that the next trial succeeds) against trials (number of trials n) from 1 to 20. One curve for each value of successes (number of successes k): 7, 3. 14 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, trials = 10, p_next = 0.666667.*
 
 ```python
 bayesian_statistics_ai999x.solve('rule_of_succession', successes=7, trials=10)
@@ -773,19 +733,15 @@ $$
 
 ![A Beta(2, 2) prior updated with 7 successes in 10 trials: the posterior Beta(9, 5) with mean 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-binomial-posterior-density.svg)
 
-*A Beta(2, 2) prior updated with 7 successes in 10 trials: the posterior Beta(9, 5) with mean 0.6429 and standard deviation 0.1237. Shaded: its 95 % equal-tailed credible interval [0.3857, 0.8614]. Both densities are drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
+*A Beta(2, 2) prior updated with 7 successes in 10 trials: the posterior Beta(9, 5) with mean 0.642857 and standard deviation 0.123718; shaded: the equal-tailed 95 % credible interval [0.385738, 0.861421]. Both densities are drawn from the package's cumulative probabilities at 199 values of θ (each interval's probability divided by its width).*
 
-![The posterior mean of a success probability under a Beta(2, 2) prior after s successes (rows, 0 to 5) and f failures (columns, 0 to 5), each cell computed by the model: from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-posterior-heatmap)
+![The posterior mean of a success probability under a Beta(2, 2) prior after s successes (rows, 0 to 5) and f failures (columns, 0 to 5), each cell from the package (rounded to 3 decimals): from 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-binomial-posterior-heatmap.svg)
 
-*The posterior mean of a success probability under a Beta(2, 2) prior after s successes (rows, 0 to 5) and f failures (columns, 0 to 5), each cell computed by the model: from 0.2222 after 5 failures to 0.7778 after 5 successes, 0.5 with no data. In SI units: posterior_mean = 0.6429. Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
+*The posterior mean of a success probability under a Beta(2, 2) prior after s successes (rows, 0 to 5) and f failures (columns, 0 to 5), each cell from the package (rounded to 3 decimals): from 0.222 after 5 failures to 0.778 after 5 successes, 0.5 with no data.*
 
-![Posterior mean as successes runs from 1 to 10, every other input as you entered it (10 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-posterior-live-1)
+![posterior_mean (posterior mean) against beta (prior Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-posterior-curve)
 
-*Posterior mean as successes runs from 1 to 10, every other input as you entered it (10 solutions). Marked: your successes = 7 gives posterior_mean = 0.6429. Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
-
-![Posterior mean as trials runs from 8 to 30, every other input as you entered it (12 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-posterior-live-2)
-
-*Posterior mean as trials runs from 8 to 30, every other input as you entered it (12 solutions). Marked: your trials = 10 gives posterior_mean = 0.6429. Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
+*posterior_mean (posterior mean) against beta (prior Beta beta (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3. Other inputs as in the worked example: alpha = 2.0, trials = 10. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, posterior_mean = 0.642857.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_posterior', alpha=2, beta=2, successes=7, trials=10)
@@ -832,17 +788,13 @@ $$
 - **Assumes:** alpha, $\beta > 0$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Beta(1, 1) density, drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-density)
+![The Beta(1, 1) density (the worked example: alpha = 1, beta = 1, level = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-density)
 
-*The Beta(1, 1) density, drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the computed 90 % equal-tailed credible interval [0.05, 0.95], the same probability left in each tail; dashed: the computed median 0.5. Your inputs: alpha = 1, beta = 1, level = 0.9.*
+*The Beta(1, 1) density (the worked example: alpha = 1, beta = 1, level = 0.9); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.05, 0.95], 5 % of the probability left in each tail; marked: the returned median 0.5.*
 
-![Lower limit (quantile as α runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-live-1)
+![lower (lower limit (quantile (1 - level)/2)) against beta (Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-curve)
 
-*Lower limit (quantile as α runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your α = 1 gives lower = 0.05. Your inputs: alpha = 1, beta = 1, level = 0.9.*
-
-![Lower limit (quantile as level runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-credible-interval-live-2)
-
-*Lower limit (quantile as level runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your level = 0.9 gives lower = 0.05. Your inputs: alpha = 1, beta = 1, level = 0.9.*
+*lower (lower limit (quantile (1 - level)/2)) against beta (Beta beta (> 0)) from 0.5 to 1.5. One curve for each value of alpha (Beta alpha (> 0)): 1, 0.5, 2. Other inputs as in the worked example: level = 0.9. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 1, lower = 0.05.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_credible_interval', alpha=1, beta=1, level=0.9)
@@ -892,17 +844,13 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  k  \leq  n$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the counts given (0 of 0), then the same share 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-intervals)
+![90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (1 of 1), then the same share 1 in ever more trials (each interval returned by the package): 1/1 [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-intervals)
 
-*90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the counts given (0 of 0), then the same share 0.5 in ever more trials, each interval computed by the model: 0/0 [0.05, 0.95]; 5/10 [0.2712, 0.7288]; 20/40 [0.3744, 0.6256]; 80/160 [0.4356, 0.5644]; 320/640 [0.4676, 0.5324]. Four times the data roughly halves the width. Your inputs: alpha = 1, beta = 1, successes = 0, trials = 0, level = 0.9.*
+*90 % equal-tailed credible intervals for a success probability under a Beta(1, 1) prior: first the worked example (1 of 1), then the same share 1 in ever more trials (each interval returned by the package): 1/1 [0.223607, 0.974679]; 10/10 [0.761596, 0.995348]; 40/40 [0.929539, 0.99875]; 160/160 [0.981565, 0.999681]; 640/640 [0.995337, 0.99992]. Four times the data halves the width.*
 
-![Lower credible limit as α runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-live-1)
+![lower (lower credible limit) against alpha (prior Beta alpha (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-curve)
 
-*Lower credible limit as α runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your α = 1 gives lower = 0.05. Your inputs: alpha = 1, beta = 1, successes = 0, trials = 0, level = 0.9.*
-
-![Lower credible limit as level runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-credible-interval-live-2)
-
-*Lower credible limit as level runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your level = 0.9 gives lower = 0.05. Your inputs: alpha = 1, beta = 1, successes = 0, trials = 0, level = 0.9.*
+*lower (lower credible limit) against alpha (prior Beta alpha (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of level (credibility level as a fraction (0.95 for 95%; default 0.95)): 0.9, 0.26, 0.74. Other inputs as in the worked example: beta = 1.0, successes = 1, trials = 1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha = 1, lower = 0.223607.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_credible_interval', alpha=1, beta=1, successes=0, trials=0, level=0.9)
@@ -950,17 +898,13 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0 < c < 1$; $0  \leq  k  \leq  n$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior of a success probability from a Beta(1, 1) prior, drawn from the model's P(θ < c) at 121 values of c (differenced)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-density)
+![The posterior of a success probability from a Beta(2, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-density)
 
-*The posterior of a success probability from a Beta(1, 1) prior, drawn from the model's P(θ < c) at 121 values of c (differenced). Shaded: the computed P(θ > 0.3) = 0.7 (P(θ < 0.3) = 0.3). Your inputs: alpha = 1, beta = 1, threshold = 0.3.*
+*The posterior of a success probability from a Beta(2, 1) prior (the worked example's) after 7 successes in 10 trials (data chosen for the drawing), drawn from the package's P(θ < c) at 199 values of c (differenced). Shaded: the returned P(θ > 0.5) = 0.927002 (P(θ < 0.5) = 0.072998).*
 
-![Posterior probability P(p > c) as threshold runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-live-1)
+![prob_above (posterior probability P(p > c)) against beta (Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-curve)
 
-*Posterior probability P(p > c) as threshold runs from 0.075 to 0.525, every other input as you entered it (41 solutions). Marked: your threshold = 0.3 gives prob_above = 0.7. Your inputs: alpha = 1, beta = 1, threshold = 0.3.*
-
-![Posterior probability P(p > c) as α runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-posterior-tail-probability-live-2)
-
-*Posterior probability P(p > c) as α runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your α = 1 gives prob_above = 0.7. Your inputs: alpha = 1, beta = 1, threshold = 0.3.*
+*prob_above (posterior probability P(p > c)) against beta (Beta beta (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of alpha (Beta alpha (> 0)): 2, 1, 4. Other inputs as in the worked example: threshold = 0.5. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 1, prob_above = 0.75.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_posterior_tail_probability', alpha=1, beta=1, threshold=0.3)
@@ -1006,17 +950,13 @@ $$
 - **Assumes:** $0  \leq  k  \leq  n$; $n  \geq  1$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Jeffreys 95 % intervals for a proportion, starting from the counts given (7 of 50) and multiplying both by 2, 4, 8 and 16; intervals and posterior means (dots) computed by the model: 7/50 [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/jeffreys-interval-intervals)
+![Jeffreys 95 % intervals for a proportion, starting from the worked example (7 of 50) and multiplying both counts by 2, 4, 8 and 16 (inputs chosen); intervals and posterior means (dots) as returned: 7/50 [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/jeffreys-interval-intervals)
 
-*Jeffreys 95 % intervals for a proportion, starting from the counts given (7 of 50) and multiplying both by 2, 4, 8 and 16; intervals and posterior means (dots) computed by the model: 7/50 [0.06487, 0.2553]; 14/100 [0.08257, 0.2179]; 28/200 [0.0972, 0.1931]; 56/400 [0.1086, 0.1766]; 112/800 [0.1173, 0.1653]. Your inputs: successes = 7, trials = 50, level = 0.95.*
+*Jeffreys 95 % intervals for a proportion, starting from the worked example (7 of 50) and multiplying both counts by 2, 4, 8 and 16 (inputs chosen); intervals and posterior means (dots) as returned: 7/50 [0.0648717, 0.255325]; 14/100 [0.082566, 0.217898]; 28/200 [0.0971955, 0.19313]; 56/400 [0.108632, 0.176554]; 112/800 [0.11727, 0.165329].*
 
-![Upper limit as successes runs from 1 to 13, every other input as you entered it (13 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/jeffreys-interval-live-1)
+![upper (upper limit) against trials (number of trials n (>= 1)) from 1 to 100 on a logarithmic axis](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/jeffreys-interval-curve)
 
-*Upper limit as successes runs from 1 to 13, every other input as you entered it (13 solutions). Marked: your successes = 7 gives upper = 0.2553. Your inputs: successes = 7, trials = 50, level = 0.95.*
-
-![Upper limit as trials runs from 30 to 70, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/jeffreys-interval-live-2)
-
-*Upper limit as trials runs from 30 to 70, every other input as you entered it (21 solutions). Marked: your trials = 50 gives upper = 0.2553. Your inputs: successes = 7, trials = 50, level = 0.95.*
+*upper (upper limit) against trials (number of trials n (>= 1)) from 1 to 100 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3, 14. Other inputs as in the worked example: level = 0.95. 24 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, trials = 50, upper = 0.255325.*
 
 ```python
 bayesian_statistics_ai999x.solve('jeffreys_interval', successes=7, trials=50, level=0.95)
@@ -1065,17 +1005,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  j  \leq  m$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The beta-binomial predictive distribution of the number of successes in 4 future trials, for the given Beta(1, 1) belief and, for comparison, a Beta(8, 4) one; each probability computed by the model](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-predictive-stems)
+![The beta-binomial predictive distribution of the number of successes in 4 future trials, for the worked example's Beta(1, 1) belief and, for comparison, a Beta(8, 4) one; each probability returned by the package: Beta(1, 1): 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-predictive-stems)
 
-*The beta-binomial predictive distribution of the number of successes in 4 future trials, for the given Beta(1, 1) belief and, for comparison, a Beta(8, 4) one; each probability computed by the model. Marked: the count given, P(k = 2) = 0.2 (predictive mean 2). Your inputs: alpha = 1, beta = 1, future_trials = 4, future_successes = 2.*
-
-![P(exactly j successes in m trials) as future_trials runs from 2 to 8, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-predictive-live-1)
-
-*P(exactly j successes in m trials) as future_trials runs from 2 to 8, every other input as you entered it (7 solutions). Marked: your future_trials = 4 gives probability = 0.2. Your inputs: alpha = 1, beta = 1, future_trials = 4, future_successes = 2.*
-
-![P(more than j) as future_successes runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-predictive-live-2)
-
-*P(more than j) as future_successes runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your future_successes = 2 gives prob_more = 0.4. Your inputs: alpha = 1, beta = 1, future_trials = 4, future_successes = 2.*
+*The beta-binomial predictive distribution of the number of successes in 4 future trials, for the worked example's Beta(1, 1) belief and, for comparison, a Beta(8, 4) one; each probability returned by the package: Beta(1, 1): 0.2, 0.2, 0.2, 0.2, 0.2 (mean 2); Beta(8, 4): 0.0256, 0.1172, 0.2637, 0.3516, 0.2418 (mean 2.66667). Marked: the worked example's count, P(k = 2) = 0.2. A flat belief gives every count the same chance.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_predictive', alpha=1, beta=1, future_trials=4, future_successes=2)
@@ -1121,17 +1053,9 @@ $$
 - **Assumes:** alpha, $\beta > 0$; $0  \leq  k  \leq  n$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The marginal likelihood (evidence) of k successes in 12 trials for every k, under the given Beta(1, 1) prior and a Beta(5, 5) prior for comparison; each value computed by the model](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-evidence-stems)
+![The marginal likelihood (evidence) of k successes in 10 trials for every k, under the worked example's Beta(1, 1) prior and a Beta(5, 5) prior (chosen); each value returned by the package (Beta(1, 1): from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-evidence-stems)
 
-*The marginal likelihood (evidence) of k successes in 12 trials for every k, under the given Beta(1, 1) prior and a Beta(5, 5) prior for comparison; each value computed by the model. Marked: the count given, k = 3, evidence 0.07692. In SI units: log_marginal_likelihood = -2.565. Your inputs: alpha = 1, beta = 1, successes = 3, trials = 12.*
-
-![Its natural log as trials runs from 3 to 32, every other input as you entered it (30 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-evidence-live-1)
-
-*Its natural log as trials runs from 3 to 32, every other input as you entered it (30 solutions). Marked: your trials = 12 gives log_marginal_likelihood = -2.565. Your inputs: alpha = 1, beta = 1, successes = 3, trials = 12.*
-
-![Its natural log as β runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-binomial-evidence-live-2)
-
-*Its natural log as β runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your β = 1 gives log_marginal_likelihood = -2.565. Your inputs: alpha = 1, beta = 1, successes = 3, trials = 12.*
+*The marginal likelihood (evidence) of k successes in 10 trials for every k, under the worked example's Beta(1, 1) prior and a Beta(5, 5) prior (chosen); each value returned by the package (Beta(1, 1): from 0.0909091 to 0.0909091; Beta(5, 5): from 0.0108359 to 0.171859). Marked: the worked example, k = 7, evidence 0.0909091.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_binomial_evidence', alpha=1, beta=1, successes=3, trials=12)
@@ -1178,17 +1102,13 @@ $$
 - **Assumes:** $\alpha + k > 1$ and $\beta + n - k > 1$ (interior mode)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior Beta(9, 5) for a Beta(2, 2) prior and 7 successes in 10 trials (posterior parameters from the model's posterior capability), its density drawn from the model's quantiles at about 60 cumulative probabilities](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-beta-binomial-density)
+![The posterior Beta(9, 5) for a Beta(2, 2) prior and 7 of 10 (the worked example; posterior parameters as returned by the posterior capability); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-beta-binomial-density)
 
-*The posterior Beta(9, 5) for a Beta(2, 2) prior and 7 successes in 10 trials (posterior parameters from the model's posterior capability), its density drawn from the model's quantiles at about 60 cumulative probabilities. Dashed: the computed MAP 0.6667 (the peak), maximum-likelihood estimate 0.7 and posterior mean 0.6429. Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
+*The posterior Beta(9, 5) for a Beta(2, 2) prior and 7 of 10 (the worked example; posterior parameters as returned by the posterior capability); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned MAP 0.666667 (the peak), maximum-likelihood estimate 0.7 and posterior mean 0.642857.*
 
-![Posterior mode (alpha + k - 1)/(alpha + beta](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-beta-binomial-live-1)
+![map (posterior mode (alpha + k - 1)/(alpha + beta + n - 2)) against beta (prior Beta beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-beta-binomial-curve)
 
-*Posterior mode (alpha + k - 1)/(alpha + beta... as successes runs from 1 to 10, every other input as you entered it (10 solutions). Marked: your successes = 7 gives map = 0.6667. Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
-
-![Posterior mode (alpha + k - 1)/(alpha + beta](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-beta-binomial-live-2)
-
-*Posterior mode (alpha + k - 1)/(alpha + beta... as trials runs from 8 to 30, every other input as you entered it (12 solutions). Marked: your trials = 10 gives map = 0.6667. Your inputs: alpha = 2, beta = 2, successes = 7, trials = 10.*
+*map (posterior mode (alpha + k - 1)/(alpha + beta + n - 2)) against beta (prior Beta beta (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of successes (number of successes k): 7, 3. Other inputs as in the worked example: alpha = 2.0, trials = 10. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 2, map = 0.666667.*
 
 ```python
 bayesian_statistics_ai999x.solve('map_beta_binomial', alpha=2, beta=2, successes=7, trials=10)
@@ -1235,17 +1155,13 @@ $$
 - **Assumes:** $\alpha > 1$ and $\beta > 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Beta(3, 3) density (from the model's quantiles at about 60 cumulative probabilities, differenced) against its Laplace approximation, a normal density with the computed mode 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/laplace-approximation-beta-density)
+![The Beta(3, 3) density (from the package's quantiles at 60 cumulative probabilities, differenced) against its Laplace approximation, a normal density drawn from the returned mode 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/laplace-approximation-beta-density)
 
-*The Beta(3, 3) density (from the model's quantiles at about 60 cumulative probabilities, differenced) against its Laplace approximation, a normal density with the computed mode 0.5 and standard deviation 0.25. Dashed verticals: the computed Laplace interval [0.01001, 0.99]; dots: the exact equal-tailed interval [0.1466, 0.8534]. Your inputs: alpha = 3, beta = 3, level = 0.95.*
+*The Beta(3, 3) density (from the package's quantiles at 60 cumulative probabilities, differenced) against its Laplace approximation, a normal density drawn from the returned mode 0.5 and sd 0.25. Dashed verticals: the returned 95 % Laplace interval [0.010009, 0.989991]; dots: the exact equal-tailed interval [0.146633, 0.853367].*
 
-![Laplace standard deviation as α runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/laplace-approximation-beta-live-1)
+![laplace_sd (Laplace standard deviation) against alpha (Beta alpha (> 1)) from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/laplace-approximation-beta-curve)
 
-*Laplace standard deviation as α runs from 1.087 to 5.25, every other input as you entered it (38 solutions). Marked: your α = 3 gives laplace_sd = 0.25. Your inputs: alpha = 3, beta = 3, level = 0.95.*
-
-![Laplace standard deviation as β runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/laplace-approximation-beta-live-2)
-
-*Laplace standard deviation as β runs from 1.071 to 5.25, every other input as you entered it (27 solutions). Marked: your β = 3 gives laplace_sd = 0.25. Your inputs: alpha = 3, beta = 3, level = 0.95.*
+*laplace_sd (Laplace standard deviation) against alpha (Beta alpha (> 1)) from 1.5 to 4.5. One curve for each value of beta (Beta beta (> 1)): 3, 1.5, 6. Other inputs as in the worked example: level = 0.95. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha = 3, laplace_sd = 0.25.*
 
 ```python
 bayesian_statistics_ai999x.solve('laplace_approximation_beta', alpha=3, beta=3, level=0.95)
@@ -1291,17 +1207,13 @@ $$
 - **Assumes:** $\alpha > 1$ and $\beta > 1$ (unimodal, zero density at both ends); 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Beta(2, 2) density at level 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/beta-hdi-density.svg)
+![The Beta(3, 9) density at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-density)
 
-*The Beta(2, 2) density at level 0.5, drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the computed highest-density interval [0.3264, 0.6736], width 0.3473; the density is equal at both ends (dashed chord), so no shorter interval holds the same probability. Dashed verticals: the equal-tailed interval [0.3264, 0.6736] at the same level, from the model's credible-interval capability. Your inputs: alpha = 2, beta = 2, level = 0.5.*
+*The Beta(3, 9) density at level 0.95 (the worked example; the two intervals coincide when the density is symmetric); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.0405552, 0.483724] (width 0.443168):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.0602177, 0.517756] at the same level, width 0.457538 (difference of the returned limits).*
 
-![Lower limit as α runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-live-1)
+![lower (lower limit) against beta (Beta beta (> 1)) from 4](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-curve)
 
-*Lower limit as α runs from 1.025 to 3.5, every other input as you entered it (34 solutions). Marked: your α = 2 gives lower = 0.3264. Your inputs: alpha = 2, beta = 2, level = 0.5.*
-
-![Lower limit as β runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-hdi-live-2)
-
-*Lower limit as β runs from 1.036 to 3.5, every other input as you entered it (24 solutions). Marked: your β = 2 gives lower = 0.3264. Your inputs: alpha = 2, beta = 2, level = 0.5.*
+*lower (lower limit) against beta (Beta beta (> 1)) from 4.5 to 13.5. One curve for each value of alpha (Beta alpha (> 1)): 3, 1.5, 6. Other inputs as in the worked example: level = 0.95. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, beta = 9, lower = 0.0405552.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_hdi', alpha=2, beta=2, level=0.5)
@@ -1348,15 +1260,7 @@ $$
 
 ![The Beta prior with the stated mean 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-prior-from-mean-sd-density)
 
-*The Beta prior with the stated mean 0.3 and standard deviation 0.1: the computed alpha = 6, beta = 14 (prior sample size 20), its density drawn from the model's quantiles at about 60 cumulative probabilities. Shaded: mean ± one standard deviation. Your inputs: mean = 0.3, sd = 0.1.*
-
-![Alpha as sd runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-prior-from-mean-sd-live-1)
-
-*Alpha as sd runs from 0.025 to 0.175, every other input as you entered it (41 solutions). Marked: your sd = 0.1 gives α = 6. Your inputs: mean = 0.3, sd = 0.1.*
-
-![Alpha as mean runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/beta-prior-from-mean-sd-live-2)
-
-*Alpha as mean runs from 0.075 to 0.525, every other input as you entered it (29 solutions). Marked: your mean = 0.3 gives α = 6. Your inputs: mean = 0.3, sd = 0.1.*
+*The Beta prior with the stated mean 0.3 and standard deviation 0.1: the returned alpha = 6, beta = 14 (prior sample size 20); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: mean ± one sd.*
 
 ```python
 bayesian_statistics_ai999x.solve('beta_prior_from_mean_sd', mean=0.3, sd=0.1)
@@ -1403,17 +1307,13 @@ $$
 - **Assumes:** all parameters > 0; alpha_b a whole number
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posteriors Beta(21, 81) for A and Beta(31, 71) for B, each density drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-density)
+![An A/B comparison of the worked example's posteriors Beta(1, 1) for A and Beta(1, 1) for B; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-density)
 
-*The posteriors Beta(21, 81) for A and Beta(31, 71) for B, each density drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Computed: P(pB > pA) = 0.9476, P(pA > pB) = 0.0524. Your inputs: alpha_a = 21, beta_a = 81, alpha_b = 31, beta_b = 71.*
+*An A/B comparison of the worked example's posteriors Beta(1, 1) for A and Beta(1, 1) for B; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned P(pB > pA) = 0.5 (P(pA > pB) = 0.5).*
 
-![P(p_A > p_B) as β_b runs from 17](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-live-1)
+![prob_a_greater (P(p_A > p_B)) against alpha_b (posterior alpha of B (whole number)) from 1 to 9](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-curve)
 
-*P(p_A > p_B) as β_b runs from 17.75 to 124.2, every other input as you entered it (41 solutions). Marked: your β_b = 71 gives prob_a_greater = 0.0524. Your inputs: alpha_a = 21, beta_a = 81, alpha_b = 31, beta_b = 71.*
-
-![P(p_A > p_B) as α_a runs from 5](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/ab-test-probability-beta-live-2)
-
-*P(p_A > p_B) as α_a runs from 5.25 to 36.75, every other input as you entered it (29 solutions). Marked: your α_a = 21 gives prob_a_greater = 0.0524. Your inputs: alpha_a = 21, beta_a = 81, alpha_b = 31, beta_b = 71.*
+*prob_a_greater (P(p_A > p_B)) against alpha_b (posterior alpha of B (whole number)) from 1 to 9. One curve for each value of alpha_a (posterior alpha of A): 1, 0.5, 2. Other inputs as in the worked example: beta_a = 1.0, beta_b = 1.0. 9 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha_b = 1, prob_a_greater = 0.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('ab_test_probability_beta', alpha_a=1, beta_a=1, alpha_b=1, beta_b=1)
@@ -1461,17 +1361,13 @@ $$
 - **Assumes:** shape, rate > 0; counts whole numbers >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A gamma prior (shape 2, rate 1) updated with the Poisson counts 3, 5, 4: the computed posterior has shape 14 and rate 4, mean 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-posterior-density)
+![A Gamma prior (shape 2, rate 1) updated with the Poisson counts 3, 5, 4 (the worked example): the returned posterior has shape 14 and rate 4, mean 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-posterior-density)
 
-*A gamma prior (shape 2, rate 1) updated with the Poisson counts 3, 5, 4: the computed posterior has shape 14 and rate 4, mean 3.5. Densities drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the posterior 95 % equal-tailed interval [1.913, 5.558]. Your inputs: shape = 2, rate = 1, counts = 3, 5, 4.*
+*A Gamma prior (shape 2, rate 1) updated with the Poisson counts 3, 5, 4 (the worked example): the returned posterior has shape 14 and rate 4, mean 3.5; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the posterior 95 % equal-tailed interval [1.91348, 5.5576].*
 
-![Posterior mean of the rate as rate runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-posterior-live-1)
+![posterior_mean (posterior mean of the rate) against rate (prior rate beta (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-posterior-curve)
 
-*Posterior mean of the rate as rate runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your rate = 1 gives posterior_mean = 3.5. Your inputs: shape = 2, rate = 1, counts = 3, 5, 4.*
-
-![Posterior mean of the rate as counts[2] runs from 1 to 9, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-posterior-live-2)
-
-*Posterior mean of the rate as counts[2] runs from 1 to 9, every other input as you entered it (9 solutions). Marked: your counts[2] = 5 gives posterior_mean = 3.5. Your inputs: shape = 2, rate = 1, counts = 3, 5, 4.*
+*posterior_mean (posterior mean of the rate) against rate (prior rate beta (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of shape (prior shape alpha (> 0)): 2, 1, 4. Other inputs as in the worked example: counts = 3, 5, 4. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, rate = 1, posterior_mean = 3.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_poisson_posterior', shape=2, rate=1, counts='3, 5, 4')
@@ -1520,13 +1416,13 @@ $$
 - **Assumes:** shape, rate > 0; counts whole numbers >= 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![90 % credible intervals for a Poisson rate under a Gamma(1, 1) prior as the counts 0 arrive (the first j counts), then the same counts observed again (repeated twice and four times), each computed by the model: first 1 [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-intervals)
+![90 % credible intervals for a Poisson rate under a Gamma(shape 1, rate 1) prior as the worked example's counts 0 arrive (the first 1 counts), each returned by the package: 1: [0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-intervals)
 
-*90 % credible intervals for a Poisson rate under a Gamma(1, 1) prior as the counts 0 arrive (the first j counts), then the same counts observed again (repeated twice and four times), each computed by the model: first 1 [0.02565, 1.498]; 2x repeated [0.0171, 0.9986]; 4x repeated [0.01026, 0.5991]. Your inputs: shape = 1, rate = 1, counts = 0, level = 0.9.*
+*90 % credible intervals for a Poisson rate under a Gamma(shape 1, rate 1) prior as the worked example's counts 0 arrive (the first 1 counts), each returned by the package: 1: [0.0256466, 1.49787].*
 
-![Lower limit as shape runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-live-1)
+![lower (lower limit) against shape (prior shape (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-credible-interval-curve)
 
-*Lower limit as shape runs from 0.25 to 1.75, every other input as you entered it (34 solutions). 1 value that would take too long to compute here is left out. Marked: your shape = 1 gives lower = 0.02565. Your inputs: shape = 1, rate = 1, counts = 0, level = 0.9.*
+*lower (lower limit) against shape (prior shape (> 0)) from 0.5 to 1.5. One curve for each value of level (credibility level as a fraction (0.95 for 95%; default 0.95)): 0.9, 0.26, 0.74. Other inputs as in the worked example: rate = 1.0, counts = 0. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, shape = 1, lower = 0.0256466.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_poisson_credible_interval', shape=1, rate=1, counts='0', level=0.9)
@@ -1572,17 +1468,13 @@ $$
 - **Assumes:** shape, rate > 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Gamma(1, 1) density, drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-density)
+![The Gamma density with shape 1 and rate 2 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-density)
 
-*The Gamma(1, 1) density, drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the computed 90 % equal-tailed credible interval [0.05129, 2.996], the same probability left in each tail; dashed: the computed median 0.6931. Your inputs: shape = 1, rate = 1, level = 0.9.*
+*The Gamma density with shape 1 and rate 2 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned 90 % equal-tailed credible interval [0.0256466, 1.49787]; marked: the returned median 0.346574.*
 
-![Lower limit as shape runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-live-1)
+![lower (lower limit) against rate (rate (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-curve)
 
-*Lower limit as shape runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your shape = 1 gives lower = 0.05129. Your inputs: shape = 1, rate = 1, level = 0.9.*
-
-![Lower limit as level runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-credible-interval-live-2)
-
-*Lower limit as level runs from 0.225 to 0.9, every other input as you entered it (4 solutions). Marked: your level = 0.9 gives lower = 0.05129. Your inputs: shape = 1, rate = 1, level = 0.9.*
+*lower (lower limit) against rate (rate (> 0)) from 1 to 3. One curve for each value of shape (shape (> 0)): 1, 0.5, 2. Other inputs as in the worked example: level = 0.9. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, rate = 2, lower = 0.0256466.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_credible_interval', shape=1, rate=1, level=0.9)
@@ -1628,17 +1520,13 @@ $$
 - **Assumes:** shape > 1; rate > 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Gamma(5, 2) density at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-hdi-density)
+![The Gamma density with shape 5 and rate 2 at level 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-hdi-density)
 
-*The Gamma(5, 2) density at level 0.95, drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the computed highest-density interval [0.6035, 4.715], width 4.112; the density is equal at both ends (dashed chord), so no shorter interval holds the same probability. Dashed verticals: the equal-tailed interval [0.8117, 5.121] at the same level, from the model's credible-interval capability. Your inputs: shape = 5, rate = 2, level = 0.95.*
+*The Gamma density with shape 5 and rate 2 at level 0.95 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the returned highest-density interval [0.60348, 4.71511] (width 4.11163):the density is equal at both ends (dashed chord), so no shorter interval holds the same probability; dashed verticals: the equal-tailed interval [0.811743, 5.12079] at the same level, width 4.30905 (difference of the returned limits).*
 
-![Lower limit as shape runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-hdi-live-1)
+![lower (lower limit) against rate (rate (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-hdi-curve)
 
-*Lower limit as shape runs from 1.25 to 8.75, every other input as you entered it (41 solutions). Marked: your shape = 5 gives lower = 0.6035. Your inputs: shape = 5, rate = 2, level = 0.95.*
-
-![Lower limit as level runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-hdi-live-2)
-
-*Lower limit as level runs from 0.2375 to 0.9839, every other input as you entered it (13 solutions). Marked: your level = 0.95 gives lower = 0.6035. Your inputs: shape = 5, rate = 2, level = 0.95.*
+*lower (lower limit) against rate (rate (> 0)) from 1 to 3. One curve for each value of shape (shape (> 1)): 5, 2.5, 10. Other inputs as in the worked example: level = 0.95. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, rate = 2, lower = 0.60348.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_hdi', shape=5, rate=2, level=0.95)
@@ -1684,17 +1572,9 @@ $$
 - **Assumes:** shape, rate > 0; k whole number >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The negative-binomial predictive distribution of next-period counts for the given Gamma(1, 1) rate and, for comparison, a Gamma(10, 2) rate, k = 0 to 15, each probability computed by the model](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-stems)
+![The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-stems)
 
-*The negative-binomial predictive distribution of next-period counts for the given Gamma(1, 1) rate and, for comparison, a Gamma(10, 2) rate, k = 0 to 15, each probability computed by the model. Marked: the count given, P(k = 0) = 0.5 (predictive mean 1, variance 2). Your inputs: shape = 1, rate = 1, events = 0.*
-
-![P(exactly k events) as rate runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-live-1)
-
-*P(exactly k events) as rate runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your rate = 1 gives probability = 0.5. Your inputs: shape = 1, rate = 1, events = 0.*
-
-![P(exactly k events) as events runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-poisson-predictive-live-2)
-
-*P(exactly k events) as events runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your events = 0 gives probability = 0.5. Your inputs: shape = 1, rate = 1, events = 0.*
+*The negative-binomial predictive distribution of next-period counts for the worked example's Gamma(shape 1, rate 1) rate and, for comparison, a Gamma(shape 10, rate 2) rate, k = 0 … 15, each probability returned by the package: Gamma(1, 1): P(0) = 0.5, mean 1, variance 2; Gamma(10, 2): P(0) = 0.0173415, mean 5, variance 7.5. Marked: the worked example's count, P(k = 1) = 0.25. The predictive variance exceeds the mean.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_poisson_predictive', shape=1, rate=1, events=0)
@@ -1740,17 +1620,13 @@ $$
 - **Assumes:** shape + sum of counts > 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior Gamma(14, 4) for a Gamma(2, 1) prior and the counts 3, 5, 4 (posterior parameters from the model's posterior capability), its density drawn from the model's quantiles at about 60 cumulative probabilities](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-gamma-poisson-density)
+![The posterior Gamma(shape 14, rate 4) for a Gamma(2, 1) prior and the counts 3, 5, 4 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-gamma-poisson-density)
 
-*The posterior Gamma(14, 4) for a Gamma(2, 1) prior and the counts 3, 5, 4 (posterior parameters from the model's posterior capability), its density drawn from the model's quantiles at about 60 cumulative probabilities. Dashed: the computed MAP 3.25 (the peak), maximum-likelihood estimate 4 and posterior mean 3.5. Your inputs: shape = 2, rate = 1, counts = 3, 5, 4.*
+*The posterior Gamma(shape 14, rate 4) for a Gamma(2, 1) prior and the counts 3, 5, 4 (the worked example); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned MAP 3.25, maximum-likelihood estimate 4 and posterior mean 3.5.*
 
-![(shape + sum - 1)/(rate + n) as counts[2] runs from 1 to 9, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-gamma-poisson-live-1)
+![map ((shape + sum - 1)/(rate + n)) against rate (prior rate (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-gamma-poisson-curve)
 
-*(shape + sum - 1)/(rate + n) as counts[2] runs from 1 to 9, every other input as you entered it (9 solutions). Marked: your counts[2] = 5 gives map = 3.25. Your inputs: shape = 2, rate = 1, counts = 3, 5, 4.*
-
-![(shape + sum - 1)/(rate + n) as counts[3] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/map-gamma-poisson-live-2)
-
-*(shape + sum - 1)/(rate + n) as counts[3] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your counts[3] = 4 gives map = 3.25. Your inputs: shape = 2, rate = 1, counts = 3, 5, 4.*
+*map ((shape + sum - 1)/(rate + n)) against rate (prior rate (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of shape (prior shape (> 0)): 2, 1, 4. Other inputs as in the worked example: counts = 3, 5, 4. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, rate = 1, map = 3.25.*
 
 ```python
 bayesian_statistics_ai999x.solve('map_gamma_poisson', shape=2, rate=1, counts='3, 5, 4')
@@ -1798,17 +1674,13 @@ $$
 - **Assumes:** shape, rate > 0; times > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A gamma prior (shape 2, rate 1) updated with the waiting times 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-exponential-posterior-density)
+![A Gamma prior (shape 2, rate 1) updated with the waiting times 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-exponential-posterior-density)
 
-*A gamma prior (shape 2, rate 1) updated with the waiting times 0.5, 1.2, 0.8: the computed posterior has shape 5 and rate 3.5, mean 1.429. Densities drawn from the model's quantiles at about 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the posterior 95 % equal-tailed interval [0.4639, 2.926]. Your inputs: shape = 2, rate = 1, times = 0.5, 1.2, 0.8.*
+*A Gamma prior (shape 2, rate 1) updated with the waiting times 0.5, 1.2, 0.8 (the worked example): the returned posterior has shape 5 and rate 3.5, mean 1.42857; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the posterior 95 % equal-tailed interval [0.463853, 2.92617].*
 
-![Posterior mean of the rate as times[2] runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-exponential-posterior-live-1)
+![posterior_mean (posterior mean of the rate) against shape (prior shape (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-exponential-posterior-curve)
 
-*Posterior mean of the rate as times[2] runs from 0.3 to 2.1, every other input as you entered it (41 solutions). Marked: your times[2] = 1.2 gives posterior_mean = 1.429. Your inputs: shape = 2, rate = 1, times = 0.5, 1.2, 0.8.*
-
-![Posterior mean of the rate as rate runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gamma-exponential-posterior-live-2)
-
-*Posterior mean of the rate as rate runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your rate = 1 gives posterior_mean = 1.429. Your inputs: shape = 2, rate = 1, times = 0.5, 1.2, 0.8.*
+*posterior_mean (posterior mean of the rate) against shape (prior shape (> 0)) from 1 to 3. One curve for each value of rate (prior rate (> 0)): 1, 0.5, 2. Other inputs as in the worked example: times = 0.5, 1.2, 0.8. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, shape = 2, posterior_mean = 1.42857.*
 
 ```python
 bayesian_statistics_ai999x.solve('gamma_exponential_posterior', shape=2, rate=1, times='0.5, 1.2, 0.8')
@@ -1855,17 +1727,13 @@ $$
 - **Assumes:** prior $sd > 0$; $\sigma > 0$ known
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A normal prior for a mean (mean 0, sd 1) combined with the data 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-density)
+![A normal prior for a mean (mean 10, sd 2) combined with the data 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-density)
 
-*A normal prior for a mean (mean 0, sd 1) combined with the data 1.2 of known σ = 1: the computed posterior mean 0.6 and sd 0.7071 lie between prior and data, the posterior narrower than both. The data curve is the model's posterior under a prior a billion times wider (mean 1.2, sd 1); each curve is drawn from the model's normal quantiles. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 1, data = 1.2.*
+*A normal prior for a mean (mean 10, sd 2) combined with the data 1.2 of known σ = 3: the returned posterior mean 7.29231 and sd 1.6641 (variance 2.76923) lie between prior and data, the posterior narrower than both. The three curves are normal densities drawn from these means and standard deviations (the data curve from the data mean and σ/√n).*
 
-![Posterior mean as prior_sd runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-live-1)
+![posterior_mean (posterior mean) against prior_sd (prior standard deviation tau0 (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-curve)
 
-*Posterior mean as prior_sd runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your prior_sd = 1 gives posterior_mean = 0.6. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 1, data = 1.2.*
-
-![Posterior mean as σ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-posterior-live-2)
-
-*Posterior mean as σ runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your σ = 1 gives posterior_mean = 0.6. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 1, data = 1.2.*
+*posterior_mean (posterior mean) against prior_sd (prior standard deviation tau0 (> 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of prior_mean (prior mean mu0): 10, 5, 20. Other inputs as in the worked example: sigma = 3.0, data = 1.2. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior_sd = 2, posterior_mean = 7.29231.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_normal_posterior', prior_mean=0, prior_sd=1, sigma=1, data='1.2')
@@ -1917,17 +1785,13 @@ $$
 - **Assumes:** prior $sd > 0$; $\sigma > 0$; $n  \geq  1$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1 (dashed): the model's posterior mean and credible interval (shaded) for 15 sample sizes from 1 to 100, moving from the prior towards the data](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-summary-band)
+![A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1: the package's posterior mean and 95 % credible interval for 17 sample sizes from 1 to 100, moving from the prior towards the data; marked: n = 10, posterior mean = 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/normal-normal-summary-band.svg)
 
-*A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1 (dashed): the model's posterior mean and credible interval (shaded) for 15 sample sizes from 1 to 100, moving from the prior towards the data. Marked: n = 4, posterior mean 0.5, interval [-0.8859, 1.886]. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 2, sample_mean = 1, n = 4.*
+*A normal prior (mean 0, sd 1) and data with σ = 2 and sample mean 1: the package's posterior mean and 95 % credible interval for 17 sample sizes from 1 to 100, moving from the prior towards the data; marked: n = 10, posterior mean = 0.714286, interval [-0.333359, 1.76193].*
 
-![Posterior mean as σ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-summary-live-1)
+![posterior_mean (posterior mean) against prior_sd (prior standard deviation (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-summary-curve)
 
-*Posterior mean as σ runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your σ = 2 gives posterior_mean = 0.5. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 2, sample_mean = 1, n = 4.*
-
-![Posterior mean as prior_mean runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-normal-summary-live-2)
-
-*Posterior mean as prior_mean runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your prior_mean = 0 gives posterior_mean = 0.5. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 2, sample_mean = 1, n = 4.*
+*posterior_mean (posterior mean) against prior_sd (prior standard deviation (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sample_mean (sample mean): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0.0, sigma = 2.0, n = 4, level = 0.95. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, prior_sd = 1, posterior_mean = 0.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_normal_summary', prior_mean=0, prior_sd=1, sigma=2, sample_mean=1, n=4)
@@ -1977,17 +1841,13 @@ $$
 - **Assumes:** prior $sd > 0$; $\sigma > 0$; $n  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior predictive distribution of the next observation (prior mean 0, prior sd 1, σ = 2, sample mean 1 from n = 4), drawn from the model's P(x < c) at 121 thresholds (differenced); computed predictive mean 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-posterior-predictive-density)
+![The posterior predictive distribution of the next observation for the worked example (prior mean 0, prior sd 1, σ = 2, sample mean 1 from n = 4): drawn from the package's P(x < t) at 121 thresholds (differenced); returned predictive mean 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-posterior-predictive-density)
 
-*The posterior predictive distribution of the next observation (prior mean 0, prior sd 1, σ = 2, sample mean 1 from n = 4), drawn from the model's P(x < c) at 121 thresholds (differenced); computed predictive mean 0.5, sd 2.121. Shaded: P(x > 0.5) = 0.5 (P(x < 0.5) = 0.5). Your inputs: prior_mean = 0, prior_sd = 1, sigma = 2, sample_mean = 1, n = 4, threshold = 0.5.*
+*The posterior predictive distribution of the next observation for the worked example (prior mean 0, prior sd 1, σ = 2, sample mean 1 from n = 4): drawn from the package's P(x < t) at 121 thresholds (differenced); returned predictive mean 0.5, sd 2.12132. Shaded: P(x > 0.5) = 0.5 (P(x < 0.5) = 0.5).*
 
-![Posterior mean as prior_mean runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-posterior-predictive-live-1)
+![predictive_sd (sqrt(posterior variance + sigma^2)) against sigma (known standard deviation (> 0)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-posterior-predictive-curve)
 
-*Posterior mean as prior_mean runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your prior_mean = 0 gives predictive_mean = 0.5. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 2, sample_mean = 1, n = 4, threshold = 0.5.*
-
-![Predictive sd as prior_sd runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-posterior-predictive-live-2)
-
-*Predictive sd as prior_sd runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your prior_sd = 1 gives predictive_sd = 2.121. Your inputs: prior_mean = 0, prior_sd = 1, sigma = 2, sample_mean = 1, n = 4, threshold = 0.5.*
+*predictive_sd (sqrt(posterior variance + sigma^2)) against sigma (known standard deviation (> 0)) from 1 to 3. One curve for each value of prior_sd (prior standard deviation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: prior_mean = 0.0, sample_mean = 1.0, n = 4, threshold = 0.5. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sigma = 2, predictive_sd = 2.12132.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_posterior_predictive', prior_mean=0, prior_sd=1, sigma=2, sample_mean=1, n=4, threshold=0.5)
@@ -2039,17 +1899,13 @@ $$
 - **Assumes:** kappa0, alpha0, $beta0 > 0$; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The marginal posterior of the mean under a normal-inverse-gamma prior (μ0 = 0, κ0 = 1, α0 = 2, β0 = 2) and the data 1, -1: computed μn = 0, κn = 3, αn = 3, βn = 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-inverse-gamma-posterior-density)
+![The marginal posterior of the mean under a normal–inverse-gamma prior (μ0 = 0, κ0 = 1, α0 = 2, β0 = 2) and the data 1, -1: returned μn = 0, κn = 3, αn = 3, βn = 3, posterior mean of σ² 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-inverse-gamma-posterior-density)
 
-*The marginal posterior of the mean under a normal-inverse-gamma prior (μ0 = 0, κ0 = 1, α0 = 2, β0 = 2) and the data 1, -1: computed μn = 0, κn = 3, αn = 3, βn = 3. Its density is drawn from the model's interval limits at about 30 levels (differenced). Shaded: the computed interval [-1.413, 1.413]. Your inputs: mu0 = 0, kappa0 = 1, alpha0 = 2, beta0 = 2, data = 1, -1.*
+*The marginal posterior of the mean under a normal–inverse-gamma prior (μ0 = 0, κ0 = 1, α0 = 2, β0 = 2) and the data 1, -1: returned μn = 0, κn = 3, αn = 3, βn = 3, posterior mean of σ² 1.5; each density is drawn from the package (the interval limits at many levels)'s quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Shaded: the 95 % interval [-1.41273, 1.41273].*
 
-![Posterior scale as μ0 runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-inverse-gamma-posterior-live-1)
+![beta_n (posterior scale) against mu0 (prior location of the mean) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-inverse-gamma-posterior-curve)
 
-*Posterior scale as μ0 runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your μ0 = 0 gives β_n = 3. Your inputs: mu0 = 0, kappa0 = 1, alpha0 = 2, beta0 = 2, data = 1, -1.*
-
-![Posterior scale as data[1] runs from 0 to 5, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/normal-inverse-gamma-posterior-live-2)
-
-*Posterior scale as data[1] runs from 0 to 5, every other input as you entered it (6 solutions). Marked: your data[1] = 1 gives β_n = 3. Your inputs: mu0 = 0, kappa0 = 1, alpha0 = 2, beta0 = 2, data = 1, -1.*
+*beta_n (posterior scale) against mu0 (prior location of the mean) from -1 to 1. One curve for each value of beta0 (prior inverse-gamma scale (> 0)): 2, 1, 4. Other inputs as in the worked example: kappa0 = 1.0, alpha0 = 2.0, data = 1, -1, level = 0.95. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, mu0 = 0, beta_n = 3.*
 
 ```python
 bayesian_statistics_ai999x.solve('normal_inverse_gamma_posterior', mu0=0, kappa0=1, alpha0=2, beta0=2, data='1, -1')
@@ -2093,25 +1949,13 @@ $$
 - **Assumes:** $alpha_j > 0$; counts whole numbers >= 0; same length
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A Dirichlet(1, 1, 1) prior over 3 categories updated with the counts 10, 5, 3: the computed posterior Dirichlet(11, 6, 4), posterior means 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-posterior-bars)
+![A Dirichlet(1, 1, 1) prior over 3 categories updated with the counts 10, 5, 3: the package's posterior Dirichlet(11, 6, 4), posterior means 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/dirichlet-multinomial-posterior-bars.svg)
 
-*A Dirichlet(1, 1, 1) prior over 3 categories updated with the counts 10, 5, 3: the computed posterior Dirichlet(11, 6, 4), posterior means 0.5238, 0.2857, 0.1905; whiskers ± 2 posterior standard deviations (square roots of the computed variances 0.01134, 0.009276, 0.007009). Your inputs: alpha = 1, 1, 1, counts = 10, 5, 3.*
+*A Dirichlet(1, 1, 1) prior over 3 categories updated with the counts 10, 5, 3: the package's posterior Dirichlet(11, 6, 4), posterior means 0.52381, 0.285714, 0.190476; whiskers ±2 posterior standard deviations (0.106479, 0.0963143, 0.083719).*
 
-![Posterior means of 3 category probabilities under the Dirichlet(1, 1, 1) prior when the counts 10, 5, 3 are multiplied by m = 1 to 32, each computed by the model: with more data the means leave the prior and approach the observed shares (thin horizontal lines: the model's means for the counts a million times over, 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-posterior-lines)
+![Posterior means of three category probabilities under the Dirichlet(1, 1, 1) prior of the worked example when its counts 10, 5, 3 are multiplied by m = 1 … 32 (inputs chosen), each from the package: with more data the means leave the prior's equal shares and approach the observed shares (dashed lines, the counts divided by their total)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-posterior-lines)
 
-*Posterior means of 3 category probabilities under the Dirichlet(1, 1, 1) prior when the counts 10, 5, 3 are multiplied by m = 1 to 32, each computed by the model: with more data the means leave the prior and approach the observed shares (thin horizontal lines: the model's means for the counts a million times over, 0.5556, 0.2778, 0.1667). Your inputs: alpha = 1, 1, 1, counts = 10, 5, 3.*
-
-![Posterior means (alpha_j + n_j)/(alpha_0 + n), entry 3 as α[3] runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-posterior-live-1)
-
-*Posterior means (alpha_j + n_j)/(alpha_0 + n), entry 3 as α[3] runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your α[3] = 1 gives posterior_means[3] = 0.1905. Your inputs: alpha = 1, 1, 1, counts = 10, 5, 3.*
-
-![Every entry of post_alpha as computed for your inputs (3 entries: 11, 6, 4)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-posterior-live-2)
-
-*Every entry of post_alpha as computed for your inputs (3 entries: 11, 6, 4). Your inputs: alpha = 1, 1, 1, counts = 10, 5, 3.*
-
-![Posterior means (alpha_j + n_j)/(alpha_0 + n), entry 2 as α[2] runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-posterior-live-3)
-
-*Posterior means (alpha_j + n_j)/(alpha_0 + n), entry 2 as α[2] runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your α[2] = 1 gives posterior_means[2] = 0.2857. Your inputs: alpha = 1, 1, 1, counts = 10, 5, 3.*
+*Posterior means of three category probabilities under the Dirichlet(1, 1, 1) prior of the worked example when its counts 10, 5, 3 are multiplied by m = 1 … 32 (inputs chosen), each from the package: with more data the means leave the prior's equal shares and approach the observed shares (dashed lines, the counts divided by their total).*
 
 ```python
 bayesian_statistics_ai999x.solve('dirichlet_multinomial_posterior', alpha='1, 1, 1', counts='10, 5, 3')
@@ -2155,17 +1999,9 @@ $$
 - **Assumes:** $alpha_j > 0$; counts whole numbers >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Dirichlet-multinomial probability of each of the 10 ways to split 3 observations over 3 categories (each label: the count of every category in turn), under the given Dirichlet(1, 1, 1) prior and a Dirichlet(4, 4, 4) prior for comparison; each probability computed by the model](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-evidence-bars)
+![The Dirichlet-multinomial probability of each of the 10 ways to split 3 observations over 3 categories, under the worked example's Dirichlet(1, 1, 1) prior (every split equally likely: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-evidence-bars)
 
-*The Dirichlet-multinomial probability of each of the 10 ways to split 3 observations over 3 categories (each label: the count of every category in turn), under the given Dirichlet(1, 1, 1) prior and a Dirichlet(4, 4, 4) prior for comparison; each probability computed by the model. The counts given, 2, 1, 0, have probability 0.1. In SI units: log_probability = -2.303. Your inputs: alpha = 1, 1, 1, counts = 2, 1, 0.*
-
-![Its natural log as α[3] runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-evidence-live-1)
-
-*Its natural log as α[3] runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your α[3] = 1 gives log_probability = -2.303. Your inputs: alpha = 1, 1, 1, counts = 2, 1, 0.*
-
-![Its natural log as α[1] runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/dirichlet-multinomial-evidence-live-2)
-
-*Its natural log as α[1] runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your α[1] = 1 gives log_probability = -2.303. Your inputs: alpha = 1, 1, 1, counts = 2, 1, 0.*
+*The Dirichlet-multinomial probability of each of the 10 ways to split 3 observations over 3 categories, under the worked example's Dirichlet(1, 1, 1) prior (every split equally likely: 0.1) and a Dirichlet(4, 4, 4) prior (chosen; balanced splits more likely, from 0.0549451 to 0.175824); each probability returned by the package.*
 
 ```python
 bayesian_statistics_ai999x.solve('dirichlet_multinomial_evidence', alpha='1, 1, 1', counts='2, 1, 0')
@@ -2212,17 +2048,13 @@ $$
 - **Assumes:** $0 < p_{0}$, $p_{1} < 1$; $0  \leq  k  \leq  n$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Bayes factor of the simple hypotheses p = 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/bayes-factor-binomial-simple-stems.svg)
+![The Bayes factor of the simple hypotheses p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-stems)
 
-*The Bayes factor of the simple hypotheses p = 0.8 against p = 0.5 for 2 counts of successes in 1 trials, as log10 of the computed factor (above 0 favours H1, below 0 favours H0). Marked: the count given, k = 1: log10 BF10 = 0.2041. Your inputs: successes = 1, trials = 1, p0 = 0.5, p1 = 0.8.*
+*The Bayes factor of the simple hypotheses p = 0.7 against p = 0.5 for every number of successes in the worked example's 20 trials, as log10 of the returned factor: each extra success multiplies it by the same amount, so the stems lie on a straight line. Marked: the worked example's count, k = 14: log10 BF = 0.7147.*
 
-![Log10 of BF10 as successes runs from 0 to 1, every other input as you entered it (2 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-live-1)
+![log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-curve)
 
-*Log10 of BF10 as successes runs from 0 to 1, every other input as you entered it (2 solutions). Marked: your successes = 1 gives log10_bf10 = 0.2041. Your inputs: successes = 1, trials = 1, p0 = 0.5, p1 = 0.8.*
-
-![Log10 of BF10 as trials runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-binomial-simple-live-2)
-
-*Log10 of BF10 as trials runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your trials = 1 gives log10_bf10 = 0.2041. Your inputs: successes = 1, trials = 1, p0 = 0.5, p1 = 0.8.*
+*log10_bf10 (log10 of BF10) against p0 (success probability under H0) from 0.02 to 0.98. One curve for each value of p1 (success probability under H1): 0.7, 0.26. Other inputs as in the worked example: successes = 14, trials = 20. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, p0 = 0.5, log10_bf10 = 0.7147.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_factor_binomial_simple', successes=1, trials=1, p0=0.5, p1=0.8)
@@ -2271,17 +2103,13 @@ $$
 - **Assumes:** $0 < p_{0} < 1$; alpha, $\beta > 0$; $0  \leq  k  \leq  n$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Bayes factor of a Beta alternative against the point null p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-stems)
+![The Bayes factor of a uniform alternative against the point null p = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-stems)
 
-*The Bayes factor of a Beta alternative against the point null p = 0.5 for 2 counts of successes in 1 trials, as log10 of the computed factor (above 0 favours H1, below 0 favours H0). Marked: the count given, k = 1: log10 BF10 = 0. In SI units: log10_bf10 = 1.446e-16. Your inputs: successes = 1, trials = 1, p0 = 0.5.*
+*The Bayes factor of a uniform alternative against the point null p = 0.5 for every number of successes in the worked example's 2 trials, as log10 of the returned factor: counts near n·p0 support the null, but only moderately, while extreme counts give strong evidence against it. Marked: the worked example's count, k = 2: 0.124939.*
 
-![Log10 BF10 as trials runs from 1 to 4, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-live-1)
+![log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 10](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-curve)
 
-*Log10 BF10 as trials runs from 1 to 4, every other input as you entered it (4 solutions). Marked: your trials = 1 gives log10_bf10 = 0. Your inputs: successes = 1, trials = 1, p0 = 0.5.*
-
-![Log10 BF10 as p0 runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-point-null-binomial-live-2)
-
-*Log10 BF10 as p0 runs from 0.125 to 0.875, every other input as you entered it (29 solutions). Marked: your p0 = 0.5 gives log10_bf10 = 0. Your inputs: successes = 1, trials = 1, p0 = 0.5.*
+*log10_bf10 (log10 BF10) against trials (trials n (>= 1)) from 1 to 10. One curve for each value of p0 (null value p0): 0.5, 0.25. Other inputs as in the worked example: successes = 2, alpha = 1.0, beta = 1.0. 9 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, trials = 2, log10_bf10 = 0.124939.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_factor_point_null_binomial', successes=1, trials=1, p0=0.5)
@@ -2330,13 +2158,9 @@ $$
 - **Assumes:** sigma, $\tau > 0$; $n  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Log10 BF10 as prior_sd runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-normal-mean-live-1)
+![log10_bf10 (log10 BF10) against sample_mean (sample mean) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-normal-mean-curve)
 
-*Log10 BF10 as prior_sd runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your prior_sd = 1 gives log10_bf10 = -0.1505. Your inputs: sample_mean = 0, n = 1, sigma = 1, mu0 = 0, prior_sd = 1.*
-
-![Log10 BF10 as σ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-factor-normal-mean-live-2)
-
-*Log10 BF10 as σ runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your σ = 1 gives log10_bf10 = -0.1505. Your inputs: sample_mean = 0, n = 1, sigma = 1, mu0 = 0, prior_sd = 1.*
+*log10_bf10 (log10 BF10) against sample_mean (sample mean) from -1 to 1. One curve for each value of sigma (known standard deviation (> 0)): 1, 0.5, 2. Other inputs as in the worked example: n = 1, mu0 = 0.0, prior_sd = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sample_mean = 0, log10_bf10 = -0.150515.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_factor_normal_mean', sample_mean=0, n=1, sigma=1, mu0=0, prior_sd=1)
@@ -2381,21 +2205,9 @@ $$
 - **Assumes:** prior probabilities sum to 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The posterior probability of model 1 of two as the difference of their natural-log evidences runs from -6 to 6, for equal priors and for priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-curves)
+![The posterior probability of model 1 of two as the difference of their natural-log evidences runs from -6 to 6, for the worked example's priors (equal) and for priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-curves)
 
-*The posterior probability of model 1 of two as the difference of their natural-log evidences runs from -6 to 6, for equal priors and for priors 0.8, 0.2, every value computed by the model. Marked: the log evidences given, -1, -1 (difference 0), give 0.5. Your inputs: log_evidences = -1, -1.*
-
-![Its posterior probability as log_evidences[1] runs from -5 to 3, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-live-1)
-
-*Its posterior probability as log_evidences[1] runs from -5 to 3, every other input as you entered it (9 solutions). Marked: your log_evidences[1] = -1 gives best_probability = 0.5. Your inputs: log_evidences = -1, -1.*
-
-![Every entry of posterior as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-live-2)
-
-*Every entry of posterior as computed for your inputs (2 entries: 0.5, 0.5). Your inputs: log_evidences = -1, -1.*
-
-![Its posterior probability as log_evidences[2] runs from -5 to 3, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/posterior-model-probabilities-live-3)
-
-*Its posterior probability as log_evidences[2] runs from -5 to 3, every other input as you entered it (9 solutions). Marked: your log_evidences[2] = -1 gives best_probability = 0.5. Your inputs: log_evidences = -1, -1.*
+*The posterior probability of model 1 of two as the difference of their natural-log evidences runs from -6 to 6, for the worked example's priors (equal) and for priors 0.8, 0.2, every value from the package. Marked: the worked example, log evidences -1, -1 (difference 0), gives 0.5.*
 
 ```python
 bayesian_statistics_ai999x.solve('posterior_model_probabilities', log_evidences='-1, -1')
@@ -2440,17 +2252,13 @@ $$
 - **Assumes:** probabilities sum to 1; one probability per column
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Expected payoff of each action of the table [[100, -20], [40, 30]] (rows: actions, columns: states) as the probability of state 1 runs from 0 to 1, each of the 41 points computed by the model; the last line is the best action's value](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-decision-lines)
+![Expected payoff of each action of the payoff table [[100, -20], [40, 30]] (rows: actions, columns: states) as the probability of state 1 runs from 0 to 1, each from the package; the thin line is the best action's value](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-decision-lines)
 
-*Expected payoff of each action of the table [[100, -20], [40, 30]] (rows: actions, columns: states) as the probability of state 1 runs from 0 to 1, each of the 41 points computed by the model; the last line is the best action's value. Marked: the probabilities given, 0.4, 0.6: computed expected_values 28, 34, best action 2 with 34. Your inputs: payoffs = [[100, -20], [40, 30]], probabilities = 0.4, 0.6.*
+*Expected payoff of each action of the payoff table [[100, -20], [40, 30]] (rows: actions, columns: states) as the probability of state 1 runs from 0 to 1, each from the package; the thin line is the best action's value. Marked: the worked example, probabilities 0.4, 0.6: the returned expected values 28, 34, best action 2 with 34.*
 
-![The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); expected_values (computed)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-decision-matrix)
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); expected_values (returned)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-decision-matrix)
 
-*The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); expected_values (computed). Computed with them: best_action = 2, best_expected_value = 34; probabilities given: 0.4, 0.6. Your inputs: payoffs = [[100, -20], [40, 30]], probabilities = 0.4, 0.6.*
-
-![Every entry of expected_values as computed for your inputs (2 entries: 28, 34)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-decision-live-1)
-
-*Every entry of expected_values as computed for your inputs (2 entries: 28, 34). Your inputs: payoffs = [[100, -20], [40, 30]], probabilities = 0.4, 0.6.*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); expected_values (returned). Returned with them by bayesian-statistics-ai999x: best_action = 2, best_expected_value = 34. Other inputs: probabilities = 0.4, 0.6.*
 
 ```python
 bayesian_statistics_ai999x.solve('expected_value_decision', payoffs='[[100, -20], [40, 30]]', probabilities='0.4, 0.6')
@@ -2499,23 +2307,7 @@ $$
 
 ![The score of each action of the payoff table [[100, -20], [40, 30], [60, 10]] under five criteria (Hurwicz optimism 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/decision-criteria-under-uncertainty-table)
 
-*The score of each action of the payoff table [[100, -20], [40, 30], [60, 10]] under five criteria (Hurwicz optimism 0.5), every score computed by the model; the regret row is minimised, the others maximised. Best action: maximin: action 2; maximax: action 1; laplace: action 1; minimax regret: action 3; hurwicz: action 1. Outlined: the criterion given. Your inputs: payoffs = [[100, -20], [40, 30]..., criterion = maximin.*
-
-![Criterion value of the chosen action as payoffs[2,2] runs from 7](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/decision-criteria-under-uncertainty-live-1)
-
-*Criterion value of the chosen action as payoffs[2,2] runs from 7.5 to 52.5, every other input as you entered it (41 solutions). Marked: your payoffs[2,2] = 30 gives criterion_value = 30. Your inputs: payoffs = [[100, -20], [40, 30]..., criterion = maximin.*
-
-![Criterion value of the chosen action for every choice of criterion, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/decision-criteria-under-uncertainty-live-2)
-
-*Criterion value of the chosen action for every choice of criterion, every other input as you entered it (highlighted: your choice). maximin: 30; maximax: 100; laplace: 40; minimax regret: 40; hurwicz: no answer. Your inputs: payoffs = [[100, -20], [40, 30]..., criterion = maximin.*
-
-![The 3 rows of payoffs as points (first column across, second up), coloured by scores](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/decision-criteria-under-uncertainty-live-3)
-
-*The 3 rows of payoffs as points (first column across, second up), coloured by scores. Your inputs: payoffs = [[100, -20], [40, 30]..., criterion = maximin.*
-
-![Every entry of scores as computed for your inputs (3 entries: -20, 30, 10)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/decision-criteria-under-uncertainty-live-4)
-
-*Every entry of scores as computed for your inputs (3 entries: -20, 30, 10). Your inputs: payoffs = [[100, -20], [40, 30]..., criterion = maximin.*
+*The score of each action of the payoff table [[100, -20], [40, 30], [60, 10]] under five criteria (Hurwicz optimism 0.5, chosen), every score from the package; the regret row is minimised, the others maximised. Best action: maximin: action 2; maximax: action 1; laplace: action 1; minimax regret: action 3; hurwicz: action 1.*
 
 ```python
 bayesian_statistics_ai999x.solve('decision_criteria_under_uncertainty', payoffs='[[100, -20], [40, 30], [60, 10]]', criterion='maximin')
@@ -2561,9 +2353,9 @@ $$
 - **Assumes:** probabilities sum to 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![For the payoff table [[100, -20], [40, 30]]: the expected payoff with perfect information about the state and the best expected payoff without it, over the probability of state 1 (41 computations each); the shaded gap is the expected value of perfect information](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/expected-value-of-perfect-information-band.svg)
+![For the payoff table [[100, -20], [40, 30]]: the expected payoff with perfect information about the state and the best expected payoff without it, over the probability of state 1 (41 runs each); their gap is the expected value of perfect information](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-of-perfect-information-band)
 
-*For the payoff table [[100, -20], [40, 30]]: the expected payoff with perfect information about the state and the best expected payoff without it, over the probability of state 1 (41 computations each); the shaded gap is the expected value of perfect information. Marked: the probabilities given, 0.4, 0.6, computed values 58 and 34, EVPI = 24. Your inputs: payoffs = [[100, -20], [40, 30]], probabilities = 0.4, 0.6.*
+*For the payoff table [[100, -20], [40, 30]]: the expected payoff with perfect information about the state and the best expected payoff without it, over the probability of state 1 (41 runs each); their gap is the expected value of perfect information. Marked: probabilities 0.4, 0.6, returned values 58 and 34, EVPI = 24.*
 
 ```python
 bayesian_statistics_ai999x.solve('expected_value_of_perfect_information', payoffs='[[100, -20], [40, 30]]', probabilities='0.4, 0.6')
@@ -2613,15 +2405,11 @@ $$
 
 ![For the payoff table [[100, -20], [40, 30]], priors 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-of-sample-information-bars)
 
-*For the payoff table [[100, -20], [40, 30]], priors 0.4, 0.6 and a signal with likelihoods [[0.8, 0.3], [0.2, 0.7]]: the computed expected payoff without information 34, with the sample information 44.2 (EVSI = 10.2) and, from the model's perfect-information capability, 58 (EVPI = 24): sample information is worth at most the perfect kind. Your inputs: payoffs = [[100, -20], [40, 30]], priors = 0.4, 0.6, likelihoods = [[0.8, 0.3], [0.2, 0.7]].*
+*For the payoff table [[100, -20], [40, 30]], priors 0.4, 0.6 and a signal with likelihoods [[0.8, 0.3], [0.2, 0.7]] (the worked example): the returned expected payoff without information 34, with the sample information 44.2 (EVSI = 10.2; signal probabilities 0.5, 0.5, best action per signal [1, 2]) and, from the perfect-information capability, 58 (EVPI = 24): sample information is worth at most the perfect kind.*
 
-![The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); likelihoods (input); signal_probabilities (computed)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-of-sample-information-matrix)
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); likelihoods (input); signal_probabilities (returned)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-of-sample-information-matrix)
 
-*The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); likelihoods (input); signal_probabilities (computed). Computed with them: evsi = 10.2, ev_with_information = 44.2, ev_without_information = 34; priors given: 0.4, 0.6. Your inputs: payoffs = [[100, -20], [40, 30]], priors = 0.4, 0.6, likelihoods = [[0.8, 0.3], [0.2, 0.7]].*
-
-![Every entry of signal_probabilities as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/expected-value-of-sample-information-live-1)
-
-*Every entry of signal_probabilities as computed for your inputs (2 entries: 0.5, 0.5). Your inputs: payoffs = [[100, -20], [40, 30]], priors = 0.4, 0.6, likelihoods = [[0.8, 0.3], [0.2, 0.7]].*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): payoffs (input); likelihoods (input); signal_probabilities (returned). Returned with them by bayesian-statistics-ai999x: evsi = 10.2, ev_with_information = 44.2, ev_without_information = 34. Other inputs: priors = 0.4, 0.6.*
 
 ```python
 bayesian_statistics_ai999x.solve('expected_value_of_sample_information', payoffs='[[100, -20], [40, 30]]', priors='0.4, 0.6', likelihoods='[[0.8, 0.3], [0.2, 0.7]]')
@@ -2665,17 +2453,13 @@ $$
 - **Assumes:** probabilities sum to 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Expected loss of each action of the table [[0, 10], [5, 0]] (rows: actions, columns: states) as the probability of state 1 runs from 0 to 1, each of the 41 points computed by the model; the last line is the smallest (the Bayes risk)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-action-minimum-expected-loss-lines)
+![Expected loss of each action of the loss table [[0, 10], [5, 0]] (rows: actions, columns: states) over the probability of state 1, 41 runs; the thin line is the smallest (the Bayes risk)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-action-minimum-expected-loss-lines)
 
-*Expected loss of each action of the table [[0, 10], [5, 0]] (rows: actions, columns: states) as the probability of state 1 runs from 0 to 1, each of the 41 points computed by the model; the last line is the smallest (the Bayes risk). Marked: the probabilities given, 0.3, 0.7: computed expected_losses 7, 1.5, Bayes action 2 with 1.5. Your inputs: losses = [[0, 10], [5, 0]], probabilities = 0.3, 0.7.*
+*Expected loss of each action of the loss table [[0, 10], [5, 0]] (rows: actions, columns: states) over the probability of state 1, 41 runs; the thin line is the smallest (the Bayes risk). Marked: the worked example, probabilities 0.3, 0.7: returned expected losses 7, 1.5, Bayes action 2, Bayes risk 1.5.*
 
-![The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): losses (input); expected_losses (computed)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-action-minimum-expected-loss-matrix)
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): losses (input); expected_losses (returned)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-action-minimum-expected-loss-matrix)
 
-*The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): losses (input); expected_losses (computed). Computed with them: bayes_action = 2, bayes_risk = 1.5; probabilities given: 0.3, 0.7. Your inputs: losses = [[0, 10], [5, 0]], probabilities = 0.3, 0.7.*
-
-![Every entry of expected_losses as computed for your inputs (2 entries: 7, 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/bayes-action-minimum-expected-loss-live-1)
-
-*Every entry of expected_losses as computed for your inputs (2 entries: 7, 1.5). Your inputs: losses = [[0, 10], [5, 0]], probabilities = 0.3, 0.7.*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): losses (input); expected_losses (returned). Returned with them by bayesian-statistics-ai999x: bayes_action = 2, bayes_risk = 1.5. Other inputs: probabilities = 0.3, 0.7.*
 
 ```python
 bayesian_statistics_ai999x.solve('bayes_action_minimum_expected_loss', losses='[[0, 10], [5, 0]]', probabilities='0.3, 0.7')
@@ -2724,11 +2508,11 @@ $$
 
 ![A lottery with outcomes 1000, 0 and probabilities 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/certainty-equivalent-exponential-utility-utility)
 
-*A lottery with outcomes 1000, 0 and probabilities 0.5, 0.5: the utility 1 - exp(-x/500) is drawn from the model's expected utility of a sure outcome at 61 values. The computed expected utility 0.4323 sits on the chord (dashed) at the expected value 500; the sure amount with the same utility is the computed certainty equivalent 283.1, and the gap is the computed risk premium 216.9. Your inputs: outcomes = 1000, 0, probabilities = 0.5, 0.5, risk_tolerance = 500.*
+*A lottery with outcomes 1000, 0 and probabilities 0.5, 0.5 (the worked example): the utility is drawn from the package's expected utility of a sure outcome at 61 values. The returned expected utility 0.432332 sits on the chord at the expected value 500; the sure amount with the same utility is the returned certainty equivalent 283.11, and the gap is the returned risk premium 216.89.*
 
-![-R ln E[exp(-x/R)] as risk_tolerance runs from 125 to 875, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/certainty-equivalent-exponential-utility-live-1)
+![certainty_equivalent (-R ln E[exp(-x/R)]) against risk_tolerance (risk tolerance R (> 0)) from 50 to 5000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/certainty-equivalent-exponential-utility-curve)
 
-*-R ln E[exp(-x/R)] as risk_tolerance runs from 125 to 875, every other input as you entered it (41 solutions). Marked: your risk_tolerance = 500 gives certainty_equivalent = 283.1. Your inputs: outcomes = 1000, 0, probabilities = 0.5, 0.5, risk_tolerance = 500.*
+*certainty_equivalent (-R ln E[exp(-x/R)]) against risk_tolerance (risk tolerance R (> 0)) from 50 to 5000 on a logarithmic axis. Other inputs as in the worked example: outcomes = 1000, 0, probabilities = 0.5, 0.5. 41 points computed by bayesian-statistics-ai999x; marked: the worked example, risk_tolerance = 500, certainty_equivalent = 283.11.*
 
 ```python
 bayesian_statistics_ai999x.solve('certainty_equivalent_exponential_utility', outcomes='1000, 0', probabilities='0.5, 0.5', risk_tolerance=500)
@@ -2775,7 +2559,7 @@ $$
 
 ![A lottery with outcomes 100, 400 and probabilities 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/certainty-equivalent-log-utility-utility)
 
-*A lottery with outcomes 100, 400 and probabilities 0.5, 0.5: the utility ln x is drawn from the model's expected utility of a sure outcome at 61 values. The computed expected utility 5.298 sits on the chord (dashed) at the expected value 250; the sure amount with the same utility is the computed certainty equivalent 200, and the gap is the computed risk premium 50. Your inputs: outcomes = 100, 400, probabilities = 0.5, 0.5.*
+*A lottery with outcomes 100, 400 and probabilities 0.5, 0.5 (the worked example): the utility ln x is drawn from the package's expected utility of a sure outcome at 61 values. The returned expected utility 5.29832 sits on the chord at the expected value 250; the sure amount with the same utility is the returned certainty equivalent 200, and the gap is the returned risk premium 50.*
 
 ```python
 bayesian_statistics_ai999x.solve('certainty_equivalent_log_utility', outcomes='100, 400', probabilities='0.5, 0.5')
@@ -2819,17 +2603,9 @@ $$
 - **Assumes:** a crossing strictly between 0 and 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The two actions of the payoff table [[100, -20], [40, 30]]: their expected payoffs over the probability of state 1 (from the model's expected-value capability, 41 values of p) cross at the computed break-even probability 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/break-even-probability-lines)
+![The two actions of the payoff table [[100, -20], [40, 30]]: their expected payoffs over the probability of state 1 (from the package's expected-value capability, 41 values of p) cross at the returned break-even probability 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/break-even-probability-lines)
 
-*The two actions of the payoff table [[100, -20], [40, 30]]: their expected payoffs over the probability of state 1 (from the model's expected-value capability, 41 values of p) cross at the computed break-even probability 0.4545, where both are worth 34.55; action 1 is preferred above it. Your inputs: payoffs = [[100, -20], [40, 30]].*
-
-![Probability of state 1 at which the expected](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/break-even-probability-live-1)
-
-*Probability of state 1 at which the expected... as payoffs[1,1] runs from 43.75 to 175, every other input as you entered it (36 solutions). Marked: your payoffs[1,1] = 100 gives break_even = 0.4545. Your inputs: payoffs = [[100, -20], [40, 30]].*
-
-![Probability of state 1 at which the expected](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/break-even-probability-live-2)
-
-*Probability of state 1 at which the expected... as payoffs[2,2] runs from 7.5 to 52.5, every other input as you entered it (29 solutions). Marked: your payoffs[2,2] = 30 gives break_even = 0.4545. Your inputs: payoffs = [[100, -20], [40, 30]].*
+*The two actions of the payoff table [[100, -20], [40, 30]]: their expected payoffs over the probability of state 1 (from the package's expected-value capability, 41 values of p) cross at the returned break-even probability 0.454545, where both are worth 34.5455; action 1 is preferred above it.*
 
 ```python
 bayesian_statistics_ai999x.solve('break_even_probability', payoffs='[[100, -20], [40, 30]]')
@@ -2873,17 +2649,13 @@ $$
 - **Assumes:** losses > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Threshold as loss_fn runs from 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-live-1)
+![treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-decision)
 
-*Threshold as loss_fn runs from 2.25 to 15.75, every other input as you entered it (41 solutions). Marked: your loss_fn = 9 gives threshold = 0.1. Shaded by treat / do not treat (if p given): do not treat, treat. Your inputs: loss_fp = 1, loss_fn = 9, probability = 0.15.*
+*treat / do not treat (if p given) (decision) over probability (probability of the condition (optional)) from 0.02 to 0.98 and loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 (logarithmic vertical axis): each of the 31 × 21 cells is one run of bayesian-statistics-ai999x, coloured by the verdict it returned, do not treat: 107 cells, treat: 544 cells. Other inputs as in the worked example: loss_fn = 9.0. Marked: the worked example, probability = 0.05, loss_fp = 1 → do not treat.*
 
-![Treat / do not treat (if p given) for 25 5 x 5 combinations of loss_fn and probability around your inputs (the other inputs as entered); the ring marks your inputs, which give treat](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-live-2)
+![threshold (loss_fp / (loss_fp + loss_fn)) against loss_fp (loss of acting when the condition is absent (false positive)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-curve)
 
-*Treat / do not treat (if p given) for 25 5 x 5 combinations of loss_fn and probability around your inputs (the other inputs as entered); the ring marks your inputs, which give treat. Blank cells admit no answer. Your inputs: loss_fp = 1, loss_fn = 9, probability = 0.15.*
-
-![Treat / do not treat as probability runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/treatment-threshold-live-3)
-
-*Treat / do not treat as probability runs from 0.0375 to 0.2625, every other input as you entered it (27 solutions). Shaded by treat / do not treat (if p given): do not treat, treat. Your inputs: loss_fp = 1, loss_fn = 9, probability = 0.15.*
+*threshold (loss_fp / (loss_fp + loss_fn)) against loss_fp (loss of acting when the condition is absent (false positive)) from 0.1 to 10 on a logarithmic axis. One curve for each value of loss_fn (loss of not acting when the condition is present (false negative)): 9, 4.5, 18. Other inputs as in the worked example: probability = 0.05. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, loss_fp = 1, threshold = 0.1.*
 
 ```python
 bayesian_statistics_ai999x.solve('treatment_threshold', loss_fp=1, loss_fn=9, probability=0.15)
@@ -2930,7 +2702,7 @@ $$
 
 ![A weighted sum y = Σ c_i x_i of the inputs 10, 4 with standard uncertainties 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-sum-intervals)
 
-*A weighted sum y = Σ c_i x_i of the inputs 10, 4 with standard uncertainties 0.3, 0.4 and coefficients 1, -1, each drawn as value ± uncertainty: the computed y = 6 ± 0.5. Uncertainties add in quadrature, so the result is less uncertain than their plain sum. Your inputs: values = 10, 4, uncertainties = 0.3, 0.4, coefficients = 1, -1.*
+*A weighted sum y = Σ c_i x_i of the inputs 10, 4 with standard uncertainties 0.3, 0.4 and coefficients 1, -1 (the worked example), each drawn as value ± uncertainty: the returned y = 6 ± 0.5, uncertainties add in quadrature, so the result is less uncertain than their plain sum.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_sum', values='10, 4', uncertainties='0.3, 0.4', coefficients='1, -1')
@@ -2978,17 +2750,13 @@ $$
 - **Assumes:** independent a and b; $b  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Relative uncertainties (computed uncertainty divided by computed value) for a = 12 ± 0](https://huggingface.co/AI999X/bayesian-statistics-ai999x/resolve/main/figures/uncertainty-product-quotient-bars.svg)
+![Relative uncertainties for a = 12 ± 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-quotient-bars)
 
-*Relative uncertainties (computed uncertainty divided by computed value) for a = 12 ± 0.3 and b = 4 ± 0.2: with only a uncertain, only b uncertain, and both. Computed product 48 ± 2.683 and quotient 3 ± 0.1677: product and quotient share the same relative uncertainty. Your inputs: a = 12.0, ua = 0.3, b = 4.0, ub = 0.2.*
+*Relative uncertainties for a = 12 ± 0.3 and b = 4 ± 0.2 (the worked example): the returned product 48 ± 2.68328 and quotient 3 ± 0.167705. Each bar is an uncertainty divided by its value (derived): product and quotient share the same relative uncertainty, the quadrature sum of the inputs'.*
 
-![U product as b runs from 1 to 7, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-quotient-live-1)
+![u_product (u(a*b)) against ua (standard uncertainty of a (>= 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-quotient-curve)
 
-*U product as b runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your b = 4 gives u_product = 2.683. Your inputs: a = 12.0, ua = 0.3, b = 4.0, ub = 0.2.*
-
-![U product as a runs from 3 to 21, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-quotient-live-2)
-
-*U product as a runs from 3 to 21, every other input as you entered it (29 solutions). Marked: your a = 12 gives u_product = 2.683. Your inputs: a = 12.0, ua = 0.3, b = 4.0, ub = 0.2.*
+*u_product (u(a*b)) against ua (standard uncertainty of a (>= 0)) from 0.03 to 3 on a logarithmic axis. One curve for each value of a (value of a): 12, 6, 24. Other inputs as in the worked example: b = 4.0, ub = 0.2. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, ua = 0.3, u_product = 2.68328.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_product_quotient', a=12.0, ua=0.3, b=4.0, ub=0.2)
@@ -3037,17 +2805,9 @@ $$
 - **Assumes:** $-1  \leq  \rho  \leq  1$; $b  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Uncertainties of the product and the quotient of a = 12 ± 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-correlated-curves)
+![Uncertainties of the product and the quotient of a = 1 ± 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-correlated-curves)
 
-*Uncertainties of the product and the quotient of a = 12 ± 0.3 and b = 4 ± 0.2 as their correlation runs from -1 to 1, each computed by the model: positive correlation inflates the product's uncertainty and cancels the quotient's. Marked: ρ = 0.5: u(a·b) = 3.175, u(a/b) = 0.1299. Your inputs: a = 12.0, ua = 0.3, b = 4.0, ub = 0.2, rho = 0.5.*
-
-![U product as b runs from 1 to 7, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-correlated-live-1)
-
-*U product as b runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your b = 4 gives u_product = 3.175. Your inputs: a = 12.0, ua = 0.3, b = 4.0, ub = 0.2, rho = 0.5.*
-
-![U product as a runs from 3 to 21, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-product-correlated-live-2)
-
-*U product as a runs from 3 to 21, every other input as you entered it (29 solutions). Marked: your a = 12 gives u_product = 3.175. Your inputs: a = 12.0, ua = 0.3, b = 4.0, ub = 0.2, rho = 0.5.*
+*Uncertainties of the product and the quotient of a = 1 ± 0.1 and b = 1 ± 0.1 as their correlation runs from −1 to 1, each from the package: positive correlation inflates the product's uncertainty and cancels the quotient's. Marked: the worked example, ρ = -1: u(a·b) = 0, u(a/b) = 0.2.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_product_correlated', a=1, ua=0.1, b=1, ub=0.1, rho=1)
@@ -3092,17 +2852,13 @@ $$
 - **Assumes:** $x > 0$ for a non-integer exponent; $x  \neq  0$ for $n < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Uncertainty of x^2: f is drawn from the model's value at 61 points around x = 3; the vertical band is the stated x ± u(x) = 3 ± 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-propagation)
+![Uncertainty of x^2 (the worked example): f is drawn from the package's value at 61 points around x = 3; the vertical band is the stated x ± u(x) = 3 ± 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-propagation)
 
-*Uncertainty of x^2: f is drawn from the model's value at 61 points around x = 3; the vertical band is the stated x ± u(x) = 3 ± 0.1, the horizontal band the computed f = 9 ± 0.6. The slope of f at x carries one band into the other. Your inputs: x = 3.0, ux = 0.1, exponent = 2.*
+*Uncertainty of x^2 (the worked example): f is drawn from the package's value at 61 points around x = 3; the vertical band is the stated x ± u(x) = 3 ± 0.1, the horizontal band the returned f = 9 ± 0.6. The slope of f at x carries one band into the other. Returned relative uncertainty 0.0666667.*
 
-![Uncertainty as exponent runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-live-1)
+![uncertainty (|n x^(n-1)| u(x)) against exponent (exponent n) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-curve)
 
-*Uncertainty as exponent runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your exponent = 2 gives uncertainty = 0.6. Your inputs: x = 3.0, ux = 0.1, exponent = 2.*
-
-![Uncertainty as x runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-live-2)
-
-*Uncertainty as x runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your x = 3 gives uncertainty = 0.6. Your inputs: x = 3.0, ux = 0.1, exponent = 2.*
+*uncertainty (|n x^(n-1)| u(x)) against exponent (exponent n) from 0.2 to 20 on a logarithmic axis, logarithmic output axis. One curve for each value of x (value of x): 3, 1.5, 6. Other inputs as in the worked example: ux = 0.1. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, exponent = 2, uncertainty = 9.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_power', x=3.0, ux=0.1, exponent=2)
@@ -3147,21 +2903,13 @@ $$
 - **Assumes:** x inside the function's domain
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Uncertainty of the function ln: f is drawn from the model's value at 61 points around x = 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-function-propagation)
+![Uncertainty through the function ln (the worked example): f is drawn from the package's value at 61 points around x = 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-function-propagation)
 
-*Uncertainty of the function ln: f is drawn from the model's value at 61 points around x = 2.5; the vertical band is the stated x ± u(x) = 2.5 ± 0.05, the horizontal band the computed f = 0.9163 ± 0.02. The slope of f at x carries one band into the other. Your inputs: x = 2.5, ux = 0.05, function = ln.*
+*Uncertainty through the function ln (the worked example): f is drawn from the package's value at 61 points around x = 2.5; the vertical band is the stated x ± u(x) = 2.5 ± 0.05, the horizontal band the returned f = 0.916291 ± 0.02. The slope of f at x carries one band into the other.*
 
-![Uncertainty as x runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-function-live-1)
+![uncertainty (|f'(x)| u(x)) against x (value of x (radians for sin, cos, tan)) from 0 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-function-curve)
 
-*Uncertainty as x runs from 0.625 to 4.375, every other input as you entered it (41 solutions). Marked: your x = 2.5 gives uncertainty = 0.02. Your inputs: x = 2.5, ux = 0.05, function = ln.*
-
-![Uncertainty for every choice of function, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-function-live-2)
-
-*Uncertainty for every choice of function, every other input as you entered it (highlighted: your choice). exp: 0.6091; ln: 0.02; log10: 0.008686; sqrt: 0.01581; sin: 0.04006; cos: 0.02992; tan: 0.0779; reciprocal: 0.008. Your inputs: x = 2.5, ux = 0.05, function = ln.*
-
-![Uncertainty as ux runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-function-live-3)
-
-*Uncertainty as ux runs from 0.0125 to 0.0875, every other input as you entered it (29 solutions). Marked: your ux = 0.05 gives uncertainty = 0.02. Your inputs: x = 2.5, ux = 0.05, function = ln.*
+*uncertainty (|f'(x)| u(x)) against x (value of x (radians for sin, cos, tan)) from 0 to 3.14159. Other inputs as in the worked example: ux = 0.05, function = ln. 40 points computed by bayesian-statistics-ai999x; marked: the worked example, x = 2.5, uncertainty = 0.916291.*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_function', x=2.5, ux=0.05, function='ln')
@@ -3210,11 +2958,7 @@ $$
 
 ![The power law y = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-law-bars)
 
-*The power law y = 0.5 · Π x_i^n_i with values 2, 3, exponents 1, 2 and uncertainties 0.02, 0.06: the relative uncertainty of y computed with only one input uncertain at a time (0.01, 0.04), and with all together, 0.04123 (y = 9 ± 0.3711): the contributions add in quadrature. Your inputs: coefficient = 0.5, values = 2, 3, exponents = 1, 2, uncertainties = 0.02, 0.06.*
-
-![Uncertainty as coefficient runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-power-law-live-1)
-
-*Uncertainty as coefficient runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your coefficient = 0.5 gives uncertainty = 0.3711. Your inputs: coefficient = 0.5, values = 2, 3, exponents = 1, 2, uncertainties = 0.02, 0.06.*
+*The power law y = 0.5 · Π x_i^n_i with values 2, 3, exponents 1, 2 and uncertainties 0.02, 0.06 (the worked example): each factor contributes |n|·u/x to the relative uncertainty (derived), and the returned relative uncertainty of y, 0.0412311, is their quadrature sum (y = 9 ± 0.37108).*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_power_law', coefficient=0.5, values='2, 3', exponents='1, 2', uncertainties='0.02, 0.06')
@@ -3259,9 +3003,9 @@ $$
 - **Assumes:** $u_i > 0$; $n  \geq  2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The 2 measurements 5](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/inverse-variance-weighted-mean-intervals)
+![The worked example's 2 measurements 5](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/inverse-variance-weighted-mean-intervals)
 
-*The 2 measurements 5.1, 4.9 with standard uncertainties 0.1, 0.1, each drawn as value ± uncertainty, and the computed inverse-variance weighted mean 5 ± 0.07071 (bottom row and dashed line): the most precise measurement pulls hardest. Computed χ² = 2, Birge ratio 1.414. Your inputs: values = 5.1, 4.9, uncertainties = 0.1, 0.1.*
+*The worked example's 2 measurements 5.1, 4.9 with standard uncertainties 0.1, 0.1, each drawn as value ± uncertainty, and the returned inverse-variance weighted mean 5 ± 0.0707107 (bottom row and vertical line): the most precise measurement pulls hardest. Returned χ² = 2, Birge ratio 1.41421.*
 
 ```python
 bayesian_statistics_ai999x.solve('inverse_variance_weighted_mean', values='5.1, 4.9', uncertainties='0.1, 0.1')
@@ -3306,9 +3050,9 @@ $$
 - **Assumes:** valid correlation matrix
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The answer for your inputs: value (y) = 30](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-linear-correlated-live-1)
+![The combined standard uncertainty of y = c1 x1 + c2 x2 for values 10, 20, uncertainties 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/uncertainty-linear-correlated-curve)
 
-*The answer for your inputs: value (y) = 30. Your inputs: values = 10, 20, uncertainties = 0.3, 0.4, correlation = [[1, 0.5], [0.5, 1]], coefficients = 1, 1.*
+*The combined standard uncertainty of y = c1 x1 + c2 x2 for values 10, 20, uncertainties 0.3, 0.4 and coefficients 1, 1 (the worked example) as the correlation of the inputs runs from −1 to 1, each from the package: from 0.1 to 0.7. Marked: the worked example's ρ = 0.5, u(y) = 0.608276 (y = 30).*
 
 ```python
 bayesian_statistics_ai999x.solve('uncertainty_linear_correlated', values='10, 20', uncertainties='0.3, 0.4', correlation='[[1, 0.5], [0.5, 1]]', coefficients='1, 1')
@@ -3353,19 +3097,11 @@ $$
 
 ![Linear propagation of a covariance: the input covariance [[0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/covariance-propagation-linear-ellipses)
 
-*Linear propagation of a covariance: the input covariance [[0.04, 0.01], [0.01, 0.09]] through the matrix A = [[1, 1], [1, -1]] gives the computed output covariance [[0.15, -0.05], [-0.05, 0.11]] and uncertainties 0.3873, 0.3317 (green bars along the axes). Each ellipse is the one-standard-deviation contour of its covariance matrix (from its Cholesky factor); the tilt shows the correlation. Your inputs: matrix = [[1, 1], [1, -1]], covariance = [[0.04, 0.01], [0.01, 0.09]].*
+*Linear propagation of a covariance: the input covariance [[0.04, 0.01], [0.01, 0.09]] through the matrix A = [[1, 1], [1, -1]] (the worked example) gives the returned output covariance [['0.15', '-0.05'], ['-0.05', '0.11']] and uncertainties 0.3873, 0.3317 (thick bars). Each ellipse is the one-standard-deviation contour of its covariance matrix (axes from its eigenvalues, derived); the tilt shows the correlation.*
 
-![Uncertainties[1] and uncertainties[2] as matrix[2,2] runs from -1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/covariance-propagation-linear-live-1)
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): matrix (input); covariance (input); output_covariance (returned)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/covariance-propagation-linear-matrix)
 
-*Uncertainties[1] and uncertainties[2] as matrix[2,2] runs from -1.75 to -0.25, every other input as you entered it (37 solutions). Marked: your matrix[2,2] = -1 gives uncertainties[1] = 0.3873. Your inputs: matrix = [[1, 1], [1, -1]], covariance = [[0.04, 0.01], [0.01, 0.09]].*
-
-![Every entry of uncertainties as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/covariance-propagation-linear-live-2)
-
-*Every entry of uncertainties as computed for your inputs (2 entries: 0.3873, 0.3317). Your inputs: matrix = [[1, 1], [1, -1]], covariance = [[0.04, 0.01], [0.01, 0.09]].*
-
-![Each cell is one entry of output_covariance for your inputs (row by row; shade by size and sign)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/covariance-propagation-linear-live-3)
-
-*Each cell is one entry of output_covariance for your inputs (row by row; shade by size and sign). Your inputs: matrix = [[1, 1], [1, -1]], covariance = [[0.04, 0.01], [0.01, 0.09]].*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): matrix (input); covariance (input); output_covariance (returned).*
 
 ```python
 bayesian_statistics_ai999x.solve('covariance_propagation_linear', matrix='[[1, 1], [1, -1]]', covariance='[[0.04, 0.01], [0.01, 0.09]]')
@@ -3411,17 +3147,13 @@ $$
 - **Assumes:** components and degrees of freedom > 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The coverage factor k that turns a combined standard uncertainty into an expanded one, against the degrees of freedom (14 values from 2 to 1000, levels 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/welch-satterthwaite-expanded-uncertainty-curves)
+![The coverage factor k that turns a combined standard uncertainty into an expanded one, against the degrees of freedom (one component, 14 values from 2 to 1000, levels 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/welch-satterthwaite-expanded-uncertainty-curves)
 
-*The coverage factor k that turns a combined standard uncertainty into an expanded one, against the degrees of freedom (14 values from 2 to 1000, levels 0.95 and 0.99; each computed by the model): few degrees of freedom need a large k. Marked: the inputs given, 10 effective degrees of freedom: k = 2.228, expanded uncertainty 2.228. Your inputs: uncertainties = 1, dof = 10, level = 0.95.*
+*The coverage factor k that turns a combined standard uncertainty into an expanded one, against the degrees of freedom (one component, 14 values from 2 to 1000, levels 0.95 and 0.99; each from the package): few degrees of freedom need a large k. Marked: the worked example, 10 degrees of freedom at level 0.95: k = 2.22814, expanded uncertainty 2.22814.*
 
-![Expanded uncertainty as level runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/welch-satterthwaite-expanded-uncertainty-live-1)
+![expanded_uncertainty (U = k u_c) against level (credibility level as a fraction (0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/welch-satterthwaite-expanded-uncertainty-curve)
 
-*Expanded uncertainty as level runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your level = 0.95 gives expanded_uncertainty = 2.228. Your inputs: uncertainties = 1, dof = 10, level = 0.95.*
-
-![Expanded uncertainty as uncertainties[1] runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/welch-satterthwaite-expanded-uncertainty-live-2)
-
-*Expanded uncertainty as uncertainties[1] runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your uncertainties[1] = 1 gives expanded_uncertainty = 2.228. Your inputs: uncertainties = 1, dof = 10, level = 0.95.*
+*expanded_uncertainty (U = k u_c) against level (credibility level as a fraction (0.95 for 95%; default 0.95)) from 0.02 to 0.98. Other inputs as in the worked example: uncertainties = 1, dof = 10. 41 points computed by bayesian-statistics-ai999x; marked: the worked example, level = 0.95, expanded_uncertainty = 2.22814.*
 
 ```python
 bayesian_statistics_ai999x.solve('welch_satterthwaite_expanded_uncertainty', uncertainties='1', dof='10', level=0.95)
@@ -3464,13 +3196,13 @@ $$
 - **Assumes:** $a > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Standard uncertainty as half_width runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/type-b-standard-uncertainty-live-1)
+![The standard uncertainty of a quantity known only to lie within ±0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/type-b-standard-uncertainty-bars)
 
-*Standard uncertainty as half_width runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your half_width = 0.5 gives standard_uncertainty = 0.2887. Your inputs: half_width = 0.5, distribution = rectangular.*
+*The standard uncertainty of a quantity known only to lie within ±0.5 (the worked example's half-width) for each assumed distribution, as returned: rectangular: divisor 1.73205, u = 0.288675; triangular: divisor 2.44949, u = 0.204124; arcsine: divisor 1.41421, u = 0.353553. A distribution that piles up at the edges gives the largest uncertainty.*
 
-![Standard uncertainty for every choice of distribution, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/type-b-standard-uncertainty-live-2)
+![standard_uncertainty (a / divisor) against half_width (half-width a of the interval (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/type-b-standard-uncertainty-curve)
 
-*Standard uncertainty for every choice of distribution, every other input as you entered it (highlighted: your choice). rectangular: 0.2887; triangular: 0.2041; arcsine: 0.3536. Your inputs: half_width = 0.5, distribution = rectangular.*
+*standard_uncertainty (a / divisor) against half_width (half-width a of the interval (> 0)) from 0.25 to 0.75. One curve for each value of distribution (rectangular, triangular or arcsine (U-shaped)): rectangular, triangular, arcsine. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, half_width = 0.5, standard_uncertainty = 0.288675.*
 
 ```python
 bayesian_statistics_ai999x.solve('type_b_standard_uncertainty', half_width=0.5, distribution='rectangular')
@@ -3516,17 +3248,13 @@ $$
 - **Assumes:** $\sigma > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The standard deviation of Y = exp(X) for normal X with mean μ = 1 as σ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/lognormal-propagation-curves)
+![The standard deviation of Y = exp(X) for normal X with mean μ = 0 as σ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/lognormal-propagation-curves)
 
-*The standard deviation of Y = exp(X) for normal X with mean μ = 1 as σ runs from 0.05 to 1.5: exact and first-order (linearised) values, each computed by the model; they agree for small σ and part as it grows. Marked: σ = 0.5: exact 1.642, first order 1.359 (means 3.08 and 2.718). Your inputs: mu = 1, sigma = 0.5.*
+*The standard deviation of Y = exp(X) for normal X with mean μ = 0 as σ runs from 0.05 to 1.5: exact and first-order (linearised) values, each from the package; they agree for small σ and part as it grows. Marked: the worked example σ = 1: exact 2.1612, first order 1 (means 1.64872 and 1).*
 
-![Exact sd as σ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/lognormal-propagation-live-1)
+![exact_sd (sqrt(exp(sigma^2) - 1) exp(mu + sigma^2/2)) against sigma (standard deviation of X (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/lognormal-propagation-curve)
 
-*Exact sd as σ runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your σ = 0.5 gives exact_sd = 1.642. Your inputs: mu = 1, sigma = 0.5.*
-
-![Exact sd as μ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/lognormal-propagation-live-2)
-
-*Exact sd as μ runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your μ = 1 gives exact_sd = 1.642. Your inputs: mu = 1, sigma = 0.5.*
+*exact_sd (sqrt(exp(sigma^2) - 1) exp(mu + sigma^2/2)) against sigma (standard deviation of X (> 0)) from 0.5 to 1.5. One curve for each value of mu (mean of X): 0, -0.5, 0.5. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sigma = 1, exact_sd = 2.1612.*
 
 ```python
 bayesian_statistics_ai999x.solve('lognormal_propagation', mu=0, sigma=1)
@@ -3572,17 +3300,13 @@ $$
 - **Assumes:** independent normal inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The standard deviation of the product of independent normals X (mean 10) and Y (mean 5, sd 2) as the sd of X runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curves)
+![The standard deviation of the product of independent normals X (mean 10) and Y (mean 5, sd 2) (the worked example's), as the sd of X runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curves)
 
-*The standard deviation of the product of independent normals X (mean 10) and Y (mean 5, sd 2) as the sd of X runs from 0.06 to 3: exact and first-order values, each computed by the model. Marked: the sd of X given, 1: exact 20.71, first order 20.62. Your inputs: mean_x = 10, sd_x = 1, mean_y = 5, sd_y = 2.*
+*The standard deviation of the product of independent normals X (mean 10) and Y (mean 5, sd 2) (the worked example's), as the sd of X runs from 0.06 to 3: exact and first-order values, each from the package (with zero means the first-order value vanishes). Marked: the worked example's sd of X = 1, exact 20.7123, first order 20.6155.*
 
-![Exact sd as mean_x runs from 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-live-1)
+![exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against sd_x (sd of X (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-curve)
 
-*Exact sd as mean_x runs from 2.5 to 17.5, every other input as you entered it (41 solutions). Marked: your mean_x = 10 gives exact_sd = 20.71. Your inputs: mean_x = 10, sd_x = 1, mean_y = 5, sd_y = 2.*
-
-![Exact sd as mean_y runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/product-of-normals-exact-moments-live-2)
-
-*Exact sd as mean_y runs from 1.25 to 8.75, every other input as you entered it (29 solutions). Marked: your mean_y = 5 gives exact_sd = 20.71. Your inputs: mean_x = 10, sd_x = 1, mean_y = 5, sd_y = 2.*
+*exact_sd (sqrt(mx^2 sy^2 + my^2 sx^2 + sx^2 sy^2)) against sd_x (sd of X (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sd_y (sd of Y (> 0)): 2, 1, 4. Other inputs as in the worked example: mean_x = 10.0, mean_y = 5.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sd_x = 1, exact_sd = 20.7123.*
 
 ```python
 bayesian_statistics_ai999x.solve('product_of_normals_exact_moments', mean_x=0, sd_x=1, mean_y=0, sd_y=1)
@@ -3627,13 +3351,9 @@ $$
 - **Assumes:** sigma, half-width > 0; 0 < level < 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Required number of draws as level runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-sample-size-live-1)
+![draws (required number of draws (rounded up)) against level (credibility level as a fraction (0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-sample-size-curve)
 
-*Required number of draws as level runs from 0.2375 to 0.9856, every other input as you entered it (22 solutions). Marked: your level = 0.95 gives draws = 1537. Your inputs: sigma = 10, half_width = 0.5, level = 0.95.*
-
-![Required number of draws as half_width runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-sample-size-live-2)
-
-*Required number of draws as half_width runs from 0.125 to 0.875, every other input as you entered it (29 solutions). Marked: your half_width = 0.5 gives draws = 1537. Your inputs: sigma = 10, half_width = 0.5, level = 0.95.*
+*draws (required number of draws (rounded up)) against level (credibility level as a fraction (0.95 for 95%; default 0.95)) from 0.02 to 0.98. One curve for each value of sigma (standard deviation of one draw (> 0)): 10, 5, 20. Other inputs as in the worked example: half_width = 0.5. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, level = 0.95, draws = 1537.*
 
 ```python
 bayesian_statistics_ai999x.solve('monte_carlo_sample_size', sigma=10, half_width=0.5, level=0.95)
@@ -3678,17 +3398,13 @@ $$
 - **Assumes:** $b > a$; $n  \geq  2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![(b - a) times the mean of f (estimate) over upper from 1 to 3 and lower from -1 to 1: each of the 224 shaded cells is one computation of the model, darker for a larger value (from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-field)
+![estimate ((b - a) times the mean of f) against upper (upper limit b (> a)) from 1 to 3](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-curve)
 
-*(b - a) times the mean of f (estimate) over upper from 1 to 3 and lower from -1 to 1: each of the 224 shaded cells is one computation of the model, darker for a larger value (from 0.2857 to 8; a blank cell: inputs the model refuses). Marked: the inputs given, estimate = 4. Your inputs: values = 1, 3, lower = 0, upper = 2.*
+*estimate ((b - a) times the mean of f) against upper (upper limit b (> a)) from 1 to 3. One curve for each value of lower (lower limit a): 0, -0.5, 0.5. Other inputs as in the worked example: values = 1, 3. 31 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, upper = 2, estimate = 4.*
 
-![(b - a) times the mean of f as values[0] runs from 0 to 5, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-live-1)
+![estimate ((b - a) times the mean of f) over upper (upper limit b (> a)) from 1 to 3 and lower (lower limit a) from -1 to 1: each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-field)
 
-*(b - a) times the mean of f as values[0] runs from 0 to 5, every other input as you entered it (6 solutions). Marked: your values[0] = 1 gives estimate = 4. Your inputs: values = 1, 3, lower = 0, upper = 2.*
-
-![(b - a) times the mean of f as values[1] runs from 0 to 7, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/monte-carlo-integration-live-2)
-
-*(b - a) times the mean of f as values[1] runs from 0 to 7, every other input as you entered it (8 solutions). Marked: your values[1] = 3 gives estimate = 4. Your inputs: values = 1, 3, lower = 0, upper = 2.*
+*estimate ((b - a) times the mean of f) over upper (upper limit b (> a)) from 1 to 3 and lower (lower limit a) from -1 to 1: each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0.2 to dark 8); iso-lines at estimate = 2, 4, 6; blank cells: inputs the capability refuses. Other inputs as in the worked example: values = 1, 3. Marked: the worked example, upper = 2, lower = 0, estimate = 4.*
 
 ```python
 bayesian_statistics_ai999x.solve('monte_carlo_integration', values='1, 3', lower=0, upper=2)
@@ -3735,7 +3451,7 @@ $$
 
 ![Importance sampling with draws whose values are 0, 1, target densities 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/importance-sampling-estimate-bars)
 
-*Importance sampling with draws whose values are 0, 1, target densities 0.5, 0.5 and proposal densities 0.25, 0.75: where the target is higher than the proposal a draw counts more. Computed: self-normalised estimate 0.25, unnormalised 0.3333, effective sample size 1.6. Your inputs: values = 0, 1, target_density = 0.5, 0.5, proposal_density = 0.25, 0.75.*
+*Importance sampling with draws whose values are 0, 1, target densities 0.5, 0.5 and proposal densities 0.25, 0.75 (the worked example): the importance weights p/q (derived, written over the bars) reweight the draws; returned self-normalised estimate 0.25, unnormalised 0.333333, effective sample size 1.6.*
 
 ```python
 bayesian_statistics_ai999x.solve('importance_sampling_estimate', values='0, 1', target_density='0.5, 0.5', proposal_density='0.25, 0.75')
@@ -3781,13 +3497,9 @@ $$
 - **Assumes:** outputs and control vary; $n  \geq  3$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A control-variate estimate for the paired draws y = 1, 2, 3 and c = 1, 2, 3 with the known mean of c = 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/control-variate-estimate-fit)
+![A control-variate estimate for the worked example's paired draws y = 1, 2, 3 and c = 1, 2, 3 with the known mean of c = 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/control-variate-estimate-fit)
 
-*A control-variate estimate for the paired draws y = 1, 2, 3 and c = 1, 2, 3 with the known mean of c = 2.5: the line is the model's estimate for every known mean of c (slope = the computed coefficient 1); read at the known mean it gives the computed estimate 2.5 instead of the plain mean 2 (dashed); computed variance factor 0. Your inputs: y = 1, 2, 3, c = 1, 2, 3, control_mean = 2.5.*
-
-![Mean(y) - b as control_mean runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/control-variate-estimate-live-1)
-
-*Mean(y) - b as control_mean runs from 0.625 to 4.375, every other input as you entered it (41 solutions). Marked: your control_mean = 2.5 gives estimate = 2.5. Your inputs: y = 1, 2, 3, c = 1, 2, 3, control_mean = 2.5.*
+*A control-variate estimate for the worked example's paired draws y = 1, 2, 3 and c = 1, 2, 3 with the known mean of c = 2.5: the line through the sample means (c̄ = 2, ȳ = 2, derived) with the returned slope 1 is read at the known mean, giving the returned estimate 2.5 instead of the plain mean 2; returned variance reduction 0.*
 
 ```python
 bayesian_statistics_ai999x.solve('control_variate_estimate', y='1, 2, 3', c='1, 2, 3', control_mean=2.5)
@@ -3834,7 +3546,7 @@ $$
 
 ![Stratified sampling with weights 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/stratified-sampling-estimate-intervals)
 
-*Stratified sampling with weights 0.6, 0.4, stratum means 10, 20, standard deviations 2, 5 and sample sizes 30, 20: each stratum's mean ± sd, and the computed overall estimate 14 with standard error 0.498 (bottom row: ± 1 standard error). Your inputs: weights = 0.6, 0.4, means = 10, 20, sds = 2, 5, sizes = 30, 20.*
+*Stratified sampling with weights 0.6, 0.4, stratum means 10, 20, standard deviations 2, 5 and sample sizes 30, 20 (the worked example): each stratum's mean ± sd (dot size by weight), and the returned overall estimate 14 with standard error 0.497996 (band ± 2 SE).*
 
 ```python
 bayesian_statistics_ai999x.solve('stratified_sampling_estimate', weights='0.6, 0.4', means='10, 20', sds='2, 5', sizes='30, 20')
@@ -3877,17 +3589,9 @@ $$
 - **Assumes:** index >= 0; 1 <= dimension <= 20
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The first 128 points of the two-dimensional Halton sequence (bases 2 and 3), each computed by the model: they fill the unit square evenly, without the clumps and gaps of random points](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/halton-point-points)
+![The first 128 points of the two-dimensional Halton sequence (bases 2 and 3), each returned by the package: they fill the unit square evenly, without the clumps and gaps of random points](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/halton-point-points)
 
-*The first 128 points of the two-dimensional Halton sequence (bases 2 and 3), each computed by the model: they fill the unit square evenly, without the clumps and gaps of random points. Marked: index 5, point (0.625, 0.7778). Your inputs: index = 5, dimension = 3.*
-
-![Point[1], point[2] and point[3] as index runs from 1 to 9, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/halton-point-live-1)
-
-*Point[1], point[2] and point[3] as index runs from 1 to 9, every other input as you entered it (9 solutions). Marked: your index = 5 gives point[1] = 0.625. Your inputs: index = 5, dimension = 3.*
-
-![Every entry of point as computed for your inputs (3 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/halton-point-live-2)
-
-*Every entry of point as computed for your inputs (3 entries: 0.625, 0.7778, 0.04). Your inputs: index = 5, dimension = 3.*
+*The first 128 points of the two-dimensional Halton sequence (bases 2 and 3), each returned by the package: they fill the unit square evenly, without the clumps and gaps of random points. Marked: index 5 (the worked example's index), point (0.625, 0.777778).*
 
 ```python
 bayesian_statistics_ai999x.solve('halton_point', index=5, dimension=3)
@@ -3935,17 +3639,13 @@ $$
 - **Assumes:** inputs independent uniform on [-pi, pi]
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![First- and total-order Sobol indices of the Ishigami function with a = 7, b = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-ishigami-bars)
+![First- and total-order Sobol' indices of the Ishigami function with a = 7, b = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-ishigami-bars)
 
-*First- and total-order Sobol indices of the Ishigami function with a = 7, b = 0.1, as computed: S = 0.3139, 0.4424, 0, ST = 0.5576, 0.4424, 0.2437, variance 13.84. An input whose total index exceeds its first-order one acts through interactions. Your inputs: a = 7, b = 0.1.*
+*First- and total-order Sobol' indices of the Ishigami function with a = 7, b = 0.1 (the worked example), as returned: S = 0.3139, 0.4424, 0, ST = 0.5576, 0.4424, 0.2437, variance 13.8446. x3 has no effect alone (S3 = 0) but acts through its interaction with x1.*
 
-![First-order index of x1 as a runs from 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-ishigami-live-1)
+![S1 (first-order index of x1) against b (parameter b (commonly 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-ishigami-curve)
 
-*First-order index of x1 as a runs from 1.75 to 12.25, every other input as you entered it (41 solutions). Marked: your a = 7 gives S1 = 0.3139. Your inputs: a = 7, b = 0.1.*
-
-![First-order index of x1 as b runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-ishigami-live-2)
-
-*First-order index of x1 as b runs from 0.025 to 0.175, every other input as you entered it (29 solutions). Marked: your b = 0.1 gives S1 = 0.3139. Your inputs: a = 7, b = 0.1.*
+*S1 (first-order index of x1) against b (parameter b (commonly 0.1)) from 0.01 to 1 on a logarithmic axis. One curve for each value of a (parameter a (commonly 7)): 7, 3.5, 14. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, b = 0.1, S1 = 0.313905.*
 
 ```python
 bayesian_statistics_ai999x.solve('sobol_indices_ishigami', a=7, b=0.1)
@@ -3988,13 +3688,9 @@ $$
 - **Assumes:** $a_i  \geq  0$; independent uniform inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The inputs stated and the results computed by the model: a = 0; first_order = 1, total_order = 1, variance = 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-g-function-io)
+![The worked example of Sobol indices of Sobol's G-function as inputs and results: stated a = 0; returned by bayesian-statistics-ai999x: first_order = [1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-g-function-io)
 
-*The inputs stated and the results computed by the model: a = 0; first_order = 1, total_order = 1, variance = 0.3333. Your inputs: a = 0.*
-
-![Variance of the function as a[1] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-g-function-live-1)
-
-*Variance of the function as a[1] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your a[1] = 0 gives variance = 0.3333. Your inputs: a = 0.*
+*The worked example of Sobol indices of Sobol's G-function as inputs and results: stated a = 0; returned by bayesian-statistics-ai999x: first_order = [1.0], total_order = [1.0], variance = 0.333333.*
 
 ```python
 bayesian_statistics_ai999x.solve('sobol_indices_g_function', a='0')
@@ -4037,13 +3733,9 @@ $$
 - **Assumes:** independent inputs; $sigma_i > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![First-order Sobol indices of a linear model y = Σ a_i x_i with independent inputs: the coefficients 1, 1 with sds 3, 4 give 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-linear-model-bars)
+![First-order Sobol' indices of a linear model y = Σ a_i x_i with independent inputs: the worked example (coefficients 1, 1, sds 3, 4) returns 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-linear-model-bars)
 
-*First-order Sobol indices of a linear model y = Σ a_i x_i with independent inputs: the coefficients 1, 1 with sds 3, 4 give 0.36, 0.64 (variance 25); adding an input with coefficient 2 and sd 1.5 gives 0.2647, 0.4706, 0.2647 (variance 34). Each index is that input's share of the output variance. Your inputs: coefficients = 1, 1, sds = 3, 4.*
-
-![Every entry of first_order as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-linear-model-live-1)
-
-*Every entry of first_order as computed for your inputs (2 entries: 0.36, 0.64). Your inputs: coefficients = 1, 1, sds = 3, 4.*
+*First-order Sobol' indices of a linear model y = Σ a_i x_i with independent inputs: the worked example (coefficients 1, 1, sds 3, 4) returns 0.36, 0.64 (variance 25); adding a third input with coefficient 2 and sd 1.5 (chosen) returns 0.2647, 0.4706, 0.2647 (variance 34). Each index is that input's share of the output variance.*
 
 ```python
 bayesian_statistics_ai999x.solve('sobol_indices_linear_model', coefficients='1, 1', sds='3, 4')
@@ -4095,17 +3787,13 @@ $$
 - **Assumes:** independent normal inputs
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sobol indices of y = a1 x1 + a2 x2 + a12 x1 x2 with a1 = 0, a2 = 0, a12 = 1 and inputs x1 ~ N(0, 1²), x2 ~ N(0, 1²): computed S1 = 0, S2 = 0, S12 = 1, ST1 = 1, ST2 = 1, variance 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-bars)
+![Sobol' indices of y = a1 x1 + a2 x2 + a12 x1 x2 with the worked example's a1 = 0, a2 = 0, a12 = 1 and inputs x1 ~ N(0, 1²), x2 ~ N(0, 1²): returned S1 = 0, S2 = 0, S12 = 1, ST1 = 1, ST2 = 1, variance 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-bars)
 
-*Sobol indices of y = a1 x1 + a2 x2 + a12 x1 x2 with a1 = 0, a2 = 0, a12 = 1 and inputs x1 ~ N(0, 1²), x2 ~ N(0, 1²): computed S1 = 0, S2 = 0, S12 = 1, ST1 = 1, ST2 = 1, variance 1. Each total index (highlighted) adds the interaction share to the first-order one. Your inputs: a1 = 0, a2 = 0, a12 = 1, mean1 = 0, sd1 = 1, mean2 = 0, sd2 = 1.*
+*Sobol' indices of y = a1 x1 + a2 x2 + a12 x1 x2 with the worked example's a1 = 0, a2 = 0, a12 = 1 and inputs x1 ~ N(0, 1²), x2 ~ N(0, 1²): returned S1 = 0, S2 = 0, S12 = 1, ST1 = 1, ST2 = 1, variance 1. Each total index adds the interaction share to the first-order one (the interaction bar repeats S12).*
 
-![First-order index of x1 as a1 runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-live-1)
+![S1 (first-order index of x1) against a1 (coefficient of x1) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-curve)
 
-*First-order index of x1 as a1 runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your a1 = 0 gives S1 = 0. Your inputs: a1 = 0, a2 = 0, a12 = 1, mean1 = 0, sd1 = 1, mean2 = 0, sd2 = 1.*
-
-![First-order index of x2 as a2 runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/sobol-indices-interaction-model-live-2)
-
-*First-order index of x2 as a2 runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your a2 = 0 gives S2 = 0. Your inputs: a1 = 0, a2 = 0, a12 = 1, mean1 = 0, sd1 = 1, mean2 = 0, sd2 = 1.*
+*S1 (first-order index of x1) against a1 (coefficient of x1) from -1 to 1. One curve for each value of mean2 (mean of x2): 0, -0.5, 0.5. Other inputs as in the worked example: a2 = 0.0, a12 = 1.0, mean1 = 0.0, sd1 = 1.0, sd2 = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, a1 = 0, S1 = 0.*
 
 ```python
 bayesian_statistics_ai999x.solve('sobol_indices_interaction_model', a1=0, a2=0, a12=1, mean1=0, sd1=1, mean2=0, sd2=1)
@@ -4149,17 +3837,9 @@ $$
 - **Assumes:** at least 2 trajectories; $\delta > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input); mu, mu_star, sigma (computed)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-matrix)
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-matrix)
 
-*The matrices as heat maps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input); mu, mu_star, sigma (computed). Computed with them: mu = 2.667, 3.333, mu_star = 2.667, 3.333, sigma = 1.155, 4.163; delta given: 0.5. Your inputs: outputs = [[1, 3, 4], [2, 3, 7]..., delta = 0.5.*
-
-![Μ_star[1] and μ_star[2] as δ runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-live-1)
-
-*Μ_star[1] and μ_star[2] as δ runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your δ = 0.5 gives μ_star[1] = 2.667. Your inputs: outputs = [[1, 3, 4], [2, 3, 7]..., delta = 0.5.*
-
-![Every entry of mu as computed for your inputs (2 entries: 2](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/morris-elementary-effects-live-2)
-
-*Every entry of mu as computed for your inputs (2 entries: 2.667, 3.333). Your inputs: outputs = [[1, 3, 4], [2, 3, 7]..., delta = 0.5.*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): outputs (input). Other inputs: delta = 1.0.*
 
 ```python
 bayesian_statistics_ai999x.solve('morris_elementary_effects', outputs='[[1, 3, 4], [2, 3, 7], [0, 1, 1]]', delta=0.5)
@@ -4204,17 +3884,13 @@ $$
 - **Assumes:** sd1, $sd2 > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The normal densities N1 = N(0, 1²) and N2 = N(1, 2²), drawn from the model's normal quantiles at about 60 cumulative probabilities](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-density)
+![Normal densities (drawn from their stated means and standard deviations): N1 = N(0, 1²) and N2 = N(1, 2²) of the worked example, and a wider N2' with sd 4 (chosen)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-density)
 
-*The normal densities N1 = N(0, 1²) and N2 = N(1, 2²), drawn from the model's normal quantiles at about 60 cumulative probabilities. Computed divergences in nats: KL(1‖2) = 0.4431, KL(2‖1) = 1.307. With the second standard deviation doubled to 4 (N2'): KL(1‖2) = 0.9488, KL(2‖1) = 6.614. Your inputs: mean1 = 0, sd1 = 1, mean2 = 1, sd2 = 2.*
+*Normal densities (drawn from their stated means and standard deviations): N1 = N(0, 1²) and N2 = N(1, 2²) of the worked example, and a wider N2' with sd 4 (chosen). Returned divergences in nats: sd2 = 2: KL(1‖2) = 0.443147, KL(2‖1) = 1.30685; sd2 = 4: KL(1‖2) = 0.948794, KL(2‖1) = 6.61371.*
 
-![Kl 1 to 2 as sd1 runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-live-1)
+![kl_1_to_2 (KL(N1 || N2) in nats) against sd1 (sd of distribution 1 (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-curve)
 
-*Kl 1 to 2 as sd1 runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your sd1 = 1 gives kl_1_to_2 = 0.4431. Your inputs: mean1 = 0, sd1 = 1, mean2 = 1, sd2 = 2.*
-
-![Kl 1 to 2 as sd2 runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-normal-live-2)
-
-*Kl 1 to 2 as sd2 runs from 0.5 to 3.5, every other input as you entered it (29 solutions). Marked: your sd2 = 2 gives kl_1_to_2 = 0.4431. Your inputs: mean1 = 0, sd1 = 1, mean2 = 1, sd2 = 2.*
+*kl_1_to_2 (KL(N1 || N2) in nats) against sd1 (sd of distribution 1 (> 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of sd2 (sd of distribution 2 (> 0)): 2, 1, 4. Other inputs as in the worked example: mean1 = 0.0, mean2 = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, sd1 = 1, kl_1_to_2 = 0.443147.*
 
 ```python
 bayesian_statistics_ai999x.solve('kl_divergence_normal', mean1=0, sd1=1, mean2=1, sd2=1)
@@ -4258,17 +3934,13 @@ $$
 - **Assumes:** all parameters > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The densities P = Beta(8, 4) and Q = Beta(1, 1), each drawn from the model's quantiles at about 60 cumulative probabilities](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-density)
+![The two Beta densities of the worked example; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-density)
 
-*The densities P = Beta(8, 4) and Q = Beta(1, 1), each drawn from the model's quantiles at about 60 cumulative probabilities. Computed: KL(P‖Q) = 0.6366 nats and, with the two swapped, KL(Q‖P) = 2.815 nats; the divergence is not symmetric. Your inputs: alpha1 = 8, beta1 = 4, alpha2 = 1, beta2 = 1.*
+*The two Beta densities of the worked example; each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned divergence KL(P‖Q) = 0.193147 nats and, with the two swapped, KL(Q‖P) = 0.306853 nats, the divergence is not symmetric.*
 
-![KL divergence in nats as α2 runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-live-1)
+![kl (KL divergence in nats) against alpha1 (alpha of distribution 1) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-curve)
 
-*KL divergence in nats as α2 runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your α2 = 1 gives kl = 0.6366. Your inputs: alpha1 = 8, beta1 = 4, alpha2 = 1, beta2 = 1.*
-
-![KL divergence in nats as α1 runs from 2 to 14, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/kl-divergence-beta-live-2)
-
-*KL divergence in nats as α1 runs from 2 to 14, every other input as you entered it (29 solutions). Marked: your α1 = 8 gives kl = 0.6366. Your inputs: alpha1 = 8, beta1 = 4, alpha2 = 1, beta2 = 1.*
+*kl (KL divergence in nats) against alpha1 (alpha of distribution 1) from 0.2 to 20 on a logarithmic axis. One curve for each value of beta2 (beta of distribution 2): 1, 0.5, 2. Other inputs as in the worked example: beta1 = 1.0, alpha2 = 1.0. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, alpha1 = 2, kl = 0.193147.*
 
 ```python
 bayesian_statistics_ai999x.solve('kl_divergence_beta', alpha1=2, beta1=1, alpha2=1, beta2=1)
@@ -4310,17 +3982,9 @@ $$
 - **Assumes:** $1  \leq  n  \leq  40$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Gauss-Hermite rules with 2, 4, 8 nodes (the n given and wider ones): each node with its weight as a stem, all computed by the model (n = 2: largest node 1, largest weight 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-stems)
+![Gauss–Hermite rules with n = 3, 6, 12 nodes (the worked example's n = 3 and wider ones): each node with its weight as a stem, all returned by the package (n = 3: nodes ±1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-stems)
 
-*Gauss-Hermite rules with 2, 4, 8 nodes (the n given and wider ones): each node with its weight as a stem, all computed by the model (n = 2: largest node 1, largest weight 0.5; n = 4: largest node 2.334, largest weight 0.4541; n = 8: largest node 4.145, largest weight 0.373). Wider rules reach further into the tails with ever smaller weights. Your inputs: n = 2.*
-
-![Nodes[1] and nodes[2] as n runs from 1 to 6, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-live-1)
-
-*Nodes[1] and nodes[2] as n runs from 1 to 6, every other input as you entered it (6 solutions). Marked: your n = 2 gives nodes[1] = -1. Your inputs: n = 2.*
-
-![Every entry of nodes as computed for your inputs (2 entries: -1, 1)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/gauss-hermite-rule-live-2)
-
-*Every entry of nodes as computed for your inputs (2 entries: -1, 1). Your inputs: n = 2.*
+*Gauss–Hermite rules with n = 3, 6, 12 nodes (the worked example's n = 3 and wider ones): each node with its weight as a stem, all returned by the package (n = 3: nodes ±1.7321 at most, largest weight 0.6667, weights summing to 1; n = 6: nodes ±3.3243 at most, largest weight 0.4088, weights summing to 1; n = 12: nodes ±5.5009 at most, largest weight 0.3217, weights summing to 1, the sum being derived). Wider rules reach further into the tails with ever smaller weights.*
 
 ```python
 bayesian_statistics_ai999x.solve('gauss_hermite_rule', n=2)
@@ -4365,17 +4029,13 @@ $$
 - **Assumes:** $sd > 0$; degree <= 6
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Var[Y] (variance) over sd from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/polynomial-of-normal-moments-field)
+![variance (Var[Y]) against mean (mean of X) from -1 to 1](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/polynomial-of-normal-moments-curve)
 
-*Var[Y] (variance) over sd from 0.1 to 10 and mean from -1 to 1 (logarithmic axes): each of the 225 shaded cells is one computation of the model, darker for a larger value (shaded by the logarithm of the value, from 0.002616 to 1.864e+05; a blank cell: inputs the model refuses). Marked: the inputs given, variance = 22. Your inputs: coefficients = 1, 2, 3, mean = 0, sd = 1.*
+*variance (Var[Y]) against mean (mean of X) from -1 to 1. One curve for each value of sd (standard deviation of X (> 0)): 1, 0.5, 2. Other inputs as in the worked example: coefficients = 1, 2, 3. 41 points per curve computed by bayesian-statistics-ai999x; marked: the worked example, mean = 0, variance = 22.*
 
-![Var[Y] as sd runs from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/polynomial-of-normal-moments-live-1)
+![variance (Var[Y]) over sd (standard deviation of X (> 0)) from 0](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/polynomial-of-normal-moments-field)
 
-*Var[Y] as sd runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your sd = 1 gives variance = 22. Your inputs: coefficients = 1, 2, 3, mean = 0, sd = 1.*
-
-![Var[Y] as mean runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/polynomial-of-normal-moments-live-2)
-
-*Var[Y] as mean runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your mean = 0 gives variance = 22. Your inputs: coefficients = 1, 2, 3, mean = 0, sd = 1.*
+*variance (Var[Y]) over sd (standard deviation of X (> 0)) from 0.1 to 10 and mean (mean of X) from -1 to 1 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of bayesian-statistics-ai999x, shaded by its value (light 0.00261633 to dark 186400, logarithmic shading); iso-lines at variance = 0.01, 0.1, 1, 10, 100, 1000, 10000. Other inputs as in the worked example: coefficients = 1, 2, 3. Marked: the worked example, sd = 1, mean = 0, variance = 22.*
 
 ```python
 bayesian_statistics_ai999x.solve('polynomial_of_normal_moments', coefficients='1, 2, 3', mean=0, sd=1)
@@ -4421,17 +4081,9 @@ $$
 - **Assumes:** all parameters > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Two gamma posteriors for rates (Gamma(20, 10) and Gamma(30, 12)), each density drawn from the model's quantiles at about 60 cumulative probabilities](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-rate-greater-gamma-density)
+![Two gamma posteriors for rates (the worked example: shape 5, rate 1 and shape 5, rate 1); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-rate-greater-gamma-density)
 
-*Two gamma posteriors for rates (Gamma(20, 10) and Gamma(30, 12)), each density drawn from the model's quantiles at about 60 cumulative probabilities. Computed: P(λ1 > λ2) = 0.2138, and the ratio of the posterior means 0.8. Your inputs: shape1 = 20, rate1 = 10, shape2 = 30, rate2 = 12.*
-
-![P(lambda_1 > lambda_2) as rate2 runs from 3 to 21, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-rate-greater-gamma-live-1)
-
-*P(lambda_1 > lambda_2) as rate2 runs from 3 to 21, every other input as you entered it (41 solutions). Marked: your rate2 = 12 gives prob_1_greater = 0.2138. Your inputs: shape1 = 20, rate1 = 10, shape2 = 30, rate2 = 12.*
-
-![P(lambda_1 > lambda_2) as shape1 runs from 5 to 35, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=bayesian-statistics-ai999x/probability-rate-greater-gamma-live-2)
-
-*P(lambda_1 > lambda_2) as shape1 runs from 5 to 35, every other input as you entered it (29 solutions). Marked: your shape1 = 20 gives prob_1_greater = 0.2138. Your inputs: shape1 = 20, rate1 = 10, shape2 = 30, rate2 = 12.*
+*Two gamma posteriors for rates (the worked example: shape 5, rate 1 and shape 5, rate 1); each density is drawn from the package's quantiles at 60 cumulative probabilities (the probability of each small interval divided by its width). Marked: the returned P(λ1 > λ2) = 0.5, and the posterior mean of λ1/λ2 = 1.*
 
 ```python
 bayesian_statistics_ai999x.solve('probability_rate_greater_gamma', shape1=5, rate1=1, shape2=5, rate2=1)
